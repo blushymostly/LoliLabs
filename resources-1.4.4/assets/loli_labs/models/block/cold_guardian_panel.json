@@ -1,0 +1,8 @@
+{
+  "parent": "loli_labs:block/cold_guardian_panel_south",
+  "textures": {
+    "top": "loli_labs:block/machines/cold_guardian_panel_top",
+    "side": "loli_labs:block/machines/cold_guardian_panel_side",
+    "bottom": "loli_labs:block/machines/cold_guardian_panel_bottom"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:core_unifier_neutronium"
+    },
+    {
+      "item": "ic2modern:advanced_machine_casing"
+    },
+    {
+      "item": "ic2modern:energy_crystal"
+    },
+    {
+      "item": "minecraft:chest"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:energy_unifier"
+  }
+}

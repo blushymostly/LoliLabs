@@ -1,0 +1,446 @@
+public class ru.loliland.le.common.container.ContainerMatterSolid<T extends ru.loliland.le.common.tile.TileMatterSolid> extends ic2.core.ContainerFullInv<T> implements loliland.luminous.api.transfer.IRecipeTransferTarget {
+  public final java.util.List<net.minecraft.inventory.Slot> inputSlots;
+
+  public final java.util.List<net.minecraft.inventory.Slot> outputSlots;
+
+  public final java.util.List<net.minecraft.inventory.Slot> upgradeSlots;
+
+  private final ru.loliland.le.common.container.lIOILand measuredEnergySync;
+
+  public net.minecraft.inventory.Slot dischargeSlot;
+
+  public final net.minecraft.inventory.Slot referenceSlot;
+
+  public ru.loliland.le.common.container.ContainerMatterSolid(net.minecraft.entity.player.EntityPlayer, T);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: bipush        26
+       5: bipush        46
+       7: bipush        106
+       9: bipush        46
+      11: invokespecial #60                 // Method "<init>":(Lnet/minecraft/entity/player/EntityPlayer;Lru/loliland/le/common/tile/TileMatterSolid;IIII)V
+      14: return
+
+  public ru.loliland.le.common.container.ContainerMatterSolid(net.minecraft.entity.player.EntityPlayer, T, int, int, int, int);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: sipush        214
+       6: sipush        214
+       9: invokespecial #64                 // Method ic2/core/ContainerFullInv."<init>":(Lnet/minecraft/entity/player/EntityPlayer;Lnet/minecraft/inventory/IInventory;II)V
+      12: aload_0
+      13: new           #66                 // class java/util/ArrayList
+      16: dup
+      17: invokespecial #69                 // Method java/util/ArrayList."<init>":()V
+      20: putfield      #71                 // Field inputSlots:Ljava/util/List;
+      23: aload_0
+      24: new           #66                 // class java/util/ArrayList
+      27: dup
+      28: invokespecial #69                 // Method java/util/ArrayList."<init>":()V
+      31: putfield      #73                 // Field outputSlots:Ljava/util/List;
+      34: aload_0
+      35: new           #66                 // class java/util/ArrayList
+      38: dup
+      39: invokespecial #69                 // Method java/util/ArrayList."<init>":()V
+      42: putfield      #75                 // Field upgradeSlots:Ljava/util/List;
+      45: aload_0
+      46: new           #77                 // class ru/loliland/le/common/container/lIOILand
+      49: dup
+      50: invokespecial #78                 // Method ru/loliland/le/common/container/lIOILand."<init>":()V
+      53: putfield      #80                 // Field measuredEnergySync:Lru/loliland/le/common/container/lIOILand;
+      56: aload_2
+      57: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+      60: arraylength
+      61: iconst_1
+      62: if_icmpne     130
+      65: aload_0
+      66: getfield      #71                 // Field inputSlots:Ljava/util/List;
+      69: aload_0
+      70: new           #86                 // class ic2/core/slot/SlotInvSlot
+      73: dup
+      74: aload_2
+      75: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+      78: iconst_0
+      79: aaload
+      80: iconst_0
+      81: bipush        62
+      83: bipush        55
+      85: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+      88: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+      91: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      96: pop
+      97: aload_0
+      98: getfield      #73                 // Field outputSlots:Ljava/util/List;
+     101: aload_0
+     102: new           #86                 // class ic2/core/slot/SlotInvSlot
+     105: dup
+     106: aload_2
+     107: getfield      #103                // Field ru/loliland/le/common/tile/TileMatterSolid.outputSlot:Lic2/core/block/invslot/InvSlotOutput;
+     110: iconst_0
+     111: bipush        108
+     113: bipush        55
+     115: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+     118: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     121: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     126: pop
+     127: goto          282
+     130: iconst_0
+     131: istore        7
+     133: aload_2
+     134: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+     137: arraylength
+     138: bipush        12
+     140: if_icmpne     147
+     143: bipush        -18
+     145: istore        7
+     147: iconst_0
+     148: istore        8
+     150: iconst_0
+     151: istore        9
+     153: iload         9
+     155: aload_2
+     156: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+     159: arraylength
+     160: if_icmpge     282
+     163: iload         8
+     165: iconst_3
+     166: if_icmpne     175
+     169: iconst_0
+     170: istore        8
+     172: iinc          7, 18
+     175: aload_2
+     176: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+     179: iload         9
+     181: aaload
+     182: ifnull        226
+     185: aload_0
+     186: getfield      #71                 // Field inputSlots:Ljava/util/List;
+     189: aload_0
+     190: new           #86                 // class ic2/core/slot/SlotInvSlot
+     193: dup
+     194: aload_2
+     195: getfield      #84                 // Field ru/loliland/le/common/tile/TileMatterSolid.inputSlot:[Lru/lolienergistics/lOO0ii0LAND;
+     198: iload         9
+     200: aaload
+     201: iconst_0
+     202: iload_3
+     203: iload         8
+     205: bipush        18
+     207: imul
+     208: iadd
+     209: iload         4
+     211: iload         7
+     213: iadd
+     214: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+     217: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     220: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     225: pop
+     226: aload_2
+     227: getfield      #103                // Field ru/loliland/le/common/tile/TileMatterSolid.outputSlot:Lic2/core/block/invslot/InvSlotOutput;
+     230: ifnull        273
+     233: aload_0
+     234: getfield      #73                 // Field outputSlots:Ljava/util/List;
+     237: aload_0
+     238: new           #86                 // class ic2/core/slot/SlotInvSlot
+     241: dup
+     242: aload_2
+     243: getfield      #103                // Field ru/loliland/le/common/tile/TileMatterSolid.outputSlot:Lic2/core/block/invslot/InvSlotOutput;
+     246: iload         9
+     248: iload         5
+     250: iload         8
+     252: bipush        18
+     254: imul
+     255: iadd
+     256: iload         6
+     258: iload         7
+     260: iadd
+     261: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+     264: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     267: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     272: pop
+     273: iinc          8, 1
+     276: iinc          9, 1
+     279: goto          153
+     282: iconst_0
+     283: istore        7
+     285: iload         7
+     287: iconst_4
+     288: if_icmpge     335
+     291: aload_0
+     292: getfield      #75                 // Field upgradeSlots:Ljava/util/List;
+     295: aload_0
+     296: new           #86                 // class ic2/core/slot/SlotInvSlot
+     299: dup
+     300: aload_2
+     301: getfield      #107                // Field ru/loliland/le/common/tile/TileMatterSolid.upgradeSlot:Lic2/core/block/invslot/InvSlotUpgrade;
+     304: iload         7
+     306: sipush        170
+     309: bipush        28
+     311: iload         7
+     313: bipush        18
+     315: imul
+     316: iadd
+     317: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+     320: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     323: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     328: pop
+     329: iinc          7, 1
+     332: goto          285
+     335: aload_0
+     336: aload_0
+     337: new           #86                 // class ic2/core/slot/SlotInvSlot
+     340: dup
+     341: aload_2
+     342: getfield      #111                // Field ru/loliland/le/common/tile/TileMatterSolid.chargeSlot:Lru/lolienergistics/l110LAND;
+     345: iconst_0
+     346: sipush        170
+     349: bipush        100
+     351: invokespecial #89                 // Method ic2/core/slot/SlotInvSlot."<init>":(Lic2/core/block/invslot/InvSlot;III)V
+     354: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     357: putfield      #113                // Field dischargeSlot:Lnet/minecraft/inventory/Slot;
+     360: aload_0
+     361: aload_0
+     362: new           #115                // class ru/lolienergistics/llI1OlOlanD
+     365: dup
+     366: aload_2
+     367: iconst_0
+     368: iconst_0
+     369: aload_2
+     370: invokedynamic #135,  0            // InvokeDynamic #0:get:(Lru/loliland/le/common/tile/TileMatterSolid;)Ljava/util/function/Supplier;
+     375: invokespecial #138                // Method ru/lolienergistics/llI1OlOlanD."<init>":(Lnet/minecraft/inventory/IInventory;IILjava/util/function/Supplier;)V
+     378: invokevirtual #93                 // Method func_75146_a:(Lnet/minecraft/inventory/Slot;)Lnet/minecraft/inventory/Slot;
+     381: putfield      #140                // Field referenceSlot:Lnet/minecraft/inventory/Slot;
+     384: return
+
+  private static net.minecraft.item.ItemStack resolveMatterPreviewStack(ru.loliland.le.common.tile.TileMatterSolid);
+    Code:
+       0: aload_0
+       1: invokestatic  #147                // Method getMatterItemId:(Lru/loliland/le/common/tile/TileMatterSolid;)Ljava/lang/String;
+       4: astore_1
+       5: aload_1
+       6: ifnull        18
+       9: ldc           #149                // String lolienergistics
+      11: aload_1
+      12: invokestatic  #155                // Method cpw/mods/fml/common/registry/GameRegistry.findItem:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+      15: goto          19
+      18: aconst_null
+      19: astore_2
+      20: aload_2
+      21: ifnull        35
+      24: new           #157                // class net/minecraft/item/ItemStack
+      27: dup
+      28: aload_2
+      29: invokespecial #160                // Method net/minecraft/item/ItemStack."<init>":(Lnet/minecraft/item/Item;)V
+      32: goto          36
+      35: aconst_null
+      36: areturn
+
+  private static java.lang.String getMatterItemId(ru.loliland.le.common.tile.TileMatterSolid);
+    Code:
+       0: aload_0
+       1: instanceof    #9                  // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT0
+       4: ifeq          10
+       7: ldc           #166                // String matter
+       9: areturn
+      10: aload_0
+      11: instanceof    #14                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT1
+      14: ifeq          20
+      17: ldc           #168                // String matter_loose_pink
+      19: areturn
+      20: aload_0
+      21: instanceof    #17                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT2
+      24: ifeq          30
+      27: ldc           #170                // String matter_luminous_pink
+      29: areturn
+      30: aload_0
+      31: instanceof    #20                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT3
+      34: ifeq          40
+      37: ldc           #172                // String matter_mutated_violet_turquoise
+      39: areturn
+      40: aload_0
+      41: instanceof    #23                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT4
+      44: ifeq          50
+      47: ldc           #174                // String matter_turquoise
+      49: areturn
+      50: aload_0
+      51: instanceof    #26                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT5
+      54: ifeq          60
+      57: ldc           #176                // String matter_purple
+      59: areturn
+      60: aload_0
+      61: instanceof    #29                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT6
+      64: ifeq          70
+      67: ldc           #178                // String matter_luminous_turquoise
+      69: areturn
+      70: aload_0
+      71: instanceof    #32                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT7
+      74: ifeq          80
+      77: ldc           #180                // String matter_luminous_red
+      79: areturn
+      80: aload_0
+      81: instanceof    #35                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT8
+      84: ifeq          90
+      87: ldc           #182                // String matter_loose_blue
+      89: areturn
+      90: aload_0
+      91: instanceof    #38                 // class ru/loliland/le/common/tile/TileMatterSolid$MatterSolidT9
+      94: ifeq          100
+      97: ldc           #184                // String matter_sparkling
+      99: areturn
+     100: aconst_null
+     101: areturn
+
+  public java.util.List<java.lang.String> getNetworkedFields();
+    Code:
+       0: aload_0
+       1: invokespecial #189                // Method ic2/core/ContainerFullInv.getNetworkedFields:()Ljava/util/List;
+       4: astore_1
+       5: aload_1
+       6: ldc           #191                // String tier
+       8: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      13: pop
+      14: aload_1
+      15: ldc           #193                // String progress
+      17: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      22: pop
+      23: aload_1
+      24: ldc           #195                // String required
+      26: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      31: pop
+      32: aload_1
+      33: ldc           #197                // String inputEU
+      35: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      40: pop
+      41: aload_1
+      42: ldc           #199                // String energyBuffer
+      44: invokeinterface #99,  2           // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      49: pop
+      50: aload_1
+      51: areturn
+
+  public void func_75142_b();
+    Code:
+       0: aload_0
+       1: invokespecial #202                // Method ic2/core/ContainerFullInv.func_75142_b:()V
+       4: aload_0
+       5: getfield      #80                 // Field measuredEnergySync:Lru/loliland/le/common/container/lIOILand;
+       8: aload_0
+       9: aload_0
+      10: getfield      #206                // Field base:Lnet/minecraft/inventory/IInventory;
+      13: checkcast     #208                // class net/minecraft/tileentity/TileEntity
+      16: aload_0
+      17: getfield      #206                // Field base:Lnet/minecraft/inventory/IInventory;
+      20: checkcast     #11                 // class ru/loliland/le/common/tile/TileMatterSolid
+      23: getfield      #212                // Field ru/loliland/le/common/tile/TileMatterSolid.measuredEuPerTick:D
+      26: aload_0
+      27: getfield      #206                // Field base:Lnet/minecraft/inventory/IInventory;
+      30: checkcast     #11                 // class ru/loliland/le/common/tile/TileMatterSolid
+      33: getfield      #216                // Field ru/loliland/le/common/tile/TileMatterSolid.measuredEuSamples:I
+      36: invokevirtual #220                // Method ru/loliland/le/common/container/lIOILand.I1O1I1LaNd:(Lic2/core/ContainerBase;Lnet/minecraft/tileentity/TileEntity;DI)V
+      39: return
+
+  public java.util.Set<java.lang.String> getAcceptedRecipeTypes();
+    Code:
+       0: aload_0
+       1: getfield      #206                // Field base:Lnet/minecraft/inventory/IInventory;
+       4: checkcast     #11                 // class ru/loliland/le/common/tile/TileMatterSolid
+       7: getfield      #227                // Field ru/loliland/le/common/tile/TileMatterSolid.name:Ljava/lang/String;
+      10: ldc           #229                // String .*MatterSolidT(\\d+).*
+      12: ldc           #231                // String $1
+      14: invokevirtual #235                // Method java/lang/String.replaceAll:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      17: astore_1
+      18: new           #237                // class java/lang/StringBuilder
+      21: dup
+      22: invokespecial #238                // Method java/lang/StringBuilder."<init>":()V
+      25: ldc           #240                // String matter_solid_t
+      27: invokevirtual #244                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      30: aload_1
+      31: invokevirtual #244                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      34: invokevirtual #248                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      37: invokestatic  #254                // Method java/util/Collections.singleton:(Ljava/lang/Object;)Ljava/util/Set;
+      40: areturn
+
+  public loliland.luminous.api.transfer.RecipeTransferMode getTransferMode();
+    Code:
+       0: getstatic     #262                // Field loliland/luminous/api/transfer/RecipeTransferMode.REAL:Lloliland/luminous/api/transfer/RecipeTransferMode;
+       3: areturn
+
+  public loliland.luminous.api.transfer.RecipeSlotMapping createSlotMapping(java.util.List<loliland.luminous.api.transfer.TransferInput>);
+    Code:
+       0: aload_0
+       1: getfield      #71                 // Field inputSlots:Ljava/util/List;
+       4: invokeinterface #269,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+       9: ifeq          14
+      12: aconst_null
+      13: areturn
+      14: aload_1
+      15: invokeinterface #273,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+      20: astore_2
+      21: aload_2
+      22: invokeinterface #278,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+      27: ifeq          106
+      30: aload_2
+      31: invokeinterface #281,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+      36: checkcast     #283                // class loliland/luminous/api/transfer/TransferInput
+      39: astore_3
+      40: getstatic     #289                // Field loliland/luminous/api/transfer/TransferContentType.ITEM:Lloliland/luminous/api/transfer/TransferContentType;
+      43: aload_3
+      44: invokevirtual #293                // Method loliland/luminous/api/transfer/TransferInput.getContentType:()Lloliland/luminous/api/transfer/TransferContentType;
+      47: invokevirtual #296                // Method loliland/luminous/api/transfer/TransferContentType.equals:(Ljava/lang/Object;)Z
+      50: ifeq          103
+      53: new           #298                // class loliland/luminous/api/transfer/TransferTarget
+      56: dup
+      57: getstatic     #289                // Field loliland/luminous/api/transfer/TransferContentType.ITEM:Lloliland/luminous/api/transfer/TransferContentType;
+      60: aload_0
+      61: getfield      #71                 // Field inputSlots:Ljava/util/List;
+      64: iconst_0
+      65: invokeinterface #301,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      70: checkcast     #303                // class net/minecraft/inventory/Slot
+      73: getfield      #306                // Field net/minecraft/inventory/Slot.field_75222_d:I
+      76: invokespecial #309                // Method loliland/luminous/api/transfer/TransferTarget."<init>":(Lloliland/luminous/api/transfer/TransferContentType;I)V
+      79: astore        4
+      81: new           #311                // class loliland/luminous/api/transfer/RecipeSlotMapping
+      84: dup
+      85: new           #313                // class loliland/luminous/api/transfer/TransferPair
+      88: dup
+      89: aload_3
+      90: aload         4
+      92: invokespecial #316                // Method loliland/luminous/api/transfer/TransferPair."<init>":(Lloliland/luminous/api/transfer/TransferInput;Lloliland/luminous/api/transfer/TransferTarget;)V
+      95: invokestatic  #320                // Method java/util/Collections.singletonList:(Ljava/lang/Object;)Ljava/util/List;
+      98: iconst_0
+      99: invokespecial #323                // Method loliland/luminous/api/transfer/RecipeSlotMapping."<init>":(Ljava/util/List;Z)V
+     102: areturn
+     103: goto          21
+     106: aconst_null
+     107: areturn
+
+  public java.util.List<loliland.luminous.api.transfer.TransferTarget> getAllInputTargets();
+    Code:
+       0: aload_0
+       1: getfield      #71                 // Field inputSlots:Ljava/util/List;
+       4: invokeinterface #269,  1          // InterfaceMethod java/util/List.isEmpty:()Z
+       9: ifeq          16
+      12: invokestatic  #328                // Method java/util/Collections.emptyList:()Ljava/util/List;
+      15: areturn
+      16: new           #298                // class loliland/luminous/api/transfer/TransferTarget
+      19: dup
+      20: getstatic     #289                // Field loliland/luminous/api/transfer/TransferContentType.ITEM:Lloliland/luminous/api/transfer/TransferContentType;
+      23: aload_0
+      24: getfield      #71                 // Field inputSlots:Ljava/util/List;
+      27: iconst_0
+      28: invokeinterface #301,  2          // InterfaceMethod java/util/List.get:(I)Ljava/lang/Object;
+      33: checkcast     #303                // class net/minecraft/inventory/Slot
+      36: getfield      #306                // Field net/minecraft/inventory/Slot.field_75222_d:I
+      39: invokespecial #309                // Method loliland/luminous/api/transfer/TransferTarget."<init>":(Lloliland/luminous/api/transfer/TransferContentType;I)V
+      42: invokestatic  #320                // Method java/util/Collections.singletonList:(Ljava/lang/Object;)Ljava/util/List;
+      45: areturn
+
+  private static net.minecraft.item.ItemStack lambda$new$0(ru.loliland.le.common.tile.TileMatterSolid);
+    Code:
+       0: aload_0
+       1: invokestatic  #330                // Method resolveMatterPreviewStack:(Lru/loliland/le/common/tile/TileMatterSolid;)Lnet/minecraft/item/ItemStack;
+       4: areturn
+}

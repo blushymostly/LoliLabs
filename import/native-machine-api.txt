@@ -1,0 +1,99 @@
+Compiled from "BaseEntityBlock.java"
+public abstract class net.minecraft.world.level.block.BaseEntityBlock extends net.minecraft.world.level.block.Block implements net.minecraft.world.level.block.EntityBlock {
+  protected net.minecraft.world.level.block.BaseEntityBlock(net.minecraft.world.level.block.state.BlockBehaviour$Properties);
+  public net.minecraft.world.level.block.RenderShape m_7514_(net.minecraft.world.level.block.state.BlockState);
+  public boolean m_8133_(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos, int, int);
+  public net.minecraft.world.MenuProvider m_7246_(net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.Level, net.minecraft.core.BlockPos);
+  protected static <E extends net.minecraft.world.level.block.entity.BlockEntity, A extends net.minecraft.world.level.block.entity.BlockEntity> net.minecraft.world.level.block.entity.BlockEntityTicker<A> m_152132_(net.minecraft.world.level.block.entity.BlockEntityType<A>, net.minecraft.world.level.block.entity.BlockEntityType<E>, net.minecraft.world.level.block.entity.BlockEntityTicker<? super E>);
+}
+Compiled from "BlockEntity.java"
+public abstract class net.minecraft.world.level.block.entity.BlockEntity {
+  protected net.minecraft.world.level.Level f_58857_;
+  protected final net.minecraft.core.BlockPos f_58858_;
+  protected boolean f_58859_;
+  public net.minecraft.world.level.block.entity.BlockEntity(net.minecraft.world.level.block.entity.BlockEntityType<?>, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public static net.minecraft.core.BlockPos m_187472_(net.minecraft.nbt.CompoundTag);
+  public net.minecraft.world.level.Level m_58904_();
+  public void m_142339_(net.minecraft.world.level.Level);
+  public boolean m_58898_();
+  public void m_142466_(net.minecraft.nbt.CompoundTag);
+  protected void m_183515_(net.minecraft.nbt.CompoundTag);
+  public final net.minecraft.nbt.CompoundTag m_187480_();
+  public final net.minecraft.nbt.CompoundTag m_187481_();
+  public final net.minecraft.nbt.CompoundTag m_187482_();
+  public static void m_187468_(net.minecraft.nbt.CompoundTag, net.minecraft.world.level.block.entity.BlockEntityType<?>);
+  public void m_187476_(net.minecraft.world.item.ItemStack);
+  public static net.minecraft.world.level.block.entity.BlockEntity m_155241_(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState, net.minecraft.nbt.CompoundTag);
+  public void m_6596_();
+  protected static void m_155232_(net.minecraft.world.level.Level, net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public net.minecraft.core.BlockPos m_58899_();
+  public net.minecraft.world.level.block.state.BlockState m_58900_();
+  public net.minecraft.network.protocol.Packet<net.minecraft.network.protocol.game.ClientGamePacketListener> m_58483_();
+  public net.minecraft.nbt.CompoundTag m_5995_();
+  public boolean m_58901_();
+  public void m_7651_();
+  public void m_6339_();
+  public boolean m_7531_(int, int);
+  public void m_58886_(net.minecraft.CrashReportCategory);
+  public boolean m_6326_();
+  public net.minecraft.world.level.block.entity.BlockEntityType<?> m_58903_();
+  public void m_155250_(net.minecraft.world.level.block.state.BlockState);
+  static {};
+}
+Compiled from "ChestMenu.java"
+public class net.minecraft.world.inventory.ChestMenu extends net.minecraft.world.inventory.AbstractContainerMenu {
+  public static net.minecraft.world.inventory.ChestMenu m_39234_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39243_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39255_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39258_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39262_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39266_(int, net.minecraft.world.entity.player.Inventory);
+  public static net.minecraft.world.inventory.ChestMenu m_39237_(int, net.minecraft.world.entity.player.Inventory, net.minecraft.world.Container);
+  public static net.minecraft.world.inventory.ChestMenu m_39246_(int, net.minecraft.world.entity.player.Inventory, net.minecraft.world.Container);
+  public net.minecraft.world.inventory.ChestMenu(net.minecraft.world.inventory.MenuType<?>, int, net.minecraft.world.entity.player.Inventory, net.minecraft.world.Container, int);
+  public boolean m_6875_(net.minecraft.world.entity.player.Player);
+  public net.minecraft.world.item.ItemStack m_7648_(net.minecraft.world.entity.player.Player, int);
+  public void m_6877_(net.minecraft.world.entity.player.Player);
+  public net.minecraft.world.Container m_39261_();
+  public int m_39265_();
+}
+Compiled from "SimpleContainer.java"
+public class net.minecraft.world.SimpleContainer implements net.minecraft.world.Container,net.minecraft.world.inventory.StackedContentsCompatible {
+  public net.minecraft.world.SimpleContainer(int);
+  public net.minecraft.world.SimpleContainer(net.minecraft.world.item.ItemStack...);
+  public void m_19164_(net.minecraft.world.ContainerListener);
+  public void m_19181_(net.minecraft.world.ContainerListener);
+  public net.minecraft.world.item.ItemStack m_8020_(int);
+  public java.util.List<net.minecraft.world.item.ItemStack> m_19195_();
+  public net.minecraft.world.item.ItemStack m_7407_(int, int);
+  public net.minecraft.world.item.ItemStack m_19170_(net.minecraft.world.item.Item, int);
+  public net.minecraft.world.item.ItemStack m_19173_(net.minecraft.world.item.ItemStack);
+  public boolean m_19183_(net.minecraft.world.item.ItemStack);
+  public net.minecraft.world.item.ItemStack m_8016_(int);
+  public void m_6836_(int, net.minecraft.world.item.ItemStack);
+  public int m_6643_();
+  public boolean m_7983_();
+  public void m_6596_();
+  public boolean m_6542_(net.minecraft.world.entity.player.Player);
+  public void m_6211_();
+  public void m_5809_(net.minecraft.world.entity.player.StackedContents);
+  public java.lang.String toString();
+  public void m_7797_(net.minecraft.nbt.ListTag);
+  public net.minecraft.nbt.ListTag m_7927_();
+}
+Compiled from "MenuProvider.java"
+public interface net.minecraft.world.MenuProvider extends net.minecraft.world.inventory.MenuConstructor {
+  public abstract net.minecraft.network.chat.Component m_5446_();
+}
+Compiled from "ContainerData.java"
+public interface net.minecraft.world.inventory.ContainerData {
+  public abstract int m_6413_(int);
+  public abstract void m_8050_(int, int);
+  public abstract int m_6499_();
+}
+Compiled from "EntityBlock.java"
+public interface net.minecraft.world.level.block.EntityBlock {
+  public abstract net.minecraft.world.level.block.entity.BlockEntity m_142194_(net.minecraft.core.BlockPos, net.minecraft.world.level.block.state.BlockState);
+  public default <T extends net.minecraft.world.level.block.entity.BlockEntity> net.minecraft.world.level.block.entity.BlockEntityTicker<T> m_142354_(net.minecraft.world.level.Level, net.minecraft.world.level.block.state.BlockState, net.minecraft.world.level.block.entity.BlockEntityType<T>);
+  public default <T extends net.minecraft.world.level.block.entity.BlockEntity> net.minecraft.world.level.gameevent.GameEventListener m_214009_(net.minecraft.server.level.ServerLevel, T);
+}

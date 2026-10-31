@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:matter_solid_t2_x1"
+    },
+    {
+      "item": "loli_labs:core_unifier_fluid_matter"
+    },
+    {
+      "item": "ic2modern:energy_crystal"
+    },
+    {
+      "item": "minecraft:emerald"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:matter_solid_t2_x6"
+  }
+}

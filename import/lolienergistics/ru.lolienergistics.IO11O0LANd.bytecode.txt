@@ -1,0 +1,582 @@
+public class ru.lolienergistics.IO11O0LANd {
+  public ru.lolienergistics.IO11O0LANd();
+    Code:
+       0: aload_0
+       1: invokespecial #16                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void I1O1I1LaNd();
+    Code:
+       0: ldc           #18                 // String sword1
+       2: ldc           #20                 // String ��������
+       4: invokedynamic #37,  0             // InvokeDynamic #0:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+       9: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      12: ldc           #42                 // String sword2
+      14: ldc           #44                 // String ��������
+      16: invokedynamic #49,  0             // InvokeDynamic #1:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      21: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      24: ldc           #51                 // String sword3
+      26: ldc           #53                 // String ������-��-�
+      28: invokedynamic #58,  0             // InvokeDynamic #2:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      33: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      36: ldc           #60                 // String sword4
+      38: ldc           #62                 // String ������� ����
+      40: invokedynamic #67,  0             // InvokeDynamic #3:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      45: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      48: ldc           #69                 // String sword5
+      50: ldc           #71                 // String �����������
+      52: invokedynamic #76,  0             // InvokeDynamic #4:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      57: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      60: ldc           #78                 // String sword6
+      62: ldc           #80                 // String ��������
+      64: invokedynamic #85,  0             // InvokeDynamic #5:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      69: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      72: ldc           #87                 // String sword7
+      74: ldc           #89                 // String ����� �������
+      76: invokedynamic #94,  0             // InvokeDynamic #6:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      81: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      84: ldc           #96                 // String sword8
+      86: ldc           #98                 // String �������� �����
+      88: invokedynamic #103,  0            // InvokeDynamic #7:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+      93: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+      96: ldc           #105                // String sword9
+      98: ldc           #107                // String ����������� ����
+     100: invokedynamic #112,  0            // InvokeDynamic #8:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     105: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     108: ldc           #114                // String sword10
+     110: ldc           #116                // String �����
+     112: invokedynamic #121,  0            // InvokeDynamic #9:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     117: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     120: ldc           #123                // String sword11
+     122: ldc           #125                // String ������������� �����
+     124: invokedynamic #130,  0            // InvokeDynamic #10:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     129: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     132: ldc           #132                // String sword12
+     134: ldc           #134                // String ������� ������ �������
+     136: invokedynamic #139,  0            // InvokeDynamic #11:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     141: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     144: ldc           #141                // String sword13
+     146: ldc           #143                // String ����� ����
+     148: invokedynamic #148,  0            // InvokeDynamic #12:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     153: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     156: ldc           #150                // String sword14
+     158: ldc           #152                // String ���������
+     160: invokedynamic #157,  0            // InvokeDynamic #13:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     165: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     168: ldc           #159                // String sword15
+     170: ldc           #161                // String ����������� �������
+     172: invokedynamic #166,  0            // InvokeDynamic #14:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     177: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     180: ldc           #168                // String sword16
+     182: ldc           #170                // String ��������� ��������
+     184: invokedynamic #175,  0            // InvokeDynamic #15:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     189: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     192: ldc           #177                // String sword17
+     194: ldc           #179                // String Hofner 500/1
+     196: invokedynamic #184,  0            // InvokeDynamic #16:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     201: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     204: ldc           #186                // String sword18
+     206: ldc           #188                // String ����������� ������
+     208: invokedynamic #193,  0            // InvokeDynamic #17:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     213: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     216: ldc           #195                // String sword19
+     218: ldc           #197                // String ������� ������
+     220: invokedynamic #202,  0            // InvokeDynamic #18:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     225: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     228: ldc           #204                // String sword20
+     230: ldc           #206                // String ���
+     232: invokedynamic #211,  0            // InvokeDynamic #19:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     237: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     240: ldc           #213                // String sword21
+     242: ldc           #215                // String ������� ����
+     244: invokedynamic #220,  0            // InvokeDynamic #20:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     249: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     252: ldc           #222                // String sword22
+     254: ldc           #224                // String ����������
+     256: invokedynamic #229,  0            // InvokeDynamic #21:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     261: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     264: ldc           #231                // String sword23
+     266: ldc           #233                // String ��� �����
+     268: invokedynamic #238,  0            // InvokeDynamic #22:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     273: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     276: ldc           #240                // String sword24
+     278: ldc           #242                // String ���������
+     280: invokedynamic #247,  0            // InvokeDynamic #23:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     285: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     288: ldc           #249                // String sword25
+     290: ldc           #251                // String ������ ��������
+     292: invokedynamic #256,  0            // InvokeDynamic #24:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     297: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     300: ldc_w         #258                // String sword26
+     303: ldc_w         #260                // String ������ ��������
+     306: invokedynamic #265,  0            // InvokeDynamic #25:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     311: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     314: ldc_w         #267                // String sword27
+     317: ldc_w         #269                // String ������� ������
+     320: invokedynamic #274,  0            // InvokeDynamic #26:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     325: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     328: ldc_w         #276                // String sword28
+     331: ldc_w         #278                // String ������������
+     334: invokedynamic #283,  0            // InvokeDynamic #27:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     339: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     342: ldc_w         #285                // String sword29
+     345: ldc_w         #287                // String ������ ����
+     348: invokedynamic #292,  0            // InvokeDynamic #28:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     353: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     356: ldc_w         #294                // String sword30
+     359: ldc_w         #296                // String ��� ���������
+     362: invokedynamic #301,  0            // InvokeDynamic #29:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     367: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     370: ldc_w         #303                // String sword31
+     373: ldc_w         #305                // String ��������
+     376: invokedynamic #310,  0            // InvokeDynamic #30:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     381: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     384: ldc_w         #312                // String sword32
+     387: ldc_w         #314                // String ������������ ��� ����
+     390: invokedynamic #319,  0            // InvokeDynamic #31:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     395: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     398: ldc_w         #321                // String sword33
+     401: ldc_w         #323                // String ������ ��������
+     404: invokedynamic #328,  0            // InvokeDynamic #32:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     409: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     412: ldc_w         #330                // String sword34
+     415: ldc_w         #332                // String ������ �����
+     418: invokedynamic #337,  0            // InvokeDynamic #33:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     423: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     426: ldc_w         #339                // String sword35
+     429: ldc_w         #341                // String ���������� ��������
+     432: invokedynamic #345,  0            // InvokeDynamic #34:run:()Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;
+     437: invokestatic  #40                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/IO11O0LANd$I1O1I1LaNd;)V
+     440: return
+
+  private static void I1O1I1LaNd(java.lang.String, java.lang.String, ru.lolienergistics.IO11O0LANd$I1O1I1LaNd);
+    Code:
+       0: new           #347                // class ru/lolienergistics/ll0iI10IlAND
+       3: dup
+       4: aload_0
+       5: invokespecial #350                // Method ru/lolienergistics/ll0iI10IlAND."<init>":(Ljava/lang/String;)V
+       8: astore_3
+       9: aload_3
+      10: aload_0
+      11: invokestatic  #356                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      14: aload_3
+      15: aload_1
+      16: invokestatic  #362                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+      19: getstatic     #367                // Field ru/lolienergistics/lli0OiIlAND.OOOIilanD:Ljava/util/LinkedList;
+      22: aload_3
+      23: invokevirtual #373                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+      26: pop
+      27: aload_2
+      28: aload_3
+      29: invokeinterface #375,  2          // InterfaceMethod ru/lolienergistics/IO11O0LANd$I1O1I1LaNd.run:(Lru/lolienergistics/ll0iI10IlAND;)V
+      34: aload_0
+      35: aload_1
+      36: invokestatic  #378                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)V
+      39: return
+
+  public static void I1O1I1LaNd(java.lang.String, java.lang.String);
+    Code:
+       0: new           #380                // class net/minecraft/item/Item
+       3: dup
+       4: invokespecial #381                // Method net/minecraft/item/Item."<init>":()V
+       7: astore_2
+       8: aload_2
+       9: invokestatic  #384                // Method ru/lolienergistics/lli0OiIlAND.lI00OlAND:()Lru/lolienergistics/lI00OlAND;
+      12: invokevirtual #388                // Method net/minecraft/item/Item.func_77637_a:(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      15: pop
+      16: aload_2
+      17: ldc_w         #390                // String lolienergistics:core/sword_crafting_core
+      20: invokevirtual #394                // Method net/minecraft/item/Item.func_111206_d:(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      23: pop
+      24: aload_2
+      25: new           #396                // class java/lang/StringBuilder
+      28: dup
+      29: invokespecial #397                // Method java/lang/StringBuilder."<init>":()V
+      32: ldc_w         #399                // String sword_crafting_core_
+      35: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      38: aload_0
+      39: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      42: invokevirtual #407                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      45: invokevirtual #410                // Method net/minecraft/item/Item.func_77655_b:(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      48: pop
+      49: aload_2
+      50: new           #396                // class java/lang/StringBuilder
+      53: dup
+      54: invokespecial #397                // Method java/lang/StringBuilder."<init>":()V
+      57: ldc_w         #399                // String sword_crafting_core_
+      60: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      63: aload_0
+      64: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      67: invokevirtual #407                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      70: invokestatic  #356                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      73: aload_1
+      74: ldc_w         #412                // String ���
+      77: invokevirtual #418                // Method java/lang/String.startsWith:(Ljava/lang/String;)Z
+      80: ifeq          94
+      83: aload_1
+      84: ldc_w         #412                // String ���
+      87: ldc_w         #420                // String
+      90: invokevirtual #424                // Method java/lang/String.replaceFirst:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+      93: astore_1
+      94: aload_2
+      95: new           #396                // class java/lang/StringBuilder
+      98: dup
+      99: invokespecial #397                // Method java/lang/StringBuilder."<init>":()V
+     102: ldc_w         #426                // String ���� ��������: ���
+     105: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     108: aload_1
+     109: invokevirtual #403                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     112: invokevirtual #407                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     115: invokestatic  #362                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+     118: return
+
+  private static void I1O1I1LaNd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #428                // class ru/lolienergistics/il1OI0lAnd
+       5: dup
+       6: invokespecial #429                // Method ru/lolienergistics/il1OI0lAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void OOOIilanD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #436                // class ru/lolienergistics/lOi1OOI1lanD
+       5: dup
+       6: invokespecial #437                // Method ru/lolienergistics/lOi1OOI1lanD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lI00OlAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #439                // class ru/lolienergistics/lI0OIILand
+       5: dup
+       6: invokespecial #440                // Method ru/lolienergistics/lI0OIILand."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lli0OiIlAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #442                // class ru/lolienergistics/lOililLAnd
+       5: dup
+       6: invokespecial #443                // Method ru/lolienergistics/lOililLAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void li0iOILAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #445                // class ru/lolienergistics/iIllllOlANd
+       5: dup
+       6: invokespecial #446                // Method ru/lolienergistics/iIllllOlANd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void O1il1llOLANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #448                // class ru/lolienergistics/lii1IlAND
+       5: dup
+       6: invokespecial #449                // Method ru/lolienergistics/lii1IlAND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void Oill1LAnD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #451                // class ru/lolienergistics/lIOl0lAND
+       5: dup
+       6: invokespecial #452                // Method ru/lolienergistics/lIOl0lAND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lIOILand(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #454                // class ru/lolienergistics/lOOl0LaNd
+       5: dup
+       6: invokespecial #455                // Method ru/lolienergistics/lOOl0LaNd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lil0liLand(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #457                // class ru/lolienergistics/l10OilanD
+       5: dup
+       6: invokespecial #458                // Method ru/lolienergistics/l10OilanD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void iilIi1laND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #460                // class ru/lolienergistics/lO011O1IlAnD
+       5: dup
+       6: invokespecial #461                // Method ru/lolienergistics/lO011O1IlAnD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lli011lLANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #463                // class ru/lolienergistics/lOlO0I0land
+       5: dup
+       6: invokespecial #464                // Method ru/lolienergistics/lOlO0I0land."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l0illAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #466                // class ru/lolienergistics/OlO11Land
+       5: dup
+       6: invokespecial #467                // Method ru/lolienergistics/OlO11Land."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void IO11O0LANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #469                // class ru/lolienergistics/l0O1OIlaND
+       5: dup
+       6: invokespecial #470                // Method ru/lolienergistics/l0O1OIlaND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l11lLANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #472                // class ru/lolienergistics/llllLANd
+       5: dup
+       6: invokespecial #473                // Method ru/lolienergistics/llllLANd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lO110l1LANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #475                // class ru/lolienergistics/I100I0lLand
+       5: dup
+       6: invokespecial #476                // Method ru/lolienergistics/I100I0lLand."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l0iIlIO1laNd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #478                // class ru/lolienergistics/l1l0lAnd
+       5: dup
+       6: invokespecial #479                // Method ru/lolienergistics/l1l0lAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void iOIl0LAnD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #481                // class ru/lolienergistics/lOIOlOIIlAnd
+       5: dup
+       6: invokespecial #482                // Method ru/lolienergistics/lOIOlOIIlAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void iIiO00OLaNd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #484                // class ru/lolienergistics/i0O1LAnd
+       5: dup
+       6: invokespecial #485                // Method ru/lolienergistics/i0O1LAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void ii1li00Land(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #487                // class ru/lolienergistics/llOlOiLand
+       5: dup
+       6: invokespecial #488                // Method ru/lolienergistics/llOlOiLand."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void IOI1LaNd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #490                // class ru/lolienergistics/liOi1OLaNd
+       5: dup
+       6: invokespecial #491                // Method ru/lolienergistics/liOi1OLaNd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lI00ilAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #493                // class ru/lolienergistics/i1i1OilanD
+       5: dup
+       6: invokespecial #494                // Method ru/lolienergistics/i1i1OilanD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l0l00lAND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #496                // class ru/lolienergistics/lOlOlaND
+       5: dup
+       6: invokespecial #497                // Method ru/lolienergistics/lOlOlaND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void iOl10IlLAnd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #499                // class ru/lolienergistics/il0ii0ILANd
+       5: dup
+       6: invokespecial #500                // Method ru/lolienergistics/il0ii0ILANd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lIiIii1LAnD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #502                // class ru/lolienergistics/IliO01LAnd
+       5: dup
+       6: invokespecial #503                // Method ru/lolienergistics/IliO01LAnd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void II1Iland(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #505                // class ru/lolienergistics/O1iO000Land
+       5: dup
+       6: invokespecial #506                // Method ru/lolienergistics/O1iO000Land."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l0IO0LAnd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #508                // class ru/lolienergistics/O1iOl0lAND
+       5: dup
+       6: invokespecial #509                // Method ru/lolienergistics/O1iOl0lAND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void liOIOOLANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #511                // class ru/lolienergistics/IliIIi1lanD
+       5: dup
+       6: invokespecial #512                // Method ru/lolienergistics/IliIIi1lanD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void II1i1l0laND(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #514                // class ru/lolienergistics/lOOliLANd
+       5: dup
+       6: invokespecial #515                // Method ru/lolienergistics/lOOliLANd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void OOOliOOllANd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #517                // class ru/lolienergistics/I0Oi1O0OlaND
+       5: dup
+       6: invokespecial #518                // Method ru/lolienergistics/I0Oi1O0OlaND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void IiiilAnD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #520                // class ru/lolienergistics/lilILAND
+       5: dup
+       6: invokespecial #521                // Method ru/lolienergistics/lilILAND."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void ll1ILAnd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #523                // class ru/lolienergistics/li1O0l0LaNd
+       5: dup
+       6: invokespecial #524                // Method ru/lolienergistics/li1O0l0LaNd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l1i00lLAnD(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #526                // class ru/lolienergistics/iiOlLand
+       5: dup
+       6: invokespecial #527                // Method ru/lolienergistics/iiOlLand."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void lili0l0laNd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #529                // class ru/lolienergistics/llii0LAnD
+       5: dup
+       6: invokespecial #530                // Method ru/lolienergistics/llii0LAnD."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void liIIllIland(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #532                // class ru/lolienergistics/lOOOLaNd
+       5: dup
+       6: invokespecial #533                // Method ru/lolienergistics/lOOOLaNd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+
+  private static void l0Oil0IILAnd(ru.lolienergistics.ll0iI10IlAND);
+    Code:
+       0: aload_0
+       1: iconst_0
+       2: new           #535                // class ru/lolienergistics/O1liliLANd
+       5: dup
+       6: invokespecial #536                // Method ru/lolienergistics/O1liliLANd."<init>":()V
+       9: invokestatic  #434                // Method ru/lolienergistics/lii1LAND.I1O1I1LaNd:(Lnet/minecraft/item/Item;ILnet/minecraftforge/client/IItemRenderer;)V
+      12: return
+}

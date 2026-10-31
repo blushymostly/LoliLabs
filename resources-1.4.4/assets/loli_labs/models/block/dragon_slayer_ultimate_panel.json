@@ -1,0 +1,8 @@
+{
+  "parent": "loli_labs:block/dragon_slayer_ultimate_panel_south",
+  "textures": {
+    "top": "loli_labs:block/machines/dragon_slayer_ultimate_panel_top",
+    "side": "loli_labs:block/machines/dragon_slayer_ultimate_panel_side",
+    "bottom": "loli_labs:block/machines/dragon_slayer_ultimate_panel_bottom"
+  }
+}

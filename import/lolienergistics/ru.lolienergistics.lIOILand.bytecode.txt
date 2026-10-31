@@ -1,0 +1,403 @@
+public class ru.lolienergistics.lIOILand {
+  public ru.lolienergistics.lIOILand();
+    Code:
+       0: aload_0
+       1: invokespecial #16                 // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void I1O1I1LaNd();
+    Code:
+       0: ldc           #18                 // String king1
+       2: ldc           #18                 // String king1
+       4: ldc           #20                 // String king
+       6: ldc           #22                 // String ���� ���� �����
+       8: ldc           #24                 // String ������ ���� �����
+      10: ldc           #26                 // String ������ ���� �����
+      12: ldc           #28                 // String ������� ���� �����
+      14: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      17: ldc           #33                 // String king2
+      19: ldc           #33                 // String king2
+      21: ldc           #20                 // String king
+      23: ldc           #35                 // String ���������� ����������� ����
+      25: ldc           #37                 // String ���������� ����������� ������
+      27: ldc           #39                 // String ���������� ����������� ������
+      29: ldc           #41                 // String ���������� ����������� �������
+      31: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      34: ldc           #43                 // String king3
+      36: ldc           #43                 // String king3
+      38: ldc           #20                 // String king
+      40: ldc           #45                 // String ���� �-���
+      42: ldc           #47                 // String ������ �-���
+      44: ldc           #49                 // String ������ �-���
+      46: ldc           #51                 // String ������� �-���
+      48: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      51: ldc           #53                 // String king4
+      53: ldc           #53                 // String king4
+      55: ldc           #20                 // String king
+      57: ldc           #55                 // String �������� ����
+      59: ldc           #57                 // String �������� ������
+      61: ldc           #59                 // String �������� ������
+      63: ldc           #61                 // String �������� �������
+      65: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      68: ldc           #63                 // String king5
+      70: ldc           #63                 // String king5
+      72: ldc           #20                 // String king
+      74: ldc           #65                 // String ���� �������� ���
+      76: ldc           #67                 // String ������ �������� ���
+      78: ldc           #69                 // String ������ �������� ���
+      80: ldc           #71                 // String ������� �������� ���
+      82: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+      85: ldc           #73                 // String king6
+      87: ldc           #73                 // String king6
+      89: ldc           #20                 // String king
+      91: ldc           #75                 // String �������� ����������� ����
+      93: ldc           #77                 // String �������� ����������� ������
+      95: ldc           #79                 // String �������� ����������� ������
+      97: ldc           #81                 // String �������� ����������� �������
+      99: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     102: ldc           #83                 // String king7
+     104: ldc           #83                 // String king7
+     106: ldc           #20                 // String king
+     108: ldc           #85                 // String ���������� ����������� ����
+     110: ldc           #87                 // String ���������� ����������� ������
+     112: ldc           #89                 // String ���������� ����������� ������
+     114: ldc           #91                 // String ���������� ����������� �������
+     116: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     119: ldc           #93                 // String king8
+     121: ldc           #93                 // String king8
+     123: ldc           #20                 // String king
+     125: ldc           #95                 // String �������� ����
+     127: ldc           #97                 // String �������� ������
+     129: ldc           #99                 // String �������� ������
+     131: ldc           #101                // String �������� �������
+     133: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     136: ldc           #103                // String gold
+     138: ldc           #103                // String gold
+     140: ldc           #103                // String gold
+     142: ldc           #105                // String ���� ��������
+     144: ldc           #107                // String ������ ��������
+     146: ldc           #109                // String ������ ��������
+     148: ldc           #111                // String ������� ��������
+     150: invokestatic  #31                 // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V
+     153: ldc           #113                // String dark
+     155: ldc           #115                // String Dark
+     157: ldc           #117                // String custom
+     159: ldc           #119                // String ���� �������
+     161: ldc           #121                // String ������ �������
+     163: ldc           #123                // String ������ �������
+     165: ldc           #125                // String ������� �������
+     167: invokedynamic #142,  0            // InvokeDynamic #0:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+     172: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+     175: ldc           #147                // String satan
+     177: ldc           #149                // String Satan
+     179: ldc           #117                // String custom
+     181: ldc           #151                // String ���� ��������
+     183: ldc           #153                // String ������ ��������
+     185: ldc           #155                // String ������ ��������
+     187: ldc           #157                // String ������� ��������
+     189: invokedynamic #162,  0            // InvokeDynamic #1:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+     194: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+     197: ldc           #164                // String hero
+     199: ldc           #166                // String Hero
+     201: ldc           #117                // String custom
+     203: ldc           #168                // String ���� �������� ������
+     205: ldc           #170                // String ������ �������� ������
+     207: ldc           #172                // String ������ �������� ������
+     209: ldc           #174                // String ������� �������� ������
+     211: invokedynamic #179,  0            // InvokeDynamic #2:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+     216: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+     219: ldc           #181                // String oson
+     221: ldc           #183                // String Oson
+     223: ldc           #117                // String custom
+     225: ldc           #185                // String ������������ ����: ��������
+     227: ldc           #187                // String ������������ ������: ��������
+     229: ldc           #189                // String ������������ ������: ��������
+     231: ldc           #191                // String ������������ �������: ��������
+     233: invokedynamic #196,  0            // InvokeDynamic #3:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+     238: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+     241: ldc           #198                // String leon
+     243: ldc           #200                // String Leon
+     245: ldc           #117                // String custom
+     247: ldc           #202                // String ���� �������� ������ ����
+     249: ldc           #204                // String ������ �������� ������ ����
+     251: ldc           #206                // String ������ �������� ������ ����
+     253: ldc           #208                // String ������� �������� ������ ����
+     255: invokedynamic #213,  0            // InvokeDynamic #4:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+     260: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+     263: return
+
+  public static void I1O1I1LaNd(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: aload_2
+       3: aload_3
+       4: aload         4
+       6: aload         5
+       8: aload         6
+      10: invokedynamic #217,  0            // InvokeDynamic #5:run:()Lru/lolienergistics/lIOILand$I1O1I1LaNd;
+      15: invokestatic  #145                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lru/lolienergistics/lIOILand$I1O1I1LaNd;)V
+      18: return
+
+  public static void I1O1I1LaNd(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, ru.lolienergistics.lIOILand$I1O1I1LaNd);
+    Code:
+       0: new           #219                // class ru/lolienergistics/OiO1llAnd
+       3: dup
+       4: new           #221                // class java/lang/StringBuilder
+       7: dup
+       8: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+      11: ldc           #224                // String electric_head_
+      13: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      16: aload_0
+      17: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      20: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      23: aload_1
+      24: aload_2
+      25: iconst_0
+      26: invokespecial #235                // Method ru/lolienergistics/OiO1llAnd."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+      29: astore        8
+      31: aload         8
+      33: aload         8
+      35: invokevirtual #238                // Method ru/lolienergistics/OiO1llAnd.func_77658_a:()Ljava/lang/String;
+      38: invokestatic  #244                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      41: getstatic     #249                // Field ru/lolienergistics/lli0OiIlAND.OOOIilanD:Ljava/util/LinkedList;
+      44: aload         8
+      46: invokevirtual #255                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+      49: pop
+      50: aload         7
+      52: aload         8
+      54: invokeinterface #257,  2          // InterfaceMethod ru/lolienergistics/lIOILand$I1O1I1LaNd.run:(Lru/lolienergistics/OiO1llAnd;)V
+      59: new           #221                // class java/lang/StringBuilder
+      62: dup
+      63: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+      66: ldc_w         #259                // String armor_core_head_
+      69: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      72: aload_0
+      73: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      76: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      79: new           #221                // class java/lang/StringBuilder
+      82: dup
+      83: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+      86: ldc_w         #261                // String ���� �������� �����:
+      89: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      92: aload_3
+      93: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+      96: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+      99: invokestatic  #264                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)V
+     102: aload         8
+     104: aload_3
+     105: invokestatic  #270                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+     108: new           #219                // class ru/lolienergistics/OiO1llAnd
+     111: dup
+     112: new           #221                // class java/lang/StringBuilder
+     115: dup
+     116: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     119: ldc_w         #272                // String electric_chest_
+     122: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     125: aload_0
+     126: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     129: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     132: aload_1
+     133: aload_2
+     134: iconst_1
+     135: invokespecial #235                // Method ru/lolienergistics/OiO1llAnd."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+     138: astore        8
+     140: aload         8
+     142: aload         8
+     144: invokevirtual #238                // Method ru/lolienergistics/OiO1llAnd.func_77658_a:()Ljava/lang/String;
+     147: invokestatic  #244                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     150: getstatic     #249                // Field ru/lolienergistics/lli0OiIlAND.OOOIilanD:Ljava/util/LinkedList;
+     153: aload         8
+     155: invokevirtual #255                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+     158: pop
+     159: aload         7
+     161: aload         8
+     163: invokeinterface #257,  2          // InterfaceMethod ru/lolienergistics/lIOILand$I1O1I1LaNd.run:(Lru/lolienergistics/OiO1llAnd;)V
+     168: new           #221                // class java/lang/StringBuilder
+     171: dup
+     172: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     175: ldc_w         #274                // String armor_core_chest_
+     178: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     181: aload_0
+     182: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     185: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     188: new           #221                // class java/lang/StringBuilder
+     191: dup
+     192: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     195: ldc_w         #276                // String ���� �������� ������:
+     198: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     201: aload         4
+     203: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     206: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     209: invokestatic  #264                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)V
+     212: aload         8
+     214: aload         4
+     216: invokestatic  #270                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+     219: new           #219                // class ru/lolienergistics/OiO1llAnd
+     222: dup
+     223: new           #221                // class java/lang/StringBuilder
+     226: dup
+     227: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     230: ldc_w         #278                // String electric_legs_
+     233: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     236: aload_0
+     237: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     240: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     243: aload_1
+     244: aload_2
+     245: iconst_2
+     246: invokespecial #235                // Method ru/lolienergistics/OiO1llAnd."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+     249: astore        8
+     251: aload         8
+     253: aload         8
+     255: invokevirtual #238                // Method ru/lolienergistics/OiO1llAnd.func_77658_a:()Ljava/lang/String;
+     258: invokestatic  #244                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     261: getstatic     #249                // Field ru/lolienergistics/lli0OiIlAND.OOOIilanD:Ljava/util/LinkedList;
+     264: aload         8
+     266: invokevirtual #255                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+     269: pop
+     270: aload         7
+     272: aload         8
+     274: invokeinterface #257,  2          // InterfaceMethod ru/lolienergistics/lIOILand$I1O1I1LaNd.run:(Lru/lolienergistics/OiO1llAnd;)V
+     279: new           #221                // class java/lang/StringBuilder
+     282: dup
+     283: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     286: ldc_w         #280                // String armor_core_legs_
+     289: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     292: aload_0
+     293: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     296: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     299: new           #221                // class java/lang/StringBuilder
+     302: dup
+     303: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     306: ldc_w         #282                // String ���� �������� �����:
+     309: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     312: aload         5
+     314: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     317: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     320: invokestatic  #264                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)V
+     323: aload         8
+     325: aload         5
+     327: invokestatic  #270                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+     330: new           #219                // class ru/lolienergistics/OiO1llAnd
+     333: dup
+     334: new           #221                // class java/lang/StringBuilder
+     337: dup
+     338: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     341: ldc_w         #284                // String electric_feet_
+     344: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     347: aload_0
+     348: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     351: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     354: aload_1
+     355: aload_2
+     356: iconst_3
+     357: invokespecial #235                // Method ru/lolienergistics/OiO1llAnd."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
+     360: astore        8
+     362: aload         8
+     364: aload         8
+     366: invokevirtual #238                // Method ru/lolienergistics/OiO1llAnd.func_77658_a:()Ljava/lang/String;
+     369: invokestatic  #244                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     372: getstatic     #249                // Field ru/lolienergistics/lli0OiIlAND.OOOIilanD:Ljava/util/LinkedList;
+     375: aload         8
+     377: invokevirtual #255                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+     380: pop
+     381: aload         7
+     383: aload         8
+     385: invokeinterface #257,  2          // InterfaceMethod ru/lolienergistics/lIOILand$I1O1I1LaNd.run:(Lru/lolienergistics/OiO1llAnd;)V
+     390: aload         8
+     392: aload         6
+     394: invokestatic  #270                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+     397: new           #221                // class java/lang/StringBuilder
+     400: dup
+     401: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     404: ldc_w         #286                // String armor_core_feet_
+     407: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     410: aload_0
+     411: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     414: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     417: new           #221                // class java/lang/StringBuilder
+     420: dup
+     421: invokespecial #222                // Method java/lang/StringBuilder."<init>":()V
+     424: ldc_w         #288                // String ���� �������� �������:
+     427: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     430: aload         6
+     432: invokevirtual #228                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     435: invokevirtual #232                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     438: invokestatic  #264                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)V
+     441: return
+
+  public static void I1O1I1LaNd(java.lang.String, java.lang.String);
+    Code:
+       0: new           #290                // class net/minecraft/item/Item
+       3: dup
+       4: invokespecial #291                // Method net/minecraft/item/Item."<init>":()V
+       7: astore_2
+       8: aload_2
+       9: invokestatic  #294                // Method ru/lolienergistics/lli0OiIlAND.lli0OiIlAND:()Lru/lolienergistics/lI00OlAND;
+      12: invokevirtual #298                // Method net/minecraft/item/Item.func_77637_a:(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      15: pop
+      16: aload_2
+      17: aload_0
+      18: invokevirtual #302                // Method net/minecraft/item/Item.func_77655_b:(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      21: pop
+      22: aload_2
+      23: ldc_w         #304                // String lolienergistics:core/armor_crafting_core
+      26: invokevirtual #307                // Method net/minecraft/item/Item.func_111206_d:(Ljava/lang/String;)Lnet/minecraft/item/Item;
+      29: pop
+      30: aload_2
+      31: aload_0
+      32: invokestatic  #244                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      35: aload_2
+      36: aload_1
+      37: invokestatic  #270                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+      40: return
+
+  private static void I1O1I1LaNd(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #312                // Method ru/lolienergistics/iiO0ilaNd.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/iiO0ilaNd;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+
+  private static void OOOIilanD(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #323                // Method ru/lolienergistics/i11IllAnd.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/i11IllAnd;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+
+  private static void lI00OlAND(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #328                // Method ru/lolienergistics/Il0O0LANd.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/Il0O0LANd;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+
+  private static void lli0OiIlAND(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #333                // Method ru/lolienergistics/iOO1IiI1lAnD.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/iOO1IiI1lAnD;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+
+  private static void li0iOILAND(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #338                // Method ru/lolienergistics/O1iIland.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/O1iIland;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+
+  private static void O1il1llOLANd(ru.lolienergistics.OiO1llAnd);
+    Code:
+       0: aload_0
+       1: aload_0
+       2: invokestatic  #343                // Method ru/lolienergistics/lIOi0LANd.I1O1I1LaNd:(Lru/lolienergistics/OiO1llAnd;)Lru/lolienergistics/lIOi0LANd;
+       5: invokestatic  #318                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+       8: return
+}

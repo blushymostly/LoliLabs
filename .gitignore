@@ -1,0 +1,37 @@
+# Generated builds, binaries and local caches
+**/build/
+**/dist/
+/dependencies/
+/previous/
+/.gradle/
+/.idea/
+/.vscode/
+*.class
+*.jar
+*.log
+*.tmp
+*.bak
+*.iml
+Thumbs.db
+.DS_Store
+
+# Historical resource snapshots. Active resources-1.4.4 and future versions remain tracked.
+/resources/
+/resources-testing/
+/resources-1.3.*/
+/resources-1.4.1/
+/resources-1.4.2/
+/resources-1.4.3/
+/deferred/
+
+# Regenerated legacy indexes
+/import/lolienergistics/class-index.json
+/import/lolienergistics/item-classes.json
+/import/lolienergistics/item-textures.json
+
+# Local secrets
+.env
+.env.*
+*.pem
+*.pfx
+*.key

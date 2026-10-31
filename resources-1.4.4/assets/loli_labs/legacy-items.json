@@ -1,0 +1,1780 @@
+[
+  {
+    "id": "aberration_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/aberration_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "adamantium_cluster_arcane",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/adamantium_cluster_arcane.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "adamantium_cluster_dragon",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/adamantium_cluster_dragon.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "adamantium_cluster_ethereal",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/adamantium_cluster_ethereal.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "adamantium_cluster_ghost",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/adamantium_cluster_ghost.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "adamantium_cluster_infernal",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/adamantium_cluster_infernal.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "amber_crystal_bee_frame",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/amber_crystal_bee_frame.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "amber_iridescent_compressed_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/amber_iridescent_compressed_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "amber_iridescent_crystal_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/amber_iridescent_crystal_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "amber_iridescent_crystal_plate",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/amber_iridescent_crystal_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_base",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_base.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_crystal",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_crystal.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_energy_element",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_energy_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_plasma_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_plasma_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_plate",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ametrine_shard",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/ametrine_shard.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "anisotropic_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/anisotropic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "antimaterial_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/antimaterial_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_green_core",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_green_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_green_element",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_green_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_pink_core",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_pink_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_pink_element",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_pink_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_purple_core",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_purple_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_purple_element",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_purple_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_red_core",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_red_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_red_element",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_red_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_ultimate_core",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_ultimate_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "aoa_ultimate_element",
+    "group": "nevermine",
+    "resource": "assets/lolienergistics/textures/items/nevermine/aoa_ultimate_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "asmodeus_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/asmodeus_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "awakened_dream_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/awakened_dream_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "awakened_mortum_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/awakened_mortum_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "awakened_mystery_dungeon_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/awakened_mystery_dungeon_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "awakened_nightmares_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/awakened_nightmares_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "basis_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/basis_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "basis_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/basis_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "bee_core",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/bee_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "beelzebub_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/beelzebub_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "belphegor_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/belphegor_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "bimetallic_microcircuit",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/bimetallic_microcircuit.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blood_clot",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/blood_clot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_crystal_bee_frame",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/blue_crystal_bee_frame.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_damaged_iris",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/blue_damaged_iris.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_iridescent_compressed_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/blue_iridescent_compressed_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_iridescent_crystal_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/blue_iridescent_crystal_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_iridescent_crystal_plate",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/blue_iridescent_crystal_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "blue_iris_pupil",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/blue_iris_pupil.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "bone_growth",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/bone_growth.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "bronze_allow_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/bronze_allow_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "brown_damaged_iris",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/brown_damaged_iris.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "brown_iris_pupil",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/brown_iris_pupil.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "bud_filled_sunflower_petals",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/bud_filled_sunflower_petals.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "cherry_blossomed_flower_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/cherry_blossomed_flower_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "cherry_flowers",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/cherry_flowers.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chromodynamic_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/chromodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_base",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_base.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_crystal",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_crystal.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_energy_element",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_energy_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_plasma_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_plasma_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_plate",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "chrysolite_shard",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/chrysolite_shard.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "clouded_eyeball",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/clouded_eyeball.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "coding_plate_gray",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/coding_plate_gray.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "coding_plate_green",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/coding_plate_green.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "coding_plate_pink",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/coding_plate_pink.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "coding_plate_purple",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/coding_plate_purple.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "coding_plate_yellow",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/coding_plate_yellow.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "cololess_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/cololess_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "colorless_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/colorless_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "conductive_chip",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/conductive_chip.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "cooling_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/cooling_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "core_unifier_fluid_matter",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/core_unifier_fluid_matter.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "core_unifier_neutronium",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/core_unifier_neutronium.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "cracked_bird_bone",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/cracked_bird_bone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "cracked_skull",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/cracked_skull.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "crystal_primordial_chaos",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/crystal_primordial_chaos.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "dark_dream_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/dark_dream_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dark_mortum_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/dark_mortum_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dark_mystery_dungeon_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/dark_mystery_dungeon_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dark_nightmares_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/dark_nightmares_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dispersion_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/dispersion_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dream_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/dream_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "dust_primordial_chaos",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/dust_primordial_chaos.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "electrolytic_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/electrolytic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "electroplated_niobium_charged_chip",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/electroplated_niobium_charged_chip.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "electroplated_niobium_chip",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/electroplated_niobium_chip.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "empty_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/empty_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "empty_magic_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/empty_magic_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "engine_boost",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/engine_boost.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "fetid_ashes",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/fetid_ashes.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "flower_filled_iris_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/flower_filled_iris_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "flower_filled_oleander_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/flower_filled_oleander_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "flower_filled_rose_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/flower_filled_rose_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluctuation_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/fluctuation_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_base",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_base.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_crystal",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_crystal.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_energy_element",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_energy_element.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_plasma_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_plasma_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_plate",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fluorite_shard",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/fluorite_shard.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "four-color_crystal_bee_frame",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/four-color_crystal_bee_frame.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fusion_dream",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/fusion_dream.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fusion_mortum",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/fusion_mortum.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fusion_mystery_dungeon",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/fusion_mystery_dungeon.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fusion_nightmares",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/fusion_nightmares.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "fusion_parallel_dimension",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/fusion_parallel_dimension.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galaxy_singularity_blue",
+    "group": "galacticraft",
+    "resource": "assets/lolienergistics/textures/items/galacticraft/galaxy_singularity_blue.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galaxy_singularity_gold",
+    "group": "galacticraft",
+    "resource": "assets/lolienergistics/textures/items/galacticraft/galaxy_singularity_gold.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galaxy_singularity_green",
+    "group": "galacticraft",
+    "resource": "assets/lolienergistics/textures/items/galacticraft/galaxy_singularity_green.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galaxy_singularity_multicolor",
+    "group": "galacticraft",
+    "resource": "assets/lolienergistics/textures/items/galacticraft/galaxy_singularity_multicolor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galaxy_singularity_red",
+    "group": "galacticraft",
+    "resource": "assets/lolienergistics/textures/items/galacticraft/galaxy_singularity_red.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galvanized_niobium_board",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/galvanized_niobium_board.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galvanized_niobium_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/galvanized_niobium_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "galvanized_niobium_sheet",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/galvanized_niobium_sheet.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "glowstone_allow_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/glowstone_allow_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "gravitation_engine",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/gravitation_engine.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "gravitomagnetic_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/gravitomagnetic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "gray_damaged_iris",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/gray_damaged_iris.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "gray_iris_pupil",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/gray_iris_pupil.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_crystal_bee_frame",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/green_crystal_bee_frame.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_damaged_iris",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/green_damaged_iris.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_iridescent_compressed_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/green_iridescent_compressed_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_iridescent_crystal_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/green_iridescent_crystal_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_iridescent_crystal_plate",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/green_iridescent_crystal_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "green_iris_pupil",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/green_iris_pupil.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "holographic_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/holographic_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "horrific_something",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/horrific_something.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "improvement_beekeeper_panels",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/improvement_beekeeper_panels.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "iris_flowers",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/iris_flowers.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "leviathan_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/leviathan_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "living_flesh",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/living_flesh.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "lucifer_demon_contract",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/lucifer_demon_contract.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_loose_blue",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_loose_blue.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_loose_pink",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_loose_pink.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_luminous_pink",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_luminous_pink.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_luminous_red",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_luminous_red.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_luminous_turquoise",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_luminous_turquoise.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_mutated_violet_turquoise",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_mutated_violet_turquoise.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_purple",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_purple.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_sparkling",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_sparkling.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "matter_turquoise",
+    "group": "matters",
+    "resource": "assets/lolienergistics/textures/items/matters/matter_turquoise.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "mortum_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/mortum_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "mt_core",
+    "group": "asp",
+    "resource": "assets/lolienergistics/textures/items/asp/mt_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "multialloy_allow_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/multialloy_allow_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "multicolor_magic_bud",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/multicolor_magic_bud.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "mystery_dungeon_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/mystery_dungeon_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "neutronium_accumulation",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/neutronium_accumulation.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "nightmares_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/nightmares_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "niobium_chip",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/niobium_chip.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "niobium_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/niobium_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "niobium_microcircuit",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/niobium_microcircuit.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "niobium_pcb",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/niobium_pcb.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "niobium_thin_sheet",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/niobium_thin_sheet.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "obsidian_allow_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/obsidian_allow_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "oleander_flowers",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/oleander_flowers.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "osmiridium_capacitor",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/osmiridium_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "osmiridium_gear",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/osmiridium_gear.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "osmiridium_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/osmiridium_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "osmiridium_plate",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/osmiridium_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "osmium_allow_capacitor",
+    "group": "mekanism",
+    "resource": "assets/lolienergistics/textures/items/mekanism/osmium_allow_capacitor.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "osmium_plate",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/osmium_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "parametric_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/parametric_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "petrified_heart",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/petrified_heart.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "purple_crystal_bee_frame",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/purple_crystal_bee_frame.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "purple_iridescent_compressed_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/purple_iridescent_compressed_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "purple_iridescent_crystal_honeycombs",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/purple_iridescent_crystal_honeycombs.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "purple_iridescent_crystal_plate",
+    "group": "forestry",
+    "resource": "assets/lolienergistics/textures/items/forestry/purple_iridescent_crystal_plate.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "purple_spectrum_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/purple_spectrum_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "quantum_chip",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/quantum_chip.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "rare_purple_stone",
+    "group": "divinerpg",
+    "resource": "assets/lolienergistics/textures/items/divinerpg/rare_purple_stone.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "red_spectrum_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/red_spectrum_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "ritual_blood_jar",
+    "group": "bloodmagic",
+    "resource": "assets/lolienergistics/textures/items/bloodmagic/ritual_blood_jar.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "sakura_flowers",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/sakura_flowers.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "shabby_wing",
+    "group": "thaumcraft",
+    "resource": "assets/lolienergistics/textures/items/thaumcraft/shabby_wing.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "sparkling_core",
+    "group": "core",
+    "resource": "assets/lolienergistics/textures/items/core/sparkling_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "star_matter_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/star_matter_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "sunflower_flowers",
+    "group": "botania",
+    "resource": "assets/lolienergistics/textures/items/botania/sunflower_flowers.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "superalloy_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/superalloy_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "transparent_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/transparent_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "tungsten_ingot",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/tungsten_ingot.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "turquoise_spectrum_thermodynamic_core",
+    "group": "thermal",
+    "resource": "assets/lolienergistics/textures/items/thermal/turquoise_spectrum_thermodynamic_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.lolienergistics.iilIi1laND"
+  },
+  {
+    "id": "vajra_core",
+    "group": "consumable",
+    "resource": "assets/lolienergistics/textures/items/consumable/vajra_core.png",
+    "kind": "material",
+    "legacyRegistration": "ru.loliland.le.common.li0iOILAND"
+  },
+  {
+    "id": "base_microchip",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/microchip.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "base_transistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/transistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "base_capacitor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/capacitor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "base_diode",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/diode.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "base_resistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/resistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "base_conductive_contour",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/base/conductive_contour.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_microchip",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/microchip.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_transistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/transistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_capacitor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/capacitor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_diode",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/diode.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_resistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/resistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "quant_conductive_contour",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/quant/conductive_contour.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_microchip",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/microchip.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_transistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/transistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_capacitor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/capacitor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_diode",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/diode.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_resistor",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/resistor.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "integral_conductive_contour",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/components/integral/conductive_contour.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "infinity_nugget",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/infinity_nugget.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "infinity_dust",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/infinity_dust.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "infinity_dragon_awakened_heart",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/infinity_dragon_awakened_heart.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "neutronium_catalyst",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/neutronium_catalyst.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "infinity_singularity",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/infinity_singularity.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "red_energon",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/red_energon.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "dark_energon",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/dark_energon.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "energy_pulsating_crystal",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/energy_pulsating_crystal.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "energized_crystal_fluorite",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/energized_crystal_fluorite.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "energized_crystal_ametrine",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/energized_crystal_ametrine.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "energized_crystal_chrysolite",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/energized_crystal_chrysolite.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "copper_radiator",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/radiator/copper.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "iridium_radiator",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/radiator/iridium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "thermal_insulator1",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/thermal_insulator1.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "thermal_insulator2",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/thermal_insulator2.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "thermal_insulator3",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/thermal_insulator3.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "grinding_ball0",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/grinding_ball0.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "grinding_ball1",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/grinding_ball1.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "grinding_ball2",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/grinding_ball2.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_neutronium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_neutronium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_adamantium_dragon",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_adamantium_dragon.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_gladium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_gladium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_bedrockium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_bedrockium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_crystal_matrix",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_crystal_matrix.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_sannarium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_sannarium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_ametrine",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_ametrine.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_chrysolite",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_chrysolite.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_adamantium_arcane",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_adamantium_arcane.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_adamantium_ethereal",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_adamantium_ethereal.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_mobius",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_mobius.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_super_alloy",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_super_alloy.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_sebastyanit",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_sebastyanit.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_nether_star",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_nether_star.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_iridium_ore",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_iridium_ore.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_skyfiry",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_skyfiry.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_infinity_ingot",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_infinity_ingot.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_niobium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_niobium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_spark_matter",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_spark_matter.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_radvirium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_radvirium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_adamantium_ghost",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_adamantium_ghost.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_adamantium",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_adamantium.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity_molten_fluorite",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/molten_fluorite.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "fluid_singularity",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/singularity/fluid_singularity.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_yellow",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/yellow.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_brown",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/brown.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_green",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/green.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_lime",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/lime.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_gray",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/gray.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_red",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/red.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_lightblue",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/lightblue.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_magenta",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/magenta.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_orange",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/orange.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_purple",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/purple.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_cyan",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/cyan.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_white",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/white.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_lightgray",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/lightgray.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_blue",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/blue.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_black",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/black.png",
+    "supplier": "new Item(new Item.Properties())"
+  },
+  {
+    "id": "laser_focus_pink",
+    "kind": "material",
+    "resource": "assets/lolienergistics/textures/items/laser_focus/pink.png",
+    "supplier": "new Item(new Item.Properties())"
+  }
+]

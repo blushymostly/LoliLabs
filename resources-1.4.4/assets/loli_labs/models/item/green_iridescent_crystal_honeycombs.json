@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/legacy/forestry/green_iridescent_crystal_honeycombs"
+  }
+}

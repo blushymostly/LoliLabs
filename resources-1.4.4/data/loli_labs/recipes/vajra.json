@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "ic2modern:iridium_drill"
+    },
+    {
+      "item": "ic2modern:quantum_core"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:vajra"
+  }
+}

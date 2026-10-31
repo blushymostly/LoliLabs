@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:base_resistor"
+    },
+    {
+      "item": "ae2:fluix_crystal"
+    },
+    {
+      "item": "ic2modern:carbon_plate"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:quant_resistor",
+    "count": 2
+  }
+}

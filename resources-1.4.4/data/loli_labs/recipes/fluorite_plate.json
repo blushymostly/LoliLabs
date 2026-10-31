@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:fluorite_ingot"
+    },
+    {
+      "item": "ic2modern:electronic_circuit"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:fluorite_plate",
+    "count": 2
+  }
+}

@@ -1,0 +1,414 @@
+public class ru.lolienergistics.l11lLANd {
+  public ru.lolienergistics.l11lLANd();
+    Code:
+       0: aload_0
+       1: invokespecial #8                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void I1O1I1LaNd();
+    Code:
+       0: new           #11                 // class ru/lolienergistics/lO1OIlI1laNd
+       3: dup
+       4: ldc           #13                 // String upgrade_electric_item_power1
+       6: ldc           #15                 // String ���������: ������������� | 1 ��.
+       8: ldc           #16                 // int 100000000
+      10: invokespecial #19                 // Method ru/lolienergistics/lO1OIlI1laNd."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      13: invokestatic  #22                 // Method I1O1I1LaNd:(Lru/lolienergistics/OOiOLand;)V
+      16: new           #11                 // class ru/lolienergistics/lO1OIlI1laNd
+      19: dup
+      20: ldc           #24                 // String upgrade_electric_item_power2
+      22: ldc           #26                 // String ���������: ������������� | 2 ��.
+      24: ldc           #27                 // int 200000000
+      26: invokespecial #19                 // Method ru/lolienergistics/lO1OIlI1laNd."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      29: invokestatic  #22                 // Method I1O1I1LaNd:(Lru/lolienergistics/OOiOLand;)V
+      32: new           #11                 // class ru/lolienergistics/lO1OIlI1laNd
+      35: dup
+      36: ldc           #29                 // String upgrade_electric_item_power3
+      38: ldc           #31                 // String ���������: ������������� | 3 ��.
+      40: ldc           #32                 // int 300000000
+      42: invokespecial #19                 // Method ru/lolienergistics/lO1OIlI1laNd."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      45: invokestatic  #22                 // Method I1O1I1LaNd:(Lru/lolienergistics/OOiOLand;)V
+      48: new           #11                 // class ru/lolienergistics/lO1OIlI1laNd
+      51: dup
+      52: ldc           #34                 // String upgrade_electric_item_power4
+      54: ldc           #36                 // String ���������: ������������� | 4 ��.
+      56: ldc           #37                 // int 400000000
+      58: invokespecial #19                 // Method ru/lolienergistics/lO1OIlI1laNd."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      61: invokestatic  #22                 // Method I1O1I1LaNd:(Lru/lolienergistics/OOiOLand;)V
+      64: new           #11                 // class ru/lolienergistics/lO1OIlI1laNd
+      67: dup
+      68: ldc           #39                 // String upgrade_electric_item_power5
+      70: ldc           #41                 // String ���������: ������������� | 5 ��.
+      72: ldc           #42                 // int 500000000
+      74: invokespecial #19                 // Method ru/lolienergistics/lO1OIlI1laNd."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      77: invokestatic  #22                 // Method I1O1I1LaNd:(Lru/lolienergistics/OOiOLand;)V
+      80: new           #44                 // class ru/lolienergistics/iIOiOLAND
+      83: dup
+      84: ldc           #46                 // String upgrade_sword_radius1
+      86: ldc           #48                 // String ���������: ������ ����� | 1 ��.
+      88: iconst_2
+      89: invokespecial #49                 // Method ru/lolienergistics/iIOiOLAND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      92: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+      95: new           #44                 // class ru/lolienergistics/iIOiOLAND
+      98: dup
+      99: ldc           #54                 // String upgrade_sword_radius2
+     101: ldc           #56                 // String ���������: ������ ����� | 2 ��.
+     103: iconst_3
+     104: invokespecial #49                 // Method ru/lolienergistics/iIOiOLAND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     107: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     110: new           #44                 // class ru/lolienergistics/iIOiOLAND
+     113: dup
+     114: ldc           #58                 // String upgrade_sword_radius3
+     116: ldc           #60                 // String ���������: ������ ����� | 3 ��.
+     118: iconst_5
+     119: invokespecial #49                 // Method ru/lolienergistics/iIOiOLAND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     122: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     125: new           #62                 // class ru/lolienergistics/llllil1LaND
+     128: dup
+     129: ldc           #64                 // String upgrade_sword_attack1
+     131: ldc           #66                 // String ���������: ���� ����� | 1 ��.
+     133: bipush        50
+     135: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     138: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     141: new           #62                 // class ru/lolienergistics/llllil1LaND
+     144: dup
+     145: ldc           #69                 // String upgrade_sword_attack2
+     147: ldc           #71                 // String ���������: ���� ����� | 2 ��.
+     149: sipush        150
+     152: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     155: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     158: new           #62                 // class ru/lolienergistics/llllil1LaND
+     161: dup
+     162: ldc           #73                 // String upgrade_sword_attack3
+     164: ldc           #75                 // String ���������: ���� ����� | 3 ��.
+     166: sipush        200
+     169: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     172: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     175: new           #62                 // class ru/lolienergistics/llllil1LaND
+     178: dup
+     179: ldc           #77                 // String upgrade_sword_attack4
+     181: ldc           #79                 // String ���������: ���� ����� | 4 ��.
+     183: sipush        300
+     186: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     189: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     192: new           #62                 // class ru/lolienergistics/llllil1LaND
+     195: dup
+     196: ldc           #81                 // String upgrade_sword_attack5
+     198: ldc           #83                 // String ���������: ���� ����� | 5 ��.
+     200: sipush        400
+     203: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     206: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     209: new           #62                 // class ru/lolienergistics/llllil1LaND
+     212: dup
+     213: ldc           #85                 // String upgrade_sword_attack6
+     215: ldc           #87                 // String ���������: ���� ����� | 6 ��.
+     217: sipush        500
+     220: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     223: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     226: new           #62                 // class ru/lolienergistics/llllil1LaND
+     229: dup
+     230: ldc           #89                 // String upgrade_sword_attack7
+     232: ldc           #91                 // String ���������: ���� ����� | 7 ��.
+     234: sipush        600
+     237: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     240: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     243: new           #62                 // class ru/lolienergistics/llllil1LaND
+     246: dup
+     247: ldc           #93                 // String upgrade_sword_attack8
+     249: ldc           #95                 // String ���������: ���� ����� | 8 ��.
+     251: sipush        700
+     254: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     257: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     260: new           #62                 // class ru/lolienergistics/llllil1LaND
+     263: dup
+     264: ldc           #97                 // String upgrade_sword_attack9
+     266: ldc           #99                 // String ���������: ���� ����� | 9 ��.
+     268: sipush        800
+     271: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     274: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     277: new           #62                 // class ru/lolienergistics/llllil1LaND
+     280: dup
+     281: ldc           #101                // String upgrade_sword_attack10
+     283: ldc           #103                // String ���������: ���� ����� | 10 ��.
+     285: sipush        1000
+     288: invokespecial #67                 // Method ru/lolienergistics/llllil1LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     291: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     294: new           #105                // class ru/lolienergistics/ilI1l1IOLanD
+     297: dup
+     298: ldc           #107                // String upgrade_sword_fire
+     300: ldc           #109                // String ���������: ������
+     302: invokespecial #112                // Method ru/lolienergistics/ilI1l1IOLanD."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     305: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     308: new           #114                // class ru/lolienergistics/II1OiILanD
+     311: dup
+     312: ldc           #116                // String upgrade_sword_vampirism1
+     314: ldc           #118                // String ���������: ��������� | 1 ��.
+     316: iconst_2
+     317: invokespecial #119                // Method ru/lolienergistics/II1OiILanD."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     320: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     323: new           #114                // class ru/lolienergistics/II1OiILanD
+     326: dup
+     327: ldc           #121                // String upgrade_sword_vampirism2
+     329: ldc           #123                // String ���������: ��������� | 2 ��.
+     331: iconst_4
+     332: invokespecial #119                // Method ru/lolienergistics/II1OiILanD."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     335: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     338: new           #125                // class ru/lolienergistics/IOIIO1lanD
+     341: dup
+     342: ldc           #127                // String upgrade_sword_poison
+     344: ldc           #129                // String ���������: ����������
+     346: ldc           #131                // String ����������� �� ���������� ������ ����������
+     348: ldc           #133                // String ������������� ������
+     350: getstatic     #139                // Field net/minecraft/potion/Potion.field_76436_u:Lnet/minecraft/potion/Potion;
+     353: getfield      #143                // Field net/minecraft/potion/Potion.field_76415_H:I
+     356: bipush        100
+     358: iconst_2
+     359: invokespecial #146                // Method ru/lolienergistics/IOIIO1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+     362: iconst_5
+     363: invokevirtual #149                // Method ru/lolienergistics/IOIIO1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     366: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     369: new           #125                // class ru/lolienergistics/IOIIO1lanD
+     372: dup
+     373: ldc           #151                // String upgrade_sword_confusion
+     375: ldc           #153                // String ���������: ��������������
+     377: ldc           #155                // String ����������� �� ���������� ������ ��������������
+     379: ldc           #133                // String ������������� ������
+     381: getstatic     #158                // Field net/minecraft/potion/Potion.field_76431_k:Lnet/minecraft/potion/Potion;
+     384: getfield      #143                // Field net/minecraft/potion/Potion.field_76415_H:I
+     387: bipush        100
+     389: iconst_2
+     390: invokespecial #146                // Method ru/lolienergistics/IOIIO1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+     393: bipush        7
+     395: invokevirtual #149                // Method ru/lolienergistics/IOIIO1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     398: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     401: new           #125                // class ru/lolienergistics/IOIIO1lanD
+     404: dup
+     405: ldc           #160                // String upgrade_sword_blindness
+     407: ldc           #162                // String ���������: �������
+     409: ldc           #164                // String ����������� �� ���������� ������ �������
+     411: ldc           #133                // String ������������� ������
+     413: getstatic     #167                // Field net/minecraft/potion/Potion.field_76440_q:Lnet/minecraft/potion/Potion;
+     416: getfield      #143                // Field net/minecraft/potion/Potion.field_76415_H:I
+     419: bipush        100
+     421: iconst_2
+     422: invokespecial #146                // Method ru/lolienergistics/IOIIO1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+     425: bipush        8
+     427: invokevirtual #149                // Method ru/lolienergistics/IOIIO1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     430: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     433: new           #125                // class ru/lolienergistics/IOIIO1lanD
+     436: dup
+     437: ldc           #169                // String upgrade_sword_weakness
+     439: ldc           #171                // String ���������: ��������
+     441: ldc           #173                // String ����������� �� ���������� ������ ��������
+     443: ldc           #133                // String ������������� ������
+     445: getstatic     #176                // Field net/minecraft/potion/Potion.field_76437_t:Lnet/minecraft/potion/Potion;
+     448: getfield      #143                // Field net/minecraft/potion/Potion.field_76415_H:I
+     451: bipush        100
+     453: iconst_2
+     454: invokespecial #146                // Method ru/lolienergistics/IOIIO1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+     457: bipush        9
+     459: invokevirtual #149                // Method ru/lolienergistics/IOIIO1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     462: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     465: new           #125                // class ru/lolienergistics/IOIIO1lanD
+     468: dup
+     469: ldc           #178                // String upgrade_sword_wither
+     471: ldc           #180                // String ���������: ���������
+     473: ldc           #182                // String ����������� �� ���������� ������ ���������
+     475: ldc           #133                // String ������������� ������
+     477: getstatic     #185                // Field net/minecraft/potion/Potion.field_82731_v:Lnet/minecraft/potion/Potion;
+     480: getfield      #143                // Field net/minecraft/potion/Potion.field_76415_H:I
+     483: bipush        100
+     485: iconst_2
+     486: invokespecial #146                // Method ru/lolienergistics/IOIIO1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;III)V
+     489: bipush        11
+     491: invokevirtual #149                // Method ru/lolienergistics/IOIIO1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     494: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     497: new           #187                // class ru/lolienergistics/II0l0LaND
+     500: dup
+     501: ldc           #189                // String upgrade_sword_kickback1
+     503: ldc           #191                // String ���������: ������������ | 1 ��.
+     505: iconst_2
+     506: invokespecial #192                // Method ru/lolienergistics/II0l0LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     509: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     512: new           #187                // class ru/lolienergistics/II0l0LaND
+     515: dup
+     516: ldc           #194                // String upgrade_sword_kickback2
+     518: ldc           #196                // String ���������: ������������ | 2 ��.
+     520: iconst_3
+     521: invokespecial #192                // Method ru/lolienergistics/II0l0LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     524: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     527: new           #187                // class ru/lolienergistics/II0l0LaND
+     530: dup
+     531: ldc           #198                // String upgrade_sword_kickback3
+     533: ldc           #200                // String ���������: ������������ | 3 ��.
+     535: iconst_5
+     536: invokespecial #192                // Method ru/lolienergistics/II0l0LaND."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     539: invokestatic  #52                 // Method OOOIilanD:(Lru/lolienergistics/OOiOLand;)V
+     542: new           #202                // class ru/lolienergistics/lilO00LANd
+     545: dup
+     546: ldc           #204                // String upgrade_armor_night_vision
+     548: ldc           #206                // String ���������: ������ ������
+     550: invokespecial #207                // Method ru/lolienergistics/lilO00LANd."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     553: bipush        14
+     555: invokevirtual #208                // Method ru/lolienergistics/lilO00LANd.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     558: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     561: new           #213                // class ru/lolienergistics/I0ilI1lanD
+     564: dup
+     565: ldc           #215                // String upgrade_armor_clear_potions
+     567: ldc           #217                // String ���������: ������� ���������� ��������
+     569: invokespecial #218                // Method ru/lolienergistics/I0ilI1lanD."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     572: bipush        19
+     574: invokevirtual #219                // Method ru/lolienergistics/I0ilI1lanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     577: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     580: new           #221                // class ru/lolienergistics/IiiIOIlanD
+     583: dup
+     584: ldc           #223                // String upgrade_armor_solar1
+     586: ldc           #225                // String ���������: ��������� ������� | 1 ��.
+     588: bipush        100
+     590: invokespecial #226                // Method ru/lolienergistics/IiiIOIlanD."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     593: bipush        12
+     595: invokevirtual #227                // Method ru/lolienergistics/IiiIOIlanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     598: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     601: new           #221                // class ru/lolienergistics/IiiIOIlanD
+     604: dup
+     605: ldc           #229                // String upgrade_armor_solar2
+     607: ldc           #231                // String ���������: ��������� ������� | 2 ��.
+     609: sipush        150
+     612: invokespecial #226                // Method ru/lolienergistics/IiiIOIlanD."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     615: bipush        12
+     617: invokevirtual #227                // Method ru/lolienergistics/IiiIOIlanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     620: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     623: new           #221                // class ru/lolienergistics/IiiIOIlanD
+     626: dup
+     627: ldc           #233                // String upgrade_armor_solar3
+     629: ldc           #235                // String ���������: ��������� ������� | 3 ��.
+     631: sipush        250
+     634: invokespecial #226                // Method ru/lolienergistics/IiiIOIlanD."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+     637: bipush        12
+     639: invokevirtual #227                // Method ru/lolienergistics/IiiIOIlanD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     642: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     645: new           #237                // class ru/lolienergistics/iIl0il1lAnD
+     648: dup
+     649: ldc           #239                // String upgrade_armor_water_protect
+     651: ldc           #241                // String ���������: ������� ��� �����
+     653: invokespecial #242                // Method ru/lolienergistics/iIl0il1lAnD."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     656: bipush        16
+     658: invokevirtual #243                // Method ru/lolienergistics/iIl0il1lAnD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     661: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     664: new           #245                // class ru/lolienergistics/il1iIIILaND
+     667: dup
+     668: ldc           #247                // String upgrade_armor_speed
+     670: ldc           #249                // String ���������: ��������� ����
+     672: invokespecial #250                // Method ru/lolienergistics/il1iIIILaND."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     675: bipush        13
+     677: invokevirtual #251                // Method ru/lolienergistics/il1iIIILaND.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     680: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     683: new           #253                // class ru/lolienergistics/il000OLANd
+     686: dup
+     687: ldc           #255                // String upgrade_armor_jump
+     689: ldc_w         #257                // String ���������: ������
+     692: invokespecial #258                // Method ru/lolienergistics/il000OLANd."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     695: bipush        21
+     697: invokevirtual #259                // Method ru/lolienergistics/il000OLANd.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     700: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     703: new           #261                // class ru/lolienergistics/llOIlIilAND
+     706: dup
+     707: ldc_w         #263                // String upgrade_armor_ext
+     710: ldc_w         #265                // String ���������: ������� ����
+     713: invokespecial #266                // Method ru/lolienergistics/llOIlIilAND."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     716: bipush        18
+     718: invokevirtual #267                // Method ru/lolienergistics/llOIlIilAND.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     721: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     724: new           #269                // class ru/lolienergistics/ll1O0iiland
+     727: dup
+     728: ldc_w         #271                // String upgrade_armor_fall
+     731: ldc_w         #273                // String ���������: ���������� ����� �� �������
+     734: invokespecial #274                // Method ru/lolienergistics/ll1O0iiland."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     737: bipush        23
+     739: invokevirtual #275                // Method ru/lolienergistics/ll1O0iiland.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     742: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     745: new           #277                // class ru/lolienergistics/OOIlLAnD
+     748: dup
+     749: ldc_w         #279                // String upgrade_armor_jetpack
+     752: ldc_w         #281                // String ���������: Jetpack
+     755: invokespecial #282                // Method ru/lolienergistics/OOIlLAnD."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     758: bipush        22
+     760: invokevirtual #283                // Method ru/lolienergistics/OOIlLAnD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     763: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     766: new           #285                // class ru/lolienergistics/llII0lOiLAnD
+     769: dup
+     770: ldc_w         #287                // String upgrade_armor_food
+     773: ldc_w         #289                // String ���������: �������
+     776: invokespecial #290                // Method ru/lolienergistics/llII0lOiLAnD."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     779: bipush        15
+     781: invokevirtual #291                // Method ru/lolienergistics/llII0lOiLAnD.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     784: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     787: new           #293                // class ru/lolienergistics/l0OllOOlland
+     790: dup
+     791: ldc_w         #295                // String upgrade_armor_regen
+     794: ldc_w         #297                // String ���������: ������� �������
+     797: invokespecial #298                // Method ru/lolienergistics/l0OllOOlland."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     800: bipush        12
+     802: invokevirtual #299                // Method ru/lolienergistics/l0OllOOlland.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     805: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     808: new           #301                // class ru/lolienergistics/lI01110LaNd
+     811: dup
+     812: ldc_w         #303                // String upgrade_armor_speed_creative_fly
+     815: ldc_w         #305                // String ���������: ��������� ������
+     818: invokespecial #306                // Method ru/lolienergistics/lI01110LaNd."<init>":(Ljava/lang/String;Ljava/lang/String;)V
+     821: bipush        24
+     823: invokevirtual #307                // Method ru/lolienergistics/lI01110LaNd.I1O1I1LaNd:(I)Lru/lolienergistics/OOiOLand;
+     826: invokestatic  #211                // Method lI00OlAND:(Lru/lolienergistics/OOiOLand;)V
+     829: return
+
+  private static void I1O1I1LaNd(ru.lolienergistics.OOiOLand);
+    Code:
+       0: invokestatic  #312                // Method ru/lolienergistics/lli0OiIlAND.OOOIilanD:()Lru/lolienergistics/lI00OlAND;
+       3: aload_0
+       4: invokestatic  #315                // Method I1O1I1LaNd:(Lnet/minecraft/creativetab/CreativeTabs;Lru/lolienergistics/OOiOLand;)V
+       7: return
+
+  private static void OOOIilanD(ru.lolienergistics.OOiOLand);
+    Code:
+       0: invokestatic  #317                // Method ru/lolienergistics/lli0OiIlAND.lI00OlAND:()Lru/lolienergistics/lI00OlAND;
+       3: aload_0
+       4: invokestatic  #315                // Method I1O1I1LaNd:(Lnet/minecraft/creativetab/CreativeTabs;Lru/lolienergistics/OOiOLand;)V
+       7: return
+
+  private static void lI00OlAND(ru.lolienergistics.OOiOLand);
+    Code:
+       0: invokestatic  #320                // Method ru/lolienergistics/lli0OiIlAND.lli0OiIlAND:()Lru/lolienergistics/lI00OlAND;
+       3: aload_0
+       4: invokestatic  #315                // Method I1O1I1LaNd:(Lnet/minecraft/creativetab/CreativeTabs;Lru/lolienergistics/OOiOLand;)V
+       7: return
+
+  private static void I1O1I1LaNd(net.minecraft.creativetab.CreativeTabs, ru.lolienergistics.OOiOLand);
+    Code:
+       0: new           #322                // class ru/lolienergistics/Olll0lANd
+       3: dup
+       4: aload_1
+       5: invokespecial #324                // Method ru/lolienergistics/Olll0lANd."<init>":(Lru/lolienergistics/OOiOLand;)V
+       8: astore_2
+       9: aload_2
+      10: aload_0
+      11: invokevirtual #328                // Method ru/lolienergistics/Olll0lANd.func_77637_a:(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      14: pop
+      15: aload_2
+      16: aload_1
+      17: invokevirtual #334                // Method ru/lolienergistics/OOiOLand.j_:()Ljava/lang/String;
+      20: invokestatic  #340                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      23: aload_2
+      24: aload_1
+      25: invokevirtual #343                // Method ru/lolienergistics/OOiOLand.li0iOILAND:()Ljava/lang/String;
+      28: invokestatic  #349                // Method cpw/mods/fml/common/registry/LanguageRegistry.addName:(Ljava/lang/Object;Ljava/lang/String;)V
+      31: getstatic     #352                // Field ru/lolienergistics/OOiOLand.OOOIilanD:Ljava/util/LinkedList;
+      34: aload_1
+      35: invokevirtual #358                // Method java/util/LinkedList.add:(Ljava/lang/Object;)Z
+      38: pop
+      39: getstatic     #361                // Field ru/lolienergistics/OOiOLand.I1O1I1LaNd:Ljava/util/HashMap;
+      42: aload_1
+      43: aload_2
+      44: invokevirtual #367                // Method java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+      47: pop
+      48: return
+}

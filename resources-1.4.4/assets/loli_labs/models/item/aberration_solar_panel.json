@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "top": "loli_labs:block/machines/aberration_solar_panel_top",
+    "side": "loli_labs:block/machines/aberration_solar_panel_side",
+    "bottom": "loli_labs:block/machines/aberration_solar_panel_bottom"
+  }
+}

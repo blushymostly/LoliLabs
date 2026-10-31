@@ -1,0 +1,1566 @@
+public class ru.loliland.le.common.li0iOILAND {
+  public static net.minecraft.item.EnumRarity I1O1I1LaNd;
+
+  public static net.minecraft.item.EnumRarity OOOIilanD;
+
+  public static java.util.List<net.minecraft.item.Item> lI00OlAND;
+
+  public static net.minecraft.item.ItemStack[] lli0OiIlAND;
+
+  public static net.minecraft.item.ItemStack[] li0iOILAND;
+
+  public static net.minecraft.item.ItemStack[] O1il1llOLANd;
+
+  public static net.minecraft.item.ItemStack[] Oill1LAnD;
+
+  public static net.minecraft.item.ItemStack[] lIOILand;
+
+  public static net.minecraft.item.ItemStack[] lil0liLand;
+
+  public static net.minecraft.item.ItemStack[] iilIi1laND;
+
+  public static net.minecraft.item.ItemStack[] lli011lLANd;
+
+  public static net.minecraft.item.ItemStack[] l0illAND;
+
+  public static net.minecraft.item.ItemStack[] IO11O0LANd;
+
+  public static net.minecraft.item.ItemStack[] l11lLANd;
+
+  public static net.minecraft.item.ItemStack[] lO110l1LANd;
+
+  public static net.minecraft.item.ItemStack[] l0iIlIO1laNd;
+
+  public static net.minecraft.item.ItemStack[] iOIl0LAnD;
+
+  public static net.minecraft.item.ItemStack[] iIiO00OLaNd;
+
+  public static net.minecraft.item.ItemStack[] ii1li00Land;
+
+  public static net.minecraft.item.ItemStack[] IOI1LaNd;
+
+  public static net.minecraft.item.ItemStack lI00ilAND;
+
+  public static net.minecraft.item.ItemStack[] l0l00lAND;
+
+  public static net.minecraft.item.ItemStack iOl10IlLAnd;
+
+  public static net.minecraft.item.ItemStack lIiIii1LAnD;
+
+  public static net.minecraft.item.ItemStack II1Iland;
+
+  public static net.minecraft.item.ItemStack l0IO0LAnd;
+
+  public static net.minecraft.item.ItemStack liOIOOLANd;
+
+  public static net.minecraft.item.ItemStack[] II1i1l0laND;
+
+  public static net.minecraft.item.ItemStack OOOliOOllANd;
+
+  public static net.minecraft.item.ItemStack IiiilAnD;
+
+  public static net.minecraft.item.Item ll1ILAnd;
+
+  public static net.minecraft.item.Item l1i00lLAnD;
+
+  public static net.minecraft.item.Item lili0l0laNd;
+
+  public static ru.lolienergistics.l0liLaND liIIllIland;
+
+  public static ru.lolienergistics.llOlILanD l0Oil0IILAnd;
+
+  public static ru.lolienergistics.lIiiil1laND l00OlIlAnd;
+
+  public static final net.minecraft.item.Item[] liO1Oli1lanD;
+
+  public static final net.minecraft.item.Item[] OI1II1OIlanD;
+
+  public static net.minecraft.item.Item lliliilanD;
+
+  public static net.minecraft.item.ItemStack OO1Oi0LAnD;
+
+  public static net.minecraft.item.ItemStack[] l01l0OilANd;
+
+  public static net.minecraft.item.ItemStack Iil0IOlAND;
+
+  public static net.minecraft.item.ItemStack[] lOOllANd;
+
+  public static net.minecraft.item.ItemStack[] iOIOOilanD;
+
+  public static net.minecraft.item.ItemStack[] illiLanD;
+
+  public static net.minecraft.item.ItemStack[] OO10lO1LANd;
+
+  public static net.minecraft.item.ItemStack II1II0laND;
+
+  public static net.minecraft.item.ItemStack i0IIlOLANd;
+
+  public static net.minecraft.item.ItemStack li0ii01laND;
+
+  public static net.minecraft.item.ItemStack l0lllAND;
+
+  public static net.minecraft.item.ItemStack l0lOiOlAnd;
+
+  public static net.minecraft.item.ItemStack i100laND;
+
+  public static net.minecraft.item.ItemStack OIl0IilanD;
+
+  public static net.minecraft.item.ItemStack ilIlllanD;
+
+  public static net.minecraft.item.ItemStack IIOlO0ilAnD;
+
+  public static net.minecraft.item.ItemStack[] I1IllaND;
+
+  public static net.minecraft.item.ItemStack liIil1lllAND;
+
+  public static net.minecraft.item.ItemStack IOi0I0LAnD;
+
+  public static net.minecraft.item.ItemStack il1iILaNd;
+
+  public static net.minecraft.item.ItemStack iI0IlIlLAnD;
+
+  public static net.minecraft.item.ItemStack ilI110lAnd;
+
+  public static net.minecraft.item.ItemStack i0IO1II1laND;
+
+  public static net.minecraft.item.ItemStack l1O0i1IlanD;
+
+  public static net.minecraft.item.Item O1l1OILAnD;
+
+  public static net.minecraft.item.ItemStack i1OilAnD;
+
+  public static net.minecraft.item.ItemStack ll10lanD;
+
+  public static net.minecraft.item.ItemStack l0IlILANd;
+
+  public static net.minecraft.item.Item ll10II0LaND;
+
+  public static net.minecraft.item.Item Il0IllIOLAnd;
+
+  public static net.minecraft.item.Item Olli1LAnD;
+
+  public static net.minecraft.item.Item I1IiilLAnD;
+
+  public static net.minecraft.item.Item OiO1llAnd;
+
+  public static net.minecraft.item.Item llOIOlAnd;
+
+  public static net.minecraft.item.Item ll0iI10IlAND;
+
+  public static net.minecraft.item.Item lIIi0Land;
+
+  public static net.minecraft.item.Item Olll0lANd;
+
+  public static net.minecraft.item.Item lOIiilANd;
+
+  public static net.minecraft.item.Item liIOI1LANd;
+
+  public static net.minecraft.item.Item IOilIl10LanD;
+
+  public static net.minecraft.item.Item IOlli01lAnd;
+
+  public static net.minecraft.item.Item l11OOlIIlaND;
+
+  public static net.minecraft.item.Item lllO0IiLANd;
+
+  public static java.util.List<ru.loliland.le.common.li0iOILAND$I1O1I1LaNd> Il0iIland;
+
+  public static net.minecraft.item.Item lii1LAND;
+
+  public static net.minecraft.item.Item O1liliLANd;
+
+  public static net.minecraft.item.Item O1iOl0lAND;
+
+  public static net.minecraft.item.Item O1iO000Land;
+
+  public static net.minecraft.item.Item IliO01LAnd;
+
+  public static net.minecraft.item.Item il0ii0ILANd;
+
+  public static net.minecraft.item.Item lOlOlaND;
+
+  public static net.minecraft.item.Item i1i1OilanD;
+
+  public static net.minecraft.item.Item liOi1OLaNd;
+
+  public static net.minecraft.item.Item llOlOiLand;
+
+  public static net.minecraft.item.Item i0O1LAnd;
+
+  public static net.minecraft.item.Item lOIOlOIIlAnd;
+
+  public static final java.lang.String[] lOOOLaNd;
+
+  public static final int[] l1l0lAnd;
+
+  public static final int[] I100I0lLand;
+
+  public static net.minecraft.item.Item llllLANd;
+
+  public static net.minecraft.item.Item l0O1OIlaND;
+
+  public static net.minecraft.item.Item OlO11Land;
+
+  public static net.minecraft.item.Item lOlO0I0land;
+
+  public static net.minecraft.item.Item lO011O1IlAnD;
+
+  public static net.minecraft.item.Item l10OilanD;
+
+  public static net.minecraft.item.Item lOOl0LaNd;
+
+  public static net.minecraft.item.Item lIOl0lAND;
+
+  public static net.minecraft.item.Item llii0LAnD;
+
+  public static net.minecraft.item.Item lii1IlAND;
+
+  public static net.minecraft.item.Item iIllllOlANd;
+
+  public static ru.lolienergistics.IO0I1lilaNd lOililLAnd;
+
+  public static net.minecraft.item.Item lI0OIILand;
+
+  public static net.minecraft.item.Item lOi1OOI1lanD;
+
+  public static net.minecraft.item.Item il1OI0lAnd;
+
+  public static net.minecraft.item.Item iiOlLand;
+
+  public static net.minecraft.item.Item li1O0l0LaNd;
+
+  public static net.minecraft.item.Item lilILAND;
+
+  public static net.minecraft.item.Item I0Oi1O0OlaND;
+
+  public static net.minecraft.item.Item lOOliLANd;
+
+  public static net.minecraft.item.Item IliIIi1lanD;
+
+  public static net.minecraft.item.Item O1llI1LAnd;
+
+  public static net.minecraft.item.Item OIi00l0LaND;
+
+  public static net.minecraft.item.Item I111i0OILaNd;
+
+  public static net.minecraft.item.Item lIOi0LANd;
+
+  public static net.minecraft.item.Item O1iOOlllANd;
+
+  public static net.minecraft.item.Item iOO1IiI1lAnD;
+
+  public static net.minecraft.item.Item iiO0ilaNd;
+
+  public static net.minecraft.item.Item ll0iOlLAnd;
+
+  public static net.minecraft.item.Item i11IllAnd;
+
+  public static net.minecraft.item.Item l10II00OLaND;
+
+  public ru.loliland.le.common.li0iOILAND();
+    Code:
+       0: aload_0
+       1: invokespecial #175                // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void I1O1I1LaNd();
+    Code:
+       0: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+       3: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+       6: dup
+       7: ldc           #179                // String molten_iridium_ore
+       9: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+      12: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      17: pop
+      18: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+      21: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+      24: dup
+      25: ldc           #190                // String molten_niobium
+      27: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+      30: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      35: pop
+      36: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+      39: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+      42: dup
+      43: ldc           #192                // String molten_sannarium
+      45: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+      48: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      53: pop
+      54: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+      57: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+      60: dup
+      61: ldc           #194                // String molten_spark_matter
+      63: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+      66: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      71: pop
+      72: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+      75: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+      78: dup
+      79: ldc           #196                // String molten_ametrine
+      81: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+      84: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      89: pop
+      90: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+      93: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+      96: dup
+      97: ldc           #198                // String molten_fluorite
+      99: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     102: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     107: pop
+     108: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     111: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     114: dup
+     115: ldc           #200                // String molten_chrysolite
+     117: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     120: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     125: pop
+     126: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     129: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     132: dup
+     133: ldc           #202                // String molten_nether_star
+     135: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     138: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     143: pop
+     144: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     147: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     150: dup
+     151: ldc           #204                // String molten_super_alloy
+     153: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     156: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     161: pop
+     162: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     165: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     168: dup
+     169: ldc           #206                // String molten_skyfiry
+     171: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     174: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     179: pop
+     180: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     183: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     186: dup
+     187: ldc           #208                // String molten_sebastyanit
+     189: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     192: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     197: pop
+     198: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     201: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     204: dup
+     205: ldc           #210                // String molten_radvirium
+     207: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     210: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     215: pop
+     216: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     219: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     222: dup
+     223: ldc           #212                // String molten_gladium
+     225: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     228: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     233: pop
+     234: ldc           #214                // String Avaritia
+     236: invokestatic  #220                // Method cpw/mods/fml/common/Loader.isModLoaded:(Ljava/lang/String;)Z
+     239: ifne          245
+     242: goto          299
+     245: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     248: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     251: dup
+     252: ldc           #222                // String molten_neutronium
+     254: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     257: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     262: pop
+     263: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     266: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     269: dup
+     270: ldc           #224                // String molten_crystal_matrix
+     272: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     275: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     280: pop
+     281: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     284: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     287: dup
+     288: ldc           #226                // String molten_infinity_ingot
+     290: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     293: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     298: pop
+     299: ldc           #228                // String lolimagically
+     301: invokestatic  #220                // Method cpw/mods/fml/common/Loader.isModLoaded:(Ljava/lang/String;)Z
+     304: ifne          310
+     307: goto          400
+     310: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     313: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     316: dup
+     317: ldc           #230                // String molten_adamantium
+     319: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     322: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     327: pop
+     328: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     331: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     334: dup
+     335: ldc           #232                // String molten_adamantium_ethereal
+     337: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     340: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     345: pop
+     346: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     349: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     352: dup
+     353: ldc           #234                // String molten_adamantium_ghost
+     355: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     358: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     363: pop
+     364: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     367: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     370: dup
+     371: ldc           #236                // String molten_adamantium_arcane
+     373: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     376: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     381: pop
+     382: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     385: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     388: dup
+     389: ldc           #238                // String molten_adamantium_dragon
+     391: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     394: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     399: pop
+     400: ldc           #240                // String ExtraUtilities
+     402: invokestatic  #220                // Method cpw/mods/fml/common/Loader.isModLoaded:(Ljava/lang/String;)Z
+     405: ifne          411
+     408: goto          447
+     411: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     414: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     417: dup
+     418: ldc           #242                // String molten_mobius
+     420: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     423: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     428: pop
+     429: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     432: new           #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     435: dup
+     436: ldc           #244                // String molten_bedrockium
+     438: invokespecial #182                // Method ru/loliland/le/common/li0iOILAND$I1O1I1LaNd."<init>":(Ljava/lang/String;)V
+     441: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     446: pop
+     447: ldc           #246                // String fluid_singularity
+     449: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     452: invokestatic  #249                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/util/List;)V
+     455: getstatic     #177                // Field Il0iIland:Ljava/util/List;
+     458: invokeinterface #253,  1          // InterfaceMethod java/util/List.iterator:()Ljava/util/Iterator;
+     463: astore_0
+     464: aload_0
+     465: invokeinterface #259,  1          // InterfaceMethod java/util/Iterator.hasNext:()Z
+     470: ifeq          495
+     473: aload_0
+     474: invokeinterface #263,  1          // InterfaceMethod java/util/Iterator.next:()Ljava/lang/Object;
+     479: checkcast     #8                  // class ru/loliland/le/common/li0iOILAND$I1O1I1LaNd
+     482: astore_1
+     483: aload_1
+     484: getfield      #266                // Field ru/loliland/le/common/li0iOILAND$I1O1I1LaNd.I1O1I1LaNd:Ljava/lang/String;
+     487: iconst_1
+     488: invokestatic  #271                // Method ru/loliland/le/common/I1O1I1LaNd.I1O1I1LaNd:(Ljava/lang/String;Z)Lnet/minecraftforge/fluids/Fluid;
+     491: pop
+     492: goto          464
+     495: new           #273                // class ru/lolienergistics/l1illl01Land
+     498: dup
+     499: invokespecial #274                // Method ru/lolienergistics/l1illl01Land."<init>":()V
+     502: putstatic     #276                // Field ll0iI10IlAND:Lnet/minecraft/item/Item;
+     505: getstatic     #278                // Field lI00OlAND:Ljava/util/List;
+     508: new           #280                // class ru/lolienergistics/l1ilOIIILanD
+     511: dup
+     512: ldc_w         #282                // String charged_neutron_star
+     515: invokespecial #283                // Method ru/lolienergistics/l1ilOIIILanD."<init>":(Ljava/lang/String;)V
+     518: bipush        16
+     520: invokevirtual #287                // Method ru/lolienergistics/l1ilOIIILanD.func_77625_d:(I)Lnet/minecraft/item/Item;
+     523: iconst_0
+     524: invokevirtual #290                // Method net/minecraft/item/Item.func_77656_e:(I)Lnet/minecraft/item/Item;
+     527: dup
+     528: putstatic     #292                // Field lIIi0Land:Lnet/minecraft/item/Item;
+     531: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     536: pop
+     537: getstatic     #278                // Field lI00OlAND:Ljava/util/List;
+     540: new           #280                // class ru/lolienergistics/l1ilOIIILanD
+     543: dup
+     544: ldc_w         #294                // String red_energon
+     547: invokespecial #283                // Method ru/lolienergistics/l1ilOIIILanD."<init>":(Ljava/lang/String;)V
+     550: dup
+     551: putstatic     #296                // Field Olll0lANd:Lnet/minecraft/item/Item;
+     554: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     559: pop
+     560: getstatic     #278                // Field lI00OlAND:Ljava/util/List;
+     563: new           #280                // class ru/lolienergistics/l1ilOIIILanD
+     566: dup
+     567: ldc_w         #298                // String dark_energon
+     570: invokespecial #283                // Method ru/lolienergistics/l1ilOIIILanD."<init>":(Ljava/lang/String;)V
+     573: dup
+     574: putstatic     #300                // Field lOIiilANd:Lnet/minecraft/item/Item;
+     577: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     582: pop
+     583: getstatic     #278                // Field lI00OlAND:Ljava/util/List;
+     586: new           #280                // class ru/lolienergistics/l1ilOIIILanD
+     589: dup
+     590: ldc_w         #302                // String energy_pulsating_crystal
+     593: invokespecial #283                // Method ru/lolienergistics/l1ilOIIILanD."<init>":(Ljava/lang/String;)V
+     596: dup
+     597: putstatic     #304                // Field liIOI1LANd:Lnet/minecraft/item/Item;
+     600: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+     605: pop
+     606: new           #306                // class ru/lolienergistics/liIOI1LANd
+     609: dup
+     610: invokespecial #307                // Method ru/lolienergistics/liIOI1LANd."<init>":()V
+     613: putstatic     #309                // Field ll1ILAnd:Lnet/minecraft/item/Item;
+     616: getstatic     #309                // Field ll1ILAnd:Lnet/minecraft/item/Item;
+     619: ldc_w         #311                // String infinity_pickaxe_ultra
+     622: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     625: new           #319                // class ru/lolienergistics/OilOlAND
+     628: dup
+     629: getstatic     #323                // Field net/minecraft/item/Item$ToolMaterial.EMERALD:Lnet/minecraft/item/Item$ToolMaterial;
+     632: invokespecial #326                // Method ru/lolienergistics/OilOlAND."<init>":(Lnet/minecraft/item/Item$ToolMaterial;)V
+     635: putstatic     #328                // Field l1i00lLAnD:Lnet/minecraft/item/Item;
+     638: new           #330                // class ru/lolienergistics/l00lOOlaNd
+     641: dup
+     642: invokespecial #331                // Method ru/lolienergistics/l00lOOlaNd."<init>":()V
+     645: putstatic     #333                // Field lili0l0laNd:Lnet/minecraft/item/Item;
+     648: new           #335                // class ru/lolienergistics/l0liLaND
+     651: dup
+     652: invokespecial #336                // Method ru/lolienergistics/l0liLaND."<init>":()V
+     655: putstatic     #338                // Field liIIllIland:Lru/lolienergistics/l0liLaND;
+     658: new           #340                // class ru/lolienergistics/llOlILanD
+     661: dup
+     662: invokespecial #341                // Method ru/lolienergistics/llOlILanD."<init>":()V
+     665: putstatic     #343                // Field l0Oil0IILAnd:Lru/lolienergistics/llOlILanD;
+     668: new           #345                // class ru/lolienergistics/lIiiil1laND
+     671: dup
+     672: invokespecial #346                // Method ru/lolienergistics/lIiiil1laND."<init>":()V
+     675: putstatic     #348                // Field l00OlIlAnd:Lru/lolienergistics/lIiiil1laND;
+     678: new           #350                // class ru/lolienergistics/lI1il011LAnD
+     681: dup
+     682: invokespecial #351                // Method ru/lolienergistics/lI1il011LAnD."<init>":()V
+     685: pop
+     686: new           #353                // class ru/lolienergistics/I010ii1Land
+     689: dup
+     690: invokespecial #354                // Method ru/lolienergistics/I010ii1Land."<init>":()V
+     693: pop
+     694: new           #356                // class ru/lolienergistics/Il0IllIOLAnd
+     697: dup
+     698: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     701: ldc_w         #362                // String advanced_solar_helmet
+     704: ldc_w         #362                // String advanced_solar_helmet
+     707: invokestatic  #365                // Method I1O1I1LaNd:(Ljava/lang/String;)I
+     710: iconst_0
+     711: iconst_1
+     712: invokespecial #368                // Method ru/lolienergistics/Il0IllIOLAnd."<init>":(Lnet/minecraft/item/ItemArmor$ArmorMaterial;Ljava/lang/String;III)V
+     715: astore_0
+     716: aload_0
+     717: ldc_w         #362                // String advanced_solar_helmet
+     720: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     723: new           #356                // class ru/lolienergistics/Il0IllIOLAnd
+     726: dup
+     727: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     730: ldc_w         #370                // String hybrid_solar_helmet
+     733: ldc_w         #370                // String hybrid_solar_helmet
+     736: invokestatic  #365                // Method I1O1I1LaNd:(Ljava/lang/String;)I
+     739: iconst_0
+     740: iconst_2
+     741: invokespecial #368                // Method ru/lolienergistics/Il0IllIOLAnd."<init>":(Lnet/minecraft/item/ItemArmor$ArmorMaterial;Ljava/lang/String;III)V
+     744: astore_1
+     745: aload_1
+     746: ldc_w         #370                // String hybrid_solar_helmet
+     749: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     752: new           #356                // class ru/lolienergistics/Il0IllIOLAnd
+     755: dup
+     756: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     759: ldc_w         #372                // String ultimate_solar_helmet
+     762: ldc_w         #372                // String ultimate_solar_helmet
+     765: invokestatic  #365                // Method I1O1I1LaNd:(Ljava/lang/String;)I
+     768: iconst_0
+     769: iconst_3
+     770: invokespecial #368                // Method ru/lolienergistics/Il0IllIOLAnd."<init>":(Lnet/minecraft/item/ItemArmor$ArmorMaterial;Ljava/lang/String;III)V
+     773: astore_2
+     774: aload_2
+     775: ldc_w         #372                // String ultimate_solar_helmet
+     778: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+     781: ldc_w         #374                // String loli_elements_tm
+     784: invokestatic  #220                // Method cpw/mods/fml/common/Loader.isModLoaded:(Ljava/lang/String;)Z
+     787: ifne          793
+     790: goto          893
+     793: iconst_2
+     794: istore_3
+     795: iload_3
+     796: iconst_5
+     797: if_icmpgt     837
+     800: getstatic     #376                // Field liO1Oli1lanD:[Lnet/minecraft/item/Item;
+     803: iload_3
+     804: new           #378                // class java/lang/StringBuilder
+     807: dup
+     808: invokespecial #379                // Method java/lang/StringBuilder."<init>":()V
+     811: ldc_w         #381                // String drill_bit_upgrade_
+     814: invokevirtual #385                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     817: iload_3
+     818: invokevirtual #388                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     821: invokevirtual #392                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     824: ldc_w         #394                // String improvements
+     827: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+     830: aastore
+     831: iinc          3, 1
+     834: goto          795
+     837: iconst_1
+     838: istore_3
+     839: iload_3
+     840: iconst_3
+     841: if_icmpgt     881
+     844: getstatic     #399                // Field OI1II1OIlanD:[Lnet/minecraft/item/Item;
+     847: iload_3
+     848: new           #378                // class java/lang/StringBuilder
+     851: dup
+     852: invokespecial #379                // Method java/lang/StringBuilder."<init>":()V
+     855: ldc_w         #401                // String drill_luck_upgrade_
+     858: invokevirtual #385                // Method java/lang/StringBuilder.append:(Ljava/lang/String;)Ljava/lang/StringBuilder;
+     861: iload_3
+     862: invokevirtual #388                // Method java/lang/StringBuilder.append:(I)Ljava/lang/StringBuilder;
+     865: invokevirtual #392                // Method java/lang/StringBuilder.toString:()Ljava/lang/String;
+     868: ldc_w         #394                // String improvements
+     871: invokestatic  #403                // Method OOOIilanD:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+     874: aastore
+     875: iinc          3, 1
+     878: goto          839
+     881: ldc_w         #405                // String oreglow_coating
+     884: ldc_w         #394                // String improvements
+     887: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+     890: putstatic     #407                // Field lliliilanD:Lnet/minecraft/item/Item;
+     893: ldc_w         #409                // String neutronium_accumulation
+     896: ldc_w         #411                // String consumable
+     899: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+     902: pop
+     903: ldc_w         #413                // String star_matter_ingot
+     906: ldc_w         #411                // String consumable
+     909: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+     912: pop
+     913: ldc_w         #415                // String neutronium_catalyst
+     916: bipush        8
+     918: ldc_w         #417                // String halonoise
+     921: ldc_w         #411                // String consumable
+     924: invokestatic  #420                // Method I1O1I1LaNd:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lru/lolienergistics/li0OLand;
+     927: ldc_w         #421                // int -1711276033
+     930: invokevirtual #426                // Method ru/lolienergistics/li0OLand.I1O1I1LaNd:(I)Lru/lolienergistics/li0OLand;
+     933: iconst_0
+     934: invokevirtual #429                // Method ru/lolienergistics/li0OLand.I1O1I1LaNd:(Z)Lru/lolienergistics/li0OLand;
+     937: pop
+     938: ldc_w         #431                // String infinity_singularity
+     941: bipush        8
+     943: ldc_w         #433                // String halo
+     946: ldc_w         #411                // String consumable
+     949: invokestatic  #420                // Method I1O1I1LaNd:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lru/lolienergistics/li0OLand;
+     952: pop
+     953: ldc_w         #435                // String infinity_dust
+     956: bipush        8
+     958: ldc_w         #433                // String halo
+     961: ldc_w         #411                // String consumable
+     964: invokestatic  #420                // Method I1O1I1LaNd:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lru/lolienergistics/li0OLand;
+     967: pop
+     968: ldc_w         #437                // String infinity_nugget
+     971: bipush        8
+     973: ldc_w         #433                // String halo
+     976: ldc_w         #411                // String consumable
+     979: invokestatic  #420                // Method I1O1I1LaNd:(Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)Lru/lolienergistics/li0OLand;
+     982: pop
+     983: new           #439                // class ru/lolienergistics/l1ll0llAND
+     986: dup
+     987: invokespecial #440                // Method ru/lolienergistics/l1ll0llAND."<init>":()V
+     990: pop
+     991: new           #442                // class ru/lolienergistics/I1Ol1IlaND
+     994: dup
+     995: invokespecial #443                // Method ru/lolienergistics/I1Ol1IlaND."<init>":()V
+     998: pop
+     999: new           #445                // class ru/lolienergistics/ilO0lanD
+    1002: dup
+    1003: ldc_w         #447                // String microchip
+    1006: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1009: putstatic     #450                // Field ll10II0LaND:Lnet/minecraft/item/Item;
+    1012: new           #445                // class ru/lolienergistics/ilO0lanD
+    1015: dup
+    1016: ldc_w         #452                // String resistor
+    1019: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1022: putstatic     #454                // Field Il0IllIOLAnd:Lnet/minecraft/item/Item;
+    1025: new           #445                // class ru/lolienergistics/ilO0lanD
+    1028: dup
+    1029: ldc_w         #456                // String capacitor
+    1032: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1035: putstatic     #458                // Field Olli1LAnD:Lnet/minecraft/item/Item;
+    1038: new           #445                // class ru/lolienergistics/ilO0lanD
+    1041: dup
+    1042: ldc_w         #460                // String diode
+    1045: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1048: putstatic     #462                // Field I1IiilLAnD:Lnet/minecraft/item/Item;
+    1051: new           #445                // class ru/lolienergistics/ilO0lanD
+    1054: dup
+    1055: ldc_w         #464                // String transistor
+    1058: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1061: putstatic     #466                // Field OiO1llAnd:Lnet/minecraft/item/Item;
+    1064: new           #445                // class ru/lolienergistics/ilO0lanD
+    1067: dup
+    1068: ldc_w         #468                // String conductive_contour
+    1071: invokespecial #448                // Method ru/lolienergistics/ilO0lanD."<init>":(Ljava/lang/String;)V
+    1074: putstatic     #470                // Field llOIOlAnd:Lnet/minecraft/item/Item;
+    1077: new           #472                // class ru/lolienergistics/lll0O0LAnd
+    1080: dup
+    1081: invokespecial #473                // Method ru/lolienergistics/lll0O0LAnd."<init>":()V
+    1084: pop
+    1085: new           #475                // class ru/lolienergistics/lI0il11LaND
+    1088: dup
+    1089: invokespecial #476                // Method ru/lolienergistics/lI0il11LaND."<init>":()V
+    1092: pop
+    1093: new           #478                // class ru/lolienergistics/O0IlOiILAnD
+    1096: dup
+    1097: invokespecial #479                // Method ru/lolienergistics/O0IlOiILAnD."<init>":()V
+    1100: pop
+    1101: new           #481                // class ru/lolienergistics/Ililll0land
+    1104: dup
+    1105: invokespecial #482                // Method ru/lolienergistics/Ililll0land."<init>":()V
+    1108: putstatic     #484                // Field O1l1OILAnD:Lnet/minecraft/item/Item;
+    1111: getstatic     #490                // Field ru/lolienergistics/lOlOillIlANd.ASTROLION:Lru/lolienergistics/lOlOillIlANd;
+    1114: ldc_w         #492                // String astrolion
+    1117: ldc2_w        #493                // long 1000000000l
+    1120: ldc_w         #495                // float 2800000.0f
+    1123: ldc_w         #496                // float 1.0E7f
+    1126: ldc_w         #497                // float 4000.0f
+    1129: bipush        8
+    1131: invokestatic  #500                // Method I1O1I1LaNd:(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFFI)Lorg/apache/commons/lang3/tuple/Triple;
+    1134: astore_3
+    1135: getstatic     #503                // Field ru/lolienergistics/lOlOillIlANd.SUN:Lru/lolienergistics/lOlOillIlANd;
+    1138: ldc_w         #505                // String sun
+    1141: ldc2_w        #506                // long 100000000000l
+    1144: ldc_w         #508                // float 1.5E7f
+    1147: ldc_w         #509                // float 3.0E7f
+    1150: ldc_w         #510                // float 12000.0f
+    1153: bipush        16
+    1155: invokestatic  #500                // Method I1O1I1LaNd:(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFFI)Lorg/apache/commons/lang3/tuple/Triple;
+    1158: astore        4
+    1160: getstatic     #513                // Field ru/lolienergistics/lOlOillIlANd.SIRIUS:Lru/lolienergistics/lOlOillIlANd;
+    1163: ldc_w         #515                // String sirius
+    1166: ldc2_w        #516                // long 50000000000000l
+    1169: ldc_w         #518                // float 4.0E7f
+    1172: ldc_w         #519                // float 6.0E7f
+    1175: ldc_w         #520                // float 30000.0f
+    1178: bipush        32
+    1180: invokestatic  #500                // Method I1O1I1LaNd:(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFFI)Lorg/apache/commons/lang3/tuple/Triple;
+    1183: astore        5
+    1185: getstatic     #523                // Field ru/lolienergistics/lOlOillIlANd.ZODIUS:Lru/lolienergistics/lOlOillIlANd;
+    1188: ldc_w         #525                // String zodius
+    1191: ldc2_w        #526                // long 1000000000000000l
+    1194: ldc_w         #528                // float 8.0E7f
+    1197: ldc_w         #529                // float 1.2E8f
+    1200: ldc_w         #530                // float 50000.0f
+    1203: bipush        64
+    1205: invokestatic  #500                // Method I1O1I1LaNd:(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFFI)Lorg/apache/commons/lang3/tuple/Triple;
+    1208: astore        6
+    1210: aload_3
+    1211: invokevirtual #535                // Method org/apache/commons/lang3/tuple/Triple.getLeft:()Ljava/lang/Object;
+    1214: checkcast     #20                 // class net/minecraft/item/Item
+    1217: putstatic     #537                // Field lii1LAND:Lnet/minecraft/item/Item;
+    1220: aload_3
+    1221: invokevirtual #540                // Method org/apache/commons/lang3/tuple/Triple.getMiddle:()Ljava/lang/Object;
+    1224: checkcast     #20                 // class net/minecraft/item/Item
+    1227: putstatic     #542                // Field IliO01LAnd:Lnet/minecraft/item/Item;
+    1230: aload_3
+    1231: invokevirtual #545                // Method org/apache/commons/lang3/tuple/Triple.getRight:()Ljava/lang/Object;
+    1234: checkcast     #20                 // class net/minecraft/item/Item
+    1237: putstatic     #547                // Field liOi1OLaNd:Lnet/minecraft/item/Item;
+    1240: aload         4
+    1242: invokevirtual #535                // Method org/apache/commons/lang3/tuple/Triple.getLeft:()Ljava/lang/Object;
+    1245: checkcast     #20                 // class net/minecraft/item/Item
+    1248: putstatic     #549                // Field O1liliLANd:Lnet/minecraft/item/Item;
+    1251: aload         4
+    1253: invokevirtual #540                // Method org/apache/commons/lang3/tuple/Triple.getMiddle:()Ljava/lang/Object;
+    1256: checkcast     #20                 // class net/minecraft/item/Item
+    1259: putstatic     #551                // Field il0ii0ILANd:Lnet/minecraft/item/Item;
+    1262: aload         4
+    1264: invokevirtual #545                // Method org/apache/commons/lang3/tuple/Triple.getRight:()Ljava/lang/Object;
+    1267: checkcast     #20                 // class net/minecraft/item/Item
+    1270: putstatic     #553                // Field llOlOiLand:Lnet/minecraft/item/Item;
+    1273: aload         5
+    1275: invokevirtual #535                // Method org/apache/commons/lang3/tuple/Triple.getLeft:()Ljava/lang/Object;
+    1278: checkcast     #20                 // class net/minecraft/item/Item
+    1281: putstatic     #555                // Field O1iOl0lAND:Lnet/minecraft/item/Item;
+    1284: aload         5
+    1286: invokevirtual #540                // Method org/apache/commons/lang3/tuple/Triple.getMiddle:()Ljava/lang/Object;
+    1289: checkcast     #20                 // class net/minecraft/item/Item
+    1292: putstatic     #557                // Field lOlOlaND:Lnet/minecraft/item/Item;
+    1295: aload         5
+    1297: invokevirtual #545                // Method org/apache/commons/lang3/tuple/Triple.getRight:()Ljava/lang/Object;
+    1300: checkcast     #20                 // class net/minecraft/item/Item
+    1303: putstatic     #559                // Field i0O1LAnd:Lnet/minecraft/item/Item;
+    1306: aload         6
+    1308: invokevirtual #535                // Method org/apache/commons/lang3/tuple/Triple.getLeft:()Ljava/lang/Object;
+    1311: checkcast     #20                 // class net/minecraft/item/Item
+    1314: putstatic     #561                // Field O1iO000Land:Lnet/minecraft/item/Item;
+    1317: aload         6
+    1319: invokevirtual #540                // Method org/apache/commons/lang3/tuple/Triple.getMiddle:()Ljava/lang/Object;
+    1322: checkcast     #20                 // class net/minecraft/item/Item
+    1325: putstatic     #563                // Field i1i1OilanD:Lnet/minecraft/item/Item;
+    1328: aload         6
+    1330: invokevirtual #545                // Method org/apache/commons/lang3/tuple/Triple.getRight:()Ljava/lang/Object;
+    1333: checkcast     #20                 // class net/minecraft/item/Item
+    1336: putstatic     #565                // Field lOIOlOIIlAnd:Lnet/minecraft/item/Item;
+    1339: new           #567                // class ru/lolienergistics/lO1O1I01lAnd
+    1342: dup
+    1343: ldc_w         #569                // String thermal_insulator1
+    1346: ldc_w         #570                // float 50.0f
+    1349: ldc_w         #571                // float 25.0f
+    1352: invokespecial #574                // Method ru/lolienergistics/lO1O1I01lAnd."<init>":(Ljava/lang/String;FF)V
+    1355: pop
+    1356: new           #567                // class ru/lolienergistics/lO1O1I01lAnd
+    1359: dup
+    1360: ldc_w         #576                // String thermal_insulator2
+    1363: ldc_w         #577                // float 100.0f
+    1366: ldc_w         #570                // float 50.0f
+    1369: invokespecial #574                // Method ru/lolienergistics/lO1O1I01lAnd."<init>":(Ljava/lang/String;FF)V
+    1372: pop
+    1373: new           #567                // class ru/lolienergistics/lO1O1I01lAnd
+    1376: dup
+    1377: ldc_w         #579                // String thermal_insulator3
+    1380: ldc_w         #580                // float 150.0f
+    1383: ldc_w         #577                // float 100.0f
+    1386: invokespecial #574                // Method ru/lolienergistics/lO1O1I01lAnd."<init>":(Ljava/lang/String;FF)V
+    1389: pop
+    1390: new           #582                // class ru/lolienergistics/IIiI0O11laND
+    1393: dup
+    1394: ldc_w         #584                // String portable_charging_module
+    1397: invokespecial #585                // Method ru/lolienergistics/IIiI0O11laND."<init>":(Ljava/lang/String;)V
+    1400: pop
+    1401: new           #587                // class ru/lolienergistics/l000O1ILaND
+    1404: dup
+    1405: ldc_w         #589                // String advanced_cell
+    1408: sipush        10000
+    1411: invokespecial #592                // Method ru/lolienergistics/l000O1ILaND."<init>":(Ljava/lang/String;I)V
+    1414: putstatic     #594                // Field IOilIl10LanD:Lnet/minecraft/item/Item;
+    1417: new           #587                // class ru/lolienergistics/l000O1ILaND
+    1420: dup
+    1421: ldc_w         #596                // String ultimate_cell
+    1424: ldc_w         #597                // int 100000
+    1427: invokespecial #592                // Method ru/lolienergistics/l000O1ILaND."<init>":(Ljava/lang/String;I)V
+    1430: putstatic     #599                // Field IOlli01lAnd:Lnet/minecraft/item/Item;
+    1433: new           #587                // class ru/lolienergistics/l000O1ILaND
+    1436: dup
+    1437: ldc_w         #601                // String quantum_cell
+    1440: ldc_w         #602                // int 1000000
+    1443: invokespecial #592                // Method ru/lolienergistics/l000O1ILaND."<init>":(Ljava/lang/String;I)V
+    1446: putstatic     #604                // Field l11OOlIIlaND:Lnet/minecraft/item/Item;
+    1449: new           #606                // class ru/lolienergistics/i1iiOOlanD
+    1452: dup
+    1453: invokespecial #607                // Method ru/lolienergistics/i1iiOOlanD."<init>":()V
+    1456: putstatic     #609                // Field lllO0IiLANd:Lnet/minecraft/item/Item;
+    1459: getstatic     #614                // Field ru/lolienergistics/lO110l1LANd.O1il1llOLANd:Z
+    1462: ifeq          1468
+    1465: invokestatic  #616                // Method OOOIilanD:()V
+    1468: ldc_w         #618                // String gladia_ingot
+    1471: ldc_w         #411                // String consumable
+    1474: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1477: pop
+    1478: ldc_w         #620                // String superalloy_ingot
+    1481: ldc_w         #411                // String consumable
+    1484: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1487: pop
+    1488: ldc_w         #622                // String crystal_ypsilonium
+    1491: ldc_w         #411                // String consumable
+    1494: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1497: pop
+    1498: ldc_w         #624                // String energy_crystal
+    1501: ldc_w         #411                // String consumable
+    1504: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1507: pop
+    1508: ldc_w         #626                // String osmium_plate
+    1511: ldc_w         #411                // String consumable
+    1514: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1517: pop
+    1518: ldc_w         #628                // String osmium_wire
+    1521: ldc_w         #411                // String consumable
+    1524: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1527: pop
+    1528: ldc_w         #630                // String osmiridium_ingot
+    1531: ldc_w         #411                // String consumable
+    1534: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1537: pop
+    1538: ldc_w         #632                // String osmiridium_plate
+    1541: ldc_w         #411                // String consumable
+    1544: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1547: pop
+    1548: ldc_w         #634                // String osmiridium_gear
+    1551: ldc_w         #411                // String consumable
+    1554: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1557: pop
+    1558: ldc_w         #636                // String osmiridium_capacitor
+    1561: ldc_w         #411                // String consumable
+    1564: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1567: pop
+    1568: ldc_w         #638                // String conductive_chip
+    1571: ldc_w         #411                // String consumable
+    1574: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1577: pop
+    1578: ldc_w         #640                // String quantum_chip
+    1581: ldc_w         #411                // String consumable
+    1584: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1587: pop
+    1588: ldc_w         #642                // String coke_coal
+    1591: ldc_w         #411                // String consumable
+    1594: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1597: putstatic     #644                // Field O1llI1LAnd:Lnet/minecraft/item/Item;
+    1600: ldc_w         #646                // String hop_graphite_ingot
+    1603: ldc_w         #411                // String consumable
+    1606: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1609: pop
+    1610: ldc_w         #648                // String windmill_blade
+    1613: ldc_w         #411                // String consumable
+    1616: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1619: pop
+    1620: ldc_w         #650                // String advanced_windmill_blade
+    1623: ldc_w         #411                // String consumable
+    1626: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1629: pop
+    1630: ldc_w         #652                // String part_waterwheel
+    1633: ldc_w         #411                // String consumable
+    1636: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1639: pop
+    1640: ldc_w         #654                // String soaked_sticks
+    1643: ldc_w         #411                // String consumable
+    1646: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1649: pop
+    1650: ldc_w         #656                // String slag
+    1653: ldc_w         #411                // String consumable
+    1656: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1659: putstatic     #658                // Field IliIIi1lanD:Lnet/minecraft/item/Item;
+    1662: ldc_w         #660                // String hot_iron_ingot
+    1665: ldc_w         #411                // String consumable
+    1668: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1671: putstatic     #662                // Field OIi00l0LaND:Lnet/minecraft/item/Item;
+    1674: ldc_w         #664                // String tungsten_ingot
+    1677: ldc_w         #411                // String consumable
+    1680: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1683: pop
+    1684: ldc_w         #666                // String constantan_ingot
+    1687: ldc_w         #411                // String consumable
+    1690: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1693: pop
+    1694: ldc_w         #668                // String constantan_dust
+    1697: ldc_w         #411                // String consumable
+    1700: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1703: pop
+    1704: ldc_w         #670                // String crystal_primordial_chaos
+    1707: ldc_w         #411                // String consumable
+    1710: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1713: pop
+    1714: ldc_w         #672                // String dust_primordial_chaos
+    1717: ldc_w         #411                // String consumable
+    1720: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1723: putstatic     #674                // Field I0Oi1O0OlaND:Lnet/minecraft/item/Item;
+    1726: ldc_w         #676                // String petrified_heart
+    1729: ldc_w         #411                // String consumable
+    1732: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1735: putstatic     #678                // Field lOOliLANd:Lnet/minecraft/item/Item;
+    1738: new           #680                // class ru/lolienergistics/lI10ilAnd
+    1741: dup
+    1742: invokespecial #681                // Method ru/lolienergistics/lI10ilAnd."<init>":()V
+    1745: putstatic     #683                // Field lilILAND:Lnet/minecraft/item/Item;
+    1748: new           #685                // class ru/lolienergistics/llI0OlAND
+    1751: dup
+    1752: ldc_w         #687                // String upgrade_recycler
+    1755: iconst_1
+    1756: invokespecial #688                // Method ru/lolienergistics/llI0OlAND."<init>":(Ljava/lang/String;I)V
+    1759: putstatic     #690                // Field iiOlLand:Lnet/minecraft/item/Item;
+    1762: new           #685                // class ru/lolienergistics/llI0OlAND
+    1765: dup
+    1766: ldc_w         #692                // String upgrade_demineralizer
+    1769: iconst_1
+    1770: invokespecial #688                // Method ru/lolienergistics/llI0OlAND."<init>":(Ljava/lang/String;I)V
+    1773: putstatic     #694                // Field il1OI0lAnd:Lnet/minecraft/item/Item;
+    1776: new           #685                // class ru/lolienergistics/llI0OlAND
+    1779: dup
+    1780: ldc_w         #696                // String upgrade_cardiacamplifier
+    1783: iconst_1
+    1784: invokespecial #688                // Method ru/lolienergistics/llI0OlAND."<init>":(Ljava/lang/String;I)V
+    1787: putstatic     #698                // Field li1O0l0LaNd:Lnet/minecraft/item/Item;
+    1790: new           #700                // class ru/lolienergistics/IO0I1lilaNd
+    1793: dup
+    1794: ldc_w         #702                // String copper
+    1797: ldc2_w        #703                // double 10000.0d
+    1800: ldc2_w        #705                // double 2.0d
+    1803: ldc2_w        #707                // double 0.1d
+    1806: invokespecial #711                // Method ru/lolienergistics/IO0I1lilaNd."<init>":(Ljava/lang/String;DDD)V
+    1809: pop
+    1810: new           #700                // class ru/lolienergistics/IO0I1lilaNd
+    1813: dup
+    1814: ldc_w         #713                // String iridium
+    1817: ldc2_w        #714                // double 50000.0d
+    1820: ldc2_w        #716                // double 5.0d
+    1823: ldc2_w        #718                // double 0.25d
+    1826: invokespecial #711                // Method ru/lolienergistics/IO0I1lilaNd."<init>":(Ljava/lang/String;DDD)V
+    1829: putstatic     #721                // Field lOililLAnd:Lru/lolienergistics/IO0I1lilaNd;
+    1832: ldc_w         #723                // String thermal_protection_upgrade
+    1835: ldc_w         #725                // String upgrades
+    1838: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1841: putstatic     #727                // Field lI0OIILand:Lnet/minecraft/item/Item;
+    1844: ldc_w         #729                // String efficient_injector_upgrade
+    1847: ldc_w         #725                // String upgrades
+    1850: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1853: putstatic     #731                // Field lOi1OOI1lanD:Lnet/minecraft/item/Item;
+    1856: ldc_w         #733                // String substrate
+    1859: ldc_w         #411                // String consumable
+    1862: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1865: pop
+    1866: ldc_w         #735                // String hdpe_pellet
+    1869: ldc_w         #411                // String consumable
+    1872: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1875: pop
+    1876: ldc_w         #737                // String hdpe_rod
+    1879: ldc_w         #411                // String consumable
+    1882: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1885: pop
+    1886: ldc_w         #739                // String hdpe_sheet
+    1889: ldc_w         #411                // String consumable
+    1892: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1895: pop
+    1896: ldc_w         #741                // String bio_fuel
+    1899: ldc_w         #411                // String consumable
+    1902: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1905: pop
+    1906: ldc_w         #743                // String compressed_diamond
+    1909: ldc_w         #411                // String consumable
+    1912: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1915: pop
+    1916: ldc_w         #745                // String compressed_obsidian
+    1919: ldc_w         #411                // String consumable
+    1922: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1925: pop
+    1926: ldc_w         #747                // String electrolytic_core
+    1929: ldc_w         #411                // String consumable
+    1932: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    1935: pop
+    1936: new           #749                // class ru/lolienergistics/Il0OLAnD
+    1939: dup
+    1940: invokespecial #750                // Method ru/lolienergistics/Il0OLAnD."<init>":()V
+    1943: putstatic     #752                // Field iIllllOlANd:Lnet/minecraft/item/Item;
+    1946: new           #754                // class ru/lolienergistics/lOiIl0ilanD
+    1949: dup
+    1950: ldc_w         #756                // String advanced_jetpack
+    1953: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+    1956: getstatic     #761                // Field ru/lolienergistics/OOOIilanD.O1il1llOLANd:Lru/loliland/le/common/CommonSide;
+    1959: ldc_w         #763                // String gravi_suite
+    1962: invokevirtual #768                // Method ru/loliland/le/common/CommonSide.addArmor:(Ljava/lang/String;)I
+    1965: iconst_1
+    1966: invokespecial #771                // Method ru/lolienergistics/lOiIl0ilanD."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+    1969: putstatic     #773                // Field llii0LAnD:Lnet/minecraft/item/Item;
+    1972: new           #775                // class ru/lolienergistics/I1IIll1LaND
+    1975: dup
+    1976: ldc_w         #777                // String gravi_chestplate
+    1979: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+    1982: getstatic     #761                // Field ru/lolienergistics/OOOIilanD.O1il1llOLANd:Lru/loliland/le/common/CommonSide;
+    1985: ldc_w         #763                // String gravi_suite
+    1988: invokevirtual #768                // Method ru/loliland/le/common/CommonSide.addArmor:(Ljava/lang/String;)I
+    1991: iconst_1
+    1992: invokespecial #778                // Method ru/lolienergistics/I1IIll1LaND."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+    1995: putstatic     #780                // Field lii1IlAND:Lnet/minecraft/item/Item;
+    1998: new           #782                // class ru/lolienergistics/l1lIOlAND
+    2001: dup
+    2002: ldc_w         #784                // String advanced_nano_chestplate
+    2005: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+    2008: getstatic     #761                // Field ru/lolienergistics/OOOIilanD.O1il1llOLANd:Lru/loliland/le/common/CommonSide;
+    2011: ldc_w         #763                // String gravi_suite
+    2014: invokevirtual #768                // Method ru/loliland/le/common/CommonSide.addArmor:(Ljava/lang/String;)I
+    2017: iconst_1
+    2018: invokespecial #785                // Method ru/lolienergistics/l1lIOlAND."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+    2021: putstatic     #787                // Field lIOl0lAND:Lnet/minecraft/item/Item;
+    2024: new           #789                // class ru/lolienergistics/O1Ol0i0LAnd
+    2027: dup
+    2028: ldc_w         #791                // String advanced_lappack
+    2031: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+    2034: getstatic     #761                // Field ru/lolienergistics/OOOIilanD.O1il1llOLANd:Lru/loliland/le/common/CommonSide;
+    2037: ldc_w         #763                // String gravi_suite
+    2040: invokevirtual #768                // Method ru/loliland/le/common/CommonSide.addArmor:(Ljava/lang/String;)I
+    2043: iconst_1
+    2044: ldc_w         #792                // int 3000000
+    2047: iconst_3
+    2048: sipush        3000
+    2051: invokespecial #795                // Method ru/lolienergistics/O1Ol0i0LAnd."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;IIIII)V
+    2054: putstatic     #797                // Field lOOl0LaNd:Lnet/minecraft/item/Item;
+    2057: new           #789                // class ru/lolienergistics/O1Ol0i0LAnd
+    2060: dup
+    2061: ldc_w         #799                // String ultimate_lappack
+    2064: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+    2067: getstatic     #761                // Field ru/lolienergistics/OOOIilanD.O1il1llOLANd:Lru/loliland/le/common/CommonSide;
+    2070: ldc_w         #763                // String gravi_suite
+    2073: invokevirtual #768                // Method ru/loliland/le/common/CommonSide.addArmor:(Ljava/lang/String;)I
+    2076: iconst_1
+    2077: ldc_w         #800                // int 30000000
+    2080: iconst_4
+    2081: ldc_w         #801                // int 60000
+    2084: invokespecial #795                // Method ru/lolienergistics/O1Ol0i0LAnd."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;IIIII)V
+    2087: putstatic     #803                // Field l10OilanD:Lnet/minecraft/item/Item;
+    2090: new           #805                // class ru/lolienergistics/OIOiO10LaND
+    2093: dup
+    2094: ldc_w         #807                // String vajra
+    2097: getstatic     #323                // Field net/minecraft/item/Item$ToolMaterial.EMERALD:Lnet/minecraft/item/Item$ToolMaterial;
+    2100: invokespecial #810                // Method ru/lolienergistics/OIOiO10LaND."<init>":(Ljava/lang/String;Lnet/minecraft/item/Item$ToolMaterial;)V
+    2103: putstatic     #812                // Field lO011O1IlAnD:Lnet/minecraft/item/Item;
+    2106: new           #814                // class ru/lolienergistics/lIIiO0laNd
+    2109: dup
+    2110: ldc_w         #816                // String gravi_tool
+    2113: getstatic     #819                // Field net/minecraft/item/Item$ToolMaterial.IRON:Lnet/minecraft/item/Item$ToolMaterial;
+    2116: invokespecial #820                // Method ru/lolienergistics/lIIiO0laNd."<init>":(Ljava/lang/String;Lnet/minecraft/item/Item$ToolMaterial;)V
+    2119: putstatic     #822                // Field lOlO0I0land:Lnet/minecraft/item/Item;
+    2122: new           #824                // class ru/lolienergistics/O1l0i01lLAND
+    2125: dup
+    2126: getstatic     #323                // Field net/minecraft/item/Item$ToolMaterial.EMERALD:Lnet/minecraft/item/Item$ToolMaterial;
+    2129: invokespecial #825                // Method ru/lolienergistics/O1l0i01lLAND."<init>":(Lnet/minecraft/item/Item$ToolMaterial;)V
+    2132: putstatic     #827                // Field OlO11Land:Lnet/minecraft/item/Item;
+    2135: new           #829                // class ru/lolienergistics/ii0ii01LanD
+    2138: dup
+    2139: ldc_w         #831                // String advanced_drill
+    2142: getstatic     #323                // Field net/minecraft/item/Item$ToolMaterial.EMERALD:Lnet/minecraft/item/Item$ToolMaterial;
+    2145: invokespecial #832                // Method ru/lolienergistics/ii0ii01LanD."<init>":(Ljava/lang/String;Lnet/minecraft/item/Item$ToolMaterial;)V
+    2148: putstatic     #834                // Field llllLANd:Lnet/minecraft/item/Item;
+    2151: new           #836                // class ru/lolienergistics/lI0lI11ILanD
+    2154: dup
+    2155: ldc_w         #838                // String advanced_chainsaw
+    2158: getstatic     #323                // Field net/minecraft/item/Item$ToolMaterial.EMERALD:Lnet/minecraft/item/Item$ToolMaterial;
+    2161: invokespecial #839                // Method ru/lolienergistics/lI0lI11ILanD."<init>":(Ljava/lang/String;Lnet/minecraft/item/Item$ToolMaterial;)V
+    2164: putstatic     #841                // Field l0O1OIlaND:Lnet/minecraft/item/Item;
+    2167: ldc_w         #843                // String super_conductor_cover
+    2170: ldc_w         #411                // String consumable
+    2173: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2176: pop
+    2177: ldc_w         #845                // String super_conductor
+    2180: ldc_w         #411                // String consumable
+    2183: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2186: pop
+    2187: ldc_w         #847                // String cooling_core
+    2190: ldc_w         #411                // String consumable
+    2193: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2196: pop
+    2197: ldc_w         #849                // String gravitation_engine
+    2200: ldc_w         #411                // String consumable
+    2203: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2206: pop
+    2207: ldc_w         #851                // String magnetron
+    2210: ldc_w         #411                // String consumable
+    2213: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2216: pop
+    2217: ldc_w         #853                // String vajra_core
+    2220: ldc_w         #411                // String consumable
+    2223: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2226: pop
+    2227: ldc_w         #855                // String engine_boost
+    2230: ldc_w         #411                // String consumable
+    2233: invokestatic  #397                // Method I1O1I1LaNd:(Ljava/lang/String;Ljava/lang/String;)Lnet/minecraft/item/Item;
+    2236: pop
+    2237: return
+
+  private static void OOOIilanD();
+    Code:
+       0: new           #858                // class ru/lolienergistics/llIl010LAnd
+       3: dup
+       4: invokespecial #859                // Method ru/lolienergistics/llIl010LAnd."<init>":()V
+       7: pop
+       8: new           #861                // class ru/lolienergistics/liiOlanD
+      11: dup
+      12: invokespecial #862                // Method ru/lolienergistics/liiOlanD."<init>":()V
+      15: pop
+      16: new           #864                // class ru/lolienergistics/lI10lOlAND
+      19: dup
+      20: ldc_w         #866                // String electric_boots_traveller
+      23: iconst_3
+      24: iconst_3
+      25: invokespecial #869                // Method ru/lolienergistics/lI10lOlAND."<init>":(Ljava/lang/String;II)V
+      28: putstatic     #871                // Field iiO0ilaNd:Lnet/minecraft/item/Item;
+      31: new           #873                // class ru/lolienergistics/l1O0Land
+      34: dup
+      35: ldc_w         #875                // String nano_boots_traveller
+      38: iconst_3
+      39: iconst_3
+      40: invokespecial #876                // Method ru/lolienergistics/l1O0Land."<init>":(Ljava/lang/String;II)V
+      43: putstatic     #878                // Field i11IllAnd:Lnet/minecraft/item/Item;
+      46: new           #880                // class ru/lolienergistics/li01laND
+      49: dup
+      50: ldc_w         #882                // String quantum_boots_traveller
+      53: iconst_3
+      54: iconst_3
+      55: invokespecial #883                // Method ru/lolienergistics/li01laND."<init>":(Ljava/lang/String;II)V
+      58: putstatic     #885                // Field ll0iOlLAnd:Lnet/minecraft/item/Item;
+      61: new           #887                // class ru/lolienergistics/lOlI00LAND
+      64: dup
+      65: ldc_w         #889                // String infused_quantum_chest
+      68: iconst_1
+      69: invokespecial #890                // Method ru/lolienergistics/lOlI00LAND."<init>":(Ljava/lang/String;I)V
+      72: putstatic     #892                // Field l10II00OLaND:Lnet/minecraft/item/Item;
+      75: new           #894                // class ru/lolienergistics/iiIi1IlaNd
+      78: dup
+      79: ldc_w         #896                // String electric_goggles
+      82: getstatic     #898                // Field net/minecraft/item/ItemArmor$ArmorMaterial.IRON:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+      85: iconst_3
+      86: iconst_0
+      87: invokespecial #899                // Method ru/lolienergistics/iiIi1IlaNd."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+      90: putstatic     #901                // Field I111i0OILaNd:Lnet/minecraft/item/Item;
+      93: new           #903                // class ru/lolienergistics/lIiO10IlLaNd
+      96: dup
+      97: ldc_w         #905                // String nano_thaumic_helmet
+     100: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     103: iconst_3
+     104: iconst_0
+     105: invokespecial #906                // Method ru/lolienergistics/lIiO10IlLaNd."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+     108: putstatic     #908                // Field lIOi0LANd:Lnet/minecraft/item/Item;
+     111: new           #910                // class ru/lolienergistics/l0lIOilanD
+     114: dup
+     115: ldc_w         #912                // String quantum_thaumic_helmet
+     118: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     121: iconst_3
+     122: iconst_0
+     123: invokespecial #913                // Method ru/lolienergistics/l0lIOilanD."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+     126: putstatic     #915                // Field O1iOOlllANd:Lnet/minecraft/item/Item;
+     129: new           #917                // class ru/lolienergistics/l1IO0IOIlaNd
+     132: dup
+     133: ldc_w         #919                // String solar_helmet_revealing
+     136: getstatic     #360                // Field net/minecraft/item/ItemArmor$ArmorMaterial.DIAMOND:Lnet/minecraft/item/ItemArmor$ArmorMaterial;
+     139: iconst_3
+     140: iconst_0
+     141: invokespecial #920                // Method ru/lolienergistics/l1IO0IOIlaNd."<init>":(Ljava/lang/String;Lnet/minecraft/item/ItemArmor$ArmorMaterial;II)V
+     144: putstatic     #922                // Field iOO1IiI1lAnD:Lnet/minecraft/item/Item;
+     147: return
+
+  public static net.minecraft.item.Item I1O1I1LaNd(ru.lolienergistics.lOlOillIlANd);
+    Code:
+       0: getstatic     #925                // Field ru/loliland/le/common/Oill1LAnD.I1O1I1LaNd:[I
+       3: aload_0
+       4: invokevirtual #929                // Method ru/lolienergistics/lOlOillIlANd.ordinal:()I
+       7: iaload
+       8: tableswitch   { // 1 to 4
+
+                     1: 40
+
+                     2: 44
+
+                     3: 48
+
+                     4: 52
+               default: 56
+          }
+      40: getstatic     #537                // Field lii1LAND:Lnet/minecraft/item/Item;
+      43: areturn
+      44: getstatic     #549                // Field O1liliLANd:Lnet/minecraft/item/Item;
+      47: areturn
+      48: getstatic     #555                // Field O1iOl0lAND:Lnet/minecraft/item/Item;
+      51: areturn
+      52: getstatic     #561                // Field O1iO000Land:Lnet/minecraft/item/Item;
+      55: areturn
+      56: aconst_null
+      57: areturn
+
+  public static net.minecraft.item.Item OOOIilanD(ru.lolienergistics.lOlOillIlANd);
+    Code:
+       0: getstatic     #925                // Field ru/loliland/le/common/Oill1LAnD.I1O1I1LaNd:[I
+       3: aload_0
+       4: invokevirtual #929                // Method ru/lolienergistics/lOlOillIlANd.ordinal:()I
+       7: iaload
+       8: tableswitch   { // 1 to 4
+
+                     1: 40
+
+                     2: 44
+
+                     3: 48
+
+                     4: 52
+               default: 56
+          }
+      40: getstatic     #547                // Field liOi1OLaNd:Lnet/minecraft/item/Item;
+      43: areturn
+      44: getstatic     #553                // Field llOlOiLand:Lnet/minecraft/item/Item;
+      47: areturn
+      48: getstatic     #559                // Field i0O1LAnd:Lnet/minecraft/item/Item;
+      51: areturn
+      52: getstatic     #565                // Field lOIOlOIIlAnd:Lnet/minecraft/item/Item;
+      55: areturn
+      56: aconst_null
+      57: areturn
+
+  public static org.apache.commons.lang3.tuple.Triple<net.minecraft.item.Item, net.minecraft.item.Item, net.minecraft.item.Item> I1O1I1LaNd(ru.lolienergistics.lOlOillIlANd, java.lang.String, long, float, float, float, int);
+    Code:
+       0: new           #932                // class ru/lolienergistics/II10iil1lanD
+       3: dup
+       4: aload_0
+       5: aload_1
+       6: lload_2
+       7: fload         4
+       9: fload         5
+      11: fload         6
+      13: invokespecial #935                // Method ru/lolienergistics/II10iil1lanD."<init>":(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFF)V
+      16: astore        8
+      18: new           #937                // class ru/lolienergistics/O1liIliLand
+      21: dup
+      22: aload_0
+      23: aload_1
+      24: lload_2
+      25: fload         4
+      27: fload         5
+      29: iload         7
+      31: aload         8
+      33: invokespecial #940                // Method ru/lolienergistics/O1liIliLand."<init>":(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFILru/lolienergistics/II10iil1lanD;)V
+      36: astore        9
+      38: new           #942                // class ru/lolienergistics/lO1i01LAnd
+      41: dup
+      42: aload_0
+      43: aload_1
+      44: lload_2
+      45: fload         4
+      47: fload         5
+      49: fload         6
+      51: invokespecial #943                // Method ru/lolienergistics/lO1i01LAnd."<init>":(Lru/lolienergistics/lOlOillIlANd;Ljava/lang/String;JFFF)V
+      54: astore        10
+      56: aload         8
+      58: aload         9
+      60: aload         10
+      62: invokestatic  #947                // Method org/apache/commons/lang3/tuple/Triple.of:(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Lorg/apache/commons/lang3/tuple/Triple;
+      65: areturn
+
+  private static int I1O1I1LaNd(java.lang.String);
+    Code:
+       0: aload_0
+       1: invokestatic  #952                // Method cpw/mods/fml/client/registry/RenderingRegistry.addNewArmourRendererPrefix:(Ljava/lang/String;)I
+       4: ireturn
+
+  public static net.minecraft.item.Item I1O1I1LaNd(java.lang.String, java.lang.String);
+    Code:
+       0: new           #954                // class ru/lolienergistics/Olli1LAnD
+       3: dup
+       4: aload_0
+       5: invokespecial #955                // Method ru/lolienergistics/Olli1LAnD."<init>":(Ljava/lang/String;)V
+       8: astore_2
+       9: aload_2
+      10: aload_1
+      11: invokevirtual #958                // Method ru/lolienergistics/Olli1LAnD.I1O1I1LaNd:(Ljava/lang/String;)Lru/lolienergistics/Olli1LAnD;
+      14: pop
+      15: aload_2
+      16: aload_0
+      17: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      20: aload_2
+      21: areturn
+
+  public static net.minecraft.item.Item OOOIilanD(java.lang.String, java.lang.String);
+    Code:
+       0: new           #11                 // class ru/loliland/le/common/O1il1llOLANd
+       3: dup
+       4: aload_0
+       5: invokespecial #959                // Method ru/loliland/le/common/O1il1llOLANd."<init>":(Ljava/lang/String;)V
+       8: astore_2
+       9: aload_2
+      10: aload_1
+      11: invokevirtual #958                // Method ru/lolienergistics/Olli1LAnD.I1O1I1LaNd:(Ljava/lang/String;)Lru/lolienergistics/Olli1LAnD;
+      14: pop
+      15: aload_2
+      16: aload_0
+      17: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      20: aload_2
+      21: areturn
+
+  public static net.minecraft.item.Item I1O1I1LaNd(net.minecraft.creativetab.CreativeTabs, java.lang.String, java.lang.String);
+    Code:
+       0: new           #954                // class ru/lolienergistics/Olli1LAnD
+       3: dup
+       4: aload_2
+       5: invokespecial #955                // Method ru/lolienergistics/Olli1LAnD."<init>":(Ljava/lang/String;)V
+       8: astore_3
+       9: aload_3
+      10: aload_1
+      11: invokevirtual #958                // Method ru/lolienergistics/Olli1LAnD.I1O1I1LaNd:(Ljava/lang/String;)Lru/lolienergistics/Olli1LAnD;
+      14: pop
+      15: aload_3
+      16: aload_0
+      17: invokevirtual #964                // Method ru/lolienergistics/Olli1LAnD.func_77637_a:(Lnet/minecraft/creativetab/CreativeTabs;)Lnet/minecraft/item/Item;
+      20: pop
+      21: aload_3
+      22: aload_2
+      23: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      26: aload_3
+      27: areturn
+
+  public static ru.lolienergistics.li0OLand I1O1I1LaNd(java.lang.String, int, java.lang.String, java.lang.String);
+    Code:
+       0: new           #423                // class ru/lolienergistics/li0OLand
+       3: dup
+       4: aload_0
+       5: aload_2
+       6: iload_1
+       7: invokespecial #967                // Method ru/lolienergistics/li0OLand."<init>":(Ljava/lang/String;Ljava/lang/String;I)V
+      10: astore        4
+      12: aload         4
+      14: aload_0
+      15: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      18: new           #969                // class fox/spiteful/avaritia/render/FancyHaloRenderer
+      21: dup
+      22: invokespecial #970                // Method fox/spiteful/avaritia/render/FancyHaloRenderer."<init>":()V
+      25: astore        5
+      27: aload         4
+      29: aload         5
+      31: invokestatic  #976                // Method net/minecraftforge/client/MinecraftForgeClient.registerItemRenderer:(Lnet/minecraft/item/Item;Lnet/minecraftforge/client/IItemRenderer;)V
+      34: aload         4
+      36: areturn
+
+  public static void I1O1I1LaNd(java.lang.String, java.util.List<ru.loliland.le.common.li0iOILAND$I1O1I1LaNd>);
+    Code:
+       0: new           #979                // class ru/lolienergistics/i1i1OlLaNd
+       3: dup
+       4: aload_0
+       5: aload_1
+       6: invokespecial #981                // Method ru/lolienergistics/i1i1OlLaNd."<init>":(Ljava/lang/String;Ljava/util/List;)V
+       9: astore_2
+      10: getstatic     #278                // Field lI00OlAND:Ljava/util/List;
+      13: aload_2
+      14: invokeinterface #188,  2          // InterfaceMethod java/util/List.add:(Ljava/lang/Object;)Z
+      19: pop
+      20: aload_2
+      21: aload_0
+      22: invokestatic  #317                // Method cpw/mods/fml/common/registry/GameRegistry.registerItem:(Lnet/minecraft/item/Item;Ljava/lang/String;)V
+      25: return
+
+  static {};
+    Code:
+       0: ldc_w         #984                // String LOLI
+       3: getstatic     #990                // Field net/minecraft/util/EnumChatFormatting.DARK_AQUA:Lnet/minecraft/util/EnumChatFormatting;
+       6: ldc_w         #992                // String Loli
+       9: invokestatic  #998                // Method net/minecraftforge/common/util/EnumHelper.addRarity:(Ljava/lang/String;Lnet/minecraft/util/EnumChatFormatting;Ljava/lang/String;)Lnet/minecraft/item/EnumRarity;
+      12: putstatic     #1000               // Field I1O1I1LaNd:Lnet/minecraft/item/EnumRarity;
+      15: ldc_w         #1002               // String red
+      18: getstatic     #1005               // Field net/minecraft/util/EnumChatFormatting.RED:Lnet/minecraft/util/EnumChatFormatting;
+      21: ldc_w         #1007               // String Red Rarity
+      24: invokestatic  #998                // Method net/minecraftforge/common/util/EnumHelper.addRarity:(Ljava/lang/String;Lnet/minecraft/util/EnumChatFormatting;Ljava/lang/String;)Lnet/minecraft/item/EnumRarity;
+      27: putstatic     #1009               // Field OOOIilanD:Lnet/minecraft/item/EnumRarity;
+      30: new           #1011               // class java/util/ArrayList
+      33: dup
+      34: invokespecial #1012               // Method java/util/ArrayList."<init>":()V
+      37: putstatic     #278                // Field lI00OlAND:Ljava/util/List;
+      40: iconst_2
+      41: anewarray     #1014               // class net/minecraft/item/ItemStack
+      44: putstatic     #1016               // Field lli0OiIlAND:[Lnet/minecraft/item/ItemStack;
+      47: iconst_2
+      48: anewarray     #1014               // class net/minecraft/item/ItemStack
+      51: putstatic     #1018               // Field li0iOILAND:[Lnet/minecraft/item/ItemStack;
+      54: iconst_2
+      55: anewarray     #1014               // class net/minecraft/item/ItemStack
+      58: putstatic     #1020               // Field O1il1llOLANd:[Lnet/minecraft/item/ItemStack;
+      61: iconst_2
+      62: anewarray     #1014               // class net/minecraft/item/ItemStack
+      65: putstatic     #1022               // Field Oill1LAnD:[Lnet/minecraft/item/ItemStack;
+      68: iconst_2
+      69: anewarray     #1014               // class net/minecraft/item/ItemStack
+      72: putstatic     #1024               // Field lIOILand:[Lnet/minecraft/item/ItemStack;
+      75: iconst_2
+      76: anewarray     #1014               // class net/minecraft/item/ItemStack
+      79: putstatic     #1026               // Field lil0liLand:[Lnet/minecraft/item/ItemStack;
+      82: bipush        10
+      84: anewarray     #1014               // class net/minecraft/item/ItemStack
+      87: putstatic     #1028               // Field iilIi1laND:[Lnet/minecraft/item/ItemStack;
+      90: bipush        10
+      92: anewarray     #1014               // class net/minecraft/item/ItemStack
+      95: putstatic     #1030               // Field lli011lLANd:[Lnet/minecraft/item/ItemStack;
+      98: bipush        10
+     100: anewarray     #1014               // class net/minecraft/item/ItemStack
+     103: putstatic     #1032               // Field l0illAND:[Lnet/minecraft/item/ItemStack;
+     106: bipush        10
+     108: anewarray     #1014               // class net/minecraft/item/ItemStack
+     111: putstatic     #1034               // Field IO11O0LANd:[Lnet/minecraft/item/ItemStack;
+     114: iconst_3
+     115: anewarray     #1014               // class net/minecraft/item/ItemStack
+     118: putstatic     #1036               // Field l11lLANd:[Lnet/minecraft/item/ItemStack;
+     121: iconst_3
+     122: anewarray     #1014               // class net/minecraft/item/ItemStack
+     125: putstatic     #1038               // Field lO110l1LANd:[Lnet/minecraft/item/ItemStack;
+     128: iconst_2
+     129: anewarray     #1014               // class net/minecraft/item/ItemStack
+     132: putstatic     #1040               // Field l0iIlIO1laNd:[Lnet/minecraft/item/ItemStack;
+     135: bipush        6
+     137: anewarray     #1014               // class net/minecraft/item/ItemStack
+     140: putstatic     #1042               // Field iOIl0LAnD:[Lnet/minecraft/item/ItemStack;
+     143: iconst_3
+     144: anewarray     #1014               // class net/minecraft/item/ItemStack
+     147: putstatic     #1044               // Field iIiO00OLaNd:[Lnet/minecraft/item/ItemStack;
+     150: iconst_3
+     151: anewarray     #1014               // class net/minecraft/item/ItemStack
+     154: putstatic     #1046               // Field ii1li00Land:[Lnet/minecraft/item/ItemStack;
+     157: bipush        10
+     159: anewarray     #1014               // class net/minecraft/item/ItemStack
+     162: putstatic     #1048               // Field IOI1LaNd:[Lnet/minecraft/item/ItemStack;
+     165: iconst_2
+     166: anewarray     #1014               // class net/minecraft/item/ItemStack
+     169: putstatic     #1050               // Field l0l00lAND:[Lnet/minecraft/item/ItemStack;
+     172: iconst_5
+     173: anewarray     #1014               // class net/minecraft/item/ItemStack
+     176: putstatic     #1052               // Field II1i1l0laND:[Lnet/minecraft/item/ItemStack;
+     179: bipush        6
+     181: anewarray     #20                 // class net/minecraft/item/Item
+     184: putstatic     #376                // Field liO1Oli1lanD:[Lnet/minecraft/item/Item;
+     187: iconst_4
+     188: anewarray     #20                 // class net/minecraft/item/Item
+     191: putstatic     #399                // Field OI1II1OIlanD:[Lnet/minecraft/item/Item;
+     194: iconst_3
+     195: anewarray     #1014               // class net/minecraft/item/ItemStack
+     198: putstatic     #1054               // Field l01l0OilANd:[Lnet/minecraft/item/ItemStack;
+     201: iconst_3
+     202: anewarray     #1014               // class net/minecraft/item/ItemStack
+     205: putstatic     #1056               // Field lOOllANd:[Lnet/minecraft/item/ItemStack;
+     208: iconst_5
+     209: anewarray     #1014               // class net/minecraft/item/ItemStack
+     212: putstatic     #1058               // Field iOIOOilanD:[Lnet/minecraft/item/ItemStack;
+     215: iconst_5
+     216: anewarray     #1014               // class net/minecraft/item/ItemStack
+     219: putstatic     #1060               // Field illiLanD:[Lnet/minecraft/item/ItemStack;
+     222: iconst_5
+     223: anewarray     #1014               // class net/minecraft/item/ItemStack
+     226: putstatic     #1062               // Field OO10lO1LANd:[Lnet/minecraft/item/ItemStack;
+     229: iconst_2
+     230: anewarray     #1014               // class net/minecraft/item/ItemStack
+     233: putstatic     #1064               // Field I1IllaND:[Lnet/minecraft/item/ItemStack;
+     236: new           #1011               // class java/util/ArrayList
+     239: dup
+     240: invokespecial #1012               // Method java/util/ArrayList."<init>":()V
+     243: putstatic     #177                // Field Il0iIland:Ljava/util/List;
+     246: iconst_3
+     247: anewarray     #1066               // class java/lang/String
+     250: dup
+     251: iconst_0
+     252: ldc_w         #1068               // String minicio
+     255: aastore
+     256: dup
+     257: iconst_1
+     258: ldc_w         #1070               // String acio
+     261: aastore
+     262: dup
+     263: iconst_2
+     264: ldc_w         #1072               // String crucio
+     267: aastore
+     268: putstatic     #1074               // Field lOOOLaNd:[Ljava/lang/String;
+     271: iconst_3
+     272: newarray       int
+     274: dup
+     275: iconst_0
+     276: ldc_w         #1075               // int 9629874
+     279: iastore
+     280: dup
+     281: iconst_1
+     282: ldc_w         #1076               // int 16762496
+     285: iastore
+     286: dup
+     287: iconst_2
+     288: ldc_w         #1077               // int 15918593
+     291: iastore
+     292: putstatic     #1079               // Field l1l0lAnd:[I
+     295: iconst_3
+     296: newarray       int
+     298: dup
+     299: iconst_0
+     300: ldc_w         #1080               // int 2129472
+     303: iastore
+     304: dup
+     305: iconst_1
+     306: ldc_w         #1081               // int 9654529
+     309: iastore
+     310: dup
+     311: iconst_2
+     312: ldc_w         #1082               // int 7038465
+     315: iastore
+     316: putstatic     #1084               // Field I100I0lLand:[I
+     319: return
+}

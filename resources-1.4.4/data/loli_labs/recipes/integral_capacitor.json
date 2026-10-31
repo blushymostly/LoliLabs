@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:quant_capacitor"
+    },
+    {
+      "item": "ae2:engineering_processor"
+    },
+    {
+      "item": "ic2modern:iridium_plate"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:integral_capacitor",
+    "count": 2
+  }
+}

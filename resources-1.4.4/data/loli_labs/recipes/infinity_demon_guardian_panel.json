@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "loli_labs:infinity_guardian_panel"
+    },
+    {
+      "item": "ic2modern:iridium_plate"
+    },
+    {
+      "item": "ic2modern:energy_crystal"
+    },
+    {
+      "item": "avaritia:infinity_ingot"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:infinity_demon_guardian_panel"
+  }
+}

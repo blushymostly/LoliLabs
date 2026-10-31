@@ -1,0 +1,138 @@
+[
+  {
+    "original": "assets/lolienergistics/textures/gui/gui_solar_panel.png",
+    "target": "assets/loli_labs/textures/gui/og/solar.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/gui_unifier.png",
+    "target": "assets/loli_labs/textures/gui/og/unifier.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT0X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t0_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT0X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t0_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT0X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t0_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT1X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t1_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT1X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t1_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT1X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t1_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT2X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t2_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT2X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t2_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT2X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t2_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT3X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t3_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT3X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t3_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT3X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t3_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT4X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t4_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT4X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t4_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT4X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t4_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT5X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t5_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT5X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t5_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT5X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t5_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT6X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t6_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT6X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t6_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT6X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t6_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT7X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t7_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT7X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t7_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT7X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t7_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT8X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t8_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT8X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t8_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT8X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t8_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT9X1.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t9_x1.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT9X6.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t9_x6.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/GuiMatterSolidT9X12.png",
+    "target": "assets/loli_labs/textures/gui/og/matter_solid_t9_x12.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/upgrades/progress_full.png",
+    "target": "assets/loli_labs/textures/gui/og/progress_full.png"
+  },
+  {
+    "original": "assets/lolienergistics/textures/gui/upgrades/progress_empty.png",
+    "target": "assets/loli_labs/textures/gui/og/progress_empty.png"
+  }
+]

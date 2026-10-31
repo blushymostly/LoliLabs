@@ -1,0 +1,28 @@
+const fs=require('fs'),path=require('path'),assert=require('node:assert/strict'),vm=require('node:vm');
+const root=path.join(__dirname,'resources-1.4.4');
+function json(p){return JSON.parse(fs.readFileSync(path.join(root,p),'utf8'));}
+function files(dir){return fs.readdirSync(dir,{withFileTypes:true}).flatMap(x=>x.isDirectory()?files(path.join(dir,x.name)):[path.join(dir,x.name)]);}
+const materials=json('assets/loli_labs/legacy-items.json'),machines=json('assets/loli_labs/machines.json');
+const ids=new Set([...materials,...machines].map(x=>x.id));ids.add('vajra');assert.equal(ids.size,317);
+const excluded=require('./EXCLUSIONS.json');for(const id of excluded.excludedMaterials)assert.ok(!ids.has(id));
+assert.equal(machines.filter(x=>x.kind===0).length,20);assert.equal(machines.filter(x=>x.kind===2).length,30);
+const legacy=require('./import/inspect-legacy.cjs'),entries=new Map(legacy.entries.map(x=>[x.name,x]));
+for(const gui of json('assets/loli_labs/gui-assets.json'))assert.deepEqual(fs.readFileSync(path.join(root,gui.target)),legacy.read(entries.get(gui.original)),'Modified original GUI asset '+gui.original);
+for(const x of materials){const model=json('assets/loli_labs/models/item/'+x.id+'.json'),ref=model.textures.layer0.split(':')[1];assert.deepEqual(fs.readFileSync(path.join(root,'assets/loli_labs/textures/'+ref+'.png')),legacy.read(entries.get(x.resource)),'Legacy texture changed '+x.id);}
+const graph=new Map(),signatures=new Set();let recipes=0,pngs=0,animated=0;
+for(const id of ids){
+ const model=json('assets/loli_labs/models/item/'+id+'.json');
+ for(const ref of Object.values(model.textures||{}))if(ref.startsWith('loli_labs:'))assert.ok(fs.existsSync(path.join(root,'assets/loli_labs/textures/'+ref.split(':')[1]+'.png')));
+ if(model.parent.startsWith('loli_labs:')){const block=json('assets/loli_labs/models/'+model.parent.split(':')[1]+'.json');for(const ref of Object.values(block.textures))assert.ok(fs.existsSync(path.join(root,'assets/loli_labs/textures/'+ref.split(':')[1]+'.png')));json('assets/loli_labs/blockstates/'+id+'.json');const loot=json('data/loli_labs/loot_tables/blocks/'+id+'.json');assert.equal(loot.pools[0].entries[0].name,'loli_labs:'+id);assert.equal(loot.pools[0].entries[0].functions[0].ops.length,machines.find(d=>d.id===id).kind===2?9:7);}
+ const recipePath='data/loli_labs/recipes/'+id+'.json';if(!fs.existsSync(path.join(root,recipePath))){assert.ok(materials.find(x=>x.id===id)?.group==='matters');graph.set(id,[]);continue;}
+ const rec=json(recipePath);assert.equal(rec.result.item,'loli_labs:'+id);assert.ok(rec.ingredients.length>0&&rec.ingredients.length<=9);
+ const sig=rec.ingredients.map(x=>x.item).sort().join('|');assert.ok(!signatures.has(sig),'Duplicate recipe '+id);signatures.add(sig);recipes++;
+ const deps=rec.ingredients.filter(x=>x.item.startsWith('loli_labs:')).map(x=>x.item.split(':')[1]);for(const dep of deps)assert.ok(ids.has(dep),'Missing ingredient '+dep);graph.set(id,deps);
+}
+const visited=new Set(),active=new Set();function visit(id){if(visited.has(id))return;assert.ok(!active.has(id),'Recipe cycle '+id);active.add(id);for(const dep of graph.get(id))visit(dep);active.delete(id);visited.add(id);}for(const id of ids)visit(id);
+for(const p of files(path.join(root,'assets/loli_labs/textures')).filter(p=>p.endsWith('.png'))){pngs++;const png=fs.readFileSync(p),w=png.readUInt32BE(16),h=png.readUInt32BE(20);assert.ok(w>0&&h>0);if(!fs.existsSync(p+'.mcmeta')){assert.ok(w===h||w/h===12||p.replaceAll('\\','/').includes('/textures/gui/'),'Unexpected static atlas '+p);continue;}const a=JSON.parse(fs.readFileSync(p+'.mcmeta')).animation,fw=a.width||Math.min(w,h),fh=a.height||fw;assert.equal(w%fw,0);assert.equal(h%fh,0);assert.ok(a.frametime>0);for(const f of a.frames||[]){const index=typeof f==='number'?f:f.index;assert.ok(index>=0&&index<w/fw*h/fh);if(typeof f==='object')assert.ok(f.time>0);}animated++;}
+for(const d of machines.filter(x=>x.kind===2)){const m=json('assets/loli_labs/models/block/'+d.id+'.json');assert.equal(Object.keys(m.elements[0].faces).length,6);for(const f of Object.values(m.elements[0].faces))assert.ok(Math.abs(f.uv[2]-f.uv[0]-16/12)<1e-8,'Stretched machine atlas '+d.id);}
+for(const d of machines.filter(d=>d.kind!==2)){const variants=json('assets/loli_labs/blockstates/'+d.id+'.json').variants;assert.equal(Object.keys(variants).length,6);const opposite={north:'south',south:'north',east:'west',west:'east',up:'down',down:'up'};for(const [key,value] of Object.entries(variants)){const m=json('assets/loli_labs/models/'+value.model.split(':')[1]+'.json');assert.ok(m.elements[1].faces[opposite[key.split('=')[1]]],'Energy output overlay on wrong face');assert.equal(m.elements[0].faces.up.texture,'#top');}}
+for(const language of ['ru_ru','en_us']){const lang=json('assets/loli_labs/lang/'+language+'.json');for(const id of ids)assert.ok(lang[(machines.some(d=>d.id===id)?'block':'item')+'.loli_labs.'+id],'Missing name '+id);assert.ok(lang['block.loli_labs.sparkling_panel'].includes(language==='ru_ru'?'Искрящаяся':'Sparkling'));}
+const kubeSolar=path.join(__dirname,'../minecraft/kubejs/server_scripts/sparkling_solar_panel.js');let solarRecipes=0;if(fs.existsSync(kubeSolar))vm.runInNewContext(fs.readFileSync(kubeSolar,'utf8'),{ServerEvents:{recipes(callback){callback({shaped(id,pattern,ingredients){assert.equal(id,'loli_labs:sparkling_panel');assert.equal(ingredients.P,'ic2modern:quantum_solar_panel');return{id(){solarRecipes++;}};}});}}});if(fs.existsSync(kubeSolar))assert.equal(solarRecipes,1);
+console.log(`Verified ${ids.size} items, ${recipes} acyclic unique recipes, ${pngs} original PNGs and ${animated} strict animation metadata files; 20 panels, 30 generators, exclusions and KubeJS recipe.`);

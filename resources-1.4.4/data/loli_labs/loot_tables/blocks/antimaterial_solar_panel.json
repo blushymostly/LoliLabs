@@ -1,0 +1,62 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "loli_labs:antimaterial_solar_panel",
+          "functions": [
+            {
+              "function": "minecraft:copy_nbt",
+              "source": "block_entity",
+              "ops": [
+                {
+                  "source": "LabEnergy",
+                  "target": "BlockEntityTag.LabEnergy",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabInventory",
+                  "target": "BlockEntityTag.LabInventory",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabProgress",
+                  "target": "BlockEntityTag.LabProgress",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabEnergyVersion",
+                  "target": "BlockEntityTag.LabEnergyVersion",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabEUFraction",
+                  "target": "BlockEntityTag.LabEUFraction",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabEnabled",
+                  "target": "BlockEntityTag.LabEnabled",
+                  "op": "replace"
+                },
+                {
+                  "source": "LabMuted",
+                  "target": "BlockEntityTag.LabMuted",
+                  "op": "replace"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ]
+    }
+  ]
+}

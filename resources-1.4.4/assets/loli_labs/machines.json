@@ -1,0 +1,410 @@
+[
+  {
+    "id": "dispersion_solar_panel",
+    "kind": 0,
+    "rate": 32768,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "gravitomagnetic_solar_panel",
+    "kind": 0,
+    "rate": 65536,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "anisotropic_solar_panel",
+    "kind": 0,
+    "rate": 131072,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "fluctuation_solar_panel",
+    "kind": 0,
+    "rate": 262144,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "aberration_solar_panel",
+    "kind": 0,
+    "rate": 524288,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "parametric_solar_panel",
+    "kind": 0,
+    "rate": 1048576,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "chronodynamic_solar_panel",
+    "kind": 0,
+    "rate": 2097152,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "antimaterial_solar_panel",
+    "kind": 0,
+    "rate": 4194304,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "sparkling_panel",
+    "kind": 0,
+    "rate": 8388608,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "asmodeus_demonic_panel",
+    "kind": 0,
+    "rate": 33554432,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "belphegor_demonic_panel",
+    "kind": 0,
+    "rate": 67108864,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "beelzebub_demonic_panel",
+    "kind": 0,
+    "rate": 134217728,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "leviathan_demonic_panel",
+    "kind": 0,
+    "rate": 268435456,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "lucifer_ultimate_demonic_panel",
+    "kind": 0,
+    "rate": 536870912,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "chaos_guardian_panel",
+    "kind": 0,
+    "rate": 67108864,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "cold_guardian_panel",
+    "kind": 0,
+    "rate": 134217728,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "flame_guardian_panel",
+    "kind": 0,
+    "rate": 268435456,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "infinity_guardian_panel",
+    "kind": 0,
+    "rate": 536870912,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "infinity_demon_guardian_panel",
+    "kind": 0,
+    "rate": 1073741824,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "dragon_slayer_ultimate_panel",
+    "kind": 0,
+    "rate": 2147483648,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "energy_unifier",
+    "kind": 1,
+    "rate": 0,
+    "matter": "",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t0_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter",
+    "tier": 0,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t0_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter",
+    "tier": 0,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t0_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter",
+    "tier": 0,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t1_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_blue",
+    "tier": 1,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t1_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_blue",
+    "tier": 1,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t1_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_blue",
+    "tier": 1,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t2_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_pink",
+    "tier": 2,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t2_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_pink",
+    "tier": 2,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t2_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_loose_pink",
+    "tier": 2,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t3_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_pink",
+    "tier": 3,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t3_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_pink",
+    "tier": 3,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t3_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_pink",
+    "tier": 3,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t4_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_red",
+    "tier": 4,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t4_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_red",
+    "tier": 4,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t4_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_red",
+    "tier": 4,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t5_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_turquoise",
+    "tier": 5,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t5_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_turquoise",
+    "tier": 5,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t5_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_turquoise",
+    "tier": 5,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t6_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_turquoise",
+    "tier": 6,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t6_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_turquoise",
+    "tier": 6,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t6_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_luminous_turquoise",
+    "tier": 6,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t7_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_purple",
+    "tier": 7,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t7_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_purple",
+    "tier": 7,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t7_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_purple",
+    "tier": 7,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t8_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_mutated_violet_turquoise",
+    "tier": 8,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t8_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_mutated_violet_turquoise",
+    "tier": 8,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t8_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_mutated_violet_turquoise",
+    "tier": 8,
+    "batch": 12
+  },
+  {
+    "id": "matter_solid_t9_x1",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_sparkling",
+    "tier": 9,
+    "batch": 1
+  },
+  {
+    "id": "matter_solid_t9_x6",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_sparkling",
+    "tier": 9,
+    "batch": 6
+  },
+  {
+    "id": "matter_solid_t9_x12",
+    "kind": 2,
+    "rate": 0,
+    "matter": "matter_sparkling",
+    "tier": 9,
+    "batch": 12
+  }
+]
