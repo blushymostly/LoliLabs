@@ -1,19 +1,22 @@
 package tmr.lolilabs.jade;
 
+import tmr.lolilabs.FlowingGauge;
+import tmr.lolilabs.LoliLabs;
+
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.phys.Vec2;
+
 import snownee.jade.api.ui.Element;
-import tmr.lolilabs.FlowingGauge;
-import tmr.lolilabs.LoliLabs;
 
 /**
  * Jade overlay that scrolls the same 129×5 sparkling strip as {@link FlowingGauge}
  * in machine ModularUI meters.
  */
 public final class FlowingEnergyElement extends Element {
-    public static final ResourceLocation ATLAS =
-            new ResourceLocation(LoliLabs.MOD_ID, "textures/gui/og/gui_multi_greenhouse_common.png");
+
+    public static final ResourceLocation ATLAS = new ResourceLocation(LoliLabs.MOD_ID,
+            "textures/gui/og/gui_multi_greenhouse_common.png");
     /** EU meter row in the shared OG atlas (matches LabModularUI / Greenhouse / Fortune). */
     public static final int EU_V = 12;
     /** Mana / work-meter row. */

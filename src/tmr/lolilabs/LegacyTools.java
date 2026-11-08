@@ -1,61 +1,129 @@
 package tmr.lolilabs;
+
 import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
-public final class LegacyTools { public static void register() {
-LabItems.CATALOG.put("atomic_disassembler",LabItems.ITEMS.register("atomic_disassembler",()->new LabMiningTool(false)));
-LabItems.CATALOG.put("vajra",LabItems.ITEMS.register("vajra",()->new LabMiningTool(false)));
-LabItems.CATALOG.put("legendary_vajra",LabItems.ITEMS.register("legendary_vajra",()->new LabMiningTool(true)));
-LabItems.CATALOG.put("advanced_drill",LabItems.ITEMS.register("advanced_drill",()->new LabMiningTool(true)));
-LabItems.CATALOG.put("advanced_chainsaw",LabItems.ITEMS.register("advanced_chainsaw",()->new LabMiningTool(false)));
-LabItems.CATALOG.put("infinity_pickaxe_ultra",LabItems.ITEMS.register("infinity_pickaxe_ultra",()->new LabInfinityPickaxe()));
-LabItems.CATALOG.put("infinity_ultra_hammer",LabItems.ITEMS.register("infinity_ultra_hammer",()->new LabInfinityPickaxe()));
-LabItems.CATALOG.put("gravi_tool",LabItems.ITEMS.register("gravi_tool",()->new LabConfigurator()));
-LabItems.CATALOG.put("quantum_assembly_tool",LabItems.ITEMS.register("quantum_assembly_tool",()->new LabConfigurator()));
-LabItems.CATALOG.put("manual_pump",LabItems.ITEMS.register("manual_pump",()->new LabPump()));
-LabItems.CATALOG.put("relocator",LabItems.ITEMS.register("relocator",()->new LabRelocator()));
-LabItems.CATALOG.put("flask",LabItems.ITEMS.register("flask",()->new FluidCellItem(1000)));
-LabItems.CATALOG.put("advanced_solar_helmet",LabItems.ITEMS.register("advanced_solar_helmet",()->new LabTechArmor(ArmorItem.Type.HELMET, "advancedSolarHelmet", 1)));
-LabItems.CATALOG.put("hybrid_solar_helmet",LabItems.ITEMS.register("hybrid_solar_helmet",()->new LabTechArmor(ArmorItem.Type.HELMET, "hybridSolarHelmet", 2)));
-LabItems.CATALOG.put("ultimate_solar_helmet",LabItems.ITEMS.register("ultimate_solar_helmet",()->new LabTechArmor(ArmorItem.Type.HELMET, "ultimateSolarHelmet", 3)));
-LabItems.CATALOG.put("advanced_jetpack",LabItems.ITEMS.register("advanced_jetpack",()->new LabTechArmor(ArmorItem.Type.CHESTPLATE, "advanced_jetpack", 0, "LabFlight", "LabFallProtection")));
-LabItems.CATALOG.put("gravi_chestplate",LabItems.ITEMS.register("gravi_chestplate",()->new LabTechArmor(ArmorItem.Type.CHESTPLATE, "gravi_chestplate", 0, "LabFlight", "LabFastFlight", "LabFallProtection")));
-LabItems.CATALOG.put("advanced_nano_chestplate",LabItems.ITEMS.register("advanced_nano_chestplate",()->new LabTechArmor(ArmorItem.Type.CHESTPLATE, "advanced_nano_chestplate", 0, "LabFlight", "LabFallProtection")));
-LabItems.CATALOG.put("electric_boots_traveller",LabItems.ITEMS.register("electric_boots_traveller",()->new LabTechArmor(ArmorItem.Type.BOOTS, "electricboots", 0, "LabSpeed", "LabJump", "LabManaDiscount")));
-LabItems.CATALOG.put("nano_boots_traveller",LabItems.ITEMS.register("nano_boots_traveller",()->new LabTechArmor(ArmorItem.Type.BOOTS, "nanobootstravel", 0, "LabSpeed", "LabJump", "LabFallProtection", "LabManaDiscount")));
-LabItems.CATALOG.put("quantum_boots_traveller",LabItems.ITEMS.register("quantum_boots_traveller",()->new LabTechArmor(ArmorItem.Type.BOOTS, "quantumbootstravel", 0, "LabSpeed", "LabJump", "LabFallProtection", "LabManaDiscount")));
-LabItems.CATALOG.put("infused_quantum_chest",LabItems.ITEMS.register("infused_quantum_chest",()->new LabTechArmor(ArmorItem.Type.CHESTPLATE, "quantum", 0, "LabFlight", "LabFallProtection", "LabManaDiscount")));
-LabItems.CATALOG.put("electric_goggles",LabItems.ITEMS.register("electric_goggles",()->new LabTechArmor(ArmorItem.Type.HELMET, "electricgoggles", 0, "LabNightVision", "LabManaDiscount")));
-LabItems.CATALOG.put("nano_thaumic_helmet",LabItems.ITEMS.register("nano_thaumic_helmet",()->new LabTechArmor(ArmorItem.Type.HELMET, "thaumicnanohelmet", 0, "LabNightVision", "LabManaDiscount")));
-LabItems.CATALOG.put("quantum_thaumic_helmet",LabItems.ITEMS.register("quantum_thaumic_helmet",()->new LabTechArmor(ArmorItem.Type.HELMET, "thaumicquantumhelmet", 0, "LabNightVision", "LabWaterBreathing", "LabClearEffects", "LabManaDiscount")));
-LabItems.CATALOG.put("solar_helmet_revealing",LabItems.ITEMS.register("solar_helmet_revealing",()->new LabTechArmor(ArmorItem.Type.HELMET, "solarrevealinghelmet", 3, "LabNightVision", "LabManaDiscount")));
-LabItems.CATALOG.put("base_microchip",LabItems.ITEMS.register("base_microchip",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("base_transistor",LabItems.ITEMS.register("base_transistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("base_capacitor",LabItems.ITEMS.register("base_capacitor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("base_diode",LabItems.ITEMS.register("base_diode",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("base_resistor",LabItems.ITEMS.register("base_resistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("base_conductive_contour",LabItems.ITEMS.register("base_conductive_contour",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_microchip",LabItems.ITEMS.register("quant_microchip",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_transistor",LabItems.ITEMS.register("quant_transistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_capacitor",LabItems.ITEMS.register("quant_capacitor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_diode",LabItems.ITEMS.register("quant_diode",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_resistor",LabItems.ITEMS.register("quant_resistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("quant_conductive_contour",LabItems.ITEMS.register("quant_conductive_contour",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_microchip",LabItems.ITEMS.register("integral_microchip",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_transistor",LabItems.ITEMS.register("integral_transistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_capacitor",LabItems.ITEMS.register("integral_capacitor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_diode",LabItems.ITEMS.register("integral_diode",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_resistor",LabItems.ITEMS.register("integral_resistor",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("integral_conductive_contour",LabItems.ITEMS.register("integral_conductive_contour",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("infinity_nugget",LabItems.ITEMS.register("infinity_nugget",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("infinity_dust",LabItems.ITEMS.register("infinity_dust",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("infinity_dragon_awakened_heart",LabItems.ITEMS.register("infinity_dragon_awakened_heart",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("neutronium_catalyst",LabItems.ITEMS.register("neutronium_catalyst",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("infinity_singularity",LabItems.ITEMS.register("infinity_singularity",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("red_energon",LabItems.ITEMS.register("red_energon",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("dark_energon",LabItems.ITEMS.register("dark_energon",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("energy_pulsating_crystal",LabItems.ITEMS.register("energy_pulsating_crystal",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("energized_crystal_fluorite",LabItems.ITEMS.register("energized_crystal_fluorite",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("energized_crystal_ametrine",LabItems.ITEMS.register("energized_crystal_ametrine",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("energized_crystal_chrysolite",LabItems.ITEMS.register("energized_crystal_chrysolite",()->new Item(new Item.Properties())));
-LabItems.CATALOG.put("upgrade_armor_fly",LabItems.ITEMS.register("upgrade_armor_fly",()->new LabUpgrade("LabFlight",0,"armor")));
-} }
+
+public final class LegacyTools {
+
+    public static void register() {
+        LabItems.CATALOG.put("atomic_disassembler",
+                LabItems.ITEMS.register("atomic_disassembler", () -> new LabMiningTool(false)));
+        LabItems.CATALOG.put("vajra", LabItems.ITEMS.register("vajra", () -> new LabMiningTool(false)));
+        LabItems.CATALOG.put("legendary_vajra",
+                LabItems.ITEMS.register("legendary_vajra", () -> new LabMiningTool(true)));
+        LabItems.CATALOG.put("advanced_drill",
+                LabItems.ITEMS.register("advanced_drill", () -> new LabMiningTool(true)));
+        LabItems.CATALOG.put("advanced_chainsaw",
+                LabItems.ITEMS.register("advanced_chainsaw", () -> new LabMiningTool(false)));
+        LabItems.CATALOG.put("infinity_pickaxe_ultra",
+                LabItems.ITEMS.register("infinity_pickaxe_ultra", () -> new LabInfinityPickaxe()));
+        LabItems.CATALOG.put("infinity_ultra_hammer",
+                LabItems.ITEMS.register("infinity_ultra_hammer", () -> new LabInfinityPickaxe()));
+        LabItems.CATALOG.put("gravi_tool", LabItems.ITEMS.register("gravi_tool", () -> new LabConfigurator()));
+        LabItems.CATALOG.put("quantum_assembly_tool",
+                LabItems.ITEMS.register("quantum_assembly_tool", () -> new LabConfigurator()));
+        LabItems.CATALOG.put("manual_pump", LabItems.ITEMS.register("manual_pump", () -> new LabPump()));
+        LabItems.CATALOG.put("relocator", LabItems.ITEMS.register("relocator", () -> new LabRelocator()));
+        LabItems.CATALOG.put("flask", LabItems.ITEMS.register("flask", () -> new FluidCellItem(1000)));
+        LabItems.CATALOG.put("advanced_solar_helmet", LabItems.ITEMS.register("advanced_solar_helmet",
+                () -> new LabTechArmor(ArmorItem.Type.HELMET, "advancedSolarHelmet", 1)));
+        LabItems.CATALOG.put("hybrid_solar_helmet", LabItems.ITEMS.register("hybrid_solar_helmet",
+                () -> new LabTechArmor(ArmorItem.Type.HELMET, "hybridSolarHelmet", 2)));
+        LabItems.CATALOG.put("ultimate_solar_helmet", LabItems.ITEMS.register("ultimate_solar_helmet",
+                () -> new LabTechArmor(ArmorItem.Type.HELMET, "ultimateSolarHelmet", 3)));
+        LabItems.CATALOG.put("advanced_jetpack",
+                LabItems.ITEMS.register("advanced_jetpack", () -> new LabTechArmor(ArmorItem.Type.CHESTPLATE,
+                        "advanced_jetpack", 0, "LabFlight", "LabFallProtection")));
+        LabItems.CATALOG.put("gravi_chestplate",
+                LabItems.ITEMS.register("gravi_chestplate", () -> new LabTechArmor(ArmorItem.Type.CHESTPLATE,
+                        "gravi_chestplate", 0, "LabFlight", "LabFastFlight", "LabFallProtection")));
+        LabItems.CATALOG.put("advanced_nano_chestplate",
+                LabItems.ITEMS.register("advanced_nano_chestplate", () -> new LabTechArmor(ArmorItem.Type.CHESTPLATE,
+                        "advanced_nano_chestplate", 0, "LabFlight", "LabFallProtection")));
+        LabItems.CATALOG.put("electric_boots_traveller",
+                LabItems.ITEMS.register("electric_boots_traveller", () -> new LabTechArmor(ArmorItem.Type.BOOTS,
+                        "electricboots", 0, "LabSpeed", "LabJump", "LabManaDiscount")));
+        LabItems.CATALOG.put("nano_boots_traveller",
+                LabItems.ITEMS.register("nano_boots_traveller", () -> new LabTechArmor(ArmorItem.Type.BOOTS,
+                        "nanobootstravel", 0, "LabSpeed", "LabJump", "LabFallProtection", "LabManaDiscount")));
+        LabItems.CATALOG.put("quantum_boots_traveller",
+                LabItems.ITEMS.register("quantum_boots_traveller", () -> new LabTechArmor(ArmorItem.Type.BOOTS,
+                        "quantumbootstravel", 0, "LabSpeed", "LabJump", "LabFallProtection", "LabManaDiscount")));
+        LabItems.CATALOG.put("infused_quantum_chest",
+                LabItems.ITEMS.register("infused_quantum_chest", () -> new LabTechArmor(ArmorItem.Type.CHESTPLATE,
+                        "quantum", 0, "LabFlight", "LabFallProtection", "LabManaDiscount")));
+        LabItems.CATALOG.put("electric_goggles",
+                LabItems.ITEMS.register("electric_goggles", () -> new LabTechArmor(ArmorItem.Type.HELMET,
+                        "electricgoggles", 0, "LabNightVision", "LabManaDiscount")));
+        LabItems.CATALOG.put("nano_thaumic_helmet",
+                LabItems.ITEMS.register("nano_thaumic_helmet", () -> new LabTechArmor(ArmorItem.Type.HELMET,
+                        "thaumicnanohelmet", 0, "LabNightVision", "LabManaDiscount")));
+        LabItems.CATALOG.put("quantum_thaumic_helmet",
+                LabItems.ITEMS.register("quantum_thaumic_helmet",
+                        () -> new LabTechArmor(ArmorItem.Type.HELMET, "thaumicquantumhelmet", 0, "LabNightVision",
+                                "LabWaterBreathing", "LabClearEffects", "LabManaDiscount")));
+        LabItems.CATALOG.put("solar_helmet_revealing",
+                LabItems.ITEMS.register("solar_helmet_revealing", () -> new LabTechArmor(ArmorItem.Type.HELMET,
+                        "solarrevealinghelmet", 3, "LabNightVision", "LabManaDiscount")));
+        LabItems.CATALOG.put("base_microchip",
+                LabItems.ITEMS.register("base_microchip", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("base_transistor",
+                LabItems.ITEMS.register("base_transistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("base_capacitor",
+                LabItems.ITEMS.register("base_capacitor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("base_diode",
+                LabItems.ITEMS.register("base_diode", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("base_resistor",
+                LabItems.ITEMS.register("base_resistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("base_conductive_contour",
+                LabItems.ITEMS.register("base_conductive_contour", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_microchip",
+                LabItems.ITEMS.register("quant_microchip", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_transistor",
+                LabItems.ITEMS.register("quant_transistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_capacitor",
+                LabItems.ITEMS.register("quant_capacitor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_diode",
+                LabItems.ITEMS.register("quant_diode", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_resistor",
+                LabItems.ITEMS.register("quant_resistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("quant_conductive_contour",
+                LabItems.ITEMS.register("quant_conductive_contour", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_microchip",
+                LabItems.ITEMS.register("integral_microchip", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_transistor",
+                LabItems.ITEMS.register("integral_transistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_capacitor",
+                LabItems.ITEMS.register("integral_capacitor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_diode",
+                LabItems.ITEMS.register("integral_diode", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_resistor",
+                LabItems.ITEMS.register("integral_resistor", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("integral_conductive_contour",
+                LabItems.ITEMS.register("integral_conductive_contour", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("infinity_nugget",
+                LabItems.ITEMS.register("infinity_nugget", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("infinity_dust",
+                LabItems.ITEMS.register("infinity_dust", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("infinity_dragon_awakened_heart",
+                LabItems.ITEMS.register("infinity_dragon_awakened_heart", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("neutronium_catalyst",
+                LabItems.ITEMS.register("neutronium_catalyst", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("infinity_singularity",
+                LabItems.ITEMS.register("infinity_singularity", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("red_energon",
+                LabItems.ITEMS.register("red_energon", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("dark_energon",
+                LabItems.ITEMS.register("dark_energon", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("energy_pulsating_crystal",
+                LabItems.ITEMS.register("energy_pulsating_crystal", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("energized_crystal_fluorite",
+                LabItems.ITEMS.register("energized_crystal_fluorite", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("energized_crystal_ametrine",
+                LabItems.ITEMS.register("energized_crystal_ametrine", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("energized_crystal_chrysolite",
+                LabItems.ITEMS.register("energized_crystal_chrysolite", () -> new Item(new Item.Properties())));
+        LabItems.CATALOG.put("upgrade_armor_fly",
+                LabItems.ITEMS.register("upgrade_armor_fly", () -> new LabUpgrade("LabFlight", 0, "armor")));
+    }
+}

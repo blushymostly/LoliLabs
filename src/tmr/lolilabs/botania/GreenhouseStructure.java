@@ -1,21 +1,36 @@
 package tmr.lolilabs.botania;
 
-import java.util.*;
 import net.minecraft.core.*;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+
+import java.util.*;
 
 /**
  * 3x3x3 multi-greenhouse: 3x3 base floor, eight managlass around the core, 3x3 dark-manabrick roof.
  * Core sits at the center of the middle layer.
  */
 public final class GreenhouseStructure {
-    public enum Status { FORMED, INCOMPLETE, UNLOADED }
-    public record Match(Status status, List<BlockPos> parts) {
-        public boolean formed() { return status == Status.FORMED; }
+
+    public enum Status {
+        FORMED,
+        INCOMPLETE,
+        UNLOADED
     }
 
-    public enum Role { CORE, BASE, MANABRICKS, MANAGLASS }
+    public record Match(Status status, List<BlockPos> parts) {
+
+        public boolean formed() {
+            return status == Status.FORMED;
+        }
+    }
+
+    public enum Role {
+        CORE,
+        BASE,
+        MANABRICKS,
+        MANAGLASS
+    }
 
     public static Map<BlockPos, Role> relativePattern() {
         var map = new LinkedHashMap<BlockPos, Role>();
@@ -54,7 +69,8 @@ public final class GreenhouseStructure {
         for (var entry : relativePattern().entrySet()) {
             var pos = offset(origin, entry.getKey());
             if (!level.m_46805_(pos)) return new Match(Status.UNLOADED, List.of());
-            if (roleOf(level.m_8055_(pos).m_60734_()) != entry.getValue()) return new Match(Status.INCOMPLETE, List.of());
+            if (roleOf(level.m_8055_(pos).m_60734_()) != entry.getValue())
+                return new Match(Status.INCOMPLETE, List.of());
             parts.add(pos);
         }
         return new Match(Status.FORMED, List.copyOf(parts));
@@ -65,9 +81,11 @@ public final class GreenhouseStructure {
         if (level == null) return null;
         var partPos = part.labPos();
         for (var entry : relativePattern().entrySet()) {
-            var candidate = partPos.m_7918_(-entry.getKey().m_123341_(), -entry.getKey().m_123342_(), -entry.getKey().m_123343_());
+            var candidate = partPos.m_7918_(-entry.getKey().m_123341_(), -entry.getKey().m_123342_(),
+                    -entry.getKey().m_123343_());
             if (!level.m_46805_(candidate)) continue;
-            if (level.m_7702_(candidate) instanceof GreenhouseBlockEntity core && !core.isPart() && match(core).formed()) {
+            if (level.m_7702_(candidate) instanceof GreenhouseBlockEntity core && !core.isPart() &&
+                    match(core).formed()) {
                 return core;
             }
         }

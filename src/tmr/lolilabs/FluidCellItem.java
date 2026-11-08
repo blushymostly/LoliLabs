@@ -1,6 +1,5 @@
 package tmr.lolilabs;
 
-import java.util.List;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -22,15 +21,24 @@ import net.minecraftforge.fluids.FluidStack;
 import net.minecraftforge.fluids.FluidUtil;
 import net.minecraftforge.fluids.capability.templates.FluidHandlerItemStack;
 
-public final class FluidCellItem extends Item {
-    private final int capacity;
-    public FluidCellItem(int capacity) { super(new Item.Properties().m_41487_(1)); this.capacity = capacity; }
+import java.util.List;
 
-    @Override public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
+public final class FluidCellItem extends Item {
+
+    private final int capacity;
+
+    public FluidCellItem(int capacity) {
+        super(new Item.Properties().m_41487_(1));
+        this.capacity = capacity;
+    }
+
+    @Override
+    public ICapabilityProvider initCapabilities(ItemStack stack, CompoundTag nbt) {
         return new FluidHandlerItemStack(stack, capacity);
     }
 
-    @Override public InteractionResult m_6225_(UseOnContext context) {
+    @Override
+    public InteractionResult m_6225_(UseOnContext context) {
         Player player = context.m_43723_();
         if (player == null) return InteractionResult.PASS;
         if (context.m_43725_().f_46443_) return InteractionResult.SUCCESS;
@@ -38,9 +46,11 @@ public final class FluidCellItem extends Item {
                 context.m_8083_(), context.m_43719_()) ? InteractionResult.CONSUME : InteractionResult.PASS;
     }
 
-    @Override public InteractionResultHolder<ItemStack> m_7203_(Level level, Player player, InteractionHand hand) {
+    @Override
+    public InteractionResultHolder<ItemStack> m_7203_(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.m_21120_(hand);
-        BlockHitResult hit = m_41435_(level, player, player.m_6144_() ? ClipContext.Fluid.NONE : ClipContext.Fluid.SOURCE_ONLY);
+        BlockHitResult hit = m_41435_(level, player,
+                player.m_6144_() ? ClipContext.Fluid.NONE : ClipContext.Fluid.SOURCE_ONLY);
         if (hit.m_6662_() != HitResult.Type.BLOCK) return InteractionResultHolder.m_19098_(stack);
         BlockPos pos = hit.m_82425_();
         if (!level.m_7966_(player, pos) || !player.m_36204_(pos.m_121945_(hit.m_82434_()), hit.m_82434_(), stack)) {
@@ -50,7 +60,8 @@ public final class FluidCellItem extends Item {
         FluidActionResult result;
         if (player.m_6144_()) {
             var handler = FluidUtil.getFluidHandler(stack).orElse(null);
-            if (handler == null || handler.getFluidInTank(0).getAmount() < 1000) return InteractionResultHolder.m_19098_(stack);
+            if (handler == null || handler.getFluidInTank(0).getAmount() < 1000)
+                return InteractionResultHolder.m_19098_(stack);
             FluidStack fluid = handler.getFluidInTank(0).copy();
             fluid.setAmount(1000);
             result = FluidUtil.tryPlaceFluid(player, level, hand, pos.m_121945_(hit.m_82434_()), stack, fluid);
@@ -60,12 +71,13 @@ public final class FluidCellItem extends Item {
         return InteractionResultHolder.m_19090_(result.getResult());
     }
 
-    @Override public void m_7373_(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
+    @Override
+    public void m_7373_(ItemStack stack, Level level, List<Component> tooltip, TooltipFlag flag) {
         tooltip.add(Component.m_237110_("tooltip.loli_labs.fluid_capacity", capacity));
         FluidUtil.getFluidHandler(stack).ifPresent(handler -> {
             FluidStack fluid = handler.getFluidInTank(0);
-            tooltip.add(fluid.isEmpty() ? Component.m_237115_("tooltip.loli_labs.fluid_empty")
-                    : Component.m_237110_("tooltip.loli_labs.fluid_stored", fluid.getDisplayName(), fluid.getAmount()));
+            tooltip.add(fluid.isEmpty() ? Component.m_237115_("tooltip.loli_labs.fluid_empty") :
+                    Component.m_237110_("tooltip.loli_labs.fluid_stored", fluid.getDisplayName(), fluid.getAmount()));
         });
     }
 }

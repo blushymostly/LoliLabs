@@ -1,6 +1,10 @@
 import groovy.json.JsonSlurper
 
-plugins { id 'java'; id 'idea' }
+plugins {
+    id 'java'
+    id 'idea'
+    id 'com.diffplug.spotless' version '7.0.2'
+}
 
 def config = new JsonSlurper().parse(file('build-config.json'))
 group = 'tmr.lolilabs'
@@ -19,6 +23,11 @@ def nodeExecutable = providers.gradleProperty('nodeExecutable').orElse(providers
     found
 })
 def apiFile = file('build/ide-classpath.json')
+
+repositories {
+    // Spotless Eclipse formatter + import cleanup artifacts
+    mavenCentral()
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -143,3 +152,5 @@ tasks.register('checkWorldClient', Exec) {
     workingDir projectDir
     commandLine powershell, '-NoProfile', '-File', file('check-runtime.ps1').absolutePath, '-Client', '-World'
 }
+
+apply from: "$rootDir/gradle/scripts/spotless.gradle"

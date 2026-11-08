@@ -2,12 +2,14 @@ package tmr.lolilabs.jade;
 
 import net.minecraft.Util;
 import net.minecraft.network.chat.Component;
+
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.ui.BoxStyle;
 import snownee.jade.api.ui.IElementHelper;
 
 /** Shared Jade chrome for Loli Labs machines. */
 public final class LabJadeBars {
+
     /** Same red as IC2/GT workable progress. */
     public static final int PROGRESS_COLOR = 0xFFBB1C28;
 

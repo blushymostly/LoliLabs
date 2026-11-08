@@ -7,6 +7,7 @@ import net.minecraft.world.item.ArmorMaterials;
 import net.minecraft.world.item.ItemStack;
 
 public final class LabPlainArmor extends ArmorItem {
+
     private final String texture;
 
     public LabPlainArmor(Type type, String texture) {

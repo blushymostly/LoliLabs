@@ -1,1 +1,7 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal() // Needed for spotless
+    }
+}
+
 rootProject.name = 'loli-labs'

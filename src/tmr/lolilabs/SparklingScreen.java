@@ -1,19 +1,23 @@
 package tmr.lolilabs;
 
-import java.lang.reflect.Field;
-import java.text.NumberFormat;
-import java.util.Locale;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.resources.language.I18n;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.inventory.Slot;
+
 import org.zeith.solarflux.client.screen.SolarPanelScreen;
 import org.zeith.solarflux.container.SolarPanelContainer;
 
+import java.lang.reflect.Field;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public final class SparklingScreen extends SolarPanelScreen {
-    private static final ResourceLocation GUI = new ResourceLocation(LoliLabs.MOD_ID, "textures/gui/gui_solar_panel.png");
+
+    private static final ResourceLocation GUI = new ResourceLocation(LoliLabs.MOD_ID,
+            "textures/gui/gui_solar_panel.png");
     private static final NumberFormat NUMBERS = NumberFormat.getIntegerInstance(Locale.US);
 
     public SparklingScreen(SolarPanelContainer menu, Inventory inventory, Component title) {
@@ -27,10 +31,19 @@ public final class SparklingScreen extends SolarPanelScreen {
             y.setAccessible(true);
             for (int i = 0; i < menu.f_38839_.size(); i++) {
                 int sx, sy;
-                if (i < 27) { sx = 26 + (i % 9) * 18; sy = 128 + (i / 9) * 18; }
-                else if (i < 36) { sx = 26 + (i - 27) * 18; sy = 186; }
-                else if (i < 41) { sx = 62 + (i - 36) * 18; sy = 92; }
-                else { sx = 168; sy = 92; }
+                if (i < 27) {
+                    sx = 26 + (i % 9) * 18;
+                    sy = 128 + (i / 9) * 18;
+                } else if (i < 36) {
+                    sx = 26 + (i - 27) * 18;
+                    sy = 186;
+                } else if (i < 41) {
+                    sx = 62 + (i - 36) * 18;
+                    sy = 92;
+                } else {
+                    sx = 168;
+                    sy = 92;
+                }
                 x.setInt(menu.f_38839_.get(i), sx);
                 y.setInt(menu.f_38839_.get(i), sy);
             }
@@ -75,4 +88,3 @@ public final class SparklingScreen extends SolarPanelScreen {
         return true;
     }
 }
-

@@ -6,6 +6,7 @@ import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 
 public final class LegacyDemonic {
+
     private LegacyDemonic() {}
 
     public static void register() {

@@ -1,5 +1,10 @@
 package tmr.lolilabs.jade;
 
+import tmr.lolilabs.LabMachineEntity;
+import tmr.lolilabs.LoliLabs;
+import tmr.lolilabs.utility.FortuneEntity;
+import tmr.lolilabs.utility.LabUtility;
+
 import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -7,19 +12,17 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraftforge.registries.ForgeRegistries;
+
 import snownee.jade.api.BlockAccessor;
 import snownee.jade.api.IBlockComponentProvider;
 import snownee.jade.api.IServerDataProvider;
 import snownee.jade.api.ITooltip;
 import snownee.jade.api.config.IPluginConfig;
 import snownee.jade.api.ui.IElementHelper;
-import tmr.lolilabs.LabMachineEntity;
-import tmr.lolilabs.LoliLabs;
-import tmr.lolilabs.utility.FortuneEntity;
-import tmr.lolilabs.utility.LabUtility;
 
 /** Progress / recipe outputs for matter gens and Fortune. */
 public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServerDataProvider<BlockAccessor> {
+
     INSTANCE;
 
     private static final ResourceLocation UID = new ResourceLocation(LoliLabs.MOD_ID, "workable");
@@ -40,7 +43,8 @@ public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServ
         }
         if (be instanceof FortuneEntity fortune && fortune.totalWork > 0) {
             int ticks = LabUtility.TICKS.get();
-            float fill = (float) Math.min((double) fortune.progress / ticks, (double) fortune.doneWork / fortune.totalWork);
+            float fill = (float) Math.min((double) fortune.progress / ticks,
+                    (double) fortune.doneWork / fortune.totalWork);
             data.m_128350_("LabWorkFill", fill);
             data.m_128405_("LabDone", fortune.doneWork);
             data.m_128405_("LabTotal", fortune.totalWork);
@@ -56,7 +60,8 @@ public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServ
                     tooltip,
                     data.m_128457_("LabWorkFill"),
                     Component.m_237115_("tooltip.loli_labs.fortune.progress")
-                            .m_7220_(Component.m_237113_(String.format(" (%d / %d)", data.m_128451_("LabDone"), data.m_128451_("LabTotal")))),
+                            .m_7220_(Component.m_237113_(String.format(" (%d / %d)", data.m_128451_("LabDone"),
+                                    data.m_128451_("LabTotal")))),
                     true);
             return;
         }
@@ -65,9 +70,8 @@ public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServ
         int duration = data.m_128451_("LabDuration");
         if (duration <= 0) return;
         if (data.m_128471_("LabActive") || progress > 0) {
-            Component text = duration < 20
-                    ? Component.m_237110_("loli_labs.jade.progress_tick", progress, duration)
-                    : Component.m_237110_("loli_labs.jade.progress_sec",
+            Component text = duration < 20 ? Component.m_237110_("loli_labs.jade.progress_tick", progress, duration) :
+                    Component.m_237110_("loli_labs.jade.progress_sec",
                             Math.round(progress / 20.0F), Math.round(duration / 20.0F));
             LabJadeBars.work(tooltip, (float) progress / (float) duration, text);
         }
@@ -78,7 +82,8 @@ public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServ
         IElementHelper helper = tooltip.getElementHelper();
         tooltip.add(helper.smallItem(stack));
         tooltip.append(Component.m_237113_(" ")
-                .m_7220_(Component.m_237113_("[").m_7220_(stack.m_41786_().m_6881_()).m_7220_(Component.m_237113_("]")).m_130940_(ChatFormatting.WHITE)));
+                .m_7220_(Component.m_237113_("[").m_7220_(stack.m_41786_().m_6881_()).m_7220_(Component.m_237113_("]"))
+                        .m_130940_(ChatFormatting.WHITE)));
     }
 
     @Override

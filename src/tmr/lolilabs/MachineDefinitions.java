@@ -1,5 +1,8 @@
 package tmr.lolilabs;
-public final class MachineDefinitions { public static void register() {
+
+public final class MachineDefinitions {
+
+    public static void register() {
         add("dispersion_solar_panel", 0, 131072L, "", 0, 1);
         add("gravitomagnetic_solar_panel", 0, 262144L, "", 0, 1);
         add("anisotropic_solar_panel", 0, 524288L, "", 0, 1);
@@ -51,4 +54,9 @@ public final class MachineDefinitions { public static void register() {
         add("matter_solid_t9_x1", 2, 0L, "matter_sparkling", 9, 1);
         add("matter_solid_t9_x6", 2, 0L, "matter_sparkling", 9, 6);
         add("matter_solid_t9_x12", 2, 0L, "matter_sparkling", 9, 12);
-} private static void add(String id,int kind,long rate,String matter,int tier,int batch){LabMachines.add(id,kind,rate,matter,tier,batch);} }
+    }
+
+    private static void add(String id, int kind, long rate, String matter, int tier, int batch) {
+        LabMachines.add(id, kind, rate, matter, tier, batch);
+    }
+}

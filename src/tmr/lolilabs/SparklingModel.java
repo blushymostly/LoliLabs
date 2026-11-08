@@ -1,7 +1,5 @@
 package tmr.lolilabs;
 
-import java.util.ArrayList;
-import java.util.List;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.block.model.BakedQuad;
@@ -12,12 +10,19 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.inventory.InventoryMenu;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.client.model.data.ModelData;
+
+import org.joml.Vector3f;
 import org.zeith.solarflux.block.SolarPanelBlock;
 import org.zeith.solarflux.client.SolarPanelBakedModel;
-import org.joml.Vector3f;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public final class SparklingModel extends SolarPanelBakedModel {
-    public SparklingModel(SolarPanelBlock block) { super(block); }
+
+    public SparklingModel(SolarPanelBlock block) {
+        super(block);
+    }
 
     private TextureAtlasSprite texture(String face) {
         return Minecraft.m_91087_().m_91258_(InventoryMenu.f_39692_)
@@ -36,9 +41,18 @@ public final class SparklingModel extends SolarPanelBakedModel {
         return result;
     }
 
-    @Override public boolean m_7539_() { return true; }
+    @Override
+    public boolean m_7539_() {
+        return true;
+    }
 
-    @Override public TextureAtlasSprite t_base() { return texture("side"); }
-    @Override public TextureAtlasSprite t_top() { return texture("top"); }
+    @Override
+    public TextureAtlasSprite t_base() {
+        return texture("side");
+    }
+
+    @Override
+    public TextureAtlasSprite t_top() {
+        return texture("top");
+    }
 }
-

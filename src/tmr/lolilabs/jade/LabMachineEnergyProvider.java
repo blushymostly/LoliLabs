@@ -1,23 +1,26 @@
 package tmr.lolilabs.jade;
 
-import net.minecraft.ChatFormatting;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import snownee.jade.api.BlockAccessor;
-import snownee.jade.api.IBlockComponentProvider;
-import snownee.jade.api.IServerDataProvider;
-import snownee.jade.api.ITooltip;
-import snownee.jade.api.config.IPluginConfig;
 import tmr.lolilabs.LabMachineEntity;
 import tmr.lolilabs.LoliLabs;
 import tmr.lolilabs.botania.GreenhouseBlockEntity;
 import tmr.lolilabs.utility.FortuneEntity;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceLocation;
+
+import snownee.jade.api.BlockAccessor;
+import snownee.jade.api.IBlockComponentProvider;
+import snownee.jade.api.IServerDataProvider;
+import snownee.jade.api.ITooltip;
+import snownee.jade.api.config.IPluginConfig;
+
 import java.util.Locale;
 
 /** Flowing EU storage bar for Lab / Fortune / Greenhouse machines. */
 public enum LabMachineEnergyProvider implements IBlockComponentProvider, IServerDataProvider<BlockAccessor> {
+
     INSTANCE;
 
     private static final ResourceLocation UID = new ResourceLocation(LoliLabs.MOD_ID, "electric_container");
@@ -79,7 +82,9 @@ public enum LabMachineEnergyProvider implements IBlockComponentProvider, IServer
                     true);
         }
         if (data.m_128441_("LabCost")) {
-            tooltip.add(Component.m_237110_("gui.loli_labs.meter_cost", format(data.m_128454_("LabCost")), data.m_128451_("LabBatch"))
+            tooltip.add(Component
+                    .m_237110_("gui.loli_labs.meter_cost", format(data.m_128454_("LabCost")),
+                            data.m_128451_("LabBatch"))
                     .m_130940_(ChatFormatting.RED));
         } else if (data.m_128441_("LabRate") && data.m_128454_("LabRate") > 0) {
             tooltip.add(Component.m_237110_("gui.loli_labs.meter_rate", format(data.m_128454_("LabRate")))

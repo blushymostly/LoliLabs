@@ -3,6 +3,7 @@ package tmr.lolilabs;
 import net.minecraft.world.item.ArmorItem;
 
 public final class LegacyEquipment {
+
     public static void register() {
         LabItems.CATALOG.put("sword1", LabItems.ITEMS.register("sword1", () -> new LabSword()));
         LabItems.CATALOG.put("sword2", LabItems.ITEMS.register("sword2", () -> new LabSword()));
@@ -39,107 +40,209 @@ public final class LegacyEquipment {
         LabItems.CATALOG.put("sword33", LabItems.ITEMS.register("sword33", () -> new LabSword()));
         LabItems.CATALOG.put("sword34", LabItems.ITEMS.register("sword34", () -> new LabSword()));
         LabItems.CATALOG.put("sword35", LabItems.ITEMS.register("sword35", () -> new LabSword()));
-        LabItems.CATALOG.put("electric_head_king1", LabItems.ITEMS.register("electric_head_king1", () -> new LabArmor(ArmorItem.Type.HELMET, "king1")));
-        LabItems.CATALOG.put("electric_chest_king1", LabItems.ITEMS.register("electric_chest_king1", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king1")));
-        LabItems.CATALOG.put("electric_legs_king1", LabItems.ITEMS.register("electric_legs_king1", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king1")));
-        LabItems.CATALOG.put("electric_feet_king1", LabItems.ITEMS.register("electric_feet_king1", () -> new LabArmor(ArmorItem.Type.BOOTS, "king1")));
-        LabItems.CATALOG.put("electric_head_king2", LabItems.ITEMS.register("electric_head_king2", () -> new LabArmor(ArmorItem.Type.HELMET, "king2")));
-        LabItems.CATALOG.put("electric_chest_king2", LabItems.ITEMS.register("electric_chest_king2", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king2")));
-        LabItems.CATALOG.put("electric_legs_king2", LabItems.ITEMS.register("electric_legs_king2", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king2")));
-        LabItems.CATALOG.put("electric_feet_king2", LabItems.ITEMS.register("electric_feet_king2", () -> new LabArmor(ArmorItem.Type.BOOTS, "king2")));
-        LabItems.CATALOG.put("electric_head_king3", LabItems.ITEMS.register("electric_head_king3", () -> new LabArmor(ArmorItem.Type.HELMET, "king3")));
-        LabItems.CATALOG.put("electric_chest_king3", LabItems.ITEMS.register("electric_chest_king3", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king3")));
-        LabItems.CATALOG.put("electric_legs_king3", LabItems.ITEMS.register("electric_legs_king3", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king3")));
-        LabItems.CATALOG.put("electric_feet_king3", LabItems.ITEMS.register("electric_feet_king3", () -> new LabArmor(ArmorItem.Type.BOOTS, "king3")));
-        LabItems.CATALOG.put("electric_head_king4", LabItems.ITEMS.register("electric_head_king4", () -> new LabArmor(ArmorItem.Type.HELMET, "king4")));
-        LabItems.CATALOG.put("electric_chest_king4", LabItems.ITEMS.register("electric_chest_king4", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king4")));
-        LabItems.CATALOG.put("electric_legs_king4", LabItems.ITEMS.register("electric_legs_king4", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king4")));
-        LabItems.CATALOG.put("electric_feet_king4", LabItems.ITEMS.register("electric_feet_king4", () -> new LabArmor(ArmorItem.Type.BOOTS, "king4")));
-        LabItems.CATALOG.put("electric_head_king5", LabItems.ITEMS.register("electric_head_king5", () -> new LabArmor(ArmorItem.Type.HELMET, "king5")));
-        LabItems.CATALOG.put("electric_chest_king5", LabItems.ITEMS.register("electric_chest_king5", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king5")));
-        LabItems.CATALOG.put("electric_legs_king5", LabItems.ITEMS.register("electric_legs_king5", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king5")));
-        LabItems.CATALOG.put("electric_feet_king5", LabItems.ITEMS.register("electric_feet_king5", () -> new LabArmor(ArmorItem.Type.BOOTS, "king5")));
-        LabItems.CATALOG.put("electric_head_king6", LabItems.ITEMS.register("electric_head_king6", () -> new LabArmor(ArmorItem.Type.HELMET, "king6")));
-        LabItems.CATALOG.put("electric_chest_king6", LabItems.ITEMS.register("electric_chest_king6", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king6")));
-        LabItems.CATALOG.put("electric_legs_king6", LabItems.ITEMS.register("electric_legs_king6", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king6")));
-        LabItems.CATALOG.put("electric_feet_king6", LabItems.ITEMS.register("electric_feet_king6", () -> new LabArmor(ArmorItem.Type.BOOTS, "king6")));
-        LabItems.CATALOG.put("electric_head_king7", LabItems.ITEMS.register("electric_head_king7", () -> new LabArmor(ArmorItem.Type.HELMET, "king7")));
-        LabItems.CATALOG.put("electric_chest_king7", LabItems.ITEMS.register("electric_chest_king7", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king7")));
-        LabItems.CATALOG.put("electric_legs_king7", LabItems.ITEMS.register("electric_legs_king7", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king7")));
-        LabItems.CATALOG.put("electric_feet_king7", LabItems.ITEMS.register("electric_feet_king7", () -> new LabArmor(ArmorItem.Type.BOOTS, "king7")));
-        LabItems.CATALOG.put("electric_head_king8", LabItems.ITEMS.register("electric_head_king8", () -> new LabArmor(ArmorItem.Type.HELMET, "king8")));
-        LabItems.CATALOG.put("electric_chest_king8", LabItems.ITEMS.register("electric_chest_king8", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king8")));
-        LabItems.CATALOG.put("electric_legs_king8", LabItems.ITEMS.register("electric_legs_king8", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king8")));
-        LabItems.CATALOG.put("electric_feet_king8", LabItems.ITEMS.register("electric_feet_king8", () -> new LabArmor(ArmorItem.Type.BOOTS, "king8")));
-        LabItems.CATALOG.put("electric_head_gold", LabItems.ITEMS.register("electric_head_gold", () -> new LabArmor(ArmorItem.Type.HELMET, "gold")));
-        LabItems.CATALOG.put("electric_chest_gold", LabItems.ITEMS.register("electric_chest_gold", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "gold")));
-        LabItems.CATALOG.put("electric_legs_gold", LabItems.ITEMS.register("electric_legs_gold", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "gold")));
-        LabItems.CATALOG.put("electric_feet_gold", LabItems.ITEMS.register("electric_feet_gold", () -> new LabArmor(ArmorItem.Type.BOOTS, "gold")));
-        LabItems.CATALOG.put("electric_head_dark", LabItems.ITEMS.register("electric_head_dark", () -> new LabArmor(ArmorItem.Type.HELMET, "Dark")));
-        LabItems.CATALOG.put("electric_chest_dark", LabItems.ITEMS.register("electric_chest_dark", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Dark")));
-        LabItems.CATALOG.put("electric_legs_dark", LabItems.ITEMS.register("electric_legs_dark", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Dark")));
-        LabItems.CATALOG.put("electric_feet_dark", LabItems.ITEMS.register("electric_feet_dark", () -> new LabArmor(ArmorItem.Type.BOOTS, "Dark")));
-        LabItems.CATALOG.put("electric_head_satan", LabItems.ITEMS.register("electric_head_satan", () -> new LabArmor(ArmorItem.Type.HELMET, "Satan")));
-        LabItems.CATALOG.put("electric_chest_satan", LabItems.ITEMS.register("electric_chest_satan", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Satan")));
-        LabItems.CATALOG.put("electric_legs_satan", LabItems.ITEMS.register("electric_legs_satan", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Satan")));
-        LabItems.CATALOG.put("electric_feet_satan", LabItems.ITEMS.register("electric_feet_satan", () -> new LabArmor(ArmorItem.Type.BOOTS, "Satan")));
-        LabItems.CATALOG.put("electric_head_hero", LabItems.ITEMS.register("electric_head_hero", () -> new LabArmor(ArmorItem.Type.HELMET, "Hero")));
-        LabItems.CATALOG.put("electric_chest_hero", LabItems.ITEMS.register("electric_chest_hero", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Hero")));
-        LabItems.CATALOG.put("electric_legs_hero", LabItems.ITEMS.register("electric_legs_hero", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Hero")));
-        LabItems.CATALOG.put("electric_feet_hero", LabItems.ITEMS.register("electric_feet_hero", () -> new LabArmor(ArmorItem.Type.BOOTS, "Hero")));
-        LabItems.CATALOG.put("electric_head_oson", LabItems.ITEMS.register("electric_head_oson", () -> new LabArmor(ArmorItem.Type.HELMET, "Oson")));
-        LabItems.CATALOG.put("electric_chest_oson", LabItems.ITEMS.register("electric_chest_oson", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Oson")));
-        LabItems.CATALOG.put("electric_legs_oson", LabItems.ITEMS.register("electric_legs_oson", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Oson")));
-        LabItems.CATALOG.put("electric_feet_oson", LabItems.ITEMS.register("electric_feet_oson", () -> new LabArmor(ArmorItem.Type.BOOTS, "Oson")));
-        LabItems.CATALOG.put("electric_head_leon", LabItems.ITEMS.register("electric_head_leon", () -> new LabArmor(ArmorItem.Type.HELMET, "Leon")));
-        LabItems.CATALOG.put("electric_chest_leon", LabItems.ITEMS.register("electric_chest_leon", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Leon")));
-        LabItems.CATALOG.put("electric_legs_leon", LabItems.ITEMS.register("electric_legs_leon", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Leon")));
-        LabItems.CATALOG.put("electric_feet_leon", LabItems.ITEMS.register("electric_feet_leon", () -> new LabArmor(ArmorItem.Type.BOOTS, "Leon")));
-        LabItems.CATALOG.put("upgrade_electric_item_power1", LabItems.ITEMS.register("upgrade_electric_item_power1", () -> new LabUpgrade("LabPowerLevel", 1, "any")));
-        LabItems.CATALOG.put("upgrade_electric_item_power2", LabItems.ITEMS.register("upgrade_electric_item_power2", () -> new LabUpgrade("LabPowerLevel", 2, "any")));
-        LabItems.CATALOG.put("upgrade_electric_item_power3", LabItems.ITEMS.register("upgrade_electric_item_power3", () -> new LabUpgrade("LabPowerLevel", 3, "any")));
-        LabItems.CATALOG.put("upgrade_electric_item_power4", LabItems.ITEMS.register("upgrade_electric_item_power4", () -> new LabUpgrade("LabPowerLevel", 4, "any")));
-        LabItems.CATALOG.put("upgrade_electric_item_power5", LabItems.ITEMS.register("upgrade_electric_item_power5", () -> new LabUpgrade("LabPowerLevel", 5, "any")));
-        LabItems.CATALOG.put("upgrade_sword_radius1", LabItems.ITEMS.register("upgrade_sword_radius1", () -> new LabUpgrade("LabRadius", 1, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_radius2", LabItems.ITEMS.register("upgrade_sword_radius2", () -> new LabUpgrade("LabRadius", 2, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_radius3", LabItems.ITEMS.register("upgrade_sword_radius3", () -> new LabUpgrade("LabRadius", 3, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack1", LabItems.ITEMS.register("upgrade_sword_attack1", () -> new LabUpgrade("LabDamage", 1, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack2", LabItems.ITEMS.register("upgrade_sword_attack2", () -> new LabUpgrade("LabDamage", 2, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack3", LabItems.ITEMS.register("upgrade_sword_attack3", () -> new LabUpgrade("LabDamage", 3, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack4", LabItems.ITEMS.register("upgrade_sword_attack4", () -> new LabUpgrade("LabDamage", 4, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack5", LabItems.ITEMS.register("upgrade_sword_attack5", () -> new LabUpgrade("LabDamage", 5, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack6", LabItems.ITEMS.register("upgrade_sword_attack6", () -> new LabUpgrade("LabDamage", 6, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack7", LabItems.ITEMS.register("upgrade_sword_attack7", () -> new LabUpgrade("LabDamage", 7, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack8", LabItems.ITEMS.register("upgrade_sword_attack8", () -> new LabUpgrade("LabDamage", 8, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack9", LabItems.ITEMS.register("upgrade_sword_attack9", () -> new LabUpgrade("LabDamage", 9, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_attack10", LabItems.ITEMS.register("upgrade_sword_attack10", () -> new LabUpgrade("LabDamage", 10, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_fire", LabItems.ITEMS.register("upgrade_sword_fire", () -> new LabUpgrade("LabFire", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_vampirism1", LabItems.ITEMS.register("upgrade_sword_vampirism1", () -> new LabUpgrade("LabVampirism", 1, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_vampirism2", LabItems.ITEMS.register("upgrade_sword_vampirism2", () -> new LabUpgrade("LabVampirism", 2, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_poison", LabItems.ITEMS.register("upgrade_sword_poison", () -> new LabUpgrade("LabPoison", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_confusion", LabItems.ITEMS.register("upgrade_sword_confusion", () -> new LabUpgrade("LabConfusion", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_blindness", LabItems.ITEMS.register("upgrade_sword_blindness", () -> new LabUpgrade("LabBlindness", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_weakness", LabItems.ITEMS.register("upgrade_sword_weakness", () -> new LabUpgrade("LabWeakness", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_wither", LabItems.ITEMS.register("upgrade_sword_wither", () -> new LabUpgrade("LabWither", 0, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_kickback1", LabItems.ITEMS.register("upgrade_sword_kickback1", () -> new LabUpgrade("LabKnockback", 1, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_kickback2", LabItems.ITEMS.register("upgrade_sword_kickback2", () -> new LabUpgrade("LabKnockback", 2, "sword")));
-        LabItems.CATALOG.put("upgrade_sword_kickback3", LabItems.ITEMS.register("upgrade_sword_kickback3", () -> new LabUpgrade("LabKnockback", 3, "sword")));
-        LabItems.CATALOG.put("upgrade_armor_night_vision", LabItems.ITEMS.register("upgrade_armor_night_vision", () -> new LabUpgrade("LabNightVision", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_clear_potions", LabItems.ITEMS.register("upgrade_armor_clear_potions", () -> new LabUpgrade("LabClearEffects", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_solar1", LabItems.ITEMS.register("upgrade_armor_solar1", () -> new LabUpgrade("LabSolar", 1, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_solar2", LabItems.ITEMS.register("upgrade_armor_solar2", () -> new LabUpgrade("LabSolar", 2, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_solar3", LabItems.ITEMS.register("upgrade_armor_solar3", () -> new LabUpgrade("LabSolar", 3, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_water_protect", LabItems.ITEMS.register("upgrade_armor_water_protect", () -> new LabUpgrade("LabWaterBreathing", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_speed", LabItems.ITEMS.register("upgrade_armor_speed", () -> new LabUpgrade("LabSpeed", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_jump", LabItems.ITEMS.register("upgrade_armor_jump", () -> new LabUpgrade("LabJump", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_ext", LabItems.ITEMS.register("upgrade_armor_ext", () -> new LabUpgrade("LabExtinguish", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_fall", LabItems.ITEMS.register("upgrade_armor_fall", () -> new LabUpgrade("LabFallProtection", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_jetpack", LabItems.ITEMS.register("upgrade_armor_jetpack", () -> new LabUpgrade("LabFlight", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_food", LabItems.ITEMS.register("upgrade_armor_food", () -> new LabUpgrade("LabFood", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_regen", LabItems.ITEMS.register("upgrade_armor_regen", () -> new LabUpgrade("LabRegen", 0, "armor")));
-        LabItems.CATALOG.put("upgrade_armor_speed_creative_fly", LabItems.ITEMS.register("upgrade_armor_speed_creative_fly", () -> new LabUpgrade("LabFastFlight", 0, "armor")));
-        LabItems.CATALOG.put("portable_charging_module", LabItems.ITEMS.register("portable_charging_module", () -> new LabBattery(100000000)));
-        LabItems.CATALOG.put("advanced_lappack", LabItems.ITEMS.register("advanced_lappack", () -> new LabBattery(10000000)));
-        LabItems.CATALOG.put("ultimate_lappack", LabItems.ITEMS.register("ultimate_lappack", () -> new LabBattery(100000000)));
+        LabItems.CATALOG.put("electric_head_king1",
+                LabItems.ITEMS.register("electric_head_king1", () -> new LabArmor(ArmorItem.Type.HELMET, "king1")));
+        LabItems.CATALOG.put("electric_chest_king1", LabItems.ITEMS.register("electric_chest_king1",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king1")));
+        LabItems.CATALOG.put("electric_legs_king1",
+                LabItems.ITEMS.register("electric_legs_king1", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king1")));
+        LabItems.CATALOG.put("electric_feet_king1",
+                LabItems.ITEMS.register("electric_feet_king1", () -> new LabArmor(ArmorItem.Type.BOOTS, "king1")));
+        LabItems.CATALOG.put("electric_head_king2",
+                LabItems.ITEMS.register("electric_head_king2", () -> new LabArmor(ArmorItem.Type.HELMET, "king2")));
+        LabItems.CATALOG.put("electric_chest_king2", LabItems.ITEMS.register("electric_chest_king2",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king2")));
+        LabItems.CATALOG.put("electric_legs_king2",
+                LabItems.ITEMS.register("electric_legs_king2", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king2")));
+        LabItems.CATALOG.put("electric_feet_king2",
+                LabItems.ITEMS.register("electric_feet_king2", () -> new LabArmor(ArmorItem.Type.BOOTS, "king2")));
+        LabItems.CATALOG.put("electric_head_king3",
+                LabItems.ITEMS.register("electric_head_king3", () -> new LabArmor(ArmorItem.Type.HELMET, "king3")));
+        LabItems.CATALOG.put("electric_chest_king3", LabItems.ITEMS.register("electric_chest_king3",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king3")));
+        LabItems.CATALOG.put("electric_legs_king3",
+                LabItems.ITEMS.register("electric_legs_king3", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king3")));
+        LabItems.CATALOG.put("electric_feet_king3",
+                LabItems.ITEMS.register("electric_feet_king3", () -> new LabArmor(ArmorItem.Type.BOOTS, "king3")));
+        LabItems.CATALOG.put("electric_head_king4",
+                LabItems.ITEMS.register("electric_head_king4", () -> new LabArmor(ArmorItem.Type.HELMET, "king4")));
+        LabItems.CATALOG.put("electric_chest_king4", LabItems.ITEMS.register("electric_chest_king4",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king4")));
+        LabItems.CATALOG.put("electric_legs_king4",
+                LabItems.ITEMS.register("electric_legs_king4", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king4")));
+        LabItems.CATALOG.put("electric_feet_king4",
+                LabItems.ITEMS.register("electric_feet_king4", () -> new LabArmor(ArmorItem.Type.BOOTS, "king4")));
+        LabItems.CATALOG.put("electric_head_king5",
+                LabItems.ITEMS.register("electric_head_king5", () -> new LabArmor(ArmorItem.Type.HELMET, "king5")));
+        LabItems.CATALOG.put("electric_chest_king5", LabItems.ITEMS.register("electric_chest_king5",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king5")));
+        LabItems.CATALOG.put("electric_legs_king5",
+                LabItems.ITEMS.register("electric_legs_king5", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king5")));
+        LabItems.CATALOG.put("electric_feet_king5",
+                LabItems.ITEMS.register("electric_feet_king5", () -> new LabArmor(ArmorItem.Type.BOOTS, "king5")));
+        LabItems.CATALOG.put("electric_head_king6",
+                LabItems.ITEMS.register("electric_head_king6", () -> new LabArmor(ArmorItem.Type.HELMET, "king6")));
+        LabItems.CATALOG.put("electric_chest_king6", LabItems.ITEMS.register("electric_chest_king6",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king6")));
+        LabItems.CATALOG.put("electric_legs_king6",
+                LabItems.ITEMS.register("electric_legs_king6", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king6")));
+        LabItems.CATALOG.put("electric_feet_king6",
+                LabItems.ITEMS.register("electric_feet_king6", () -> new LabArmor(ArmorItem.Type.BOOTS, "king6")));
+        LabItems.CATALOG.put("electric_head_king7",
+                LabItems.ITEMS.register("electric_head_king7", () -> new LabArmor(ArmorItem.Type.HELMET, "king7")));
+        LabItems.CATALOG.put("electric_chest_king7", LabItems.ITEMS.register("electric_chest_king7",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king7")));
+        LabItems.CATALOG.put("electric_legs_king7",
+                LabItems.ITEMS.register("electric_legs_king7", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king7")));
+        LabItems.CATALOG.put("electric_feet_king7",
+                LabItems.ITEMS.register("electric_feet_king7", () -> new LabArmor(ArmorItem.Type.BOOTS, "king7")));
+        LabItems.CATALOG.put("electric_head_king8",
+                LabItems.ITEMS.register("electric_head_king8", () -> new LabArmor(ArmorItem.Type.HELMET, "king8")));
+        LabItems.CATALOG.put("electric_chest_king8", LabItems.ITEMS.register("electric_chest_king8",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "king8")));
+        LabItems.CATALOG.put("electric_legs_king8",
+                LabItems.ITEMS.register("electric_legs_king8", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "king8")));
+        LabItems.CATALOG.put("electric_feet_king8",
+                LabItems.ITEMS.register("electric_feet_king8", () -> new LabArmor(ArmorItem.Type.BOOTS, "king8")));
+        LabItems.CATALOG.put("electric_head_gold",
+                LabItems.ITEMS.register("electric_head_gold", () -> new LabArmor(ArmorItem.Type.HELMET, "gold")));
+        LabItems.CATALOG.put("electric_chest_gold",
+                LabItems.ITEMS.register("electric_chest_gold", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "gold")));
+        LabItems.CATALOG.put("electric_legs_gold",
+                LabItems.ITEMS.register("electric_legs_gold", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "gold")));
+        LabItems.CATALOG.put("electric_feet_gold",
+                LabItems.ITEMS.register("electric_feet_gold", () -> new LabArmor(ArmorItem.Type.BOOTS, "gold")));
+        LabItems.CATALOG.put("electric_head_dark",
+                LabItems.ITEMS.register("electric_head_dark", () -> new LabArmor(ArmorItem.Type.HELMET, "Dark")));
+        LabItems.CATALOG.put("electric_chest_dark",
+                LabItems.ITEMS.register("electric_chest_dark", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Dark")));
+        LabItems.CATALOG.put("electric_legs_dark",
+                LabItems.ITEMS.register("electric_legs_dark", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Dark")));
+        LabItems.CATALOG.put("electric_feet_dark",
+                LabItems.ITEMS.register("electric_feet_dark", () -> new LabArmor(ArmorItem.Type.BOOTS, "Dark")));
+        LabItems.CATALOG.put("electric_head_satan",
+                LabItems.ITEMS.register("electric_head_satan", () -> new LabArmor(ArmorItem.Type.HELMET, "Satan")));
+        LabItems.CATALOG.put("electric_chest_satan", LabItems.ITEMS.register("electric_chest_satan",
+                () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Satan")));
+        LabItems.CATALOG.put("electric_legs_satan",
+                LabItems.ITEMS.register("electric_legs_satan", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Satan")));
+        LabItems.CATALOG.put("electric_feet_satan",
+                LabItems.ITEMS.register("electric_feet_satan", () -> new LabArmor(ArmorItem.Type.BOOTS, "Satan")));
+        LabItems.CATALOG.put("electric_head_hero",
+                LabItems.ITEMS.register("electric_head_hero", () -> new LabArmor(ArmorItem.Type.HELMET, "Hero")));
+        LabItems.CATALOG.put("electric_chest_hero",
+                LabItems.ITEMS.register("electric_chest_hero", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Hero")));
+        LabItems.CATALOG.put("electric_legs_hero",
+                LabItems.ITEMS.register("electric_legs_hero", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Hero")));
+        LabItems.CATALOG.put("electric_feet_hero",
+                LabItems.ITEMS.register("electric_feet_hero", () -> new LabArmor(ArmorItem.Type.BOOTS, "Hero")));
+        LabItems.CATALOG.put("electric_head_oson",
+                LabItems.ITEMS.register("electric_head_oson", () -> new LabArmor(ArmorItem.Type.HELMET, "Oson")));
+        LabItems.CATALOG.put("electric_chest_oson",
+                LabItems.ITEMS.register("electric_chest_oson", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Oson")));
+        LabItems.CATALOG.put("electric_legs_oson",
+                LabItems.ITEMS.register("electric_legs_oson", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Oson")));
+        LabItems.CATALOG.put("electric_feet_oson",
+                LabItems.ITEMS.register("electric_feet_oson", () -> new LabArmor(ArmorItem.Type.BOOTS, "Oson")));
+        LabItems.CATALOG.put("electric_head_leon",
+                LabItems.ITEMS.register("electric_head_leon", () -> new LabArmor(ArmorItem.Type.HELMET, "Leon")));
+        LabItems.CATALOG.put("electric_chest_leon",
+                LabItems.ITEMS.register("electric_chest_leon", () -> new LabArmor(ArmorItem.Type.CHESTPLATE, "Leon")));
+        LabItems.CATALOG.put("electric_legs_leon",
+                LabItems.ITEMS.register("electric_legs_leon", () -> new LabArmor(ArmorItem.Type.LEGGINGS, "Leon")));
+        LabItems.CATALOG.put("electric_feet_leon",
+                LabItems.ITEMS.register("electric_feet_leon", () -> new LabArmor(ArmorItem.Type.BOOTS, "Leon")));
+        LabItems.CATALOG.put("upgrade_electric_item_power1", LabItems.ITEMS.register("upgrade_electric_item_power1",
+                () -> new LabUpgrade("LabPowerLevel", 1, "any")));
+        LabItems.CATALOG.put("upgrade_electric_item_power2", LabItems.ITEMS.register("upgrade_electric_item_power2",
+                () -> new LabUpgrade("LabPowerLevel", 2, "any")));
+        LabItems.CATALOG.put("upgrade_electric_item_power3", LabItems.ITEMS.register("upgrade_electric_item_power3",
+                () -> new LabUpgrade("LabPowerLevel", 3, "any")));
+        LabItems.CATALOG.put("upgrade_electric_item_power4", LabItems.ITEMS.register("upgrade_electric_item_power4",
+                () -> new LabUpgrade("LabPowerLevel", 4, "any")));
+        LabItems.CATALOG.put("upgrade_electric_item_power5", LabItems.ITEMS.register("upgrade_electric_item_power5",
+                () -> new LabUpgrade("LabPowerLevel", 5, "any")));
+        LabItems.CATALOG.put("upgrade_sword_radius1",
+                LabItems.ITEMS.register("upgrade_sword_radius1", () -> new LabUpgrade("LabRadius", 1, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_radius2",
+                LabItems.ITEMS.register("upgrade_sword_radius2", () -> new LabUpgrade("LabRadius", 2, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_radius3",
+                LabItems.ITEMS.register("upgrade_sword_radius3", () -> new LabUpgrade("LabRadius", 3, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack1",
+                LabItems.ITEMS.register("upgrade_sword_attack1", () -> new LabUpgrade("LabDamage", 1, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack2",
+                LabItems.ITEMS.register("upgrade_sword_attack2", () -> new LabUpgrade("LabDamage", 2, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack3",
+                LabItems.ITEMS.register("upgrade_sword_attack3", () -> new LabUpgrade("LabDamage", 3, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack4",
+                LabItems.ITEMS.register("upgrade_sword_attack4", () -> new LabUpgrade("LabDamage", 4, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack5",
+                LabItems.ITEMS.register("upgrade_sword_attack5", () -> new LabUpgrade("LabDamage", 5, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack6",
+                LabItems.ITEMS.register("upgrade_sword_attack6", () -> new LabUpgrade("LabDamage", 6, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack7",
+                LabItems.ITEMS.register("upgrade_sword_attack7", () -> new LabUpgrade("LabDamage", 7, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack8",
+                LabItems.ITEMS.register("upgrade_sword_attack8", () -> new LabUpgrade("LabDamage", 8, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack9",
+                LabItems.ITEMS.register("upgrade_sword_attack9", () -> new LabUpgrade("LabDamage", 9, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_attack10",
+                LabItems.ITEMS.register("upgrade_sword_attack10", () -> new LabUpgrade("LabDamage", 10, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_fire",
+                LabItems.ITEMS.register("upgrade_sword_fire", () -> new LabUpgrade("LabFire", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_vampirism1",
+                LabItems.ITEMS.register("upgrade_sword_vampirism1", () -> new LabUpgrade("LabVampirism", 1, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_vampirism2",
+                LabItems.ITEMS.register("upgrade_sword_vampirism2", () -> new LabUpgrade("LabVampirism", 2, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_poison",
+                LabItems.ITEMS.register("upgrade_sword_poison", () -> new LabUpgrade("LabPoison", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_confusion",
+                LabItems.ITEMS.register("upgrade_sword_confusion", () -> new LabUpgrade("LabConfusion", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_blindness",
+                LabItems.ITEMS.register("upgrade_sword_blindness", () -> new LabUpgrade("LabBlindness", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_weakness",
+                LabItems.ITEMS.register("upgrade_sword_weakness", () -> new LabUpgrade("LabWeakness", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_wither",
+                LabItems.ITEMS.register("upgrade_sword_wither", () -> new LabUpgrade("LabWither", 0, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_kickback1",
+                LabItems.ITEMS.register("upgrade_sword_kickback1", () -> new LabUpgrade("LabKnockback", 1, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_kickback2",
+                LabItems.ITEMS.register("upgrade_sword_kickback2", () -> new LabUpgrade("LabKnockback", 2, "sword")));
+        LabItems.CATALOG.put("upgrade_sword_kickback3",
+                LabItems.ITEMS.register("upgrade_sword_kickback3", () -> new LabUpgrade("LabKnockback", 3, "sword")));
+        LabItems.CATALOG.put("upgrade_armor_night_vision", LabItems.ITEMS.register("upgrade_armor_night_vision",
+                () -> new LabUpgrade("LabNightVision", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_clear_potions", LabItems.ITEMS.register("upgrade_armor_clear_potions",
+                () -> new LabUpgrade("LabClearEffects", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_solar1",
+                LabItems.ITEMS.register("upgrade_armor_solar1", () -> new LabUpgrade("LabSolar", 1, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_solar2",
+                LabItems.ITEMS.register("upgrade_armor_solar2", () -> new LabUpgrade("LabSolar", 2, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_solar3",
+                LabItems.ITEMS.register("upgrade_armor_solar3", () -> new LabUpgrade("LabSolar", 3, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_water_protect", LabItems.ITEMS.register("upgrade_armor_water_protect",
+                () -> new LabUpgrade("LabWaterBreathing", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_speed",
+                LabItems.ITEMS.register("upgrade_armor_speed", () -> new LabUpgrade("LabSpeed", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_jump",
+                LabItems.ITEMS.register("upgrade_armor_jump", () -> new LabUpgrade("LabJump", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_ext",
+                LabItems.ITEMS.register("upgrade_armor_ext", () -> new LabUpgrade("LabExtinguish", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_fall",
+                LabItems.ITEMS.register("upgrade_armor_fall", () -> new LabUpgrade("LabFallProtection", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_jetpack",
+                LabItems.ITEMS.register("upgrade_armor_jetpack", () -> new LabUpgrade("LabFlight", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_food",
+                LabItems.ITEMS.register("upgrade_armor_food", () -> new LabUpgrade("LabFood", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_regen",
+                LabItems.ITEMS.register("upgrade_armor_regen", () -> new LabUpgrade("LabRegen", 0, "armor")));
+        LabItems.CATALOG.put("upgrade_armor_speed_creative_fly", LabItems.ITEMS
+                .register("upgrade_armor_speed_creative_fly", () -> new LabUpgrade("LabFastFlight", 0, "armor")));
+        LabItems.CATALOG.put("portable_charging_module",
+                LabItems.ITEMS.register("portable_charging_module", () -> new LabBattery(100000000)));
+        LabItems.CATALOG.put("advanced_lappack",
+                LabItems.ITEMS.register("advanced_lappack", () -> new LabBattery(10000000)));
+        LabItems.CATALOG.put("ultimate_lappack",
+                LabItems.ITEMS.register("ultimate_lappack", () -> new LabBattery(100000000)));
     }
 }

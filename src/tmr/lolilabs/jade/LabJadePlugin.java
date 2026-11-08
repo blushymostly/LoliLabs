@@ -1,9 +1,5 @@
 package tmr.lolilabs.jade;
 
-import snownee.jade.api.IWailaClientRegistration;
-import snownee.jade.api.IWailaCommonRegistration;
-import snownee.jade.api.IWailaPlugin;
-import snownee.jade.api.WailaPlugin;
 import tmr.lolilabs.LabMachineBlock;
 import tmr.lolilabs.LabMachineEntity;
 import tmr.lolilabs.botania.GreenhouseBlockEntity;
@@ -12,9 +8,15 @@ import tmr.lolilabs.botania.GreenhousePartBlock;
 import tmr.lolilabs.utility.FortuneBlock;
 import tmr.lolilabs.utility.FortuneEntity;
 
+import snownee.jade.api.IWailaClientRegistration;
+import snownee.jade.api.IWailaCommonRegistration;
+import snownee.jade.api.IWailaPlugin;
+import snownee.jade.api.WailaPlugin;
+
 /** Jade hooks for Loli Labs machines — flowing EU meter matching in-GUI animation. */
 @WailaPlugin
 public final class LabJadePlugin implements IWailaPlugin {
+
     @Override
     public void register(IWailaCommonRegistration registration) {
         registration.registerBlockDataProvider(LabMachineEnergyProvider.INSTANCE, LabMachineEntity.class);

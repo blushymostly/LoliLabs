@@ -11,10 +11,10 @@
 !/settings.gradle
 !/gradle/
 !/gradle/**
+!/spotless/
+!/spotless/**
 !/src/
 !/src/**
-!/resources/
-!/resources/**
 !/run/
 /run/*
 !/run/kubejs/

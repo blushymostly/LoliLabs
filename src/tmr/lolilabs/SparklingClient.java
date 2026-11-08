@@ -10,14 +10,17 @@ import net.minecraftforge.eventbus.api.EventPriority;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.ForgeRegistries;
+
 import org.zeith.solarflux.block.SolarPanelBlock;
 import org.zeith.solarflux.client.screen.SolarPanelScreen;
 
 public final class SparklingClient {
+
     public static final ResourceLocation PANEL = new ResourceLocation("solarflux", "sp_custom_sparkling");
 
     @Mod.EventBusSubscriber(modid = LoliLabs.MOD_ID, value = Dist.CLIENT, bus = Mod.EventBusSubscriber.Bus.MOD)
     public static final class Models {
+
         @SubscribeEvent
         public static void register(ModelEvent.RegisterAdditional event) {
             event.register(new ResourceLocation(LoliLabs.MOD_ID, "block/sparkling_textures"));
@@ -35,15 +38,14 @@ public final class SparklingClient {
 
     @Mod.EventBusSubscriber(modid = LoliLabs.MOD_ID, value = Dist.CLIENT)
     public static final class Screens {
+
         @SubscribeEvent
         public static void open(ScreenEvent.Opening event) {
-            if (event.getNewScreen() instanceof SolarPanelScreen screen
-                    && !(screen instanceof SparklingScreen)
-                    && PANEL.equals(ForgeRegistries.BLOCKS.getKey(screen.solar.m_58900_().m_60734_()))) {
+            if (event.getNewScreen() instanceof SolarPanelScreen screen && !(screen instanceof SparklingScreen) &&
+                    PANEL.equals(ForgeRegistries.BLOCKS.getKey(screen.solar.m_58900_().m_60734_()))) {
                 event.setNewScreen(new SparklingScreen(screen.m_6262_(),
                         Minecraft.m_91087_().f_91074_.m_150109_(), screen.m_96636_()));
             }
         }
     }
 }
-

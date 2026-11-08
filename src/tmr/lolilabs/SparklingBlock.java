@@ -7,11 +7,15 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
+
 import org.zeith.solarflux.block.SolarPanelBlock;
 import org.zeith.solarflux.panels.SolarPanel;
 
 public final class SparklingBlock extends SolarPanelBlock {
-    public SparklingBlock(SolarPanel panel, ResourceLocation id) { super(panel, id); }
+
+    public SparklingBlock(SolarPanel panel, ResourceLocation id) {
+        super(panel, id);
+    }
 
     @Override
     public VoxelShape m_5940_(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
