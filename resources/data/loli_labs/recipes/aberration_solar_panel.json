@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DED"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:anisotropic_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:fluctuation_solar_panel"
+    },
+    "B": {
+      "item": "avaritia:neutron_ingot"
+    },
+    "C": {
+      "item": "loli_labs:aberration_core"
+    },
+    "D": {
+      "item": "loli_labs:chrysolite_plasma_core"
+    },
+    "E": {
+      "item": "loli_labs:quant_microchip"
+    }
+  },
+  "result": {
+    "item": "loli_labs:aberration_solar_panel"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    }
+  ]
+}

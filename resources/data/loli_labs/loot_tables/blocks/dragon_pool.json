@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:block",
+  "pools": [{
+    "rolls": 1,
+    "entries": [{ "type": "minecraft:item", "name": "loli_labs:dragon_pool" }],
+    "conditions": [{ "condition": "minecraft:survives_explosion" }]
+  }]
+}

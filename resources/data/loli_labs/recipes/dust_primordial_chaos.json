@@ -1,0 +1,12 @@
+{
+  "type": "ic2modern:machine",
+  "machine": "macerator",
+  "ingredient": {
+    "item": "loli_labs:crystal_primordial_chaos"
+  },
+  "result": {
+    "item": "loli_labs:dust_primordial_chaos"
+  },
+  "duration": 300,
+  "eu_per_tick": 32
+}

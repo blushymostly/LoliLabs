@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "loli_labs:chaotic_draconium_block",
+    "loli_labs:awakened_chaotic_draconium_block",
+    "loli_labs:ice_draconium_block",
+    "loli_labs:awakened_ice_draconium_block",
+    "loli_labs:fire_draconium_block",
+    "loli_labs:awakened_fire_draconium_block",
+    "loli_labs:infinity_draconium_block",
+    "loli_labs:awakened_infinity_draconium_block",
+    "loli_labs:demonic_infinity_draconium_block",
+    "loli_labs:awakened_demonic_infinity_draconium_block",
+    "loli_labs:chromatic_ore",
+    "loli_labs:infernium_ore",
+    "loli_labs:osmium_ore",
+    "loli_labs:tungsten_ore"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DED"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:anisotropic_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:gravitomagnetic_solar_panel"
+    },
+    "B": {
+      "item": "loli_labs:matter_luminous_turquoise"
+    },
+    "C": {
+      "item": "loli_labs:fluctuation_core"
+    },
+    "D": {
+      "item": "loli_labs:niobium_ingot"
+    },
+    "E": {
+      "item": "loli_labs:matter_luminous_red"
+    }
+  },
+  "result": {
+    "item": "loli_labs:fluctuation_solar_panel"
+  }
+}

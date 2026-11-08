@@ -1,0 +1,14 @@
+﻿{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/legacy/extra/neutronium_catalyst",
+    "halo": "loliavaritia:misc/halo_noise"
+  },
+  "loader": "loliavaritia:halo",
+  "halo": {
+    "texture": "#halo",
+    "color": -1711276033,
+    "size": 6,
+    "pulse": false
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "type": "botania:mana_infusion",
+  "input": {
+    "item": "loli_labs:tungsten_ingot"
+  },
+  "output": {
+    "item": "loli_labs:adamantium_scrap"
+  },
+  "mana": 10000,
+  "catalyst": {
+    "type": "block",
+    "block": "botania:conjuration_catalyst"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

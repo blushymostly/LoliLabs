@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/magically/magical_scroll_give"
+  }
+}

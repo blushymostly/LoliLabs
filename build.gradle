@@ -1,0 +1,145 @@
+import groovy.json.JsonSlurper
+
+plugins { id 'java'; id 'idea' }
+
+def config = new JsonSlurper().parse(file('build-config.json'))
+group = 'tmr.lolilabs'
+version = config.version
+def prismRoot = providers.gradleProperty('prismRoot').getOrElse('D:/Prism')
+def powershell = providers.gradleProperty('powershellExecutable').getOrElse(
+        System.getenv('SystemRoot') ? "${System.getenv('SystemRoot')}\\System32\\WindowsPowerShell\\v1.0\\powershell.exe" : 'powershell')
+def nodeExecutable = providers.gradleProperty('nodeExecutable').orElse(providers.provider {
+    def candidates = [
+            System.getenv('NODE_HOME') ? "${System.getenv('NODE_HOME')}/node.exe" : null,
+            'C:/Program Files/nodejs/node.exe',
+            "${System.getenv('LOCALAPPDATA')}/Programs/cursor/resources/app/resources/helpers/node.exe"
+    ].findAll { it }
+    def found = candidates.find { new File(it).exists() }
+    if (found == null) throw new GradleException('node executable not found; set -PnodeExecutable=...')
+    found
+})
+def apiFile = file('build/ide-classpath.json')
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+}
+sourceSets {
+    main {
+        java.srcDirs = ['src']
+        java.setIncludes(config.sources as Set)
+        resources.srcDirs = [config.resources]
+    }
+    recipeEditor {
+        java.srcDirs = ['tools/avaritia-recipe-editor/src']
+        resources.srcDirs = []
+    }
+}
+
+tasks.register('prepareIde', Exec) {
+    group = 'Minecraft'
+    description = 'Resolve the locally installed Forge, IC2Modern and ModularUI APIs'
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('prepare-ide.ps1').absolutePath, '-PrismRoot', prismRoot
+}
+// Lazy lookup lets a clean build prepare this file before compiling. No remote repositories.
+def localApis = files(providers.provider {
+    apiFile.exists() ? new JsonSlurper().parse(apiFile) : []
+})
+dependencies {
+    implementation localApis
+    recipeEditorImplementation files("${prismRoot}/libraries/com/google/code/gson/gson/2.10/gson-2.10.jar")
+}
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+    options.release = 17
+    options.compilerArgs += ['-proc:none']
+}
+tasks.named('compileJava') {
+    dependsOn 'prepareIde'
+    doFirst {
+        if (!apiFile.exists() || localApis.files.isEmpty()) throw new GradleException('Local API classpath is missing; run prepareIde')
+    }
+}
+tasks.register('generateMaterialOres', Exec) {
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('generate-material-ores.ps1').absolutePath
+}
+tasks.named('processResources') {
+    dependsOn 'generateMaterialOres' 
+    inputs.property('modVersion', version)
+    doFirst {
+        def metadata = file("${config.resources}/META-INF/mods.toml").getText('UTF-8')
+        def match = metadata =~ /(?m)^version="([^"]+)"/
+        if (!match.find() || match.group(1) != version.toString()) {
+            throw new GradleException('Version in build-config.json must match resources META-INF/mods.toml')
+        }
+    }
+}
+// Loli Labs source uses the production SRG API, so this is the runnable Forge artifact.
+tasks.named('jar', Jar) {
+    archiveBaseName = 'loli-labs-1.20.1'
+    archiveVersion = project.version.toString()
+    destinationDirectory = layout.projectDirectory.dir('dist')
+    manifest.attributes('Implementation-Title': 'Loli Labs', 'Implementation-Version': project.version, 'MixinConfigs': 'loli_labs.mixins.json')
+    duplicatesStrategy = DuplicatesStrategy.FAIL
+}
+tasks.register('productionJar') {
+    group = 'Minecraft'
+    description = 'Build the runnable Forge mod in dist/'
+    dependsOn 'jar'
+}
+tasks.register('checkAssets', Exec) {
+    group = 'verification'
+    description = 'Verify recipes, textures, models, exclusions and OG GUI assets'
+    workingDir projectDir
+    commandLine nodeExecutable.get(), file('verify-release.cjs').absolutePath
+}
+tasks.register('checkRuntime', Exec) {
+    group = 'verification'
+    description = 'Run isolated production Forge checks'
+    dependsOn 'jar'
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('check-runtime.ps1').absolutePath
+}
+tasks.register('gameTest', Exec) {
+    group = 'verification'
+    description = 'Run the isolated Forge GameTest world'
+    dependsOn 'jar'
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('check-runtime.ps1').absolutePath, '-GameTest'
+}
+tasks.register('recipeEditor', JavaExec) {
+    group = 'Recipe editor'
+    description = 'Open the standalone Avaritia recipe editor for this instance'
+    classpath = sourceSets.recipeEditor.runtimeClasspath
+    mainClass = 'tmr.editor.Editor'
+    workingDir projectDir
+    args projectDir.parentFile.absolutePath
+}
+tasks.register('checkRecipeEditor', JavaExec) {
+    group = 'verification'
+    description = 'Check recipe serialization, backup and project persistence'
+    classpath = sourceSets.recipeEditor.runtimeClasspath
+    mainClass = 'tmr.editor.Editor'
+    jvmArgs '-Djava.awt.headless=true'
+    doFirst { setArgs(['--self-test', layout.buildDirectory.dir("recipe-editor-checks/${System.currentTimeMillis()}").get().asFile.absolutePath]) }
+}
+tasks.named('check') { dependsOn 'checkAssets', 'checkRecipeEditor' }
+idea { module { downloadSources = false; downloadJavadoc = false } }
+
+tasks.register('checkClient', Exec) {
+    group = 'verification'
+    description = 'Run isolated client resource bake and Botania renderer checks'
+    dependsOn 'jar'
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('check-runtime.ps1').absolutePath, '-Client'
+}
+
+tasks.register('checkWorldClient', Exec) {
+    group = 'verification'
+    description = 'Test formed greenhouse EU, typed upgrades, meters and screenshots in an isolated world'
+    dependsOn 'jar'
+    workingDir projectDir
+    commandLine powershell, '-NoProfile', '-File', file('check-runtime.ps1').absolutePath, '-Client', '-World'
+}

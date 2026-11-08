@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/radvirium"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:radvirium_ingot",
+    "count": 9
+  }
+}

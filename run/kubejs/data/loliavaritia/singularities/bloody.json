@@ -1,0 +1,12 @@
+{
+  "name": "loliavaritia:bloody",
+  "displayName": "singularity.loliavaritia.bloody",
+  "overlayColor": "ffffff",
+  "underlayColor": "ffffff",
+  "count": 1000,
+  "timeCost": 240,
+  "enabled": true,
+  "recipeEnabled": true,
+  "ingredient": { "item": "bloodmagic:weak_blood_shard" },
+  "conditions": [{"type":"forge:or","values":[{"type":"forge:mod_loaded","modid":"bloodmagic"},{"type":"forge:mod_loaded","modid":"loli_labs"}]}]
+}

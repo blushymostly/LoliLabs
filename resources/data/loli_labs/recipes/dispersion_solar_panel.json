@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "ABA",
+    "CDC"
+  ],
+  "key": {
+    "#": {
+      "item": "ic2modern:quantum_solar_panel"
+    },
+    "A": {
+      "item": "ic2modern:reinforced_iridium_iron_plate"
+    },
+    "B": {
+      "item": "loli_labs:dispersion_core"
+    },
+    "C": {
+      "item": "loli_labs:niobium_ingot"
+    },
+    "D": {
+      "item": "loli_labs:base_microchip"
+    }
+  },
+  "result": {
+    "item": "loli_labs:dispersion_solar_panel"
+  }
+}

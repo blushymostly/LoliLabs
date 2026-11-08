@@ -20,7 +20,10 @@ public final class LegacyMappings {
         }
     }
     @SubscribeEvent public static void missing(MissingMappingsEvent event){
-        for(var m:event.getMappings(ForgeRegistries.Keys.ITEMS,LoliLabs.MOD_ID)){String target=RemovedItems.ALIASES.get(m.getKey().m_135815_());if(target!=null)m.remap(ForgeRegistries.ITEMS.getValue(new net.minecraft.resources.ResourceLocation(target)));}
+        for(var m:event.getMappings(ForgeRegistries.Keys.ITEMS,LoliLabs.MOD_ID)){String id=m.getKey().m_135815_();String target=RemovedItems.ALIASES.get(id);if(id.equals("mt_core")||RemovedItems.DROPPED.contains(id)){m.ignore();continue;}if(target!=null)m.remap(ForgeRegistries.ITEMS.getValue(new net.minecraft.resources.ResourceLocation(target)));}
+        for(var m:event.getMappings(ForgeRegistries.Keys.BLOCKS,LoliLabs.MOD_ID)){if(RemovedItems.DROPPED.contains(m.getKey().m_135815_()))m.ignore();}
+        for(var m:event.getMappings(ForgeRegistries.Keys.BLOCK_ENTITY_TYPES,LoliLabs.MOD_ID)){if(RemovedItems.DROPPED.contains(m.getKey().m_135815_()))m.ignore();}
+        for(var m:event.getMappings(ForgeRegistries.Keys.MENU_TYPES,LoliLabs.MOD_ID)){if(RemovedItems.DROPPED.contains(m.getKey().m_135815_()))m.ignore();}
         for(var m:event.getMappings(ForgeRegistries.Keys.BLOCKS,"solarflux"))if(m.getKey().m_135815_().equals("sp_custom_sparkling"))m.remap(LabMachines.DEFINITIONS.get("sparkling_panel").block.get());
         for(var m:event.getMappings(ForgeRegistries.Keys.ITEMS,"solarflux"))if(m.getKey().m_135815_().equals("sp_custom_sparkling"))m.remap(LabItems.CATALOG.get("sparkling_panel").get());
     }

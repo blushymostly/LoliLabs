@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "loli_labs:raw_osmium"
+  },
+  "result": "loli_labs:osmium_ingot",
+  "experience": 0.7,
+  "cookingtime": 100
+}

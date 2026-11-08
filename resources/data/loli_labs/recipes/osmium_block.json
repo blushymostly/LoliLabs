@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "tag": "forge:ingots/osmium"
+    }
+  },
+  "result": {
+    "item": "loli_labs:osmium_block",
+    "count": 1
+  }
+}

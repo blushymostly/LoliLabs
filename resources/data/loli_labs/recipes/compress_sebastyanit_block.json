@@ -1,0 +1,14 @@
+{
+  "type": "ic2modern:machine",
+  "machine": "compressor",
+  "ingredient": {
+    "tag": "forge:ingots/sebastyanit"
+  },
+  "input_count": 9,
+  "result": {
+    "item": "loli_labs:sebastyanit_block",
+    "count": 1
+  },
+  "duration": 300,
+  "eu_per_tick": 2
+}

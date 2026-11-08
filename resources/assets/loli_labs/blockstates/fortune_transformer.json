@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "loli_labs:block/fortune_transformer",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "loli_labs:block/fortune_transformer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "loli_labs:block/fortune_transformer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "loli_labs:block/fortune_transformer",
+      "y": 270
+    }
+  }
+}

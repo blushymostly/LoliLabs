@@ -1,0 +1,234 @@
+[
+  {
+    "id": "niobium_ingot",
+    "material": "niobium",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "A6BDBD",
+    "secondary": "2B484D"
+  },
+  {
+    "id": "osmiridium_ingot",
+    "material": "osmiridium",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "A8B8D3",
+    "secondary": "9197BE"
+  },
+  {
+    "id": "osmiridium_gear",
+    "material": "osmiridium",
+    "form": "gear",
+    "iconSet": "metallic",
+    "primary": "A8B8D3",
+    "secondary": "9197BE"
+  },
+  {
+    "id": "osmiridium_plate",
+    "material": "osmiridium",
+    "form": "plate",
+    "iconSet": "metallic",
+    "primary": "A8B8D3",
+    "secondary": "9197BE"
+  },
+  {
+    "id": "star_matter_ingot",
+    "material": "star_matter",
+    "form": "ingot",
+    "iconSet": "shiny",
+    "primary": "CDF7FC",
+    "secondary": "66BFDE"
+  },
+  {
+    "id": "superalloy_ingot",
+    "material": "superalloy",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "98B9F5",
+    "secondary": "7588A9"
+  },
+  {
+    "id": "tungsten_ingot",
+    "material": "tungsten",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "3B3A32",
+    "secondary": "2A2800"
+  },
+  {
+    "id": "rose_gold_ingot",
+    "material": "rose_gold",
+    "form": "ingot",
+    "iconSet": "shiny",
+    "primary": "ECD5B8",
+    "secondary": "D85F2D"
+  },
+  {
+    "id": "radvirium_dust",
+    "material": "radvirium",
+    "form": "dust",
+    "iconSet": "shiny",
+    "primary": "4E75C4",
+    "secondary": "264D9C"
+  },
+  {
+    "id": "radvirium_ingot",
+    "material": "radvirium",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "4E75C4",
+    "secondary": "264D9C"
+  },
+  {
+    "id": "radvirium_plate",
+    "material": "radvirium",
+    "form": "plate",
+    "iconSet": "metallic",
+    "primary": "4E75C4",
+    "secondary": "264D9C"
+  },
+  {
+    "id": "sebastyanit_dust",
+    "material": "sebastyanit",
+    "form": "dust",
+    "iconSet": "shiny",
+    "primary": "8CF3B4",
+    "secondary": "64CB8C"
+  },
+  {
+    "id": "sebastyanit_ingot",
+    "material": "sebastyanit",
+    "form": "ingot",
+    "iconSet": "shiny",
+    "primary": "8CF3B4",
+    "secondary": "64CB8C"
+  },
+  {
+    "id": "sebastyanit_plate",
+    "material": "sebastyanit",
+    "form": "plate",
+    "iconSet": "shiny",
+    "primary": "8CF3B4",
+    "secondary": "64CB8C"
+  },
+  {
+    "id": "skyfiry_dust",
+    "material": "skyfiry",
+    "form": "dust",
+    "iconSet": "shiny",
+    "primary": "D69C28",
+    "secondary": "AE7400"
+  },
+  {
+    "id": "skyfiry_ingot",
+    "material": "skyfiry",
+    "form": "ingot",
+    "iconSet": "shiny",
+    "primary": "D69C28",
+    "secondary": "AE7400"
+  },
+  {
+    "id": "skyfiry_plate",
+    "material": "skyfiry",
+    "form": "plate",
+    "iconSet": "shiny",
+    "primary": "D69C28",
+    "secondary": "AE7400"
+  },
+  {
+    "id": "gladium_dust",
+    "material": "gladium",
+    "form": "dust",
+    "iconSet": "shiny",
+    "primary": "B581AD",
+    "secondary": "8D5985"
+  },
+  {
+    "id": "gladium_ingot",
+    "material": "gladium",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "B581AD",
+    "secondary": "8D5985"
+  },
+  {
+    "id": "gladium_plate",
+    "material": "gladium",
+    "form": "plate",
+    "iconSet": "metallic",
+    "primary": "B581AD",
+    "secondary": "8D5985"
+  },
+  {
+    "id": "spark_matter_dust",
+    "material": "spark_matter",
+    "form": "dust",
+    "iconSet": "shiny",
+    "primary": "B5BBFF",
+    "secondary": "8D93D7"
+  },
+  {
+    "id": "spark_matter_ingot",
+    "material": "spark_matter",
+    "form": "ingot",
+    "iconSet": "shiny",
+    "primary": "B5BBFF",
+    "secondary": "8D93D7"
+  },
+  {
+    "id": "spark_matter_plate",
+    "material": "spark_matter",
+    "form": "plate",
+    "iconSet": "shiny",
+    "primary": "B5BBFF",
+    "secondary": "8D93D7"
+  },
+  {
+    "id": "osmium_ingot",
+    "material": "osmium",
+    "form": "ingot",
+    "iconSet": "metallic",
+    "primary": "8FA2A1",
+    "secondary": "485259"
+  },
+  {
+    "id": "osmium_dust",
+    "material": "osmium",
+    "form": "dust",
+    "iconSet": "metallic",
+    "primary": "8FA2A1",
+    "secondary": "485259"
+  },
+  {
+    "id": "raw_osmium",
+    "material": "osmium",
+    "form": "raw_ore",
+    "iconSet": "metallic",
+    "primary": "8FA2A1",
+    "secondary": "485259"
+  },
+  {
+    "id": "osmium_plate",
+    "material": "osmium",
+    "form": "plate",
+    "iconSet": "metallic",
+    "primary": "8FA2A1",
+    "secondary": "485259"
+  },
+  {
+    "id": "tungsten_dust",
+    "material": "tungsten",
+    "form": "dust",
+    "iconSet": "metallic",
+    "primary": "3B3A32",
+    "secondary": "2A2800"
+  },
+  {
+    "id": "raw_tungsten",
+    "material": "tungsten",
+    "form": "raw_ore",
+    "iconSet": "metallic",
+    "primary": "3B3A32",
+    "secondary": "2A2800"
+  }
+]

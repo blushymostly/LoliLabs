@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/skyfiry"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:skyfiry_ingot",
+    "count": 9
+  }
+}

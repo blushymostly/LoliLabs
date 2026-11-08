@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "loli_labs:infinity_draconium_dust"
+  },
+  "result": "loli_labs:infinity_draconium_ingot",
+  "experience": 0.7,
+  "cookingtime": 200
+}

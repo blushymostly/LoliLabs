@@ -1,0 +1,14 @@
+{
+  "type": "ic2modern:machine",
+  "machine": "compressor",
+  "ingredient": {
+    "tag": "forge:ingots/tungsten"
+  },
+  "input_count": 9,
+  "result": {
+    "item": "loli_labs:tungsten_block",
+    "count": 1
+  },
+  "duration": 300,
+  "eu_per_tick": 2
+}

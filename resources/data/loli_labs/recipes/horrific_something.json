@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:horrific_something"
+  },
+  "pattern": [
+    "ABC",
+    "BCB",
+    "CBA"
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:petrified_heart"
+    },
+    "B": {
+      "item": "minecraft:rotten_flesh"
+    },
+    "C": {
+      "item": "loli_labs:fire_circle"
+    }
+  }
+}

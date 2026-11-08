@@ -1,0 +1,20 @@
+{
+  "type": "botania:mana_infusion",
+  "input": {
+    "item": "minecraft:nether_star"
+  },
+  "output": {
+    "item": "loli_labs:star_crystal"
+  },
+  "mana": 100000,
+  "catalyst": {
+    "type": "block",
+    "block": "botania:alchemy_catalyst"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

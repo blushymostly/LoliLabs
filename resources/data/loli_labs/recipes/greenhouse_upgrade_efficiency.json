@@ -1,0 +1,39 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:greenhouse_upgrade_efficiency"
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "mythicbotany:alfsteel_ingot"
+    },
+    "B": {
+      "item": "bloodmagic:accelerationrune"
+    },
+    "C": {
+      "item": "loli_labs:adamantium_cluster_ethereal"
+    },
+    "D": {
+      "item": "botania:lens_efficiency"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mythicbotany"
+    }
+  ]
+}

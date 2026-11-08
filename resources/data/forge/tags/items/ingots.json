@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "loli_labs:niobium_ingot",
+    "loli_labs:osmiridium_ingot",
+    "loli_labs:star_matter_ingot",
+    "loli_labs:superalloy_ingot",
+    "loli_labs:tungsten_ingot",
+    "loli_labs:rose_gold_ingot",
+    "loli_labs:chromatic_ingot",
+    "loli_labs:light_ingot",
+    "loli_labs:infernium_ingot",
+    "loli_labs:chaotic_draconium_ingot",
+    "loli_labs:ice_draconium_ingot",
+    "loli_labs:fire_draconium_ingot",
+    "loli_labs:infinity_draconium_ingot",
+    "loli_labs:demonic_infinity_draconium_ingot",
+    "loli_labs:radvirium_ingot",
+    "loli_labs:sebastyanit_ingot",
+    "loli_labs:skyfiry_ingot",
+    "loli_labs:gladium_ingot",
+    "loli_labs:spark_matter_ingot",
+    "loli_labs:osmium_ingot"
+  ]
+}

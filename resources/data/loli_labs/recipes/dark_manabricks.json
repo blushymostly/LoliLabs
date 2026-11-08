@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:dark_manabricks"
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "botania:livingrock_bricks"
+    },
+    "B": {
+      "item": "botania:manasteel_block"
+    },
+    "C": {
+      "item": "loli_labs:adamantium_ethereal_ingot"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

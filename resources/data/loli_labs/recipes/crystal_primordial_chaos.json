@@ -1,0 +1,39 @@
+{
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "item": "botanicalextramachinery:shadow_ingot"
+    },
+    {
+      "item": "botanicalextramachinery:shadow_ingot"
+    },
+    {
+      "item": "botanicalextramachinery:shadow_ingot"
+    },
+    {
+      "item": "botanicalextramachinery:shadow_ingot"
+    },
+    {
+      "item": "loli_labs:haos_shard"
+    },
+    {
+      "item": "loli_labs:haos_shard"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:crystal_primordial_chaos"
+  },
+  "syphon": 4000,
+  "ticks": 200,
+  "upgradeLevel": 5,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botanicalextramachinery"
+    }
+  ]
+}

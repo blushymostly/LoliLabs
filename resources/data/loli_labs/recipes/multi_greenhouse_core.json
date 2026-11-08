@@ -1,0 +1,43 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "item": "mythicbotany:alfsteel_ingot"
+    },
+    {
+      "item": "mythicbotany:alfsteel_ingot"
+    },
+    {
+      "item": "mythicbotany:alfsteel_ingot"
+    },
+    {
+      "item": "mythicbotany:alfsteel_ingot"
+    },
+    {
+      "item": "loli_labs:dark_manabricks"
+    },
+    {
+      "item": "loli_labs:dark_manabricks"
+    },
+    {
+      "item": "loli_labs:multi_greenhouse_base"
+    },
+    {
+      "item": "loli_labs:multi_greenhouse_base"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:multi_greenhouse_core"
+  },
+  "mana": 10000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mythicbotany"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "botania:mana_string"
+    },
+    {
+      "item": "loli_labs:air_filled_dust"
+    },
+    {
+      "item": "loli_labs:air_filled_dust"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    },
+    {
+      "item": "minecraft:paper"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:infused_air_scroll"
+  },
+  "mana": 20000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

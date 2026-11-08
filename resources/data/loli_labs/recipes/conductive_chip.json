@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:conductive_chip"
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EFE"
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:osmiridium_plate"
+    },
+    "B": {
+      "item": "ic2modern:energium_dust"
+    },
+    "C": {
+      "item": "ic2modern:glass_fibre_cable"
+    },
+    "D": {
+      "item": "loli_labs:osmiridium_capacitor"
+    },
+    "E": {
+      "item": "ic2modern:steel_ingot"
+    },
+    "F": {
+      "item": "loli_labs:base_microchip"
+    }
+  }
+}

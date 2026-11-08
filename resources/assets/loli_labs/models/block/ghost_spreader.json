@@ -1,0 +1,6 @@
+{
+  "parent": "loli_labs:block/template_mana_spreader",
+  "textures": {
+    "all": "loli_labs:models/spreaders/ghost_spreader"
+  }
+}

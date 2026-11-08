@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:straw_doll"
+  },
+  "pattern": [
+    " A ",
+    "BBB",
+    " C "
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:horrific_something"
+    },
+    "B": {
+      "item": "minecraft:wheat"
+    },
+    "C": {
+      "item": "loli_labs:cracked_bird_bone"
+    }
+  }
+}

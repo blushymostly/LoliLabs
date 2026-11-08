@@ -11,11 +11,21 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public final class LabMachineBlock extends BaseEntityBlock {
     public static final net.minecraft.world.level.block.state.properties.DirectionProperty FACING=com.ic2ceu.icceu.MachineBlock.FACING;
+    /** Lit while a panel/unifier is working. Always registered; lightLevel only on kind 0/1. */
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty ACTIVE=com.ic2ceu.icceu.MachineBlock.ACTIVE;
     public static net.minecraft.core.Direction rotationFacing(int kind,net.minecraft.core.Direction selected){return kind==2?selected:selected.m_122424_();}
     public final LabMachines.Definition definition;
-    public LabMachineBlock(LabMachines.Definition definition,BlockBehaviour.Properties properties){super(properties);this.definition=definition;m_49959_(m_49966_().m_61124_(FACING,net.minecraft.core.Direction.NORTH));}
-    @Override protected void m_7926_(StateDefinition.Builder<Block,BlockState> builder){builder.m_61104_(FACING);}
-    @Override public BlockState m_5573_(net.minecraft.world.item.context.BlockPlaceContext context){var front=context.m_8125_().m_122424_();if(context.m_43723_()!=null&&context.m_43723_().m_6144_()&&context.m_43725_().m_8055_(context.m_8083_().m_121945_(context.m_43719_().m_122424_())).m_60734_() instanceof com.ic2ceu.icceu.CableBlock)front=context.m_43719_();return m_49966_().m_61124_(FACING,front);}
+    public LabMachineBlock(LabMachines.Definition definition,BlockBehaviour.Properties properties){
+        super(properties);
+        this.definition=definition;
+        m_49959_(m_49966_().m_61124_(FACING,net.minecraft.core.Direction.NORTH).m_61124_(ACTIVE,definition.kind==0));
+    }
+    @Override protected void m_7926_(StateDefinition.Builder<Block,BlockState> builder){builder.m_61104_(FACING,ACTIVE);}
+    @Override public BlockState m_5573_(net.minecraft.world.item.context.BlockPlaceContext context){
+        var front=context.m_8125_().m_122424_();
+        if(context.m_43723_()!=null&&context.m_43723_().m_6144_()&&context.m_43725_().m_8055_(context.m_8083_().m_121945_(context.m_43719_().m_122424_())).m_60734_() instanceof com.ic2ceu.icceu.CableBlock)front=context.m_43719_();
+        return m_49966_().m_61124_(FACING,front).m_61124_(ACTIVE,definition.kind==0);
+    }
     @Override public RenderShape m_7514_(BlockState state){return RenderShape.MODEL;}
     @Override public BlockEntity m_142194_(BlockPos pos,BlockState state){return new LabMachineEntity(pos,state);}
     @Override public MenuProvider m_7246_(BlockState state,Level level,BlockPos pos){return level.m_7702_(pos) instanceof LabMachineEntity machine?machine:null;}

@@ -1,0 +1,71 @@
+{
+  "type": "avaritia:shaped_table",
+  "tier": 4,
+  "compatible": false,
+  "result": {
+    "item": "loli_labs:demon_notes"
+  },
+  "pattern": [
+    "AAAAAAA",
+    "ABCCCDA",
+    "ACEFECA",
+    "ACGHGCA",
+    "ACEFECA",
+    "AICCCJA",
+    "AAAAAAA"
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:infused_air_scroll"
+    },
+    "B": {
+      "item": "botania:rune_water"
+    },
+    "C": {
+      "item": "botanicalextramachinery:saffron_ingot"
+    },
+    "D": {
+      "item": "botania:rune_fire"
+    },
+    "E": {
+      "item": "mythicbotany:gjallar_horn_empty"
+    },
+    "F": {
+      "item": "bloodmagic:ingot_hellforged"
+    },
+    "G": {
+      "item": "loli_labs:nether_crystal"
+    },
+    "H": {
+      "item": "minecraft:trident"
+    },
+    "I": {
+      "item": "botania:rune_earth"
+    },
+    "J": {
+      "item": "botania:rune_air"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botanicalextramachinery"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mythicbotany"
+    }
+  ]
+}

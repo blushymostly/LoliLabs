@@ -1,0 +1,12 @@
+{
+  "name": "loliavaritia:gaia_shard_1",
+  "displayName": "singularity.loliavaritia.gaia_shard_1",
+  "overlayColor": "5CD8F6",
+  "underlayColor": "384F8F",
+  "count": 1000,
+  "timeCost": 240,
+  "enabled": true,
+  "recipeEnabled": true,
+  "ingredient": { "item": "loli_labs:gaya_shard_1" },
+  "conditions": [{"type":"forge:mod_loaded","modid":"loli_labs"}]
+}

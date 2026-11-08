@@ -1,0 +1,667 @@
+[
+  {
+    "id": "chaotic_draconium_block",
+    "ogId": "chaotic_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/chaotic_draconium_block.png",
+    "ru": "Блок хаотического дракония",
+    "en": "Chaotic Draconium Block",
+    "glint": false,
+    "sha256": "77f6f3df806306b35e2430c1584ea95a965aac1bfcdffc16626b132e0bac4829"
+  },
+  {
+    "id": "awakened_chaotic_draconium_block",
+    "ogId": "awakened_chaotic_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/awakened_chaotic_draconium_block.png",
+    "ru": "Блок пробуждённого хаотического дракония",
+    "en": "Awakened Chaotic Draconium Block",
+    "glint": false,
+    "sha256": "24891caf65e2b4e4232ade657b02889925eea895e463204ee808da4099fab675"
+  },
+  {
+    "id": "ice_draconium_block",
+    "ogId": "ice_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/ice_draconium_block.png",
+    "ru": "Блок ледяного дракония",
+    "en": "Ice Draconium Block",
+    "glint": false,
+    "sha256": "211d7dc3ca7074bfcaf343b09f1ebf7205118e9088b734e5149a9c197d650deb"
+  },
+  {
+    "id": "awakened_ice_draconium_block",
+    "ogId": "awakened_ice_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/awakened_ice_draconium_block.png",
+    "ru": "Блок пробуждённого ледяного дракония",
+    "en": "Awakened Ice Draconium Block",
+    "glint": false,
+    "sha256": "cb2886b57fe6dc8b909fe693f8296e87078c6c8147a2e747c1a1f4ab309116f2"
+  },
+  {
+    "id": "fire_draconium_block",
+    "ogId": "fire_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/fire_draconium_block.png",
+    "ru": "Блок огненного дракония",
+    "en": "Fire Draconium Block",
+    "glint": false,
+    "sha256": "9d6ec93b32b9d3f7e7e2b2da06e058ca704f85af508bdae5deef16213e074b5d"
+  },
+  {
+    "id": "awakened_fire_draconium_block",
+    "ogId": "awakened_fire_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/awakened_fire_draconium_block.png",
+    "ru": "Блок пробуждённого огненного дракония",
+    "en": "Awakened Fire Draconium Block",
+    "glint": false,
+    "sha256": "13e90e72e8d14dad6912886a2a0d887562c3f6ce8f57cf8b5f0df879a732d340"
+  },
+  {
+    "id": "infinity_draconium_block",
+    "ogId": "infinity_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/infinity_draconium_block.png",
+    "ru": "Блок дракония бесконечности",
+    "en": "Infinity Draconium Block",
+    "glint": false,
+    "sha256": "7ae465024407b321a1714db26aca6f01a1d9c2174ee0ea5078c413c4d37511eb"
+  },
+  {
+    "id": "awakened_infinity_draconium_block",
+    "ogId": "awakened_infinity_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/awakened_infinity_draconium_block.png",
+    "ru": "Блок пробуждённого дракония бесконечности",
+    "en": "Awakened Infinity Draconium Block",
+    "glint": false,
+    "sha256": "f6fb485c3f1bae0754a7c6fce5563042337e80238fc84ac7de292fa54bf1c3dd"
+  },
+  {
+    "id": "demonic_infinity_draconium_block",
+    "ogId": "demonic_infinity_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/demonic_infinity_draconium_block.png",
+    "ru": "Блок демонического дракония бесконечности",
+    "en": "Demonic Infinity Draconium Block",
+    "glint": false,
+    "sha256": "f99714247a984a6d13638abcff3f08c807ec0eff80a3d42911d4e132acca8661"
+  },
+  {
+    "id": "awakened_demonic_infinity_draconium_block",
+    "ogId": "awakened_demonic_infinity_draconium_block",
+    "kind": "block",
+    "original": "assets/lolidimensions/textures/blocks/awakened_demonic_infinity_draconium_block.png",
+    "ru": "Блок пробуждённого демонического дракония бесконечности",
+    "en": "Awakened Demonic Infinity Draconium Block",
+    "glint": false,
+    "sha256": "5fdccabfd04d5d5702746152fa5aa94778709cb6b12396fb87df797d87860ddc"
+  },
+  {
+    "id": "chromatic_ingot",
+    "ogId": "chromatic_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chromatic_ingot.png",
+    "ru": "Хроматический слиток",
+    "en": "Chromatic Ingot",
+    "glint": false,
+    "sha256": "b43b973bd1f291d064c8bd2a6e94219298ab6bc16bb95367ddaee4a1402dba0f"
+  },
+  {
+    "id": "infused_chromatic_ore",
+    "ogId": "infused_chromatic_ore",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infused_chromatic_ore.png",
+    "ru": "Очищенная хроматическая руда",
+    "en": "Refined Chromatic Ore",
+    "glint": false,
+    "sha256": "5cb3202e1cf6b3724334066f9d0f08db38258b6efb64d2b34a6ce62e928622ed"
+  },
+  {
+    "id": "inert_chromatic_ore",
+    "ogId": "inert_chromatic_ore",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/inert_chromatic_ore.png",
+    "ru": "Инертная хроматическая руда",
+    "en": "Inert Chromatic Ore",
+    "glint": false,
+    "sha256": "a5767b83bb2114feef4b49a0152e324227916a2d0ce2cb94e69ed769b351392d"
+  },
+  {
+    "id": "divine_catalyst",
+    "ogId": "divine_catalyst",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/divine_catalyst.png",
+    "ru": "Божественный катализатор",
+    "en": "Divine Catalyst",
+    "glint": false,
+    "sha256": "bbeedea1842ceed4639f4852d9e9b9f12fd501c8bedf4cfdf489d566f8ae9fb7"
+  },
+  {
+    "id": "holy_wool",
+    "ogId": "holy_wool",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/holy_wool.png",
+    "ru": "Священная шерсть",
+    "en": "Holy Wool",
+    "glint": false,
+    "sha256": "5b9a31926142a37b212c7afc1f6c2a8cd785bb809c00933ba1b3289f71672707"
+  },
+  {
+    "id": "holy_fabric",
+    "ogId": "holy_fabric",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/holy_fabric.png",
+    "ru": "Священная ткань",
+    "en": "Holy Fabric",
+    "glint": false,
+    "sha256": "bc53fcf877409abcd4b10ebe89e6f568b63c7e029e525b94de426a07cb83c34a"
+  },
+  {
+    "id": "holy_shards",
+    "ogId": "holy_shards",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/holy_shards.png",
+    "ru": "Священные осколки",
+    "en": "Holy Shards",
+    "glint": false,
+    "sha256": "bbf8bb1a4372710a9e26d0845af354ea3b2a1ebf50d87e4e4282c84c02674649"
+  },
+  {
+    "id": "light_ingot",
+    "ogId": "light_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/light_ingot.png",
+    "ru": "Слиток светостали",
+    "en": "Lightsteel Ingot",
+    "glint": false,
+    "sha256": "e273124f1f3627050df2fcf87a3e16b607b336dc6a5b1abc64c9f8d3ec94a477"
+  },
+  {
+    "id": "sky_dust",
+    "ogId": "sky_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/sky_dust.png",
+    "ru": "Небесная пыль",
+    "en": "Sky Dust",
+    "glint": false,
+    "sha256": "6ce80d4f8b3b3974ec29676edfba988804df00a2690221845c64fe4f3bc0e02d"
+  },
+  {
+    "id": "radiant_dust",
+    "ogId": "radiant_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/radiant_dust.png",
+    "ru": "Лучезарная пыль",
+    "en": "Radiant Dust",
+    "glint": false,
+    "sha256": "bfec47459d833cb009945516856739db9ad366084f61da85c6fcfc98842b12db"
+  },
+  {
+    "id": "arch_angel_heart",
+    "ogId": "arch_angel_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/arch_angel_heart.png",
+    "ru": "Сердце Архангела",
+    "en": "Archangel Heart",
+    "glint": true,
+    "sha256": "0ddd6e91cb7db6332d286f5288708b9e392515afa3319ac179e8c7b814c49181"
+  },
+  {
+    "id": "raw_infernium",
+    "ogId": "raw_infernium",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/raw_infernium.png",
+    "ru": "Сырой инферний",
+    "en": "Raw Infernium",
+    "glint": false,
+    "sha256": "5d53a5c8251252dac459637d70fe80f8774977cb38ba5d2cef7dfc0094a1471d"
+  },
+  {
+    "id": "infernium_ingot",
+    "ogId": "infernium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infernium_ingot.png",
+    "ru": "Слиток инферния",
+    "en": "Infernium Ingot",
+    "glint": false,
+    "sha256": "907c7fea1a0c0817c276baa87c0d72f87037d2bb993997fb3bdd23c8a97ccc3b"
+  },
+  {
+    "id": "draconium_essence",
+    "ogId": "draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/draconium_essence.png",
+    "ru": "Эссенция дракония",
+    "en": "Draconium Essence",
+    "glint": false,
+    "sha256": "97edb3a2640a772c4504ff64ccabd366a4ee6e60df825783274df4152a34e1a6"
+  },
+  {
+    "id": "chaos_dragon_heart",
+    "ogId": "chaos_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaos_dragon_heart.png",
+    "ru": "Сердце дракона Хаоса",
+    "en": "Chaos Dragon Heart",
+    "glint": false,
+    "sha256": "c43702cdb041c0fa264e2c3c22b414868b293db3df45b779708f48f1b97b90da"
+  },
+  {
+    "id": "fire_dragon_heart",
+    "ogId": "fire_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_dragon_heart.png",
+    "ru": "Сердце дракона Огня",
+    "en": "Fire Dragon Heart",
+    "glint": false,
+    "sha256": "f55aa777a397b2efcb7710057ef76dcec751376838079c015a6b03a2c3277bd9"
+  },
+  {
+    "id": "ice_dragon_heart",
+    "ogId": "ice_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_dragon_heart.png",
+    "ru": "Сердце дракона Льда",
+    "en": "Ice Dragon Heart",
+    "glint": false,
+    "sha256": "df4a6574110c30ff940ef2bb7e2b1259dc6ddd6d8a2a3f8138ca71d0fe52154f"
+  },
+  {
+    "id": "infinity_dragon_heart",
+    "ogId": "infinity_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_dragon_heart.png",
+    "ru": "Сердце дракона Бесконечности",
+    "en": "Infinity Dragon Heart",
+    "glint": false,
+    "sha256": "d8862edb633cb9090b5d352e821c96b5a51407711c5f35ceb89cfe3d80d312a0"
+  },
+  {
+    "id": "demonic_infinity_dragon_heart",
+    "ogId": "demonic_infinity_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_dragon_heart.png",
+    "ru": "Сердце демонического дракона Бесконечности",
+    "en": "Demonic Infinity Dragon Heart",
+    "glint": false,
+    "sha256": "3f86357c8214e2b05d827d99a019c3dadf5179dda46fdd81671a1413d5961118"
+  },
+  {
+    "id": "awakened_dragon_heart",
+    "ogId": "awakened_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_dragon_heart.png",
+    "ru": "Пробуждённое сердце дракона",
+    "en": "Awakened Dragon Heart",
+    "glint": false,
+    "sha256": "6a3e330a551534331e0f3769f8135c720da8650f35ab60980aa2b5fcc8ee9758"
+  },
+  {
+    "id": "awakened_chaos_dragon_heart",
+    "ogId": "awakened_chaos_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_chaos_dragon_heart.png",
+    "ru": "Пробуждённое сердце дракона Хаоса",
+    "en": "Awakened Chaos Dragon Heart",
+    "glint": false,
+    "sha256": "0141ff83143771dcbce24015e6c1d76c78e70243989f8ce374adb69ef3cfebd1"
+  },
+  {
+    "id": "awakened_fire_dragon_heart",
+    "ogId": "awakened_fire_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_fire_dragon_heart.png",
+    "ru": "Пробуждённое сердце дракона Огня",
+    "en": "Awakened Fire Dragon Heart",
+    "glint": false,
+    "sha256": "6c4567886ae170bfa5b54c37313da22fa7770b5a3d7d8ce19bf7dc5500f41683"
+  },
+  {
+    "id": "awakened_ice_dragon_heart",
+    "ogId": "awakened_ice_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_ice_dragon_heart.png",
+    "ru": "Пробуждённое сердце дракона Льда",
+    "en": "Awakened Ice Dragon Heart",
+    "glint": false,
+    "sha256": "d3fd322733d7a31ce03603181038adb1eb0739f8206b857951f5f12207ed568f"
+  },
+  {
+    "id": "infinity_dragon_awakened_heart",
+    "ogId": "awakened_infinity_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_infinity_dragon_heart.png",
+    "ru": "Пробуждённое сердце дракона Бесконечности",
+    "en": "Awakened Infinity Dragon Heart",
+    "glint": false,
+    "reused": true,
+    "sha256": "882ce3ca75dfdc150630e2a53b40ca5ab622d479f932f6030cf974e6da004ecb"
+  },
+  {
+    "id": "awakened_demonic_infinity_dragon_heart",
+    "ogId": "awakened_demonic_infinity_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/awakened_demonic_infinity_dragon_heart.png",
+    "ru": "Пробуждённое сердце демонического дракона Бесконечности",
+    "en": "Awakened Demonic Infinity Dragon Heart",
+    "glint": false,
+    "sha256": "8e2991395386f24c40da90f81f110685f34c45ade0a07693664b6d9cc162373e"
+  },
+  {
+    "id": "legendary_dragon_heart",
+    "ogId": "legendary_dragon_heart",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/legendary_dragon_heart.png",
+    "ru": "Легендарное сердце повелителя драконов",
+    "en": "Legendary Dragon Heart",
+    "glint": false,
+    "sha256": "1118cc4414ebb0837dc770c67ca72a078ec6c8ee11abd17e3c77acb8cc5b1137"
+  },
+  {
+    "id": "chaotic_draconium_essence",
+    "ogId": "chaotic_draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaotic_draconium_essence.png",
+    "ru": "Эссенция хаотического дракония",
+    "en": "Chaotic Draconium Essence",
+    "glint": false,
+    "sha256": "ca57dfa365ea2ccb6678974cebc1464dfbcc194e2a68c409eb5dbc333c756e68"
+  },
+  {
+    "id": "chaotic_draconium_dust",
+    "ogId": "chaotic_draconium_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaotic_draconium_dust.png",
+    "ru": "Пыль хаотического дракония",
+    "en": "Chaotic Draconium Dust",
+    "glint": false,
+    "sha256": "812cb5221821d146ecf376a04421d89056c787a7ace0585147610523262bdf4b"
+  },
+  {
+    "id": "chaotic_draconium_ingot",
+    "ogId": "chaotic_draconium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaotic_draconium_ingot.png",
+    "ru": "Слиток хаотического дракония",
+    "en": "Chaotic Draconium Ingot",
+    "glint": false,
+    "sha256": "ee4d078a2cfeed7b662bbadb3d7aa17120163731cd97919c5f3264ffba7c54c6"
+  },
+  {
+    "id": "chaotic_draconium_plate",
+    "ogId": "chaotic_draconium_plate",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaotic_draconium_plate.png",
+    "ru": "Пластина хаотического дракония",
+    "en": "Chaotic Draconium Plate",
+    "glint": false,
+    "sha256": "7dee8b513551577b7080738b329bd87e55d8e1facec4252b1f6e5ba28ec5edd7"
+  },
+  {
+    "id": "ice_draconium_essence",
+    "ogId": "ice_draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_draconium_essence.png",
+    "ru": "Эссенция ледяного дракония",
+    "en": "Ice Draconium Essence",
+    "glint": false,
+    "sha256": "1b0a17e711b3568745f3327a68d57be16d70be291d60fadfdece624957684607"
+  },
+  {
+    "id": "ice_draconium_dust",
+    "ogId": "ice_draconium_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_draconium_dust.png",
+    "ru": "Пыль ледяного дракония",
+    "en": "Ice Draconium Dust",
+    "glint": false,
+    "sha256": "7455c6d6d20f45b942d2a0f06f87a21f01d3a4545cb6a9b76df7e200a20512d9"
+  },
+  {
+    "id": "ice_draconium_ingot",
+    "ogId": "ice_draconium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_draconium_ingot.png",
+    "ru": "Слиток ледяного дракония",
+    "en": "Ice Draconium Ingot",
+    "glint": false,
+    "sha256": "ac33b543b8937db88d3ecc91736e94114e5ca382b6a5f075c97821136d9a2d8b"
+  },
+  {
+    "id": "ice_draconium_plate",
+    "ogId": "ice_draconium_plate",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_draconium_plate.png",
+    "ru": "Пластина ледяного дракония",
+    "en": "Ice Draconium Plate",
+    "glint": false,
+    "sha256": "44b5ce05d488986585154d7c8d2b67ebce6fa32d93b02691b79c119b08bc0f69"
+  },
+  {
+    "id": "fire_draconium_essence",
+    "ogId": "fire_draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_draconium_essence.png",
+    "ru": "Эссенция огненного дракония",
+    "en": "Fire Draconium Essence",
+    "glint": false,
+    "sha256": "e1a6ae5c2d8076ab146d6fc98458ba1185b3e81e224713072d2f89bbd23d60d5"
+  },
+  {
+    "id": "fire_draconium_dust",
+    "ogId": "fire_draconium_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_draconium_dust.png",
+    "ru": "Пыль огненного дракония",
+    "en": "Fire Draconium Dust",
+    "glint": false,
+    "sha256": "d25c0445fb8a77a19c87eb3c45914a807bfc3686f5f435995cf592c45121fea7"
+  },
+  {
+    "id": "fire_draconium_ingot",
+    "ogId": "fire_draconium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_draconium_ingot.png",
+    "ru": "Слиток огненного дракония",
+    "en": "Fire Draconium Ingot",
+    "glint": false,
+    "sha256": "63aaf286255aaa9de2f4991e5e9b991d68be90143515bcdb2b3697aacc355242"
+  },
+  {
+    "id": "fire_draconium_plate",
+    "ogId": "fire_draconium_plate",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_draconium_plate.png",
+    "ru": "Пластина огненного дракония",
+    "en": "Fire Draconium Plate",
+    "glint": false,
+    "sha256": "fe966007ea5bbb543cf26fdca8e9f349bbbfaea9142b1353787530a354f5fa38"
+  },
+  {
+    "id": "infinity_draconium_essence",
+    "ogId": "infinity_draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_draconium_essence.png",
+    "ru": "Эссенция дракония бесконечности",
+    "en": "Infinity Draconium Essence",
+    "glint": false,
+    "sha256": "11a4076f3cabf18c64411eefba5a71e07ff6e0c54f6ec092f3fa3f651783087f"
+  },
+  {
+    "id": "infinity_draconium_dust",
+    "ogId": "infinity_draconium_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_draconium_dust.png",
+    "ru": "Пыль дракония бесконечности",
+    "en": "Infinity Draconium Dust",
+    "glint": false,
+    "sha256": "f29b7565a922f02ba9e04d852f4ef64d781b2f1c15598875aad514bb300c14bd"
+  },
+  {
+    "id": "infinity_draconium_ingot",
+    "ogId": "infinity_draconium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_draconium_ingot.png",
+    "ru": "Слиток дракония бесконечности",
+    "en": "Infinity Draconium Ingot",
+    "glint": false,
+    "sha256": "a801f9c3a17d542761ce102a8cc4e3638d0ff50c1aeca40a4457458180b1dd47"
+  },
+  {
+    "id": "infinity_draconium_plate",
+    "ogId": "infinity_draconium_plate",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_draconium_plate.png",
+    "ru": "Пластина дракония бесконечности",
+    "en": "Infinity Draconium Plate",
+    "glint": false,
+    "sha256": "30971f515d8318f99bcf7ff71adf1fdc152a0f0d84736d6b4fc839ad51beae6f"
+  },
+  {
+    "id": "demonic_infinity_draconium_essence",
+    "ogId": "demonic_infinity_draconium_essence",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_draconium_essence.png",
+    "ru": "Эссенция демонического дракония бесконечности",
+    "en": "Demonic Infinity Draconium Essence",
+    "glint": false,
+    "sha256": "f2c315c85c2710f0f6350342cb93dbfa484e7f8afe57979230808d6c72fafaf9"
+  },
+  {
+    "id": "demonic_infinity_draconium_dust",
+    "ogId": "demonic_infinity_draconium_dust",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_draconium_dust.png",
+    "ru": "Пыль демонического дракония бесконечности",
+    "en": "Demonic Infinity Draconium Dust",
+    "glint": false,
+    "sha256": "2df3493ca00ab5c2ae6f781c8202f1d1313dc08e2919e0d849fdaee80bb0cffb"
+  },
+  {
+    "id": "demonic_infinity_draconium_ingot",
+    "ogId": "demonic_infinity_draconium_ingot",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_draconium_ingot.png",
+    "ru": "Слиток демонического дракония бесконечности",
+    "en": "Demonic Infinity Draconium Ingot",
+    "glint": false,
+    "sha256": "14ed47f5913a2cba2fb51c06b2f053529a365f856068eaee44f6b9a9ef979396"
+  },
+  {
+    "id": "demonic_infinity_draconium_plate",
+    "ogId": "demonic_infinity_draconium_plate",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_draconium_plate.png",
+    "ru": "Пластина демонического дракония бесконечности",
+    "en": "Demonic Infinity Draconium Plate",
+    "glint": false,
+    "sha256": "691126f55096991d5b27be00a9a59ffd60c451e89dad67398d154e6520f3f461"
+  },
+  {
+    "id": "ender_dragon_shard",
+    "ogId": "ender_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ender_dragon_shard.png",
+    "ru": "Осколок дракона",
+    "en": "Dragon Shard",
+    "glint": false,
+    "sha256": "760f075ade7def82e57fce92d1096de0a6beb10b6a15a165d55f352866f7891c"
+  },
+  {
+    "id": "chaotic_dragon_shard",
+    "ogId": "chaotic_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/chaotic_dragon_shard.png",
+    "ru": "Осколок дракона Хаоса",
+    "en": "Chaos Dragon Shard",
+    "glint": false,
+    "sha256": "dde7ffd67d2ad809aa056d7c877be554059a1cb3273385cb59c7b5ac00770e50"
+  },
+  {
+    "id": "ice_dragon_shard",
+    "ogId": "ice_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/ice_dragon_shard.png",
+    "ru": "Осколок дракона Льда",
+    "en": "Ice Dragon Shard",
+    "glint": false,
+    "sha256": "44cec00de1554f411d8e4d7c8ddd3da5464bf9e10965b207ce8ad92e99ec2a60"
+  },
+  {
+    "id": "fire_dragon_shard",
+    "ogId": "fire_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/fire_dragon_shard.png",
+    "ru": "Осколок дракона Огня",
+    "en": "Fire Dragon Shard",
+    "glint": false,
+    "sha256": "9d1593ed56bd833092ac3c88ca0b7a3419268b4db87e701c64f92c25d40fa399"
+  },
+  {
+    "id": "infinity_dragon_shard",
+    "ogId": "infinity_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/infinity_dragon_shard.png",
+    "ru": "Осколок дракона Бесконечности",
+    "en": "Infinity Dragon Shard",
+    "glint": false,
+    "sha256": "e4d52dc3459853cb4c6befd3cd53c84fe943e81c346540c31356f8d744a5ecff"
+  },
+  {
+    "id": "demonic_infinity_dragon_shard",
+    "ogId": "demonic_infinity_dragon_shard",
+    "kind": "item",
+    "original": "assets/lolidimensions/textures/items/demonic_infinity_dragon_shard.png",
+    "ru": "Осколок демонического дракона Бесконечности",
+    "en": "Demonic Infinity Dragon Shard",
+    "glint": false,
+    "sha256": "5b26a2f50a022523d813378ec66e4966cb6927970cdb530a930766043e78e9d0"
+  },
+  {
+    "id": "chromatic_ore",
+    "kind": "ore",
+    "drop": "inert_chromatic_ore",
+    "base": "minecraft:block/stone",
+    "primary": "FFFFFF",
+    "secondary": "FFFFFF",
+    "ru": "Хроматическая руда",
+    "en": "Chromatic Ore",
+    "nether": false
+  },
+  {
+    "id": "infernium_ore",
+    "kind": "ore",
+    "drop": "raw_infernium",
+    "base": "minecraft:block/netherrack",
+    "primary": "00F197",
+    "secondary": "00784F",
+    "ru": "Инферниевая руда",
+    "en": "Infernium Ore",
+    "nether": true
+  },
+  {
+    "id": "osmium_ore",
+    "kind": "ore",
+    "drop": "raw_osmium",
+    "base": "minecraft:block/stone",
+    "primary": "8FA2A1",
+    "secondary": "485259",
+    "ru": "Осмиевая руда",
+    "en": "Osmium Ore",
+    "nether": false
+  },
+  {
+    "id": "tungsten_ore",
+    "kind": "ore",
+    "drop": "raw_tungsten",
+    "base": "minecraft:block/end_stone",
+    "primary": "3B3A32",
+    "secondary": "2A2800",
+    "ru": "Вольфрамовая руда",
+    "en": "Tungsten Ore",
+    "nether": false
+  }
+]

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/editor_singularity",
+    "layer1": "loli_labs:item/editor_singularity_overlay"
+  }
+}

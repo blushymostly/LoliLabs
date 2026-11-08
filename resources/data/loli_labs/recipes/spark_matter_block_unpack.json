@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/spark_matter"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:spark_matter_ingot",
+    "count": 9
+  }
+}

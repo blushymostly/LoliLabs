@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#forge:raw_materials/chromatic",
+    "#forge:raw_materials/infernium",
+    "loli_labs:raw_osmium",
+    "loli_labs:raw_tungsten"
+  ]
+}

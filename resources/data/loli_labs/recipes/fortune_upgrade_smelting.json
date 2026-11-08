@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GFG",
+    "FCF",
+    "GFG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "F": {
+      "item": "minecraft:blast_furnace"
+    },
+    "C": {
+      "item": "minecraft:fire_charge"
+    }
+  },
+  "result": {
+    "item": "loli_labs:fortune_upgrade_smelting"
+  }
+}

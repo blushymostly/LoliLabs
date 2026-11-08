@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/dimensions/awakened_fire_dragon_heart"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GCG",
+    "DHD",
+    "GCG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "C": {
+      "item": "minecraft:comparator"
+    },
+    "D": {
+      "item": "minecraft:diamond"
+    },
+    "H": {
+      "item": "minecraft:hopper"
+    }
+  },
+  "result": {
+    "item": "loli_labs:fortune_transformer"
+  }
+}

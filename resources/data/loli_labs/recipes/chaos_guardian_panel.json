@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "ABA",
+    "CAC"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:dispersion_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:superalloy_ingot"
+    },
+    "B": {
+      "item": "loli_labs:infinity_dragon_awakened_heart"
+    },
+    "C": {
+      "item": "loli_labs:matter_turquoise"
+    }
+  },
+  "result": {
+    "item": "loli_labs:chaos_guardian_panel"
+  }
+}

@@ -18,15 +18,60 @@ public final class ReleaseRuntimeChecks {
         if(!ForgeCapabilities.ENERGY.isRegistered())CapabilityManager.INSTANCE.injectCapabilities(net.minecraftforge.fml.ModList.get().getAllScanData());
 
         for(var alias:RemovedItems.ALIASES.entrySet()){require(!LabItems.CATALOG.containsKey(alias.getKey()),"Removed item registered");require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(alias.getValue())),"Missing replacement "+alias);}
+        for(var id:RemovedItems.DROPPED)require(!LabItems.CATALOG.containsKey(id),"Dropped LoliAE2 id still registered: "+id);
+        require(!LabItems.CATALOG.containsKey("mt_core"),"Mt Core must be removed");
+        var colors = new net.minecraft.client.color.item.ItemColors();
+        LabMaterialClient.colors(new net.minecraftforge.client.event.RegisterColorHandlersEvent.Item(colors, new net.minecraft.client.color.block.BlockColors()));
+        require(LabMaterialColors.MATERIALS.size()==29,"Twenty-nine material forms");
+        for(var material:LabMaterialColors.MATERIALS.values()){
+            var stack=new ItemStack(LabItems.CATALOG.get(material.id()).get());
+            for(int tint=0;tint<3;tint++)require(colors.m_92676_(stack,tint)==material.color(tint),"Material tint "+material.id());
+            for(int layer=0;layer<3;layer++){
+                String resource="/assets/"+material.texture(layer).replace(":","/textures/")+".png";
+                try(var stream=com.ic2ceu.icceu.IC2Modern.class.getResourceAsStream(resource)){
+                    require(stream!=null,"Missing IC2Modern material texture "+resource);
+                    try(var image=com.mojang.blaze3d.platform.NativeImage.m_85058_(stream)){require(image.m_84982_()==16&&image.m_85084_()==16,"Material icon dimensions");}
+                }catch(java.io.IOException e){throw new IllegalStateException(e);}
+            }
+        }
+        require(colors.m_92676_(new ItemStack(LabItems.CATALOG.get("osmiridium_capacitor").get()),0)==-1,"Capacitor must retain original art");
+        try(var en=ReleaseRuntimeChecks.class.getResourceAsStream("/assets/loli_labs/lang/en_us.json");var ru=ReleaseRuntimeChecks.class.getResourceAsStream("/assets/loli_labs/lang/ru_ru.json")){
+            require(en!=null&&ru!=null,"Missing panel meter lang files");
+            var enJson=com.google.gson.JsonParser.parseReader(new java.io.InputStreamReader(en,java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+            var ruJson=com.google.gson.JsonParser.parseReader(new java.io.InputStreamReader(ru,java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
+            require("%s EU/t".equals(enJson.get("gui.loli_labs.meter_rate").getAsString()),"English energy meter rate");
+            require("%s EU/тик".equals(ruJson.get("gui.loli_labs.meter_rate").getAsString()),"Russian energy meter rate encoding");
+            require("%s / %s EU".equals(enJson.get("gui.loli_labs.meter_stored").getAsString())&&"%s / %s EU".equals(ruJson.get("gui.loli_labs.meter_stored").getAsString()),"Energy meter stored line");
+            require("%s EU / %s".equals(enJson.get("gui.loli_labs.meter_cost").getAsString())&&"%s EU / %s".equals(ruJson.get("gui.loli_labs.meter_cost").getAsString()),"Energy meter cost line");
+        }catch(java.io.IOException e){throw new IllegalStateException(e);}
+        System.out.println("LOLI_LABS_MATERIAL_CHECKS_PASSED: "+LabMaterialColors.MATERIALS.size()+" IC2Modern forms; rose_gold_ingot shiny; no reinforced/irradiant duplicates; Mt Core removed");
+        CanonicalRecipeChecks.runtime();
+        tmr.lolilabs.dimensions.DimensionsChecks.runtime();
         int recipes=0;
         for(var entry:LabItems.CATALOG.entrySet()){
             String id=entry.getKey();
-            if(LabMachines.DEFINITIONS.containsKey(id))require(entry.getValue().get() instanceof LabMachineItem,"Missing machine item");else if(id.equals("vajra"))require(entry.getValue().get() instanceof com.ic2ceu.icceu.ChargeableItem,"Missing Vajra EU");else require(entry.getValue().get().getClass()==Item.class,"Excluded mechanic leaked "+id);
+            var item=entry.getValue().get();
+            if(LabMachines.DEFINITIONS.containsKey(id))require(item instanceof LabMachineItem,"Missing machine item");
+            else if(id.equals("vajra"))require(item instanceof com.ic2ceu.icceu.ChargeableItem,"Missing Vajra EU");
+            else if(item instanceof net.minecraft.world.item.BlockItem||item instanceof tmr.lolilabs.dimensions.LabDimensions.EnchantedMaterial||item instanceof tmr.lolilabs.utility.FortuneModule||item instanceof tmr.lolilabs.botania.GreenhouseUpgrade||item instanceof tmr.lolilabs.botania.LabStraySparkItem){}
+            else require(item.getClass()==Item.class,"Excluded mechanic leaked "+id);
+            if(CanonicalRecipeChecks.contains("loli_labs:"+id)){recipes++;continue;}
             try(var stream=ReleaseRuntimeChecks.class.getResourceAsStream("/data/loli_labs/recipes/"+id+".json")){
-                if(stream==null){require(id.startsWith("matter"),"Missing recipe "+id);continue;}
+                if(stream==null){require(tmr.lolilabs.dimensions.LabDimensions.contains(id)||id.startsWith("matter")||java.util.Arrays.asList(LegacyMagically.ITEM_IDS).contains(id)||LegacyMagically.BLOCK_CATALOG.containsKey(id)||LabMaterialColors.MATERIALS.containsKey(id),"Missing recipe "+id);continue;}
                 var json=com.google.gson.JsonParser.parseReader(new java.io.InputStreamReader(stream,java.nio.charset.StandardCharsets.UTF_8)).getAsJsonObject();
-                for(var ingredient:json.getAsJsonArray("ingredients"))require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(ingredient.getAsJsonObject().get("item").getAsString())),"Unknown ingredient in "+id+": "+ingredient);
-                net.minecraft.world.item.crafting.RecipeSerializer.f_44077_.m_6729_(new ResourceLocation(LoliLabs.MOD_ID,id),json);recipes++;
+                if(json.has("ingredients")){
+                    for(var ingredient:json.getAsJsonArray("ingredients")){
+                        var obj=ingredient.getAsJsonObject();
+                        if(obj.has("item"))require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(obj.get("item").getAsString())),"Unknown ingredient in "+id+": "+ingredient);
+                    }
+                }else if(json.has("key")){
+                    for(var key:json.getAsJsonObject("key").entrySet()){
+                        var obj=key.getValue().getAsJsonObject();
+                        if(obj.has("item"))require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(obj.get("item").getAsString())),"Unknown key "+key.getKey()+" in "+id);
+                    }
+                }else require(false,"Recipe missing ingredients/key "+id);
+                var serializer=json.has("key")?net.minecraft.world.item.crafting.RecipeSerializer.f_44076_:net.minecraft.world.item.crafting.RecipeSerializer.f_44077_;
+                serializer.m_6729_(new ResourceLocation(LoliLabs.MOD_ID,id),json);recipes++;
             }catch(java.io.IOException e){throw new IllegalStateException(e);}
         }
         int panels=0,generators=0;
@@ -85,16 +130,53 @@ public final class ReleaseRuntimeChecks {
         require(unifier.inventory.insertItem(2,new ItemStack(LabItems.CATALOG.get("matter").get()),false).m_41613_()==1,"Non-panel insertion");
         unifier.serverTick();require(unifier.energy==unifier.generation(),"Unifier generation");
         require(unifier instanceof com.ic2ceu.icceu.EUSource&&unifier.outputVoltage()>0,"EU source");
-        require(panels==20&&generators==30&&LabItems.CATALOG.size()==317,"Registry scope");
+        int autoMaterials=0; for(var material:LabMaterialColors.MATERIALS.values()) if(!java.util.Arrays.asList(LegacyMaterials.IDS).contains(material.id())&&!java.util.Arrays.asList(LegacyMagically.ITEM_IDS).contains(material.id())) autoMaterials++;
+        require(panels==20&&generators==30&&LabItems.CATALOG.size()==486+tmr.lolilabs.dimensions.LabDimensions.addedCount()+autoMaterials,"Registry scope");
+        require(tmr.lolilabs.botania.LabBotaniaBlocks.MULTI_GREENHOUSE_CORE.get()!=null,"Multi greenhouse core");
+        require(tmr.lolilabs.botania.LabBotaniaTiers.Tier.DRAGON.poolMana>1_000_000,"Dragon pool above Botania MAX_MANA");
+        var gh=new tmr.lolilabs.botania.GreenhouseBlockEntity(BlockPos.f_121853_,tmr.lolilabs.botania.LabBotaniaBlocks.MULTI_GREENHOUSE_CORE.get().m_49966_());
+        var oldUpgrades=new net.minecraftforge.items.ItemStackHandler(tmr.lolilabs.botania.GreenhouseBlockEntity.SLOTS);
+        oldUpgrades.setStackInSlot(tmr.lolilabs.botania.GreenhouseBlockEntity.UPGRADE_BASE+8,new ItemStack(LabItems.CATALOG.get("greenhouse_upgrade_eu_buffer_lvl_2").get()));
+        oldUpgrades.setStackInSlot(tmr.lolilabs.botania.GreenhouseBlockEntity.UPGRADE_BASE+9,new ItemStack(LabItems.CATALOG.get("greenhouse_upgrade_mana_buffer_lvl_2").get()));
+        var oldGhTag=new net.minecraft.nbt.CompoundTag();oldGhTag.m_128365_("Inv",oldUpgrades.serializeNBT());oldGhTag.m_128356_("Energy",500000);oldGhTag.m_128405_("Mana",300000);oldGhTag.m_128405_("EUFraction",17);
+        var migratedGh=new tmr.lolilabs.botania.GreenhouseBlockEntity(BlockPos.f_121853_,gh.m_58900_());migratedGh.m_142466_(oldGhTag);
+        require(migratedGh.activeUpgrade(9).kind==tmr.lolilabs.botania.GreenhouseUpgrade.Kind.MANA_BUFFER&&migratedGh.activeUpgrade(0)==null&&migratedGh.inventory.getStackInSlot(tmr.lolilabs.botania.GreenhouseBlockEntity.UPGRADE_BASE).m_41720_()==LabItems.CATALOG.get("greenhouse_upgrade_eu_buffer_lvl_2").get(),"Old upgrades not migrated into typed slots");
+        require(migratedGh.energy==500000&&migratedGh.mana==300000&&migratedGh.euFraction==17,"Upgrade migration lost stored energy/mana/fraction");
+        System.out.println("LOLI_LABS_UPGRADE_MIGRATION_CHECKS_PASSED: typed slots; original items and EU/mana preserved");
+        require(!gh.isFormed()&&gh.structureStatus==tmr.lolilabs.botania.GreenhouseStructure.Status.INCOMPLETE,"Greenhouse unformed by default");
+        var msmGh=new brachy.modularui.value.sync.ModularSyncManager(false);var psmGh=new brachy.modularui.value.sync.PanelSyncManager(msmGh,true);
+        require(tmr.lolilabs.botania.GreenhouseUI.build(gh,psmGh,new brachy.modularui.screen.UISettings())!=null,"Greenhouse ModularUI");
+        require(tmr.lolilabs.botania.GreenhouseUI.WIDTH==242&&tmr.lolilabs.botania.GreenhouseUI.HEIGHT==302,"OG window must end before atlas strip");
+        for(int i=0;i<48;i++){var cell=tmr.lolilabs.botania.GreenhouseUI.flowerCell(i);require(cell.x()>=48&&cell.x()+18<=193&&cell.y()>=58&&cell.y()+18<=131,"Flower outside OG beds");}
+        for(int i=8;i<12;i++){var cell=tmr.lolilabs.botania.GreenhouseUI.upgradeCell(i);require(cell.y()+18<=169,"Upgrade overlaps meters/inventory");}
+        var formedState=gh.m_58900_().m_61124_(tmr.lolilabs.botania.GreenhouseCoreBlock.FORMED,true);
+        require(formedState.m_60734_().m_7514_(formedState)==net.minecraft.world.level.block.RenderShape.INVISIBLE,"Formed controller must hide its cube");
+        gh.structureStatus=tmr.lolilabs.botania.GreenhouseStructure.Status.FORMED;
+        var loadedGh=new tmr.lolilabs.botania.GreenhouseBlockEntity(BlockPos.f_121853_,gh.m_58900_());loadedGh.m_142466_(gh.m_187480_());require(loadedGh.isFormed(),"Formed model state must survive NBT/client sync");
+        require(tmr.lolilabs.botania.LabBotaniaBlocks.SPARK_TYPES.size()==4,"Four tiered spark entities");
+        for(var type:tmr.lolilabs.botania.LabBotaniaBlocks.SPARK_TYPES.values())require(type.isPresent(),"Spark entity type missing");
+        System.out.println("LOLI_LABS_BOTANIA_FIX_CHECKS_PASSED: OG slot bounds; formed render state/NBT; four spark entity registrations");
+        var pool=new tmr.lolilabs.botania.LabManaPoolBlockEntity(BlockPos.f_121853_,tmr.lolilabs.botania.LabBotaniaBlocks.BLOCK_CATALOG.get("dragon_pool").get().m_49966_());
+        require(pool.getMaxMana()>1_000_000,"Pool max mana");
         require(LabModularUI.slots(unifier.definition).size()==36&&unifier.inventory.getSlots()==36,"OG 36-slot unifier");
         for(var front:net.minecraft.core.Direction.values()){
             var state=LabMachines.DEFINITIONS.get("sparkling_panel").block.get().m_49966_().m_61124_(LabMachineBlock.FACING,front);
             var directional=new LabMachineEntity(BlockPos.f_121853_,state);
-            for(var side:net.minecraft.core.Direction.values())require(directional.emitsEnergy(side)==(side==front.m_122424_())&&directional.connectsEU(side)==(side==front.m_122424_()),"Directional EU output");
+            for(var side:net.minecraft.core.Direction.values())require(directional.emitsEnergy(side)==(side!=net.minecraft.core.Direction.UP)&&directional.connectsEU(side)==(side!=net.minecraft.core.Direction.UP),"Omni EU output except UP");
             require(LabMachineBlock.rotationFacing(0,front)==front.m_122424_(),"Wrench selection mapping");
-            directional.enabled=false;directional.serverTick();require(directional.energy==0&&!directional.emitsEnergy(front.m_122424_()),"Disabled panel generates/emits");
+            require(state.m_61143_(LabMachineBlock.ACTIVE),"Panel defaults to lit/active");
+            require(state.m_60791_()==15&&state.m_61124_(LabMachineBlock.ACTIVE,false).m_60791_()==0,"Panel emits light only while active");
+            directional.enabled=false;directional.serverTick();require(directional.energy==0&&!directional.emitsEnergy(net.minecraft.core.Direction.DOWN),"Disabled panel generates/emits");
             directional.muted=true;var copy=new LabMachineEntity(BlockPos.f_121853_,state);copy.m_142466_(directional.m_187480_());require(!copy.enabled&&copy.muted,"Tool settings NBT");
         }
+        var unifierState=LabMachines.DEFINITIONS.get("energy_unifier").block.get().m_49966_();
+        require(unifierState.m_61124_(LabMachineBlock.ACTIVE,true).m_60791_()==15&&unifierState.m_61124_(LabMachineBlock.ACTIVE,false).m_60791_()==0,"Unifier emits light while active");
+        var unifierSides=new LabMachineEntity(BlockPos.f_121853_,unifierState);
+        for(var side:net.minecraft.core.Direction.values())require(unifierSides.emitsEnergy(side)==(side!=net.minecraft.core.Direction.UP)&&unifierSides.connectsEU(side)==(side!=net.minecraft.core.Direction.UP),"Unifier omni EU except UP");
+        require(!unifierSides.workingLight(),"Empty unifier stays dark");
+        unifierSides.inventory.setStackInSlot(0,new ItemStack(LabItems.CATALOG.get("sparkling_panel").get(),1));
+        require(unifierSides.workingLight(),"Loaded unifier lights while enabled");
+        unifierSides.enabled=false;require(!unifierSides.workingLight(),"Disabled unifier stays dark");
         var oldUnifierTag=new net.minecraft.nbt.CompoundTag();oldUnifierTag.m_128405_("LabEnergyVersion",2);var oldUnifierSlots=new net.minecraftforge.items.ItemStackHandler(27);oldUnifierSlots.setStackInSlot(26,new ItemStack(LabItems.CATALOG.get("sparkling_panel").get(),2));oldUnifierTag.m_128365_("LabInventory",oldUnifierSlots.serializeNBT());
         var expanded=new LabMachineEntity(BlockPos.f_121853_,unifier.m_58900_());expanded.m_142466_(oldUnifierTag);require(expanded.inventory.getSlots()==36&&expanded.inventory.getStackInSlot(26).m_41613_()==2&&expanded.generation()==2*LabMachines.DEFINITIONS.get("sparkling_panel").rate(),"27 -> 36 slots lost panels");
         var oldTag=new net.minecraft.nbt.CompoundTag();oldTag.m_128356_("Energy",524288000000L);
@@ -118,7 +200,7 @@ public final class ReleaseRuntimeChecks {
         require(spent==8192L*40&&euSink.energy==8191&&euSink.euFraction==39,"Native IC2 routing and cable loss conservation");
         var fractionalOld=new net.minecraft.nbt.CompoundTag();fractionalOld.m_128356_("LabEnergy",7);euSink.m_142466_(fractionalOld);require(euSink.energy==1&&euSink.euFraction==30,"FE conversion lost fractional EU");
         int textures=0;
-        try(var jar=new java.util.zip.ZipFile(net.minecraftforge.fml.loading.FMLPaths.GAMEDIR.get().resolve("mods/loli-labs-1.20.1-1.4.4.jar").toFile())){
+        try(var jar=new java.util.zip.ZipFile(net.minecraftforge.fml.ModList.get().getModFileById(LoliLabs.MOD_ID).getFile().getFilePath().toFile())){
             var entries=jar.entries();while(entries.hasMoreElements()){
                 var entry=entries.nextElement();if(!entry.getName().startsWith("assets/loli_labs/textures/")||!entry.getName().endsWith(".png"))continue;
                 try(var stream=jar.getInputStream(entry);var image=com.mojang.blaze3d.platform.NativeImage.m_85058_(stream)){
@@ -138,4 +220,3 @@ public final class ReleaseRuntimeChecks {
         System.out.println("LOLI_LABS_RUNTIME_CHECKS_PASSED: "+recipes+" recipes; 20 continuous panels; 30 matter outputs/costs/full-output checks; unifier sum; native EU packets; fraction and FE migration; ModularUI panels; 64-bit NBT sync");
     }
 }
-

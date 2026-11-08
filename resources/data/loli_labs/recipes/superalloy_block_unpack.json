@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:storage_blocks/superalloy"
+    }
+  ],
+  "result": {
+    "item": "loli_labs:superalloy_ingot",
+    "count": 9
+  }
+}

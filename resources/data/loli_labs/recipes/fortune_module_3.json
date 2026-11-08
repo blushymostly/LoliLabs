@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GEG",
+    "ECE",
+    "GEG"
+  ],
+  "key": {
+    "G": {
+      "item": "minecraft:gold_ingot"
+    },
+    "E": {
+      "item": "minecraft:emerald"
+    },
+    "C": {
+      "item": "minecraft:lapis_block"
+    }
+  },
+  "result": {
+    "item": "loli_labs:fortune_module_3"
+  }
+}

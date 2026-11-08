@@ -1,0 +1,42 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "botania:manasteel_ingot"
+    },
+    {
+      "item": "loli_labs:water_filled_dust"
+    },
+    {
+      "item": "loli_labs:water_filled_dust"
+    },
+    {
+      "item": "loli_labs:water_filled_dust"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:managlass"
+  },
+  "mana": 5000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

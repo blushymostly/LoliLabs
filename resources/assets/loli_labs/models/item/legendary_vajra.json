@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "loli_labs:item/legacy/extra/legendary_vajra"
+  }
+}

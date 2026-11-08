@@ -1,0 +1,52 @@
+{
+  "type": "avaritia:shaped_table",
+  "tier": 4,
+  "result": {
+    "item": "loli_labs:multi_greenhouse_base"
+  },
+  "compatible": false,
+  "pattern": [
+    "AAAAA",
+    "BCDEB",
+    "BDFDB",
+    "BEDCB",
+    "BBGBB"
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:grass_block"
+    },
+    "B": {
+      "item": "loli_labs:dark_manabricks"
+    },
+    "C": {
+      "item": "botania:rune_mana"
+    },
+    "D": {
+      "item": "mythicbotany:alfsteel_nugget"
+    },
+    "E": {
+      "item": "botania:rune_greed"
+    },
+    "F": {
+      "item": "botania:overgrowth_seed"
+    },
+    "G": {
+      "item": "botania:terrasteel_ingot"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "mythicbotany"
+    }
+  ]
+}

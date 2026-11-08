@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DBD"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:fluctuation_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:aberration_solar_panel"
+    },
+    "B": {
+      "item": "avaritia:neutron"
+    },
+    "C": {
+      "item": "loli_labs:parametric_core"
+    },
+    "D": {
+      "item": "loli_labs:matter_loose_blue"
+    }
+  },
+  "result": {
+    "item": "loli_labs:parametric_solar_panel"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    }
+  ]
+}

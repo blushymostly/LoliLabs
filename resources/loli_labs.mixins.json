@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "tmr.lolilabs.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "SpreaderBurstMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "SparkDepthMixin",
+    "RichTooltipLinesMixin"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DBD"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:fluctuation_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:chronodynamic_solar_panel"
+    },
+    "B": {
+      "item": "loli_labs:matter_sparkling"
+    },
+    "C": {
+      "item": "loli_labs:antimaterial_core"
+    },
+    "D": {
+      "item": "avaritia:neutron"
+    }
+  },
+  "result": {
+    "item": "loli_labs:antimaterial_solar_panel"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    }
+  ]
+}

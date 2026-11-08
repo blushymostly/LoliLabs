@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:adamantium_ingot"
+  },
+  "pattern": [
+    "AAA",
+    "AAA"
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:adamantium_scrap"
+    }
+  }
+}

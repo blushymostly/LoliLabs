@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "A#A",
+    "#A#"
+  ],
+  "key": {
+    "#": {
+      "item": "ic2modern:raw_iridium"
+    },
+    "A": {
+      "item": "loli_labs:chrysolite_ingot"
+    }
+  },
+  "result": {
+    "item": "loli_labs:chrysolite_base"
+  }
+}

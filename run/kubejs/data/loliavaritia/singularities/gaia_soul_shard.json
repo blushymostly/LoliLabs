@@ -1,0 +1,12 @@
+{
+  "name": "loliavaritia:gaia_soul_shard",
+  "displayName": "singularity.loliavaritia.gaia_soul_shard",
+  "overlayColor": "FFC143",
+  "underlayColor": "2C126E",
+  "count": 1000,
+  "timeCost": 240,
+  "enabled": true,
+  "recipeEnabled": true,
+  "ingredient": { "item": "loli_labs:soul_shard" },
+  "conditions": [{"type":"forge:mod_loaded","modid":"loli_labs"}]
+}

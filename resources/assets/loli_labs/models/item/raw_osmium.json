@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ic2modern:item/material_sets/metallic/raw_ore",
+    "layer1": "ic2modern:item/material_sets/metallic/raw_ore_secondary"
+  }
+}

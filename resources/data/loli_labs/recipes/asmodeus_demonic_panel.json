@@ -1,0 +1,32 @@
+{
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "item": "loli_labs:dispersion_solar_panel"
+    },
+    {
+      "item": "loli_labs:dispersion_solar_panel"
+    },
+    {
+      "item": "loli_labs:asmodeus_demon_contract"
+    },
+    {
+      "item": "loli_labs:matter_purple"
+    },
+    {
+      "item": "loli_labs:blood_clot"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:asmodeus_demonic_panel"
+  },
+  "syphon": 1000,
+  "ticks": 5,
+  "upgradeLevel": 5,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    }
+  ]
+}

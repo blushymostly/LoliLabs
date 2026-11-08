@@ -1,0 +1,46 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "item": "avaritia:crystal_matrix"
+    },
+    {
+      "item": "avaritia:crystal_matrix"
+    },
+    {
+      "item": "avaritia:crystal_matrix"
+    },
+    {
+      "item": "avaritia:crystal_matrix"
+    },
+    {
+      "item": "loli_labs:time_rune"
+    },
+    {
+      "item": "loli_labs:time_rune"
+    },
+    {
+      "item": "loli_labs:star_crystal"
+    },
+    {
+      "item": "loli_labs:star_crystal"
+    },
+    {
+      "item": "loli_labs:witch_doll"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:sister_necromancer_kella_doll"
+  },
+  "mana": 500000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

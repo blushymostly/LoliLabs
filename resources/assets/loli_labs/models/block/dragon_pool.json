@@ -1,0 +1,6 @@
+{
+  "parent": "loli_labs:block/template_mana_pool",
+  "textures": {
+    "all": "loli_labs:block/magically/pools/dragon_pool"
+  }
+}

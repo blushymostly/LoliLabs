@@ -1,0 +1,27 @@
+{
+  "parent": "block/block",
+  "loader": "forge:composite",
+  "textures": {
+    "particle": "ic2modern:block/gt/material_sets/shiny/block"
+  },
+  "children": {
+    "base": {
+      "parent": "ic2modern:gt/block/cube/tinted/all_0",
+      "render_type": "solid",
+      "textures": {
+        "all": "ic2modern:block/gt/material_sets/shiny/block"
+      }
+    },
+    "secondary": {
+      "parent": "ic2modern:gt/block/cube/tinted/all",
+      "render_type": "translucent",
+      "textures": {
+        "all": "ic2modern:block/gt/material_sets/shiny/block_secondary"
+      }
+    }
+  },
+  "item_render_order": [
+    "base",
+    "secondary"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "result": {
+    "item": "loli_labs:dispersion_core"
+  },
+  "pattern": [
+    "ABA",
+    "BCB",
+    "ABA"
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:matter_loose_pink"
+    },
+    "B": {
+      "item": "ic2modern:quantum_core"
+    },
+    "C": {
+      "item": "loli_labs:conductive_chip"
+    }
+  }
+}

@@ -20,14 +20,34 @@ public final class LabItems {
 
     static {
         for (String id : LegacyMaterials.IDS) CATALOG.put(id, ITEMS.register(id, () -> new Item(new Item.Properties())));
+        for (String id : LegacyMagically.ITEM_IDS) CATALOG.put(id, ITEMS.register(id, () -> new Item(new Item.Properties())));
+        LegacyMagically.registerBlockItems();
+        tmr.lolilabs.botania.LabBotaniaBlocks.registerBlockItems();
+        tmr.lolilabs.utility.LabUtility.registerItems();
+        tmr.lolilabs.dimensions.LabDimensions.registerItems();
+        for (var material : LabMaterialColors.MATERIALS.values()) {
+            if (!CATALOG.containsKey(material.id())) {
+                CATALOG.put(material.id(), ITEMS.register(material.id(), () -> new Item(new Item.Properties())));
+            }
+        }
         CATALOG.put("vajra",ITEMS.register("vajra",()->new LabMiningTool(false)));
+        CATALOG.put("legendary_vajra",ITEMS.register("legendary_vajra",()->new LabMiningTool(true)));
+        CATALOG.put("infinity_pickaxe_ultra",ITEMS.register("infinity_pickaxe_ultra",()->new LabMiningTool(false)));
+        LegacyDemonic.register();
         TABS.register("main", () -> CreativeModeTab.builder()
                 .m_257941_(Component.m_237115_("itemGroup.loli_labs"))
                 .m_257737_(() -> new ItemStack(CATALOG.get("sparkling_panel").get()))
-                .m_257501_((parameters, output) -> {
-                    CATALOG.values().forEach(item -> output.m_246326_(item.get()));
-                }).m_257652_());
+                .m_257501_((parameters, output) -> CATALOG.forEach((id, item) -> output.m_246326_(item.get())))
+                .m_257652_());
     }
 
-    public static void register(IEventBus bus) { ITEMS.register(bus); TABS.register(bus); }
+    public static void register(IEventBus bus) {
+        LegacyMagically.register(bus);
+        tmr.lolilabs.botania.LabBotaniaBlocks.register(bus);
+        tmr.lolilabs.utility.LabUtility.register(bus);
+        tmr.lolilabs.dimensions.LabDimensions.register(bus);
+        LabMaterialBlocks.register(bus);
+        ITEMS.register(bus);
+        TABS.register(bus);
+    }
 }

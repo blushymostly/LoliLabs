@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,facing=down": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=false,facing=up": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=false,facing=north": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=false,facing=south": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=false,facing=west": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=false,facing=east": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=down": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=up": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=north": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=south": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=west": { "model": "loli_labs:block/matter_solid_t7_x12" },
+    "lit=true,facing=east": { "model": "loli_labs:block/matter_solid_t7_x12" }
+  }
+}

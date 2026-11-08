@@ -1,0 +1,19 @@
+{
+  "type": "bloodmagic:altar",
+  "input": {
+    "item": "loli_labs:straw_doll"
+  },
+  "output": {
+    "item": "loli_labs:witch_doll"
+  },
+  "altarSyphon": 100000,
+  "consumptionRate": 50,
+  "drainRate": 100,
+  "upgradeLevel": 5,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "side": "loli_labs:block/magically/multi_greenhouse/multi_greenhouse_base",
+    "top": "loli_labs:block/magically/multi_greenhouse/multi_greenhouse_base_top",
+    "bottom": "loli_labs:block/magically/multi_greenhouse/multi_greenhouse_base_bottom"
+  }
+}

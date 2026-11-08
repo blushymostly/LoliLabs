@@ -1,0 +1,46 @@
+{
+  "type": "botania:runic_altar",
+  "ingredients": [
+    {
+      "item": "avaritia:neutron"
+    },
+    {
+      "item": "avaritia:neutron"
+    },
+    {
+      "item": "avaritia:neutron"
+    },
+    {
+      "item": "avaritia:neutron"
+    },
+    {
+      "item": "loli_labs:adonas_scroll"
+    },
+    {
+      "item": "loli_labs:adonas_scroll"
+    },
+    {
+      "item": "loli_labs:star_crystal"
+    },
+    {
+      "item": "loli_labs:star_crystal"
+    },
+    {
+      "item": "loli_labs:witch_doll"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:sister_necromancer_bergamma_doll"
+  },
+  "mana": 500000,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "avaritia"
+    },
+    {
+      "type": "forge:mod_loaded",
+      "modid": "botania"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "ic2modern:machine",
+  "machine": "metal_former_rolling",
+  "ingredient": {
+    "item": "loli_labs:osmiridium_ingot"
+  },
+  "result": {
+    "item": "loli_labs:osmiridium_plate"
+  },
+  "duration": 200,
+  "eu_per_tick": 10
+}

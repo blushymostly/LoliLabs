@@ -34,7 +34,10 @@ public final class LabMachines {
             voltage=CONFIG.defineInRange("outputVoltageEU",8192L,1L,1_000_000_000_000L);
             packets=CONFIG.defineInRange("outputPacketsPerTick",16,1,256);
             CONFIG.pop();
-            block=BLOCKS.register(id,()->new LabMachineBlock(this,BlockBehaviour.Properties.m_284310_().m_60913_(5F,20F)));
+            final var props=kind<=1
+                    ?BlockBehaviour.Properties.m_284310_().m_60913_(5F,20F).m_60953_(state->state.m_61143_(LabMachineBlock.ACTIVE)?15:0)
+                    :BlockBehaviour.Properties.m_284310_().m_60913_(5F,20F);
+            block=BLOCKS.register(id,()->new LabMachineBlock(this,props));
             LabItems.CATALOG.put(id,LabItems.ITEMS.register(id,()->new LabMachineItem(block.get(),new Item.Properties(),this)));
         }
         public long rate(){return generation.get();}

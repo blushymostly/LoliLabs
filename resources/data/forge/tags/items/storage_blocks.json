@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "loli_labs:chaotic_draconium_block",
+    "loli_labs:awakened_chaotic_draconium_block",
+    "loli_labs:ice_draconium_block",
+    "loli_labs:awakened_ice_draconium_block",
+    "loli_labs:fire_draconium_block",
+    "loli_labs:awakened_fire_draconium_block",
+    "loli_labs:infinity_draconium_block",
+    "loli_labs:awakened_infinity_draconium_block",
+    "loli_labs:demonic_infinity_draconium_block",
+    "loli_labs:awakened_demonic_infinity_draconium_block",
+    "loli_labs:niobium_block",
+    "loli_labs:osmiridium_block",
+    "loli_labs:star_matter_block",
+    "loli_labs:superalloy_block",
+    "loli_labs:tungsten_block",
+    "loli_labs:rose_gold_block",
+    "loli_labs:radvirium_block",
+    "loli_labs:sebastyanit_block",
+    "loli_labs:skyfiry_block",
+    "loli_labs:gladium_block",
+    "loli_labs:spark_matter_block",
+    "loli_labs:osmium_block"
+  ]
+}

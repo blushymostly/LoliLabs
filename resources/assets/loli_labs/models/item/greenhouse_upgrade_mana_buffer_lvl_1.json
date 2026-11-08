@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/magically/greenhouse_upgrades/mana_buffer_lvl_1"
+  }
+}

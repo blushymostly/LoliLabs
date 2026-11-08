@@ -1,0 +1,31 @@
+{
+  "type": "ic2modern:industrial",
+  "machine": "blast_furnace",
+  "ingredients": [
+    {
+      "ingredient": {
+        "item": "draconicevolution:dragon_heart"
+      },
+      "count": 1
+    },
+    {
+      "ingredient": {
+        "item": "loli_labs:dust_primordial_chaos"
+      },
+      "count": 1
+    }
+  ],
+  "results": [
+    {
+      "item": "loli_labs:petrified_heart"
+    }
+  ],
+  "duration": 10000,
+  "eu_per_tick": 32,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "draconicevolution"
+    }
+  ]
+}

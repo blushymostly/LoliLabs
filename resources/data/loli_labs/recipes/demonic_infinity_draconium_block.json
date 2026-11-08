@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "III",
+    "III"
+  ],
+  "key": {
+    "I": {
+      "item": "loli_labs:demonic_infinity_draconium_ingot"
+    }
+  },
+  "result": {
+    "item": "loli_labs:demonic_infinity_draconium_block"
+  }
+}

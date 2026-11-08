@@ -35,10 +35,11 @@ public final class LabMachineEntity extends BlockEntity implements com.ic2ceu.ic
     public long outputVoltage(){return definition.kind==2?0:definition.voltage.get();}
     public int outputPackets(){return definition.packets.get();}
     public Direction outputSide(){return m_58900_().m_61143_(LabMachineBlock.FACING).m_122424_();}
-    public boolean emitsEnergy(Direction side){return enabled&&definition.kind!=2&&side==outputSide();}
+    public boolean emitsEnergy(Direction side){return enabled&&definition.kind!=2&&side!=Direction.UP;}
     public boolean acceptsEnergy(Direction side){return enabled&&definition.kind==2&&energy<capacity();}
-    public boolean connectsEU(Direction side){return definition.kind==2||side==outputSide();}
-    public void syncSettings(){m_6596_();if(f_58857_!=null)f_58857_.m_7260_(f_58858_,m_58900_(),m_58900_(),3);}
+    public boolean connectsEU(Direction side){return definition.kind==2||side!=Direction.UP;}
+    public boolean workingLight(){return definition.kind==0?enabled:definition.kind==1&&enabled&&generation()>0;}
+    public void syncSettings(){m_6596_();if(f_58857_!=null){var state=m_58900_();boolean lit=workingLight();if(definition.kind<=1&&state.m_61143_(LabMachineBlock.ACTIVE)!=lit)state=state.m_61124_(LabMachineBlock.ACTIVE,lit);f_58857_.m_7731_(f_58858_,state,3);}}
     @Override public CompoundTag m_5995_(){return m_187480_();}
     @Override public net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket m_58483_(){return net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket.m_195640_(this);}
     public void euChanged(){energy=eu.stored();euFraction=eu.fraction();m_6596_();}
@@ -72,6 +73,10 @@ public final class LabMachineEntity extends BlockEntity implements com.ic2ceu.ic
     public static void tick(Level level,BlockPos pos,BlockState state,LabMachineEntity machine){machine.serverTick();}
     public void serverTick(){
         energy=Math.min(Math.max(0,energy),capacity());
+        if(definition.kind<=1&&f_58857_!=null){
+            var state=m_58900_();boolean lit=workingLight();
+            if(state.m_61143_(LabMachineBlock.ACTIVE)!=lit)f_58857_.m_7731_(f_58858_,state.m_61124_(LabMachineBlock.ACTIVE,lit),3);
+        }
         if(!enabled)return;
         if(definition.kind==2){
             if(hasUpgrade("item_import_upgrade"))importFeed();

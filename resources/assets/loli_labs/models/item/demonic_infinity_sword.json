@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "loli_labs:item/legacy/extra/demonic_infinity_sword",
+    "layer1": "loli_labs:item/legacy/extra/demonic_infinity_sword_mask"
+  },
+  "loader": "loliavaritia:cosmic",
+  "cosmic": {
+    "mask": "loli_labs:item/legacy/extra/demonic_infinity_sword_mask"
+  }
+}

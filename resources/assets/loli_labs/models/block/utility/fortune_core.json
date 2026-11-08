@@ -1,0 +1,15 @@
+{
+  "parent": "minecraft:block/block",
+  "loader": "forge:obj",
+  "model": "loli_labs:models/block/utility/fortune_core.obj",
+  "flip_v": true,
+  "automatic_culling": false,
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "shell": "loli_labs:block/utility/fortune_1",
+    "core": "loli_labs:block/utility/fortune_2",
+    "particle": "loli_labs:block/utility/fortune_1"
+  },
+  "emissive_ambient": false,
+  "shade_quads": true
+}

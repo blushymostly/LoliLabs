@@ -1,0 +1,12 @@
+{
+  "name": "loliavaritia:flugel_soul_shard",
+  "displayName": "singularity.loliavaritia.flugel_soul_shard",
+  "overlayColor": "7DC4F3",
+  "underlayColor": "932335",
+  "count": 1000,
+  "timeCost": 240,
+  "enabled": true,
+  "recipeEnabled": true,
+  "ingredient": { "item": "loli_labs:flugel_soul_shard" },
+  "conditions": [{"type":"forge:mod_loaded","modid":"loli_labs"}]
+}

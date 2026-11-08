@@ -1,0 +1,31 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DED"
+  ],
+  "key": {
+    "#": {
+      "item": "ic2modern:luminator"
+    },
+    "A": {
+      "item": "ic2modern:irradiant_glass"
+    },
+    "B": {
+      "item": "ic2modern:irradiant_reinforced_plate"
+    },
+    "C": {
+      "item": "ic2modern:mfsu"
+    },
+    "D": {
+      "item": "loli_labs:niobium_chip"
+    },
+    "E": {
+      "item": "loli_labs:ametrine_base"
+    }
+  },
+  "result": {
+    "item": "loli_labs:energy_unifier"
+  }
+}

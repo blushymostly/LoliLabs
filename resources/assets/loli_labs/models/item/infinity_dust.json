@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "loli_labs:item/legacy/extra/infinity_dust",
+    "halo": "loliavaritia:misc/halo"
+  },
+  "loader": "loliavaritia:halo",
+  "halo": {
+    "texture": "#halo",
+    "color": -16777216,
+    "size": 8,
+    "pulse": true
+  }
+}

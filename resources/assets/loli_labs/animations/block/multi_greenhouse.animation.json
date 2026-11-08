@@ -1,0 +1,116 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.model.installation": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 4,
+			"bones": {
+				"elements_2": {
+					"position": {
+						"0.5": {
+							"vector": [0, -7, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, 0],
+							"easing": "easeInBounce",
+							"easingArgs": [0.075]
+						}
+					},
+					"scale": {
+						"0.5": {
+							"vector": [1, 0, 0.7]
+						},
+						"1.5": {
+							"vector": [1, 1, 1],
+							"easing": "easeInBounce",
+							"easingArgs": [0.075]
+						}
+					}
+				},
+				"elements_1": {
+					"position": {
+						"0.5": {
+							"vector": [0, -7, 0]
+						},
+						"1.5": {
+							"vector": [0, 0, 0],
+							"easing": "easeInBounce",
+							"easingArgs": [0.075]
+						}
+					},
+					"scale": {
+						"0.5": {
+							"vector": [1, 0, 0.7]
+						},
+						"1.5": {
+							"vector": [1, 1, 1],
+							"easing": "easeInBounce",
+							"easingArgs": [0.075]
+						}
+					}
+				},
+				"glass": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -180, 0]
+						},
+						"4.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeInOutQuint"
+						}
+					}
+				}
+			}
+		},
+		"animation.model.start": {
+			"animation_length": 8,
+			"bones": {
+				"glass": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -180, 0]
+						},
+						"8.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeInQuad"
+						}
+					}
+				}
+			}
+		},
+		"animation.model.loop": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"glass": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -90, 0]
+						},
+						"2.0": {
+							"vector": [0, 0, 0],
+							"easing": "linear"
+						}
+					}
+				}
+			}
+		},
+		"animation.model.end": {
+			"animation_length": 8,
+			"bones": {
+				"glass": {
+					"rotation": {
+						"0.0": {
+							"vector": [0, -180, 0]
+						},
+						"8.0": {
+							"vector": [0, 0, 0],
+							"easing": "easeOutQuad"
+						}
+					}
+				}
+			}
+		}
+	},
+	"geckolib_format_version": 2
+}

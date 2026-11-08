@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#A#",
+    "BCB",
+    "DBD"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:fluctuation_solar_panel"
+    },
+    "A": {
+      "item": "loli_labs:parametric_solar_panel"
+    },
+    "B": {
+      "item": "loli_labs:chrysolite_plasma_core"
+    },
+    "C": {
+      "item": "loli_labs:chromodynamic_core"
+    },
+    "D": {
+      "item": "loli_labs:matter_sparkling"
+    }
+  },
+  "result": {
+    "item": "loli_labs:chronodynamic_solar_panel"
+  }
+}

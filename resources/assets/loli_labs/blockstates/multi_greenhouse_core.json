@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "formed=false,lit=false,facing=north": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=false,lit=false,facing=south": { "model": "loli_labs:block/multi_greenhouse_core", "y": 180 },
+    "formed=false,lit=false,facing=west": { "model": "loli_labs:block/multi_greenhouse_core", "y": 270 },
+    "formed=false,lit=false,facing=east": { "model": "loli_labs:block/multi_greenhouse_core", "y": 90 },
+    "formed=false,lit=false,facing=up": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=false,lit=false,facing=down": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=false,lit=true,facing=north": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=false,lit=true,facing=south": { "model": "loli_labs:block/multi_greenhouse_core", "y": 180 },
+    "formed=false,lit=true,facing=west": { "model": "loli_labs:block/multi_greenhouse_core", "y": 270 },
+    "formed=false,lit=true,facing=east": { "model": "loli_labs:block/multi_greenhouse_core", "y": 90 },
+    "formed=false,lit=true,facing=up": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=false,lit=true,facing=down": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=false,facing=north": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=false,facing=south": { "model": "loli_labs:block/multi_greenhouse_core", "y": 180 },
+    "formed=true,lit=false,facing=west": { "model": "loli_labs:block/multi_greenhouse_core", "y": 270 },
+    "formed=true,lit=false,facing=east": { "model": "loli_labs:block/multi_greenhouse_core", "y": 90 },
+    "formed=true,lit=false,facing=up": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=false,facing=down": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=true,facing=north": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=true,facing=south": { "model": "loli_labs:block/multi_greenhouse_core", "y": 180 },
+    "formed=true,lit=true,facing=west": { "model": "loli_labs:block/multi_greenhouse_core", "y": 270 },
+    "formed=true,lit=true,facing=east": { "model": "loli_labs:block/multi_greenhouse_core", "y": 90 },
+    "formed=true,lit=true,facing=up": { "model": "loli_labs:block/multi_greenhouse_core" },
+    "formed=true,lit=true,facing=down": { "model": "loli_labs:block/multi_greenhouse_core" }
+  }
+}

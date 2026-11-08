@@ -1,0 +1,32 @@
+{
+  "type": "bloodmagic:alchemytable",
+  "input": [
+    {
+      "item": "loli_labs:asmodeus_demonic_panel"
+    },
+    {
+      "item": "loli_labs:asmodeus_demonic_panel"
+    },
+    {
+      "item": "loli_labs:belphegor_demon_contract"
+    },
+    {
+      "item": "loli_labs:matter_luminous_turquoise"
+    },
+    {
+      "item": "loli_labs:blood_clot"
+    }
+  ],
+  "output": {
+    "item": "loli_labs:belphegor_demonic_panel"
+  },
+  "syphon": 5000,
+  "ticks": 5,
+  "upgradeLevel": 5,
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "bloodmagic"
+    }
+  ]
+}
