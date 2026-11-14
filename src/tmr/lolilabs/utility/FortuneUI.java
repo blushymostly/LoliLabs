@@ -1,7 +1,11 @@
 package tmr.lolilabs.utility;
 
-import tmr.lolilabs.*;
-import tmr.lolilabs.botania.GuiDecoration;
+import tmr.lolilabs.LoliLabs;
+import tmr.lolilabs.api.ItemCatalog;
+import tmr.lolilabs.api.VerifyFlags;
+import tmr.lolilabs.gui.FlowingGauge;
+import tmr.lolilabs.gui.GuiDecoration;
+import tmr.lolilabs.gui.LabPowerToggle;
 
 import brachy.modularui.api.drawable.*;
 import brachy.modularui.drawable.*;
@@ -95,10 +99,10 @@ public final class FortuneUI {
                     if (!hooked) {
                         hooked = true;
                         context.postRenderCallbacks.add(ctx -> {
-                            if (tmr.lolilabs.dimensions.DimensionsChecks.tooltipPreview)
+                            if (VerifyFlags.dimensionsTooltipPreview)
                                 new brachy.modularui.screen.RichTooltip()
                                         .addFromItem(new net.minecraft.world.item.ItemStack(
-                                                LabItems.CATALOG.get("fortune_module_100").get()))
+                                                ItemCatalog.CATALOG.get("fortune_module_100").get()))
                                         .draw(ctx);
                         });
                     }

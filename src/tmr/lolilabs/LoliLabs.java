@@ -1,5 +1,7 @@
 package tmr.lolilabs;
 
+import tmr.lolilabs.api.ItemCatalog;
+
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -16,11 +18,7 @@ public final class LoliLabs {
 
     public LoliLabs() {
         var bus = net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext.get().getModEventBus();
-        LabItems.register(bus);
-        LabMachines.register(bus);
-        LabConfigMigration.run();
-        net.minecraftforge.fml.ModLoadingContext.get()
-                .registerConfig(net.minecraftforge.fml.config.ModConfig.Type.COMMON, LabMachines.SPEC);
+        LabBootstrap.init(bus);
         bus.addListener(this::verifyMaterials);
     }
 
@@ -31,12 +29,12 @@ public final class LoliLabs {
                 throw new IllegalStateException(
                         "Loli Labs material missing from registry: " + MOD_ID + ":rose_gold_ingot");
             }
-            if (LabItems.CATALOG.containsKey("ingot_rose_gold") ||
-                    LabItems.CATALOG.containsKey("reinforced_iridium_iron_plate")) {
+            if (ItemCatalog.CATALOG.containsKey("ingot_rose_gold") ||
+                    ItemCatalog.CATALOG.containsKey("reinforced_iridium_iron_plate")) {
                 throw new IllegalStateException("Legacy duplicate material ids must not be registered");
             }
             LOGGER.info("LOLI_LABS_MATERIAL_OK {} (catalog={}, creative tab includes rose gold)",
-                    ForgeRegistries.ITEMS.getKey(item), LabItems.CATALOG.size());
+                    ForgeRegistries.ITEMS.getKey(item), ItemCatalog.CATALOG.size());
         });
     }
 }

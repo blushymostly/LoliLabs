@@ -2,8 +2,11 @@
 /*
 !/.gitattributes
 !/.gitignore
+!/.github/
+!/.github/**
 !/LICENSE
 !/build.gradle
+!/build-config.json
 !/changelog.md
 !/gradle.properties
 !/gradlew

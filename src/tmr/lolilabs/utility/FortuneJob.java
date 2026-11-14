@@ -80,7 +80,7 @@ public final class FortuneJob {
         }
     }
 
-    /** Input, output, upgrades, and whole-EU payment. The block entity keeps the slot layout and the EU store. */
+    /** The block entity keeps the slot layout and the EU store. */
     public interface Inventory {
 
         int firstOre();
@@ -97,7 +97,6 @@ public final class FortuneJob {
 
         boolean afford(long cost);
 
-        /** False leaves the store unchanged. */
         boolean pay(long cost);
 
         ItemStack extract(int slot, int count);

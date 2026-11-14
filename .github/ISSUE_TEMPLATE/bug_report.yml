@@ -1,0 +1,35 @@
+name: Bug report
+description: Report a crash or incorrect in-game behaviour
+labels: ["bug", "needs-triage"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Mod version
+      description: From mods.toml / JAR name (e.g. 1.4.36)
+    validations:
+      required: true
+  - type: input
+    id: forge
+    attributes:
+      label: Forge / Minecraft
+      placeholder: 1.20.1-47.4.x
+    validations:
+      required: true
+  - type: textarea
+    id: describe
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: expect
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / steps
+      description: Crash report excerpt, reproduction steps, relevant mods

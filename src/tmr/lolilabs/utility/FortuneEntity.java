@@ -1,5 +1,8 @@
 package tmr.lolilabs.utility;
 
+import tmr.lolilabs.api.ForeignEnergyView;
+import tmr.lolilabs.api.WorkableProgressView;
+
 import net.minecraft.core.*;
 import net.minecraft.nbt.*;
 import net.minecraft.network.chat.Component;
@@ -14,11 +17,12 @@ import net.minecraftforge.items.*;
 
 /** Reserved ore, rolled drops, EU and progress are persisted together; output blockage never rerolls or voids a job. */
 public final class FortuneEntity extends BlockEntity implements MenuProvider, com.ic2ceu.icceu.api.energy.EUReceiver,
-                                 brachy.modularui.api.IUIHolder<brachy.modularui.factory.PosGuiData> {
+                                 brachy.modularui.api.IUIHolder<brachy.modularui.factory.PosGuiData>,
+                                 ForeignEnergyView, WorkableProgressView {
 
     public long energy;
     public int fraction, progress, totalWork, doneWork;
-    private final tmr.lolilabs.eu.ForeignEuStore euStore = new tmr.lolilabs.eu.ForeignEuStore();
+    private final tmr.lolilabs.api.ForeignEuStore euStore = new tmr.lolilabs.api.ForeignEuStore();
     private final FortuneJob job = new FortuneJob();
     private final FortuneJob.Inventory slots = new Slots();
     private OreDropper dropsPort;
@@ -112,6 +116,59 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
         return totalWork > 0 || !reserved.isEmpty() || !pending.isEmpty();
     }
 
+    @Override
+    public long foreignEuStored() {
+        return energy;
+    }
+
+    @Override
+    public long foreignEuCapacity() {
+        return capacity();
+    }
+
+    @Override
+    public boolean foreignEuInfinite() {
+        return upgrade(3);
+    }
+
+    @Override
+    public boolean hasWorkableProgress() {
+        return totalWork > 0;
+    }
+
+    @Override
+    public int workableProgressScaled(int scale) {
+        if (totalWork <= 0) return 0;
+        return (int) Math.min(scale, (long) doneWork * scale / totalWork);
+    }
+
+    @Override
+    public java.util.List<ItemStack> workableOutputs() {
+        return java.util.List.copyOf(pending);
+    }
+
+    @Override
+    public float workableFill() {
+        if (totalWork <= 0) return 0F;
+        int ticks = LabUtility.TICKS.get();
+        return (float) Math.min((double) progress / ticks, (double) doneWork / totalWork);
+    }
+
+    @Override
+    public int workableDone() {
+        return doneWork;
+    }
+
+    @Override
+    public int workableTotal() {
+        return totalWork;
+    }
+
+    @Override
+    public boolean workableActive() {
+        return hasWorkableProgress();
+    }
+
     public void tick() {
         if (f_58857_ == null || f_58857_.f_46443_) return;
         if (enabled) {
@@ -186,11 +243,6 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
             }
         }
         return left;
-    }
-
-    public static appeng.helpers.InterfaceLogicHost interfaceAt(net.minecraft.world.level.block.entity.BlockEntity be,
-                                                                Direction face) {
-        return InterfaceAe2OreSource.interfaceAt(be, face);
     }
 
     public void pullInterfaceInputs() {

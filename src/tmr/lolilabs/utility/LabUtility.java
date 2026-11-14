@@ -1,6 +1,7 @@
 package tmr.lolilabs.utility;
 
-import tmr.lolilabs.*;
+import tmr.lolilabs.LoliLabs;
+import tmr.lolilabs.api.ItemCatalog;
 
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
@@ -30,16 +31,16 @@ public final class LabUtility {
     }
 
     public static void registerItems() {
-        LabItems.CATALOG.put("fortune_transformer", LabItems.ITEMS.register("fortune_transformer",
+        ItemCatalog.CATALOG.put("fortune_transformer", ItemCatalog.ITEMS.register("fortune_transformer",
                 () -> new BlockItem(FORTUNE.get(), new Item.Properties())));
         for (int level : LEVELS) {
             String id = "fortune_module_" + level;
-            LabItems.CATALOG.put(id, LabItems.ITEMS.register(id, () -> new FortuneModule(0, level)));
+            ItemCatalog.CATALOG.put(id, ItemCatalog.ITEMS.register(id, () -> new FortuneModule(0, level)));
         }
         for (int i = 1; i <= 3; i++) {
             final int kind = i;
             String id = moduleId(i);
-            LabItems.CATALOG.put(id, LabItems.ITEMS.register(id, () -> new FortuneModule(kind, 0)));
+            ItemCatalog.CATALOG.put(id, ItemCatalog.ITEMS.register(id, () -> new FortuneModule(kind, 0)));
         }
     }
 

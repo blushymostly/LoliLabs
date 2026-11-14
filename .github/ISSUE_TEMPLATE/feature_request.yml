@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest an addition or change
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem / use case
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+  - type: dropdown
+    id: domain
+    attributes:
+      label: Domain
+      options:
+        - LoliEnergistics
+        - LoliMagically
+        - LoliUtility
+        - LoliDimensions
+        - LoliDragonMight
+        - Shared / tooling
+        - Unsure
+    validations:
+      required: true

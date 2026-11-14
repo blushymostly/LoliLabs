@@ -1,6 +1,7 @@
 package tmr.lolilabs.dimensions;
 
-import tmr.lolilabs.*;
+import tmr.lolilabs.LoliLabs;
+import tmr.lolilabs.api.ItemCatalog;
 
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
@@ -41,7 +42,7 @@ public final class LabDimensions {
     public static void registerItems() {
         for (var def : DEFINITIONS) {
             if (def.reused()) {
-                if (!LabItems.CATALOG.containsKey(def.id()))
+                if (!ItemCatalog.CATALOG.containsKey(def.id()))
                     throw new IllegalStateException("Missing reused material " + def.id());
                 continue;
             }
@@ -52,9 +53,9 @@ public final class LabDimensions {
                                         Integer.parseInt(def.secondary(), 16), def.nether()) :
                                 new Block(BlockBehaviour.Properties.m_284310_().m_60913_(5, 30).m_60999_()));
                 BLOCK_CATALOG.put(def.id(), block);
-                LabItems.CATALOG.put(def.id(),
-                        LabItems.ITEMS.register(def.id(), () -> new BlockItem(block.get(), new Item.Properties())));
-            } else LabItems.CATALOG.put(def.id(), LabItems.ITEMS.register(def.id(),
+                ItemCatalog.CATALOG.put(def.id(),
+                        ItemCatalog.ITEMS.register(def.id(), () -> new BlockItem(block.get(), new Item.Properties())));
+            } else ItemCatalog.CATALOG.put(def.id(), ItemCatalog.ITEMS.register(def.id(),
                     () -> def.glint() ? new EnchantedMaterial() : new Item(new Item.Properties())));
         }
     }
