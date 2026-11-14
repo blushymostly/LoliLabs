@@ -140,25 +140,25 @@ public final class GreenhouseFlowers {
         };
     }
 
-    public boolean hasWork(GreenhouseBlockEntity be) {
+    public boolean hasWork(GreenhouseCore core) {
         for (int s = 0; s < 8; s++) {
-            var stack = be.inventory.getStackInSlot(s);
+            var stack = core.inventory.getStackInSlot(s);
             String type = type(stack);
             if (type.isEmpty()) continue;
-            for (int j = 0; j < Math.min(stack.m_41613_(), be.flowerLimit()); j++) {
+            for (int j = 0; j < Math.min(stack.m_41613_(), core.flowerLimit()); j++) {
                 var u = units[s][j];
                 if (u != null && u.flower.equals(type) && (u.time > 0 || u.pending > 0)) return true;
             }
-            for (int i = 8; i < 40; i++) if (consumes(type, be.inventory.getStackInSlot(i))) return true;
+            for (int i = 8; i < 40; i++) if (consumes(type, core.inventory.getStackInSlot(i))) return true;
         }
         return false;
     }
 
-    public void tick(GreenhouseBlockEntity be) {
+    public void tick(GreenhouseCore core) {
         for (int slot = 0; slot < 8; slot++) {
-            var installed = be.inventory.getStackInSlot(slot);
+            var installed = core.inventory.getStackInSlot(slot);
             String type = type(installed);
-            int count = type.isEmpty() ? 0 : Math.min(installed.m_41613_(), be.flowerLimit());
+            int count = type.isEmpty() ? 0 : Math.min(installed.m_41613_(), core.flowerLimit());
             for (int index = 0; index < count; index++) {
                 Unit u = units[slot][index];
                 if (u == null || !u.flower.equals(type)) {
@@ -166,11 +166,11 @@ public final class GreenhouseFlowers {
                     u.flower = type;
                     units[slot][index] = u;
                 }
-                if (be.mana >= be.manaCap) continue;
+                if (core.mana >= core.manaCap) continue;
                 u.age++;
                 if (u.pending > 0 && (u.flower.equals("endoflame") || u.time <= 0)) {
-                    int amount = Math.min(u.pending, be.manaCap - be.mana);
-                    be.mana += amount;
+                    int amount = Math.min(u.pending, core.manaCap - core.mana);
+                    core.mana += amount;
                     u.pending -= amount;
                     if (u.pending > 0) continue;
                 }
@@ -188,11 +188,11 @@ public final class GreenhouseFlowers {
                 if (u.time > 0 || u.pending > 0) continue;
                 if (type.equals("munchdew") && u.age % 4 != 0 || type.equals("rafflowsia") && u.age % 40 != 0) continue;
                 for (int input = 8; input < 40; input++) {
-                    var stack = be.inventory.getStackInSlot(input);
+                    var stack = core.inventory.getStackInSlot(input);
                     if (stack.m_41619_()) continue;
                     boolean valid = consumes(type, stack);
                     if (!valid) continue;
-                    int batch = be.processing() ? stack.m_41613_() : 1;
+                    int batch = core.processing() ? stack.m_41613_() : 1;
                     u.batch = batch;
                     switch (type) {
                         case "endoflame" -> u.time = Math.min(32000, fuel(stack)) / 2;
@@ -220,7 +220,7 @@ public final class GreenhouseFlowers {
                             u.pending = RAFF[u.streak] / ++u.repeat * batch;
                         }
                     }
-                    be.inventory.extractItem(input, batch, false);
+                    core.inventory.extractItem(input, batch, false);
                     break;
                 }
             }

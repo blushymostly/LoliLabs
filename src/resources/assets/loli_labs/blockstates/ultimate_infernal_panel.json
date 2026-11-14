@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "lit=false,facing=down": { "model": "loli_labs:block/ultimate_infernal_panel_down" },
+    "lit=false,facing=up": { "model": "loli_labs:block/ultimate_infernal_panel_up" },
+    "lit=false,facing=north": { "model": "loli_labs:block/ultimate_infernal_panel_north" },
+    "lit=false,facing=south": { "model": "loli_labs:block/ultimate_infernal_panel_south" },
+    "lit=false,facing=west": { "model": "loli_labs:block/ultimate_infernal_panel_west" },
+    "lit=false,facing=east": { "model": "loli_labs:block/ultimate_infernal_panel_east" },
+    "lit=true,facing=down": { "model": "loli_labs:block/ultimate_infernal_panel_down" },
+    "lit=true,facing=up": { "model": "loli_labs:block/ultimate_infernal_panel_up" },
+    "lit=true,facing=north": { "model": "loli_labs:block/ultimate_infernal_panel_north" },
+    "lit=true,facing=south": { "model": "loli_labs:block/ultimate_infernal_panel_south" },
+    "lit=true,facing=west": { "model": "loli_labs:block/ultimate_infernal_panel_west" },
+    "lit=true,facing=east": { "model": "loli_labs:block/ultimate_infernal_panel_east" }
+  }
+}

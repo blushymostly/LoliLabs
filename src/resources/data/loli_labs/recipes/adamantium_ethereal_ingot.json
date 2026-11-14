@@ -29,11 +29,5 @@
   "output": {
     "item": "loli_labs:adamantium_ethereal_ingot"
   },
-  "mana": 50000,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
-    }
-  ]
+  "mana": 50000
 }

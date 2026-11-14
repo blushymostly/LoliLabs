@@ -2,16 +2,16 @@
   "type": "botania:runic_altar",
   "ingredients": [
     {
-      "item": "avaritia:neutron"
+      "item": "loliavaritia:neutron"
     },
     {
-      "item": "avaritia:neutron"
+      "item": "loliavaritia:neutron"
     },
     {
-      "item": "avaritia:neutron"
+      "item": "loliavaritia:neutron"
     },
     {
-      "item": "avaritia:neutron"
+      "item": "loliavaritia:neutron"
     },
     {
       "item": "loli_labs:adonas_scroll"
@@ -32,15 +32,5 @@
   "output": {
     "item": "loli_labs:sister_necromancer_bergamma_doll"
   },
-  "mana": 500000,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "avaritia"
-    },
-    {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
-    }
-  ]
+  "mana": 500000
 }

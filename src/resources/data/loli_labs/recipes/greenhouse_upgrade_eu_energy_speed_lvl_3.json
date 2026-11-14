@@ -1,5 +1,0 @@
-{
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [ { "item": "minecraft:stick" } ],
-  "result": { "item": "loli_labs:greenhouse_upgrade_eu_energy_speed_lvl_3" }
-}

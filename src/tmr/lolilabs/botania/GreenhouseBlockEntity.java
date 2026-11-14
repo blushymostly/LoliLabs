@@ -18,77 +18,32 @@ import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2ceu.icceu.EUReceiver, MenuProvider,
+public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2ceu.icceu.api.energy.EUReceiver, MenuProvider,
                                          brachy.modularui.api.IUIHolder<brachy.modularui.factory.PosGuiData>,
                                          vazkii.botania.api.mana.ManaPool,
                                          vazkii.botania.api.mana.spark.SparkAttachable,
                                          software.bernie.geckolib.animatable.GeoBlockEntity {
 
-    public static final int FLOWER_BASE = 0;
-    public static final int FLOWER_MAX = LabBotaniaTiers.BASE_FLOWER_SLOTS + LabBotaniaTiers.EXPANSION_SLOTS;
-    public static final int UPGRADE_BASE = FLOWER_MAX;
-    public static final int CRYSTAL_BASE = UPGRADE_BASE + LabBotaniaTiers.UPGRADE_SLOTS;
-    public static final int SLOTS = CRYSTAL_BASE + LabBotaniaTiers.CRYSTAL_SLOTS;
+    public static final int FLOWER_BASE = GreenhouseCore.FLOWER_BASE;
+    public static final int FLOWER_MAX = GreenhouseCore.FLOWER_MAX;
+    public static final int UPGRADE_BASE = GreenhouseCore.UPGRADE_BASE;
+    public static final int CRYSTAL_BASE = GreenhouseCore.CRYSTAL_BASE;
+    public static final int SLOTS = GreenhouseCore.SLOTS;
 
-    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache animationCache = software.bernie.geckolib.util.GeckoLibUtil
-            .createInstanceCache(this);
-
-    @Override
-    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
-        return animationCache;
-    }
-
-    @Override
-    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
-        controllers.add(new software.bernie.geckolib.core.animation.AnimationController<GreenhouseBlockEntity>(this,
-                "greenhouse", 0, state -> {
-                    if (enabled && isFormed())
-                        return state.setAndContinue(software.bernie.geckolib.core.animation.RawAnimation.begin()
-                                .thenLoop("animation.model.loop"));
-                    return software.bernie.geckolib.core.object.PlayState.STOP;
-                }));
-    }
-
-    @Override
-    public net.minecraft.world.phys.AABB getRenderBoundingBox() {
-        return new net.minecraft.world.phys.AABB(m_58899_()).m_82400_(4);
-    }
-
-    public boolean enabled = true;
-    public GreenhouseStructure.Status structureStatus = GreenhouseStructure.Status.INCOMPLETE;
-    public int mana;
-    public long energy;
-    public int euFraction;
+    private final boolean part = m_58900_().m_60734_() instanceof GreenhousePartBlock;
     private boolean loadingInventory;
-    public final GreenhouseFlowers flowers = new GreenhouseFlowers();
     private boolean inventorySync;
-    public final long[] upgradeInstalledAt = { Long.MIN_VALUE, Long.MIN_VALUE, Long.MIN_VALUE, Long.MIN_VALUE };
-    private final net.minecraft.world.item.Item[] observedUpgrades = new net.minecraft.world.item.Item[4];
     private boolean returnLegacyItems;
     private boolean inManaNetwork;
-    public int progress;
-    public int manaCap = LabBotaniaTiers.BASE_MANA_CAPACITY;
-    public long energyCap = LabBotaniaTiers.BASE_EU_CAPACITY;
-    private final boolean part;
-    private final com.ic2ceu.icceu.EnergyBuffer eu = new com.ic2ceu.icceu.EnergyBuffer(1);
-    private LazyOptional<IItemHandler> items = LazyOptional.empty();
-
     public final ItemStackHandler inventory = new ItemStackHandler(SLOTS) {
 
         @Override
         protected void onContentsChanged(int slot) {
             if (loadingInventory || (f_58857_ != null && f_58857_.f_46443_)) return;
-            if (slot >= UPGRADE_BASE + 8 && slot < CRYSTAL_BASE) {
-                int index = slot - UPGRADE_BASE - 8;
-                var stack = getStackInSlot(slot);
-                var item = stack.m_41619_() ? null : stack.m_41720_();
-                if (item != observedUpgrades[index]) {
-                    observedUpgrades[index] = item;
-                    upgradeInstalledAt[index] = item != null && f_58857_ != null ? f_58857_.m_46467_() : Long.MIN_VALUE;
-                }
-            }
+            if (slot >= UPGRADE_BASE + 8 && slot < CRYSTAL_BASE) domain.observeUpgrade(slot - UPGRADE_BASE - 8,
+                    getStackInSlot(slot), f_58857_ == null ? Long.MIN_VALUE : f_58857_.m_46467_());
             GreenhouseBlockEntity.this.m_6596_();
-            GreenhouseBlockEntity.this.recomputeCaps();
+            domain.recomputeCaps();
             if (slot < 8 || slot >= UPGRADE_BASE) {
                 inventorySync = true;
                 returnLegacyItems = true;
@@ -107,12 +62,35 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
             return slot >= UPGRADE_BASE && slot < CRYSTAL_BASE ? 1 : slot < 8 ? flowerLimit() : 64;
         }
     };
+    public final GreenhouseCore domain = new GreenhouseCore(inventory, part);
+    private final software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache animationCache = software.bernie.geckolib.util.GeckoLibUtil
+            .createInstanceCache(this);
+    private LazyOptional<IItemHandler> items = LazyOptional.empty();
 
     public GreenhouseBlockEntity(BlockPos pos, BlockState state) {
         super(LabBotaniaBlocks.GREENHOUSE_ENTITY.get(), pos, state);
-        this.part = state.m_60734_() instanceof GreenhousePartBlock;
         items = LazyOptional.of(() -> new GreenhouseAutomation(this));
-        recomputeCaps();
+    }
+
+    @Override
+    public software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache getAnimatableInstanceCache() {
+        return animationCache;
+    }
+
+    @Override
+    public void registerControllers(software.bernie.geckolib.core.animation.AnimatableManager.ControllerRegistrar controllers) {
+        controllers.add(new software.bernie.geckolib.core.animation.AnimationController<GreenhouseBlockEntity>(this,
+                "greenhouse", 0, state -> {
+                    if (domain.enabled && isFormed())
+                        return state.setAndContinue(software.bernie.geckolib.core.animation.RawAnimation.begin()
+                                .thenLoop("animation.model.loop"));
+                    return software.bernie.geckolib.core.object.PlayState.STOP;
+                }));
+    }
+
+    @Override
+    public net.minecraft.world.phys.AABB getRenderBoundingBox() {
+        return new net.minecraft.world.phys.AABB(m_58899_()).m_82400_(4);
     }
 
     public boolean isPart() {
@@ -120,7 +98,7 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
     }
 
     public boolean isFormed() {
-        return !m_58901_() && !part && structureStatus == GreenhouseStructure.Status.FORMED;
+        return domain.formed(m_58901_());
     }
 
     public GreenhouseBlockEntity core() {
@@ -128,92 +106,39 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
     }
 
     public boolean validUpgrade(int slot, ItemStack stack) {
-        var upgrade = GreenhouseUpgrade.of(stack);
-        return upgrade != null && (upgrade.kind == GreenhouseUpgrade.kindForSlot(slot) ||
-                (slot == 8 && upgrade.kind == GreenhouseUpgrade.Kind.PROCESSING));
+        return domain.validUpgrade(slot, stack);
     }
 
     public GreenhouseUpgrade activeUpgrade(int slot) {
-        var stack = inventory.getStackInSlot(UPGRADE_BASE + slot);
-        return validUpgrade(slot, stack) ? GreenhouseUpgrade.of(stack) : null;
+        return domain.activeUpgrade(slot);
     }
 
     public int upgradeLevel(int slot) {
-        var upgrade = activeUpgrade(slot);
-        return upgrade == null ? 0 : upgrade.level;
-    }
-
-    /** Rehome old freely placed upgrades. Duplicate/unsupported stacks remain extractable, never deleted. */
-    private void migrateUpgradeSlots() {
-        var pending = new java.util.ArrayList<ItemStack>();
-        for (int i = 0; i < LabBotaniaTiers.UPGRADE_SLOTS; i++) {
-            var stack = inventory.getStackInSlot(UPGRADE_BASE + i);
-            if (!stack.m_41619_()) pending.add(stack);
-            inventory.setStackInSlot(UPGRADE_BASE + i, ItemStack.f_41583_);
-        }
-        var overflow = new java.util.ArrayList<ItemStack>();
-        for (var stack : pending) {
-            var upgrade = GreenhouseUpgrade.of(stack);
-            int target = upgrade == null ? -1 : GreenhouseUpgrade.slotFor(upgrade.kind);
-            if (target >= 0 && inventory.getStackInSlot(UPGRADE_BASE + target).m_41619_())
-                inventory.setStackInSlot(UPGRADE_BASE + target, stack);
-            else overflow.add(stack);
-        }
-        for (var stack : overflow) for (int i = 0; i < LabBotaniaTiers.UPGRADE_SLOTS; i++)
-            if (inventory.getStackInSlot(UPGRADE_BASE + i).m_41619_()) {
-                inventory.setStackInSlot(UPGRADE_BASE + i, stack);
-                break;
-            }
+        return domain.upgradeLevel(slot);
     }
 
     public void recomputeCaps() {
-        int manaBuf = LabBotaniaTiers.BASE_MANA_CAPACITY;
-        long euBuf = LabBotaniaTiers.BASE_EU_CAPACITY;
-        for (int i = UPGRADE_BASE; i < CRYSTAL_BASE; i++) {
-            var upgrade = activeUpgrade(i - UPGRADE_BASE);
-            if (upgrade == null) continue;
-            int lvl = upgrade.level - 1;
-            if (upgrade.kind == GreenhouseUpgrade.Kind.MANA_BUFFER)
-                manaBuf += LabBotaniaTiers.MANA_BUFFER[Math.min(lvl, LabBotaniaTiers.MANA_BUFFER.length - 1)];
-            if (upgrade.kind == GreenhouseUpgrade.Kind.EU_BUFFER)
-                euBuf += LabBotaniaTiers.EU_BUFFER[Math.min(lvl, LabBotaniaTiers.EU_BUFFER.length - 1)];
-        }
-        manaCap = Math.max(manaBuf, mana);
-        energyCap = Math.max(euBuf, energy);
-        mana = Math.min(mana, manaCap);
-        energy = Math.min(energy, energyCap);
-        eu.resize(energyCap);
-        eu.restore(energy);
+        domain.recomputeCaps();
     }
 
     public int flowerSlots() {
-        return 8;
+        return domain.flowerSlots();
     }
 
     public int flowerLimit() {
-        var upgrade = activeUpgrade(10);
-        return upgrade == null ? 1 : LabBotaniaTiers.MULTIPLICATION[upgrade.level - 1];
+        return domain.flowerLimit();
     }
 
     public boolean processing() {
-        var upgrade = activeUpgrade(8);
-        return upgrade != null && upgrade.kind == GreenhouseUpgrade.Kind.PROCESSING;
+        return domain.processing();
     }
 
     public boolean hasCrystallization() {
-        return false;
+        return domain.hasCrystallization();
     }
 
     public int workBonusAndPay() {
-        var first = activeUpgrade(8);
-        int bonus = first != null && first.kind == GreenhouseUpgrade.Kind.EFFICIENCY ? 10 : 0;
-        var speed = activeUpgrade(11);
-        long cost = speed == null ? 0 : LabBotaniaTiers.EU_SPEED_COST[speed.level - 1];
-        if (speed != null && cost <= energy) {
-            energy -= cost;
-            bonus += LabBotaniaTiers.EU_SPEED_PCT[speed.level - 1];
-        }
-        return bonus;
+        return domain.workBonusAndPay();
     }
 
     private void returnStack(ItemStack stack) {
@@ -256,13 +181,13 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
     public boolean refreshStructure() {
         var match = GreenhouseStructure.match(this);
         if (match.status() == GreenhouseStructure.Status.UNLOADED) {
-            structureStatus = match.status();
+            domain.structureStatus = match.status();
             return false;
         }
-        var before = structureStatus;
-        structureStatus = match.formed() ? GreenhouseStructure.Status.FORMED : match.status();
+        var before = domain.structureStatus;
+        domain.structureStatus = match.formed() ? GreenhouseStructure.Status.FORMED : match.status();
         updateFormedBlocks(match.formed());
-        if (before != structureStatus) syncSettings();
+        if (before != domain.structureStatus) syncSettings();
         return true;
     }
 
@@ -277,7 +202,7 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
             var state = f_58857_.m_8055_(pos);
             if (state.m_61138_(GreenhouseCoreBlock.FORMED)) {
                 var next = state.m_61124_(GreenhouseCoreBlock.FORMED, formed).m_61124_(GreenhouseCoreBlock.LIT,
-                        formed && enabled);
+                        formed && domain.enabled);
                 if (next != state) f_58857_.m_46597_(pos, next);
             }
         }
@@ -297,17 +222,8 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
                             vazkii.botania.api.mana.ManaNetworkAction.REMOVE);
             be.inManaNetwork = be.isFormed();
         }
-        if (!be.enabled || !be.isFormed()) return;
-        be.recomputeCaps();
-        be.flowers.tick(be);
-        if (be.flowers.hasWork(be) && be.mana < be.manaCap) {
-            int bonus = be.workBonusAndPay();
-            be.progress += bonus;
-            while (be.progress >= 100) {
-                be.progress -= 100;
-                be.flowers.tick(be);
-            }
-        }
+        if (!be.domain.enabled || !be.isFormed()) return;
+        be.domain.tickWork();
         if (be.inventorySync || level.m_46467_() % 20 == 0) {
             be.inventorySync = false;
             be.syncSettings();
@@ -324,17 +240,7 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
     @Override
     public CompoundTag m_5995_() {
         var n = new CompoundTag();
-        n.m_128379_("Enabled", enabled);
-        n.m_128379_("Formed", isFormed());
-        n.m_128405_("Mana", mana);
-        n.m_128356_("Energy", energy);
-        n.m_128405_("EUFraction", euFraction);
-        n.m_128405_("UpgradeLayoutVersion", 4);
-        for (int i = 0; i < 4; i++) n.m_128356_("UpgradeInstalledAt" + i, upgradeInstalledAt[i]);
-        n.m_128405_("ManaCapacity", manaCap);
-        n.m_128356_("EnergyCapacity", energyCap);
-        n.m_128405_("Progress", progress);
-        n.m_128359_("Structure", structureStatus.name());
+        domain.writeClient(n, isFormed());
         var display = new net.minecraft.nbt.ListTag();
         for (int i = 0; i < 8; i++) display.add(inventory.getStackInSlot(i).m_41739_(new CompoundTag()));
         n.m_128365_("DisplayFlowers", display);
@@ -349,28 +255,14 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
     @Override
     protected void m_183515_(CompoundTag n) {
         super.m_183515_(n);
-        n.m_128405_("UpgradeLayoutVersion", 4);
-        for (int i = 0; i < 4; i++) n.m_128356_("UpgradeInstalledAt" + i, upgradeInstalledAt[i]);
-        n.m_128405_("EUFraction", euFraction);
-        n.m_128365_("FlowerState", flowers.save());
-        n.m_128379_("Formed", isFormed());
-        n.m_128379_("Enabled", enabled);
-        n.m_128405_("Mana", mana);
-        n.m_128356_("Energy", energy);
-        n.m_128405_("Progress", progress);
+        domain.writeSave(n, isFormed());
         if (!part) n.m_128365_("Inv", inventory.serializeNBT());
     }
 
     @Override
     public void m_142466_(CompoundTag n) {
         super.m_142466_(n);
-        structureStatus = n.m_128471_("Formed") ? GreenhouseStructure.Status.FORMED :
-                GreenhouseStructure.Status.INCOMPLETE;
-        enabled = !n.m_128441_("Enabled") || n.m_128471_("Enabled");
-        mana = n.m_128451_("Mana");
-        energy = n.m_128454_("Energy");
-        progress = Math.floorMod(n.m_128451_("Progress"), 100);
-        flowers.load(n.m_128437_("FlowerState", 10));
+        domain.readScalars(n);
         if (n.m_128425_("DisplayFlowers", 9)) {
             var display = n.m_128437_("DisplayFlowers", 10);
             loadingInventory = true;
@@ -381,54 +273,40 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
                 loadingInventory = false;
             }
         }
-        euFraction = Math.max(0, Math.min(39, n.m_128451_("EUFraction")));
         if (n.m_128425_("Inv", 10)) {
             loadingInventory = true;
             try {
                 inventory.deserializeNBT(n.m_128469_("Inv"));
-                if (n.m_128451_("UpgradeLayoutVersion") < 4) migrateUpgradeSlots();
+                if (n.m_128451_("UpgradeLayoutVersion") < 4) domain.migrateUpgradeSlots();
                 returnLegacyItems = true;
             } finally {
                 loadingInventory = false;
             }
-            recomputeCaps();
-        } else if (n.m_128441_("EnergyCapacity")) {
-            manaCap = Math.max(1, n.m_128451_("ManaCapacity"));
-            energyCap = Math.max(1, n.m_128454_("EnergyCapacity"));
-        } else recomputeCaps();
-        for (int i = 0; i < 4; i++) {
-            upgradeInstalledAt[i] = n.m_128441_("UpgradeInstalledAt" + i) ? n.m_128454_("UpgradeInstalledAt" + i) :
-                    Long.MIN_VALUE;
-            var stack = inventory.getStackInSlot(UPGRADE_BASE + 8 + i);
-            observedUpgrades[i] = stack.m_41619_() ? null : stack.m_41720_();
-        }
+            domain.recomputeCaps();
+        } else domain.readCaps(n);
+        domain.readUpgradeClocks(n);
     }
 
     @Override
     public boolean acceptsEnergy(Direction side) {
-        var core = core();
-        return core != null && core.enabled && core.isFormed() && core.energy < core.energyCap;
+        var controller = core();
+        return controller != null && controller.domain.acceptsEnergy(controller.isFormed());
     }
 
     @Override
     public boolean connectsEU(Direction side) {
-        var core = core();
-        return core != null && core.isFormed();
+        var controller = core();
+        return controller != null && controller.isFormed();
     }
 
     @Override
     public long receivePacket(Direction side, long quanta, long voltage) {
         if (part) {
-            var core = core();
-            return core == null ? 0 : core.receivePacket(side, quanta, voltage);
+            var controller = core();
+            return controller == null ? 0 : controller.receivePacket(side, quanta, voltage);
         }
         if (!acceptsEnergy(side) || quanta <= 0) return 0;
-        eu.resize(energyCap);
-        eu.restore(energy);
-        eu.restoreFraction(euFraction);
-        long accepted = eu.changeQuanta(quanta);
-        energy = eu.stored();
-        euFraction = eu.fraction();
+        long accepted = domain.receiveQuanta(quanta);
         m_6596_();
         return accepted;
     }
@@ -453,37 +331,37 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
 
     @Override
     public int getCurrentMana() {
-        var core = core();
-        return core == null ? 0 : core.mana;
+        var controller = core();
+        return controller == null ? 0 : controller.domain.mana;
     }
 
     @Override
     public boolean isFull() {
-        var core = core();
-        return core == null || core.mana >= core.manaCap;
+        var controller = core();
+        return controller == null || controller.domain.mana >= controller.domain.manaCap;
     }
 
     @Override
     public void receiveMana(int amount) {
         if (part) {
-            var core = core();
-            if (core != null) core.receiveMana(amount);
+            var controller = core();
+            if (controller != null) controller.receiveMana(amount);
             return;
         }
-        mana = (int) Math.max(0, Math.min((long) manaCap, (long) mana + amount));
+        domain.receiveMana(amount);
         m_6596_();
     }
 
     @Override
     public boolean canReceiveManaFromBursts() {
-        var core = core();
-        return core != null && core.enabled && core.isFormed();
+        var controller = core();
+        return controller != null && controller.domain.enabled && controller.isFormed();
     }
 
     @Override
     public int getMaxMana() {
-        var core = core();
-        return core == null ? 0 : core.manaCap;
+        var controller = core();
+        return controller == null ? 0 : controller.domain.manaCap;
     }
 
     @Override
@@ -501,8 +379,8 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
 
     @Override
     public boolean canAttachSpark(ItemStack stack) {
-        var core = core();
-        return core != null && core.isFormed() && m_58899_().m_123342_() == core.m_58899_().m_123342_() + 1;
+        var controller = core();
+        return controller != null && controller.isFormed() && m_58899_().m_123342_() == controller.m_58899_().m_123342_() + 1;
     }
 
     @Override
@@ -512,11 +390,11 @@ public final class GreenhouseBlockEntity extends BlockEntity implements com.ic2c
 
     @Override
     public vazkii.botania.api.mana.spark.ManaSpark getAttachedSpark() {
-        var core = core();
-        if (core == null || f_58857_ == null) return null;
+        var controller = core();
+        if (controller == null || f_58857_ == null) return null;
         for (var entity : f_58857_.m_45933_((net.minecraft.world.entity.Entity) null,
-                new net.minecraft.world.phys.AABB(core.m_58899_().m_7918_(-1, 2, -1),
-                        core.m_58899_().m_7918_(2, 3, 2))))
+                new net.minecraft.world.phys.AABB(controller.m_58899_().m_7918_(-1, 2, -1),
+                        controller.m_58899_().m_7918_(2, 3, 2))))
             if (entity instanceof vazkii.botania.api.mana.spark.ManaSpark spark) return spark;
         return null;
     }

@@ -1,18 +1,46 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "ic2modern:iridium_plate"
-    },
-    {
-      "item": "minecraft:white_dye"
-    },
-    {
-      "item": "minecraft:light_blue_dye"
-    }
-  ],
+  "type": "loliavaritia:shaped_table",
+  "tier": 4,
+  "compatible": false,
   "result": {
-    "item": "loli_labs:neutronium_catalyst",
-    "count": 1
+    "item": "loli_labs:neutronium_catalyst"
+  },
+  "pattern": [
+    "    A    ",
+    "  B C B  ",
+    " BDEFEDB ",
+    "  EFGFE  ",
+    "ACFGDGFCA",
+    "  EFGFE  ",
+    " BDEFEDB ",
+    "  B C B  ",
+    "    A    "
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:stone_tablet"
+    },
+    "B": {
+      "item": "loli_labs:innos_ancient_artefact"
+    },
+    "C": {
+      "item": "loli_labs:adamantium"
+    },
+    "D": {
+      "item": "loliavaritia:singularity",
+      "nbt": "{Id:\"loliavaritia:reinforced_neutronium\"}",
+      "type": "forge:nbt"
+    },
+    "E": {
+      "item": "loli_labs:adonas_scroll"
+    },
+    "F": {
+      "item": "loliavaritia:singularity",
+      "nbt": "{Id:\"loliavaritia:neutronium\"}",
+      "type": "forge:nbt"
+    },
+    "G": {
+      "item": "loli_labs:sister_necromancer_bergamma_doll"
+    }
   }
 }

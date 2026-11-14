@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "#A#",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "loli_labs:adamantium_cluster_dragon"
+    },
+    "A": {
+      "item": "loli_labs:arcane_panel"
+    }
+  },
+  "result": {
+    "item": "loli_labs:dragon_panel"
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "thaumaturge"
+    }
+  ]
+}

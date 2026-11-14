@@ -10,11 +10,5 @@
   "catalyst": {
     "type": "block",
     "block": "botania:alchemy_catalyst"
-  },
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
-    }
-  ]
+  }
 }

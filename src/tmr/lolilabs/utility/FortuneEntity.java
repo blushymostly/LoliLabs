@@ -12,17 +12,20 @@ import net.minecraftforge.common.capabilities.*;
 import net.minecraftforge.common.util.LazyOptional;
 import net.minecraftforge.items.*;
 
-import java.util.*;
-
 /** Reserved ore, rolled drops, EU and progress are persisted together; output blockage never rerolls or voids a job. */
-public final class FortuneEntity extends BlockEntity implements MenuProvider, com.ic2ceu.icceu.EUReceiver,
+public final class FortuneEntity extends BlockEntity implements MenuProvider, com.ic2ceu.icceu.api.energy.EUReceiver,
                                  brachy.modularui.api.IUIHolder<brachy.modularui.factory.PosGuiData> {
 
     public long energy;
     public int fraction, progress, totalWork, doneWork;
+    private final tmr.lolilabs.eu.ForeignEuStore euStore = new tmr.lolilabs.eu.ForeignEuStore();
+    private final FortuneJob job = new FortuneJob();
+    private final FortuneJob.Inventory slots = new Slots();
+    private OreDropper dropsPort;
+    private Ae2OreSource inputPort;
     public boolean enabled = true, jobSmelt;
     public int jobFortune, jobMultiplier;
-    public final java.util.List<ItemStack> reserved = new ArrayList<>(), pending = new ArrayList<>();
+    public final java.util.List<ItemStack> reserved = job.reserved, pending = job.pending;
     private static final net.minecraft.tags.TagKey<Block> ORES = net.minecraft.tags.TagKey.m_203882_(
             net.minecraft.core.registries.Registries.f_256747_,
             new net.minecraft.resources.ResourceLocation("forge", "ores"));
@@ -109,58 +112,50 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
         return totalWork > 0 || !reserved.isEmpty() || !pending.isEmpty();
     }
 
-    private void begin() {
-        // One input slot at a time, first to last, until that slot is empty.
-        int slot = -1;
-        for (int i = 0; i < 27; i++) if (ore(inventory.getStackInSlot(i))) {
-            slot = i;
-            break;
-        }
-        if (slot < 0) return;
-        int count = Math.min(upgrade(2) ? 64 : 1, inventory.getStackInSlot(slot).m_41613_());
-        long cost = Math.multiplyExact(LabUtility.COST.get(), count);
-        if (!upgrade(3) && energy < cost) return;
-        // Do not start more work while every output slot is occupied. A pending job can drain incrementally.
-        boolean space = false;
-        for (int i = 27; i < 54; i++) if (inventory.getStackInSlot(i).m_41619_() ||
-                inventory.getStackInSlot(i).m_41613_() < inventory.getStackInSlot(i).m_41741_()) {
-                    space = true;
-                    break;
-                }
-        if (!space) return;
-        jobMultiplier = inventory.getStackInSlot(54).m_41720_() instanceof FortuneModule module && module.kind == 0 ?
-                module.level : 0;
-        jobFortune = jobMultiplier > 0 ? 0 : fortune();
-        jobSmelt = upgrade(1);
-        totalWork = count;
-        doneWork = 0;
-        progress = 0;
-        if (!upgrade(3)) energy -= cost;
-        reserved.add(inventory.extractItem(slot, count, false));
-        m_6596_();
-    }
-
     public void tick() {
         if (f_58857_ == null || f_58857_.f_46443_) return;
         if (enabled) {
-            pullInterfaceInputs();
+            ae2().pull(inventory);
             autoOutput();
-            if (!working()) begin();
-            if (working()) {
-                progress = Math.min(LabUtility.TICKS.get(), progress + 1);
-                int budget = 64;
-                while (!reserved.isEmpty() && budget-- > 0) {
-                    var stack = reserved.get(0);
-                    for (var drop : drops(stack, jobFortune, jobSmelt, jobMultiplier)) queue(drop);
-                    stack.m_41774_(1);
-                    doneWork++;
-                    if (stack.m_41619_()) reserved.remove(0);
-                }
-                if (reserved.isEmpty() && progress >= LabUtility.TICKS.get()) flush();
-                m_6596_();
+            var roller = oreDropper();
+            if (roller != null) {
+                bindJob();
+                boolean active = job.tickStep(roller, slots);
+                saveJob();
+                if (active) m_6596_();
             }
         }
         if (f_58857_.m_46467_() % 10 == 0) sync();
+    }
+
+    /** Checks and the UI write the public counters between ticks. The job is canonical only inside tickStep. */
+    private void bindJob() {
+        job.progress = progress;
+        job.totalWork = totalWork;
+        job.doneWork = doneWork;
+        job.fortune = jobFortune;
+        job.multiplier = jobMultiplier;
+        job.smelt = jobSmelt;
+    }
+
+    private void saveJob() {
+        progress = job.progress;
+        totalWork = job.totalWork;
+        doneWork = job.doneWork;
+        jobFortune = job.fortune;
+        jobMultiplier = job.multiplier;
+        jobSmelt = job.smelt;
+    }
+
+    private OreDropper oreDropper() {
+        if (dropsPort == null && f_58857_ instanceof net.minecraft.server.level.ServerLevel server)
+            dropsPort = new ServerOreDropper(server, m_58899_());
+        return dropsPort;
+    }
+
+    private Ae2OreSource ae2() {
+        if (inputPort == null && f_58857_ != null) inputPort = new InterfaceAe2OreSource(f_58857_, m_58899_());
+        return inputPort;
     }
 
     public java.util.List<ItemStack> drops(ItemStack ore, int fortune, boolean smelt) {
@@ -168,67 +163,8 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
     }
 
     public java.util.List<ItemStack> drops(ItemStack ore, int fortune, boolean smelt, int fixedCount) {
-        if (!(f_58857_ instanceof net.minecraft.server.level.ServerLevel server) ||
-                !(ore.m_41720_() instanceof BlockItem item))
-            return java.util.List.of();
-        var tool = new ItemStack(net.minecraftforge.registries.ForgeRegistries.ITEMS
-                .getValue(new net.minecraft.resources.ResourceLocation("minecraft:diamond_pickaxe")));
-        // Modules specify an exact output ratio. Only a pickaxe uses the probabilistic Fortune enchantment.
-        net.minecraft.world.item.enchantment.EnchantmentHelper.m_44865_(java.util.Map
-                .of(net.minecraft.world.item.enchantment.Enchantments.f_44987_, fixedCount > 0 ? 0 : fortune), tool);
-        var nativeDrops = Block.m_49874_(item.m_40614_().m_49966_(), server, m_58899_(), null, null, tool);
-        var result = new ArrayList<ItemStack>();
-        var seen = new ArrayList<ItemStack>();
-        for (var drop : nativeDrops) {
-            if (drop.m_41619_()) continue;
-            if (fixedCount > 0) {
-                if (seen.stream().anyMatch(other -> ItemStack.m_150942_(other, drop))) continue;
-                seen.add(drop.m_41777_());
-            }
-            int count = fixedCount > 0 ? fixedCount : drop.m_41613_();
-            var output = drop.m_255036_(1);
-            if (smelt) {
-                var recipe = server.m_7465_().m_44015_(net.minecraft.world.item.crafting.RecipeType.f_44108_,
-                        new SimpleContainer(output), server);
-                if (recipe.isPresent()) {
-                    output = recipe.get().m_5874_(new SimpleContainer(output), server.m_9598_()).m_41777_();
-                    count *= output.m_41613_();
-                }
-            }
-            if (output.m_41619_()) continue;
-            while (count > 0) {
-                int n = Math.min(count, output.m_41741_());
-                result.add(output.m_255036_(n));
-                count -= n;
-            }
-        }
-        return result;
-    }
-
-    private void queue(ItemStack stack) {
-        if (stack.m_41619_()) return;
-        for (var other : pending) if (ItemStack.m_150942_(stack, other) && other.m_41613_() < other.m_41741_()) {
-            int n = Math.min(stack.m_41613_(), other.m_41741_() - other.m_41613_());
-            other.m_41769_(n);
-            stack.m_41774_(n);
-            if (stack.m_41619_()) return;
-        }
-        pending.add(stack.m_41777_());
-    }
-
-    private void flush() {
-        for (int i = 0; i < pending.size();) {
-            var left = insertOutput(pending.get(i));
-            if (left.m_41619_()) pending.remove(i);
-            else {
-                pending.set(i, left);
-                i++;
-            }
-        }
-        if (pending.isEmpty()) {
-            progress = 0;
-            totalWork = doneWork = 0;
-        }
+        var roller = oreDropper();
+        return roller == null ? java.util.List.of() : roller.drops(ore, fortune, smelt, fixedCount);
     }
 
     private ItemStack insertOutput(ItemStack value) {
@@ -254,39 +190,12 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
 
     public static appeng.helpers.InterfaceLogicHost interfaceAt(net.minecraft.world.level.block.entity.BlockEntity be,
                                                                 Direction face) {
-        if (be instanceof appeng.helpers.InterfaceLogicHost host) return host;
-        if (be instanceof appeng.api.parts.IPartHost parts &&
-                parts.getPart(face) instanceof appeng.helpers.InterfaceLogicHost host)
-            return host;
-        return null;
+        return InterfaceAe2OreSource.interfaceAt(be, face);
     }
 
     public void pullInterfaceInputs() {
         if (f_58857_ == null || !enabled) return;
-        for (Direction side : Direction.values()) {
-            var host = interfaceAt(f_58857_.m_7702_(m_58899_().m_121945_(side)), side.m_122424_());
-            if (host == null) continue;
-            var stock = host.getInterfaceLogic().getStorage();
-            for (int s = 0; s < stock.size(); s++) {
-                var stored = stock.getStack(s);
-                if (stored == null || !(stored.what() instanceof appeng.api.stacks.AEItemKey key)) continue;
-                var offered = key.toStack((int) Math.min(64, stored.amount()));
-                if (!ore(offered)) continue;
-                var left = offered.m_41777_();
-                for (int i = 0; i < 27 && !left.m_41619_(); i++) left = inventory.insertItem(i, left, true);
-                int count = offered.m_41613_() - left.m_41613_();
-                if (count == 0) continue;
-                int taken = (int) stock.extract(s, key, count, appeng.api.config.Actionable.MODULATE);
-                var extracted = key.toStack(taken);
-                for (int i = 0; i < 27 && !extracted.m_41619_(); i++)
-                    extracted = inventory.insertItem(i, extracted, false);
-                if (!extracted.m_41619_()) {
-                    long returned = stock.insert(s, key, extracted.m_41613_(), appeng.api.config.Actionable.MODULATE);
-                    extracted.m_41774_((int) returned);
-                    if (!extracted.m_41619_()) Block.m_49840_(f_58857_, m_58899_(), extracted);
-                }
-            }
-        }
+        ae2().pull(inventory);
     }
 
     public void autoOutput() {
@@ -316,12 +225,9 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
     @Override
     public long receivePacket(Direction side, long quanta, long voltage) {
         if (!acceptsEnergy(side) || quanta <= 0) return 0;
-        var buffer = new com.ic2ceu.icceu.EnergyBuffer(capacity());
-        buffer.restore(energy);
-        buffer.restoreFraction(fraction);
-        long accepted = buffer.changeQuanta(quanta);
-        energy = buffer.stored();
-        fraction = buffer.fraction();
+        long accepted = euStore.changeQuanta(capacity(), energy, fraction, quanta);
+        energy = euStore.stored();
+        fraction = euStore.fraction();
         m_6596_();
         return accepted;
     }
@@ -378,6 +284,7 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
         if (tag.m_128441_("Inventory")) inventory.deserializeNBT(tag.m_128469_("Inventory"));
         readStacks(tag, "Reserved", reserved);
         readStacks(tag, "Pending", pending);
+        bindJob();
     }
 
     @Override
@@ -444,5 +351,56 @@ public final class FortuneEntity extends BlockEntity implements MenuProvider, co
                                                               brachy.modularui.screen.ModularPanel<?> panel) {
         return new brachy.modularui.screen.ModularScreen("loli_labs", panel)
                 .useTheme(com.ic2ceu.icceu.mui.GuiStyle.theme());
+    }
+
+    private final class Slots implements FortuneJob.Inventory {
+
+        public int firstOre() {
+            for (int i = 0; i < 27; i++) if (ore(inventory.getStackInSlot(i))) return i;
+            return -1;
+        }
+
+        public int count(int slot) {
+            return inventory.getStackInSlot(slot).m_41613_();
+        }
+
+        public boolean upgrade(int kind) {
+            return FortuneEntity.this.upgrade(kind);
+        }
+
+        public int moduleMultiplier() {
+            var stack = inventory.getStackInSlot(54);
+            return stack.m_41720_() instanceof FortuneModule module && module.kind == 0 ? module.level : 0;
+        }
+
+        public int fortune() {
+            return FortuneEntity.this.fortune();
+        }
+
+        public boolean outputSpace() {
+            for (int i = 27; i < 54; i++) if (inventory.getStackInSlot(i).m_41619_() ||
+                    inventory.getStackInSlot(i).m_41613_() < inventory.getStackInSlot(i).m_41741_())
+                return true;
+            return false;
+        }
+
+        public boolean afford(long cost) {
+            return energy >= cost;
+        }
+
+        public boolean pay(long cost) {
+            if (!euStore.consume(capacity(), energy, fraction, cost)) return false;
+            energy = euStore.stored();
+            fraction = euStore.fraction();
+            return true;
+        }
+
+        public ItemStack extract(int slot, int count) {
+            return inventory.extractItem(slot, count, false);
+        }
+
+        public ItemStack insertOutput(ItemStack stack) {
+            return FortuneEntity.this.insertOutput(stack);
+        }
     }
 }

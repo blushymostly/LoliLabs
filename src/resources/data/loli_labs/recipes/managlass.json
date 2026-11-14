@@ -32,11 +32,5 @@
   "output": {
     "item": "loli_labs:managlass"
   },
-  "mana": 5000,
-  "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
-    }
-  ]
+  "mana": 5000
 }

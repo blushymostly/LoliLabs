@@ -34,7 +34,7 @@ public enum LabMachineEnergyProvider implements IBlockComponentProvider, IServer
             data.m_128356_("LabStored", machine.energy);
             data.m_128356_("LabCapacity", capacity);
             data.m_128356_("LabRate", machine.enabled ? machine.generation() : 0);
-            if (machine.definition.kind == 2) {
+            if (machine.definition.kindCode() == 2) {
                 data.m_128356_("LabCost", machine.definition.cycleCost());
                 data.m_128405_("LabBatch", machine.definition.batch);
             }
@@ -49,14 +49,14 @@ public enum LabMachineEnergyProvider implements IBlockComponentProvider, IServer
             return;
         }
         if (be instanceof GreenhouseBlockEntity greenhouse) {
-            var core = greenhouse.core();
-            if (core == null) return;
-            long capacity = core.energyCap;
+            var controller = greenhouse.core();
+            if (controller == null) return;
+            long capacity = controller.domain.energyCap;
             if (capacity <= 0) return;
-            data.m_128356_("LabStored", core.energy);
+            data.m_128356_("LabStored", controller.domain.energy);
             data.m_128356_("LabCapacity", capacity);
-            data.m_128405_("LabMana", core.mana);
-            data.m_128405_("LabManaCap", Math.max(1, core.manaCap));
+            data.m_128405_("LabMana", controller.domain.mana);
+            data.m_128405_("LabManaCap", Math.max(1, controller.domain.manaCap));
         }
     }
 

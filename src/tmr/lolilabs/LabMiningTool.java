@@ -1,6 +1,6 @@
 package tmr.lolilabs;
 
-import com.ic2ceu.icceu.ChargeableItem;
+import com.ic2ceu.icceu.api.item.ChargeableItem;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;

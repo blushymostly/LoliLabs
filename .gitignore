@@ -41,3 +41,7 @@
 
 # Wrapper binary must remain trackable
 !gradle/wrapper/gradle-wrapper.jar
+
+# Agent skills local config (not published with the mod)
+/AGENTS.md
+/docs/agents/

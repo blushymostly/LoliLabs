@@ -18,7 +18,7 @@ public final class LabMachineMenu extends AbstractContainerMenu {
     }
 
     public LabMachineMenu(int id, Inventory inventory, LabMachineEntity machine) {
-        this(id, inventory, machine, machine.inventory, machine.data, machine.definition.kind,
+        this(id, inventory, machine, machine.inventory, machine.data, machine.definition.kindCode(),
                 machine.definition.batch);
     }
 

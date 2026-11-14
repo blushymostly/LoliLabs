@@ -18,7 +18,7 @@ public final class LabPanelClient {
     public static void highlight(RenderHighlightEvent.Block event) {
         var mc = Minecraft.m_91087_();
         if (mc.f_91073_ == null || mc.f_91074_ == null) return;
-        if (!(mc.f_91074_.m_21205_().m_41720_() instanceof com.ic2ceu.icceu.MachineTool tool)) return;
+        if (!(mc.f_91074_.m_21205_().m_41720_() instanceof com.ic2ceu.icceu.common.machine.MachineTool tool)) return;
         var hit = event.getTarget();
         var pos = hit.m_82425_();
         if (!(mc.f_91073_.m_7702_(pos) instanceof LabMachineEntity machine)) return;
@@ -27,7 +27,7 @@ public final class LabPanelClient {
         if (!rotate && !power && !sound) return;
         var face = hit.m_82434_();
         var location = hit.m_82450_();
-        var selected = com.ic2ceu.icceu.ToolGrid.side(face, location.f_82479_ - pos.m_123341_(),
+        var selected = com.ic2ceu.icceu.common.ToolGrid.side(face, location.f_82479_ - pos.m_123341_(),
                 location.f_82480_ - pos.m_123342_(), location.f_82481_ - pos.m_123343_());
         var pose = event.getPoseStack();
         var camera = event.getCamera().m_90583_();
@@ -37,22 +37,22 @@ public final class LabPanelClient {
                     pos.m_123343_() - camera.f_82481_);
             var lines = event.getMultiBufferSource().m_6299_(net.minecraft.client.renderer.RenderType.m_110504_());
             for (double edge : new double[] { .25, .75 }) {
-                line(pose, lines, com.ic2ceu.icceu.ToolGrid.point(face, edge, 0, .012),
-                        com.ic2ceu.icceu.ToolGrid.point(face, edge, 1, .012));
-                line(pose, lines, com.ic2ceu.icceu.ToolGrid.point(face, 0, edge, .012),
-                        com.ic2ceu.icceu.ToolGrid.point(face, 1, edge, .012));
+                line(pose, lines, com.ic2ceu.icceu.common.ToolGrid.point(face, edge, 0, .012),
+                        com.ic2ceu.icceu.common.ToolGrid.point(face, edge, 1, .012));
+                line(pose, lines, com.ic2ceu.icceu.common.ToolGrid.point(face, 0, edge, .012),
+                        com.ic2ceu.icceu.common.ToolGrid.point(face, 1, edge, .012));
             }
             for (double u : new double[] { .0125, .3875, .7625 })
                 for (double v : new double[] { .0125, .3875, .7625 }) {
-                    var center = com.ic2ceu.icceu.ToolGrid.point(face, u + .1125, v + .1125, 0);
-                    var side = com.ic2ceu.icceu.ToolGrid.side(face, center.f_82479_, center.f_82480_, center.f_82481_);
-                    if (rotate && side == (machine.definition.kind == 2 ?
+                    var center = com.ic2ceu.icceu.common.ToolGrid.point(face, u + .1125, v + .1125, 0);
+                    var side = com.ic2ceu.icceu.common.ToolGrid.side(face, center.f_82479_, center.f_82480_, center.f_82481_);
+                    if (rotate && side == (machine.definition.kindCode() == 2 ?
                             machine.m_58900_().m_61143_(LabMachineBlock.FACING) : machine.outputSide()))
                         continue;
                     String icon = rotate ? "tool_front_facing_rotation" :
                             power ? (machine.enabled ? "tool_pause" : "tool_start") :
                                     (machine.muted ? "tool_sound" : "tool_mute");
-                    com.ic2ceu.icceu.ToolHighlight.quad(pose, event.getMultiBufferSource(), face,
+                    com.ic2ceu.icceu.client.ToolHighlight.quad(pose, event.getMultiBufferSource(), face,
                             new ResourceLocation("ic2modern", "textures/gui/overlay/" + icon + ".png"), u, v, .225,
                             side == selected ? 255 : 68, 15728880, .015);
                 }

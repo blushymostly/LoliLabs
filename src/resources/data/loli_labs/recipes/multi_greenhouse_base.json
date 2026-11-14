@@ -1,10 +1,10 @@
 {
-  "type": "avaritia:shaped_table",
+  "type": "loliavaritia:shaped_table",
   "tier": 4,
+  "compatible": false,
   "result": {
     "item": "loli_labs:multi_greenhouse_base"
   },
-  "compatible": false,
   "pattern": [
     "AAAAA",
     "BCDEB",
@@ -36,14 +36,6 @@
     }
   },
   "conditions": [
-    {
-      "type": "forge:mod_loaded",
-      "modid": "avaritia"
-    },
-    {
-      "type": "forge:mod_loaded",
-      "modid": "botania"
-    },
     {
       "type": "forge:mod_loaded",
       "modid": "mythicbotany"

@@ -77,17 +77,17 @@ public final class UtilityWorldChecks {
         }
         require(!ForgeRegistries.ITEMS.containsKey(new ResourceLocation("ic2modern:iridium")),
                 "Duplicate iridium remains registered");
-        require(com.ic2ceu.icceu.LegacyItems.replacement("iridium") == item("ic2modern:raw_iridium", 1).m_41720_(),
+        require(com.ic2ceu.icceu.common.data.LegacyItems.replacement("iridium") == item("ic2modern:raw_iridium", 1).m_41720_(),
                 "Old iridium does not migrate");
         require(!ForgeRegistries.BLOCKS.containsKey(new ResourceLocation("ic2modern:copper_ore")) &&
                 !ForgeRegistries.BLOCKS.containsKey(new ResourceLocation("ic2modern:copper_deepslate_ore")),
                 "Duplicate copper ore block remains");
-        require(com.ic2ceu.icceu.LegacyItems.replacement("copper_ore") == item("minecraft:copper_ore", 1).m_41720_(),
+        require(com.ic2ceu.icceu.common.data.LegacyItems.replacement("copper_ore") == item("minecraft:copper_ore", 1).m_41720_(),
                 "Copper item migration failed");
         var recipes = world.m_7465_();
         var rawIridium = item("ic2modern:raw_iridium", 1);
         int iridiumRecipes = 0;
-        for (var recipe : recipes.m_44051_()) if (recipe instanceof com.ic2ceu.icceu.MachineRecipe m &&
+        for (var recipe : recipes.m_44051_()) if (recipe instanceof com.ic2ceu.icceu.common.machine.MachineRecipe m &&
                 m.machine.equals("macerator") && m.ingredient.test(rawIridium)) {
                     iridiumRecipes++;
                     require(m.output().m_41613_() == 1, "Iridium 1:2 duplicate remains");
@@ -267,10 +267,10 @@ public final class UtilityWorldChecks {
         for (int z = -2; z < 0; z++) {
             var p = pos.m_7918_(0, 0, z);
             world.m_46597_(p, block("ic2modern:glass_fibre_cable").m_49966_());
-            var cable = (com.ic2ceu.icceu.CableEntity) world.m_7702_(p);
+            var cable = (com.ic2ceu.icceu.common.energy.CableEntity) world.m_7702_(p);
             cable.setOpen(Direction.NORTH, true);
             cable.setOpen(Direction.SOUTH, true);
-            com.ic2ceu.icceu.CableBlock.refreshAround(world, p);
+            com.ic2ceu.icceu.common.energy.CableBlock.refreshAround(world, p);
         }
         var sourcePos = pos.m_7918_(0, 0, -3);
         world.m_46597_(sourcePos,

@@ -1,22 +1,35 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GEG",
-    "ECE",
-    "GEG"
-  ],
-  "key": {
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "E": {
-      "item": "minecraft:emerald"
-    },
-    "C": {
-      "item": "loli_labs:fortune_module_5"
-    }
-  },
+  "type": "loliavaritia:shaped_table",
+  "tier": 4,
+  "compatible": false,
   "result": {
     "item": "loli_labs:fortune_module_10"
+  },
+  "pattern": [
+    "ABCBA",
+    "BDEDB",
+    "CEFEC",
+    "BDEDB",
+    "ABCBA"
+  ],
+  "key": {
+    "A": {
+      "item": "botania:terrasteel_block"
+    },
+    "B": {
+      "item": "ic2modern:enriched_sunnarium"
+    },
+    "C": {
+      "item": "loli_labs:green_iridescent_crystal_plate"
+    },
+    "D": {
+      "item": "ic2modern:sunnarium_alloy"
+    },
+    "E": {
+      "item": "loli_labs:conductive_chip"
+    },
+    "F": {
+      "item": "loli_labs:fortune_module_5"
+    }
   }
 }

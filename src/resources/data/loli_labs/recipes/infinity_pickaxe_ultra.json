@@ -1,0 +1,66 @@
+{
+  "type": "loliavaritia:shaped_table",
+  "tier": 4,
+  "compatible": false,
+  "result": {
+    "item": "loli_labs:infinity_pickaxe_ultra"
+  },
+  "pattern": [
+    "    A    ",
+    "  BCDEB  ",
+    " BFGHGFB ",
+    " CGIJIGE ",
+    "ADHJKJHDA",
+    " LGIJIGM ",
+    " BFGHGFB ",
+    "  BLDMB  ",
+    "    A    "
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:sister_necromancer_kella_doll"
+    },
+    "B": {
+      "item": "loli_labs:sister_necromancer_bergamma_doll"
+    },
+    "C": {
+      "item": "loli_labs:star_crystal_aer"
+    },
+    "D": {
+      "item": "loli_labs:demon_notes"
+    },
+    "E": {
+      "item": "loli_labs:star_crystal_ignis"
+    },
+    "F": {
+      "item": "loli_labs:galaxy_singularity_multicolor"
+    },
+    "G": {
+      "item": "draconicevolution:chaotic_core"
+    },
+    "H": {
+      "item": "loliavaritia:infinity_ingot"
+    },
+    "I": {
+      "item": "loli_labs:soul_shard"
+    },
+    "J": {
+      "item": "loli_labs:advanced_chaotic_core"
+    },
+    "K": {
+      "item": "loliavaritia:infinity_pickaxe"
+    },
+    "L": {
+      "item": "loli_labs:star_crystal_aqua"
+    },
+    "M": {
+      "item": "loli_labs:star_crystal_praecantatio"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "draconicevolution"
+    }
+  ]
+}

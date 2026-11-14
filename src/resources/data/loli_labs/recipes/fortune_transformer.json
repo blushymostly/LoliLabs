@@ -1,25 +1,31 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GCG",
-    "DHD",
-    "GCG"
-  ],
-  "key": {
-    "G": {
-      "item": "minecraft:gold_block"
-    },
-    "C": {
-      "item": "minecraft:comparator"
-    },
-    "D": {
-      "item": "minecraft:diamond"
-    },
-    "H": {
-      "item": "minecraft:hopper"
-    }
-  },
   "result": {
     "item": "loli_labs:fortune_transformer"
+  },
+  "pattern": [
+    "ABA",
+    "CDC",
+    "EFE"
+  ],
+  "key": {
+    "A": {
+      "item": "ic2modern:reinforced_glass"
+    },
+    "B": {
+      "item": "loli_labs:osmiridium_gear"
+    },
+    "C": {
+      "item": "ic2modern:reinforced_iridium_iron_plate"
+    },
+    "D": {
+      "item": "ic2modern:diamond_drill"
+    },
+    "E": {
+      "item": "minecraft:gold_block"
+    },
+    "F": {
+      "item": "ic2modern:advanced_machine_casing"
+    }
   }
 }

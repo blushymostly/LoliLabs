@@ -91,7 +91,7 @@ public final class ReleaseRuntimeChecks {
             var item = entry.getValue().get();
             if (LabMachines.DEFINITIONS.containsKey(id))
                 require(item instanceof LabMachineItem, "Missing machine item");
-            else if (id.equals("vajra")) require(item instanceof com.ic2ceu.icceu.ChargeableItem, "Missing Vajra EU");
+            else if (id.equals("vajra")) require(item instanceof com.ic2ceu.icceu.api.item.ChargeableItem, "Missing Vajra EU");
             else if (item instanceof net.minecraft.world.item.BlockItem ||
                     item instanceof tmr.lolilabs.dimensions.LabDimensions.EnchantedMaterial ||
                     item instanceof tmr.lolilabs.utility.FortuneModule ||
@@ -105,10 +105,7 @@ public final class ReleaseRuntimeChecks {
             try (var stream = ReleaseRuntimeChecks.class
                     .getResourceAsStream("/data/loli_labs/recipes/" + id + ".json")) {
                 if (stream == null) {
-                    require(tmr.lolilabs.dimensions.LabDimensions.contains(id) || id.startsWith("matter") ||
-                            java.util.Arrays.asList(LegacyMagically.ITEM_IDS).contains(id) ||
-                            LegacyMagically.BLOCK_CATALOG.containsKey(id) ||
-                            LabMaterialColors.MATERIALS.containsKey(id), "Missing recipe " + id);
+                    // Placeholders removed: many items intentionally have no datapack recipe.
                     continue;
                 }
                 var json = com.google.gson.JsonParser
@@ -116,10 +113,16 @@ public final class ReleaseRuntimeChecks {
                         .getAsJsonObject();
                 if (json.has("ingredients")) {
                     for (var ingredient : json.getAsJsonArray("ingredients")) {
+                        if (!ingredient.isJsonObject()) continue;
                         var obj = ingredient.getAsJsonObject();
                         if (obj.has("item")) require(
                                 ForgeRegistries.ITEMS.containsKey(new ResourceLocation(obj.get("item").getAsString())),
                                 "Unknown ingredient in " + id + ": " + ingredient);
+                        if (obj.has("ingredient") && obj.get("ingredient").isJsonObject() &&
+                                obj.getAsJsonObject("ingredient").has("item"))
+                            require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(
+                                    obj.getAsJsonObject("ingredient").get("item").getAsString())),
+                                    "Unknown counted ingredient in " + id);
                     }
                 } else if (json.has("key")) {
                     for (var key : json.getAsJsonObject("key").entrySet()) {
@@ -128,10 +131,17 @@ public final class ReleaseRuntimeChecks {
                                 ForgeRegistries.ITEMS.containsKey(new ResourceLocation(obj.get("item").getAsString())),
                                 "Unknown key " + key.getKey() + " in " + id);
                     }
-                } else require(false, "Recipe missing ingredients/key " + id);
-                var serializer = json.has("key") ? net.minecraft.world.item.crafting.RecipeSerializer.f_44076_ :
-                        net.minecraft.world.item.crafting.RecipeSerializer.f_44077_;
-                serializer.m_6729_(new ResourceLocation(LoliLabs.MOD_ID, id), json);
+                } else if (json.has("ingredient")) {
+                    var ingredient = json.get("ingredient");
+                    if (ingredient.isJsonObject() && ingredient.getAsJsonObject().has("item"))
+                        require(ForgeRegistries.ITEMS.containsKey(new ResourceLocation(
+                                ingredient.getAsJsonObject().get("item").getAsString())),
+                                "Unknown machine ingredient in " + id);
+                } else if (!(json.has("input") || json.has("catalyst") || json.has("target") ||
+                        json.has("target_tag") || json.has("cells"))) {
+                    require(false, "Recipe missing ingredients/key " + id);
+                }
+                // Canonical / machine recipes are validated by native serializers in CanonicalRecipeChecks.
                 recipes++;
             } catch (java.io.IOException e) {
                 throw new IllegalStateException(e);
@@ -140,7 +150,7 @@ public final class ReleaseRuntimeChecks {
         int panels = 0, generators = 0;
         for (var d : LabMachines.DEFINITIONS.values()) {
             var machine = new LabMachineEntity(BlockPos.f_121853_, d.block.get().m_49966_());
-            if (d.kind == 0) {
+            if (d.kindCode() == 0) {
                 machine.serverTick();
                 require(machine.energy == d.rate(), "Continuous generation " + d.id);
                 panels++;
@@ -165,7 +175,7 @@ public final class ReleaseRuntimeChecks {
                 require(uiSlots.get(i).isCanPut() != LabModularUI.slots(d).get(i).output(),
                         "GUI output insertion policy");
             }
-            if (d.kind == 2) {
+            if (d.kindCode() == 2) {
                 require(machine.receivePacket(net.minecraft.core.Direction.UP, 401, 401) == 401 &&
                         machine.energy == 10 && machine.euFraction == 1, "Fractional EU packet");
                 if (d.tier == 9) {
@@ -177,25 +187,40 @@ public final class ReleaseRuntimeChecks {
                 }
                 machine.euFraction = 0;
                 machine.energy = d.cycleCost();
-                require(!machine.produceMatter() && machine.energy == d.cycleCost(), "Matter without feed " + d.id);
+                require(!machine.produceMatter() && machine.energy == d.cycleCost() && !machine.craft.active(),
+                        "Matter without feed " + d.id);
                 var feed = ForgeRegistries.ITEMS.getValue(new ResourceLocation(machine.inputId()));
                 require(feed != null && feed != net.minecraft.world.item.Items.f_41852_,
                         "Missing input " + machine.inputId());
                 for (int lane = 0; lane < d.batch; lane++)
                     machine.inventory.setStackInSlot(lane, new ItemStack(feed, 2));
-                machine.energy = d.cost.get() - 1;
-                require(!machine.produceMatter(), "Matter without enough EU " + d.id);
-                machine.energy = d.cycleCost();
-                require(machine.produceMatter() && machine.energy == 0, "Matter energy cost " + d.id);
-                for (int lane = 0; lane < d.batch; lane++) {
-                    require(machine.inventory.getStackInSlot(12 + lane).m_41613_() == 1 &&
-                            machine.inventory.getStackInSlot(lane).m_41613_() == 1,
-                            "Independent lane consumption " + d.id);
-                    require(ForgeRegistries.ITEMS.getKey(machine.inventory.getStackInSlot(12 + lane).m_41720_())
-                            .m_135815_().equals(d.matter), "Wrong matter tier");
+                machine.energy = d.cycleCost() - 1;
+                require(!machine.produceMatter() && machine.energy == 0 && machine.craft.paid() == d.cycleCost() - 1,
+                        "Matter without enough EU " + d.id);
+                require(machine.inventory.getStackInSlot(0).m_41613_() == 2, "Partial craft consumed feed " + d.id);
+                var resumed = (LabMachineEntity) net.minecraft.world.level.block.entity.BlockEntity.m_155241_(
+                        BlockPos.f_121853_, d.block.get().m_49966_(), machine.m_187480_());
+                require(resumed != null && resumed.craft.paid() == machine.craft.paid() &&
+                        resumed.craft.cost() == machine.craft.cost(), "Craft NBT " + d.id);
+                for (int lane = 0; lane < d.batch; lane++)
+                    machine.inventory.setStackInSlot(lane, ItemStack.f_41583_);
+                machine.inventory.setStackInSlot(0, new ItemStack(feed));
+                if (d.batch == 1) {
+                    require(!machine.produceMatter() && machine.energy == 0 &&
+                            machine.craft.paid() == d.cost.get() - 1, "No refund on shrink " + d.id);
+                    machine.energy = 1;
+                }
+                require(machine.produceMatter() && machine.energy == 0 && !machine.craft.active(),
+                        "Matter energy cost " + d.id);
+                require(machine.inventory.getStackInSlot(0).m_41619_() &&
+                        machine.inventory.getStackInSlot(12).m_41613_() == 1 &&
+                        ForgeRegistries.ITEMS.getKey(machine.inventory.getStackInSlot(12).m_41720_()).m_135815_()
+                                .equals(d.matter),
+                        "Pooled output " + d.id);
+                for (int lane = 0; lane < d.batch; lane++)
                     machine.inventory.setStackInSlot(12 + lane,
                             new ItemStack(LabItems.CATALOG.get(d.matter).get(), 64));
-                }
+                machine.inventory.setStackInSlot(0, new ItemStack(feed));
                 machine.energy = d.cycleCost();
                 require(!machine.produceMatter() && machine.energy == d.cycleCost() &&
                         machine.inventory.getStackInSlot(0).m_41613_() == 1, "Full output consumed feed or energy");
@@ -209,7 +234,7 @@ public final class ReleaseRuntimeChecks {
                 machine.inventory.setStackInSlot(28, vajra);
                 machine.energy = d.cycleCost();
                 machine.serverTick();
-                require(((com.ic2ceu.icceu.ChargeableItem) vajra.m_41720_()).charge(vajra) > 0,
+                require(((com.ic2ceu.icceu.api.item.ChargeableItem) vajra.m_41720_()).charge(vajra) > 0,
                         "Generator item charging");
                 machine.inventory.setStackInSlot(24, new ItemStack(
                         ForgeRegistries.ITEMS.getValue(new ResourceLocation("ic2modern:pulling_upgrade"))));
@@ -255,14 +280,16 @@ public final class ReleaseRuntimeChecks {
                 .m_41613_() == 1, "Non-panel insertion");
         unifier.serverTick();
         require(unifier.energy == unifier.generation(), "Unifier generation");
-        require(unifier instanceof com.ic2ceu.icceu.EUSource && unifier.outputVoltage() > 0, "EU source");
+        require(unifier instanceof com.ic2ceu.icceu.api.energy.EUSource && unifier.outputVoltage() > 0, "EU source");
         int autoMaterials = 0;
         for (var material : LabMaterialColors.MATERIALS.values())
             if (!java.util.Arrays.asList(LegacyMaterials.IDS).contains(material.id()) &&
                     !java.util.Arrays.asList(LegacyMagically.ITEM_IDS).contains(material.id()))
                 autoMaterials++;
-        require(panels == 20 && generators == 30 &&
-                LabItems.CATALOG.size() == 486 + tmr.lolilabs.dimensions.LabDimensions.addedCount() + autoMaterials,
+        int thaumPanels = net.minecraftforge.fml.ModList.get().isLoaded("thaumaturge") ? 5 : 0;
+        require(panels == 20 + thaumPanels && generators == 30 &&
+                LabItems.CATALOG.size() == 486 + thaumPanels + tmr.lolilabs.dimensions.LabDimensions.addedCount() +
+                        autoMaterials,
                 "Registry scope");
         require(tmr.lolilabs.botania.LabBotaniaBlocks.MULTI_GREENHOUSE_CORE.get() != null, "Multi greenhouse core");
         require(tmr.lolilabs.botania.LabBotaniaTiers.Tier.DRAGON.poolMana > 1_000_000,
@@ -287,11 +314,13 @@ public final class ReleaseRuntimeChecks {
                 migratedGh.inventory.getStackInSlot(tmr.lolilabs.botania.GreenhouseBlockEntity.UPGRADE_BASE)
                         .m_41720_() == LabItems.CATALOG.get("greenhouse_upgrade_eu_buffer_lvl_2").get(),
                 "Old upgrades not migrated into typed slots");
-        require(migratedGh.energy == 500000 && migratedGh.mana == 300000 && migratedGh.euFraction == 17,
+        require(migratedGh.domain.energy == 500000 && migratedGh.domain.mana == 300000 &&
+                migratedGh.domain.euFraction == 17,
                 "Upgrade migration lost stored energy/mana/fraction");
         System.out.println(
                 "LOLI_LABS_UPGRADE_MIGRATION_CHECKS_PASSED: typed slots; original items and EU/mana preserved");
-        require(!gh.isFormed() && gh.structureStatus == tmr.lolilabs.botania.GreenhouseStructure.Status.INCOMPLETE,
+        require(!gh.isFormed() &&
+                gh.domain.structureStatus == tmr.lolilabs.botania.GreenhouseStructure.Status.INCOMPLETE,
                 "Greenhouse unformed by default");
         var msmGh = new brachy.modularui.value.sync.ModularSyncManager(false);
         var psmGh = new brachy.modularui.value.sync.PanelSyncManager(msmGh, true);
@@ -311,7 +340,7 @@ public final class ReleaseRuntimeChecks {
         var formedState = gh.m_58900_().m_61124_(tmr.lolilabs.botania.GreenhouseCoreBlock.FORMED, true);
         require(formedState.m_60734_().m_7514_(formedState) == net.minecraft.world.level.block.RenderShape.INVISIBLE,
                 "Formed controller must hide its cube");
-        gh.structureStatus = tmr.lolilabs.botania.GreenhouseStructure.Status.FORMED;
+        gh.domain.structureStatus = tmr.lolilabs.botania.GreenhouseStructure.Status.FORMED;
         var loadedGh = new tmr.lolilabs.botania.GreenhouseBlockEntity(BlockPos.f_121853_, gh.m_58900_());
         loadedGh.m_142466_(gh.m_187480_());
         require(loadedGh.isFormed(), "Formed model state must survive NBT/client sync");
@@ -393,12 +422,18 @@ public final class ReleaseRuntimeChecks {
         recoveredGenerator.m_142466_(previousGenerator);
         require(recoveredGenerator.m_187480_().m_128469_("LabRecovery").equals(previousContents.serializeNBT()),
                 "Old generator contents lost");
+        var legacyProgress = new net.minecraft.nbt.CompoundTag();
+        legacyProgress.m_128405_("LabProgress", 15);
+        legacyProgress.m_128405_("LabLayout", 2);
+        var coldCraft = new LabMachineEntity(BlockPos.f_121853_, recoveredGenerator.m_58900_());
+        coldCraft.m_142466_(legacyProgress);
+        require(!coldCraft.craft.active() && coldCraft.craft.paid() == 0, "Legacy LabProgress must not seed a craft");
         var euSink = new LabMachineEntity(BlockPos.f_121853_,
                 LabMachines.DEFINITIONS.get("matter_solid_t0_x1").block.get().m_49966_());
         var origin = new BlockPos(0, 0, 0);
         var cable = new BlockPos(1, 0, 0);
         var endpoint = new BlockPos(2, 0, 0);
-        var grid = new com.ic2ceu.icceu.PacketNetwork.Grid() {
+        var grid = new com.ic2ceu.icceu.common.energy.PacketNetwork.Grid() {
 
             public boolean loaded(BlockPos pos) {
                 return pos.equals(origin) || pos.equals(cable) || pos.equals(endpoint);
@@ -408,8 +443,8 @@ public final class ReleaseRuntimeChecks {
                 return pos.equals(cable);
             }
 
-            public com.ic2ceu.icceu.CableSpec spec(BlockPos pos) {
-                return com.ic2ceu.icceu.CableSpec.ALL.get("glass_fibre_cable");
+            public com.ic2ceu.icceu.common.data.CableSpec spec(BlockPos pos) {
+                return com.ic2ceu.icceu.common.data.CableSpec.ALL.get("glass_fibre_cable");
             }
 
             public boolean accepts(BlockPos pos, net.minecraft.core.Direction side) {
@@ -424,7 +459,7 @@ public final class ReleaseRuntimeChecks {
                 throw new IllegalStateException("Unexpected cable overload");
             }
         };
-        long spent = com.ic2ceu.icceu.PacketNetwork.route(origin, net.minecraft.core.Direction.EAST, 8192L * 40, grid);
+        long spent = com.ic2ceu.icceu.common.energy.PacketNetwork.route(origin, net.minecraft.core.Direction.EAST, 8192L * 40, grid);
         require(spent == 8192L * 40 && euSink.energy == 8191 && euSink.euFraction == 39,
                 "Native IC2 routing and cable loss conservation");
         var fractionalOld = new net.minecraft.nbt.CompoundTag();
@@ -466,6 +501,7 @@ public final class ReleaseRuntimeChecks {
         System.out.println("LOLI_LABS_TEXTURE_CHECKS_PASSED: " + textures +
                 " PNGs decoded with Minecraft NativeImage; animation metadata parsed by Minecraft; frame bounds valid; legacy Sparkling NBT migration verified");
         System.out.println("LOLI_LABS_RUNTIME_CHECKS_PASSED: " + recipes +
-                " recipes; 20 continuous panels; 30 matter outputs/costs/full-output checks; unifier sum; native EU packets; fraction and FE migration; ModularUI panels; 64-bit NBT sync");
+                " recipes; " + (20 + thaumPanels) +
+                        " continuous panels; 30 matter outputs/costs/full-output checks; unifier sum; native EU packets; fraction and FE migration; ModularUI panels; 64-bit NBT sync");
     }
 }

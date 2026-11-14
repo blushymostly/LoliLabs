@@ -19,7 +19,7 @@ public final class LabModularUI {
 
     public static java.util.List<SlotLayout> slots(LabMachines.Definition d) {
         var result = new java.util.ArrayList<SlotLayout>();
-        if (d.kind == 2) {
+        if (d.kindCode() == 2) {
             for (int i = 0; i < d.batch * 2; i++) {
                 int lane = i % d.batch;
                 boolean out = i >= d.batch;
@@ -28,8 +28,9 @@ public final class LabModularUI {
                         (d.batch == 1 ? 55 : d.batch == 6 ? 46 : 28) + (lane / (d.batch == 1 ? 1 : 3)) * 18, out));
             }
             for (int i = 0; i < 5; i++) result.add(new SlotLayout(24 + i, 170, 28 + i * 18, false));
-        } else for (int i = 0; i < (d.kind == 0 ? 6 : 36); i++) result.add(new SlotLayout(i,
-                d.kind == 0 ? 53 + i * 18 : 26 + (i % 9) * 18, d.kind == 0 ? 93 : 28 + (i / 9) * 18, false));
+        } else for (int i = 0; i < (d.kindCode() == 0 ? 6 : 36); i++) result.add(new SlotLayout(i,
+                d.kindCode() == 0 ? 53 + i * 18 : 26 + (i % 9) * 18, d.kindCode() == 0 ? 93 : 28 + (i / 9) * 18,
+                false));
         return java.util.List.copyOf(result);
     }
 
@@ -61,7 +62,7 @@ public final class LabModularUI {
 
     public static ModularPanel<?> build(LabMachineEntity m, PanelSyncManager sync, UISettings settings) {
         settings.useTheme(com.ic2ceu.icceu.mui.GuiStyle.theme());
-        int kind = m.definition.kind, height = kind == 0 ? 212 : kind == 1 ? 256 : 216;
+        int kind = m.definition.kindCode(), height = kind == 0 ? 212 : kind == 1 ? 256 : 216;
         var p = ModularPanel.defaultPanel("loli_labs_" + m.definition.id, 212, height)
                 .background(brachy.modularui.api.drawable.IDrawable.NONE);
         var solar = art("solar");
@@ -77,7 +78,7 @@ public final class LabModularUI {
         var eu = new LongSyncValue(() -> m.energy);
         var capacity = new LongSyncValue(m::capacity);
         var rate = new LongSyncValue(() -> m.enabled ? m.generation() : 0);
-        var cost = new LongSyncValue(() -> m.definition.kind == 2 ? m.definition.cycleCost() : 0);
+        var cost = new LongSyncValue(() -> m.definition.kindCode() == 2 ? m.definition.cycleCost() : 0);
         var output = new LongSyncValue(() -> m.outputVoltage() * m.outputPackets());
         sync.syncValue("packet_output", output);
         sync.syncValue("energy", eu);

@@ -1,5 +1,9 @@
 package tmr.lolilabs;
 
+import tmr.lolilabs.machine.MachineBehaviour;
+
+import com.ic2ceu.icceu.api.machine.EnergyPaidCraft;
+
 import net.minecraft.core.*;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -17,7 +21,7 @@ import net.minecraftforge.items.*;
 import net.minecraftforge.registries.ForgeRegistries;
 
 public final class LabMachineEntity extends BlockEntity
-                                    implements com.ic2ceu.icceu.EUSource, com.ic2ceu.icceu.EUReceiver, MenuProvider,
+                                    implements com.ic2ceu.icceu.api.energy.EUSource, com.ic2ceu.icceu.api.energy.EUReceiver, MenuProvider,
                                     brachy.modularui.api.IUIHolder<brachy.modularui.factory.PosGuiData> {
 
     public long energy;
@@ -25,6 +29,9 @@ public final class LabMachineEntity extends BlockEntity
     public boolean enabled = true, muted;
     private ItemStackHandler recovery = new ItemStackHandler(0);
     public final LabMachines.Definition definition;
+    public final MachineBehaviour behaviour;
+    /** One craft for the whole machine. Matter pays this; generators leave it idle. */
+    public final EnergyPaidCraft craft = new EnergyPaidCraft();
     public final ItemStackHandler inventory = new ItemStackHandler(36) {
 
         @Override
@@ -39,16 +46,14 @@ public final class LabMachineEntity extends BlockEntity
 
         @Override
         public int getSlotLimit(int slot) {
-            return definition.kind == 2 && slot >= 24 ? 1 : 64;
+            return behaviour.slotLimit(slot);
         }
     };
-    private final com.ic2ceu.icceu.EnergyBuffer eu = new com.ic2ceu.icceu.EnergyBuffer(1);
+    private final tmr.lolilabs.eu.ForeignEuStore euStore = new tmr.lolilabs.eu.ForeignEuStore();
     public int euFraction;
 
-    private void prepareEU() {
-        eu.resize(capacity());
-        eu.restore(energy);
-        eu.restoreFraction(euFraction);
+    public void prepareEU() {
+        euStore.prepare(capacity(), energy, euFraction);
     }
 
     public Level euLevel() {
@@ -59,12 +64,12 @@ public final class LabMachineEntity extends BlockEntity
         return f_58858_;
     }
 
-    public com.ic2ceu.icceu.EnergyBuffer euBuffer() {
-        return eu;
+    public com.ic2ceu.icceu.api.energy.EnergyBuffer euBuffer() {
+        return euStore.buffer();
     }
 
     public long outputVoltage() {
-        return definition.kind == 2 ? 0 : definition.voltage.get();
+        return behaviour.outputVoltage(this);
     }
 
     public int outputPackets() {
@@ -76,27 +81,27 @@ public final class LabMachineEntity extends BlockEntity
     }
 
     public boolean emitsEnergy(Direction side) {
-        return enabled && definition.kind != 2 && side != Direction.UP;
+        return behaviour.emitsEnergy(this, side);
     }
 
     public boolean acceptsEnergy(Direction side) {
-        return enabled && definition.kind == 2 && energy < capacity();
+        return behaviour.acceptsEnergy(this, side);
     }
 
     public boolean connectsEU(Direction side) {
-        return definition.kind == 2 || side != Direction.UP;
+        return behaviour.connectsEU(this, side);
     }
 
     public boolean workingLight() {
-        return definition.kind == 0 ? enabled : definition.kind == 1 && enabled && generation() > 0;
+        return behaviour.workingLight(this);
     }
 
     public void syncSettings() {
         m_6596_();
-        if (f_58857_ != null) {
+        if (f_58857_ != null && behaviour.tracksActive()) {
             var state = m_58900_();
             boolean lit = workingLight();
-            if (definition.kind <= 1 && state.m_61143_(LabMachineBlock.ACTIVE) != lit)
+            if (state.m_61143_(LabMachineBlock.ACTIVE) != lit)
                 state = state.m_61124_(LabMachineBlock.ACTIVE, lit);
             f_58857_.m_7731_(f_58858_, state, 3);
         }
@@ -113,25 +118,20 @@ public final class LabMachineEntity extends BlockEntity
     }
 
     public void euChanged() {
-        energy = eu.stored();
-        euFraction = eu.fraction();
+        energy = euStore.stored();
+        euFraction = euStore.fraction();
         m_6596_();
     }
 
     public long receivePacket(Direction side, long quanta, long voltage) {
         if (!acceptsEnergy(side) || quanta <= 0) return 0;
-        prepareEU();
-        long accepted = eu.changeQuanta(quanta);
+        long accepted = euStore.changeQuanta(capacity(), energy, euFraction, quanta);
         euChanged();
         return accepted;
     }
 
     private IItemHandler accessibleInventory() {
-        return definition.kind == 2 ?
-                new net.minecraftforge.items.wrapper.CombinedInvWrapper(
-                        new net.minecraftforge.items.wrapper.RangedWrapper(inventory, 0, definition.batch),
-                        new net.minecraftforge.items.wrapper.RangedWrapper(inventory, 12, 12 + definition.batch)) :
-                new net.minecraftforge.items.wrapper.RangedWrapper(inventory, 0, definition.kind == 0 ? 6 : 36);
+        return behaviour.accessibleInventory(this);
     }
 
     private LazyOptional<IItemHandler> itemCap = LazyOptional.of(this::accessibleInventory);
@@ -143,13 +143,13 @@ public final class LabMachineEntity extends BlockEntity
                     case 0 -> energy;
                     case 1 -> capacity();
                     case 2 -> generation();
-                    default -> definition.kind == 2 ? definition.cycleCost() : 0;
+                    default -> behaviour.displayCost(LabMachineEntity.this);
                 };
                 return (int) (value >>> (16 * (index % 4))) & 65535;
             }
             return switch (index) {
-                case 16 -> progress;
-                case 17 -> definition.kind;
+                case 16 -> craft.progress(MachineBehaviour.UI_PROGRESS_SCALE);
+                case 17 -> definition.kindCode();
                 case 19 -> definition.tier;
                 default -> definition.batch;
             };
@@ -165,6 +165,7 @@ public final class LabMachineEntity extends BlockEntity
     public LabMachineEntity(BlockPos pos, BlockState state) {
         super(LabMachines.ENTITY.get(), pos, state);
         definition = ((LabMachineBlock) state.m_60734_()).definition;
+        behaviour = definition.createBehaviour();
     }
 
     public static final String[] MATTER_CHAIN = { "matter", "matter_loose_blue", "matter_loose_pink",
@@ -179,26 +180,17 @@ public final class LabMachineEntity extends BlockEntity
         return !stack.m_41619_() && inputId().equals(ForgeRegistries.ITEMS.getKey(stack.m_41720_()).toString());
     }
 
-    private static boolean chargeable(ItemStack stack) {
-        return stack.m_41720_() instanceof com.ic2ceu.icceu.ChargeableItem;
-    }
-
     public boolean validSlot(int slot, ItemStack stack) {
-        if (definition.kind != 2) return slot < (definition.kind == 0 ? 6 : 27) && accepts(stack);
-        if (slot < definition.batch) return isFeed(stack);
-        if (slot >= 24 && slot < 28) return stack.m_41720_() instanceof com.ic2ceu.icceu.UpgradeItem u &&
-                (u.kind.equals("pulling") || u.kind.equals("ejector"));
-        return slot == 28 && chargeable(stack);
+        return behaviour.validSlot(this, slot, stack);
     }
 
     public boolean accepts(ItemStack stack) {
-        return definition.kind == 2 ? isFeed(stack) || validSlot(24, stack) || chargeable(stack) :
-                definition.kind == 1 ? LabMachines.panel(stack) != null : chargeable(stack);
+        return behaviour.accepts(this, stack);
     }
 
     public boolean hasUpgrade(String id) {
         for (int i = 24; i < 28; i++)
-            if (inventory.getStackInSlot(i).m_41720_() instanceof com.ic2ceu.icceu.UpgradeItem u &&
+            if (inventory.getStackInSlot(i).m_41720_() instanceof com.ic2ceu.icceu.common.item.UpgradeItem u &&
                     u.kind.equals(id.equals("item_import_upgrade") ? "pulling" : "ejector"))
                 return true;
         return false;
@@ -207,30 +199,21 @@ public final class LabMachineEntity extends BlockEntity
     private boolean upgradeSide(String id, Direction side) {
         for (int i = 24; i < 28; i++) {
             var stack = inventory.getStackInSlot(i);
-            if (stack.m_41720_() instanceof com.ic2ceu.icceu.UpgradeItem u &&
+            if (stack.m_41720_() instanceof com.ic2ceu.icceu.common.item.UpgradeItem u &&
                     u.kind.equals(id.equals("item_import_upgrade") ? "pulling" : "ejector")) {
-                int direction = com.ic2ceu.icceu.UpgradeItem.direction(stack);
-                if (direction == 0 || com.ic2ceu.icceu.UpgradeItem.SIDES[direction - 1] == side) return true;
+                int direction = com.ic2ceu.icceu.common.item.UpgradeItem.direction(stack);
+                if (direction == 0 || com.ic2ceu.icceu.common.item.UpgradeItem.SIDES[direction - 1] == side) return true;
             }
         }
         return false;
     }
 
     public long generation() {
-        if (definition.kind == 0) return definition.rate();
-        if (definition.kind != 1) return 0;
-        long sum = 0;
-        for (int i = 0; i < inventory.getSlots(); i++) {
-            var stack = inventory.getStackInSlot(i);
-            var d = LabMachines.panel(stack);
-            if (d != null) sum = LabMachines.addSafe(sum, Math.multiplyExact(d.rate(), stack.m_41613_()));
-        }
-        return sum;
+        return behaviour.generation(this);
     }
 
     public long capacity() {
-        return definition.kind == 2 ? definition.cycleCost() * 64 :
-                Math.max(1_000_000, Math.min((Long.MAX_VALUE / 40) / 15625, generation()) * 15625);
+        return behaviour.capacity(this);
     }
 
     public static void tick(Level level, BlockPos pos, BlockState state, LabMachineEntity machine) {
@@ -239,62 +222,23 @@ public final class LabMachineEntity extends BlockEntity
 
     public void serverTick() {
         energy = Math.min(Math.max(0, energy), capacity());
-        if (definition.kind <= 1 && f_58857_ != null) {
-            var state = m_58900_();
-            boolean lit = workingLight();
-            if (state.m_61143_(LabMachineBlock.ACTIVE) != lit)
-                f_58857_.m_7731_(f_58858_, state.m_61124_(LabMachineBlock.ACTIVE, lit), 3);
-        }
-        if (!enabled) return;
-        if (definition.kind == 2) {
-            if (hasUpgrade("item_import_upgrade")) importFeed();
-            if (++progress >= 20) {
-                progress = 0;
-                produceMatter();
-            }
-            chargeItem(28);
-        } else {
-            energy = Math.min(capacity(), LabMachines.addSafe(energy, generation()));
-            for (int i = 0; i < (definition.kind == 0 ? 6 : 27) && energy > 0; i++) chargeItem(i);
-            prepareEU();
-            com.ic2ceu.icceu.EUNetwork.distribute(this);
-        }
-        if (definition.kind == 2 && hasUpgrade("item_export_upgrade")) exportMatter();
+        behaviour.serverTick(this);
         m_6596_();
     }
 
     public boolean produceMatter() {
-        long unitCost = definition.cost.get();
-        boolean changed = false;
-        var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(LoliLabs.MOD_ID, definition.matter));
-        for (int lane = 0; lane < definition.batch; lane++) {
-            var input = inventory.getStackInSlot(lane);
-            var output = inventory.getStackInSlot(12 + lane);
-            if (!isFeed(input) || energy < unitCost ||
-                    !output.m_41619_() && (output.m_41720_() != item || output.m_41613_() >= output.m_41741_()))
-                continue;
-            if (output.m_41619_()) inventory.setStackInSlot(12 + lane, new ItemStack(item));
-            else {
-                output.m_41769_(1);
-                inventory.setStackInSlot(12 + lane, output);
-            }
-            inventory.extractItem(lane, 1, false);
-            energy -= unitCost;
-            changed = true;
-        }
-        if (changed) m_6596_();
-        return changed;
+        return behaviour.produce(this);
     }
 
-    private void chargeItem(int slot) {
+    public void chargeItem(int slot) {
         var stack = inventory.getStackInSlot(slot);
-        if (stack.m_41720_() instanceof com.ic2ceu.icceu.ChargeableItem item) {
+        if (stack.m_41720_() instanceof com.ic2ceu.icceu.api.item.ChargeableItem item) {
             long charged = item.charge(stack, Math.min(item.transferLimit(), energy));
             energy -= charged;
         }
     }
 
-    private void importFeed() {
+    public void importFeed() {
         if (f_58857_ == null) return;
         var input = new net.minecraftforge.items.wrapper.RangedWrapper(inventory, 0, definition.batch);
         for (Direction side : Direction.values()) {
@@ -322,7 +266,7 @@ public final class LabMachineEntity extends BlockEntity
         }
     }
 
-    private void exportMatter() {
+    public void exportMatter() {
         if (f_58857_ == null) return;
         for (Direction side : Direction.values()) {
             if (!upgradeSide("item_export_upgrade", side)) continue;
@@ -368,9 +312,11 @@ public final class LabMachineEntity extends BlockEntity
             energy /= 4;
         } else euFraction = Math.floorMod(tag.m_128451_("LabEUFraction"), 40);
         progress = Math.max(0, Math.min(19, tag.m_128451_("LabProgress")));
+        // Legacy LabProgress is the old 20-tick counter. Craft cold-starts unless LabCraft is present.
+        if (tag.m_128425_("LabCraft", 10)) craft.load(tag.m_128469_("LabCraft"));
         if (tag.m_128425_("LabRecovery", 10)) recovery.deserializeNBT(tag.m_128469_("LabRecovery"));
         if (tag.m_128425_("LabInventory", 10)) {
-            if (definition.kind == 2 && tag.m_128451_("LabLayout") < 2)
+            if (definition instanceof LabMachines.MatterSolidDef && tag.m_128451_("LabLayout") < 2)
                 recovery.deserializeNBT(tag.m_128469_("LabInventory"));
             else {
                 var saved = tag.m_128469_("LabInventory").m_6426_();
@@ -389,6 +335,9 @@ public final class LabMachineEntity extends BlockEntity
         tag.m_128405_("LabEnergyVersion", 2);
         tag.m_128405_("LabEUFraction", euFraction);
         tag.m_128405_("LabProgress", progress);
+        var craftTag = new CompoundTag();
+        craft.save(craftTag);
+        tag.m_128365_("LabCraft", craftTag);
         tag.m_128405_("LabLayout", 2);
         tag.m_128365_("LabInventory", inventory.serializeNBT());
         tag.m_128365_("LabRecovery", recovery.serializeNBT());
@@ -418,14 +367,7 @@ public final class LabMachineEntity extends BlockEntity
     }
 
     public void beforeOpen(Player player) {
-        // Retain old 27-slot NBT until its owner opens the panel, then return surplus.
-        if (definition.kind == 0) for (int i = 6; i < inventory.getSlots(); i++) {
-            var stack = inventory.getStackInSlot(i);
-            if (!stack.m_41619_()) {
-                inventory.setStackInSlot(i, ItemStack.f_41583_);
-                ItemHandlerHelper.giveItemToPlayer(player, stack);
-            }
-        }
+        behaviour.beforeOpen(this, player);
         for (int i = 0; i < recovery.getSlots(); i++) {
             var stack = recovery.getStackInSlot(i);
             if (!stack.m_41619_()) {

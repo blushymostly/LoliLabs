@@ -2,6 +2,7 @@ package tmr.lolilabs.jade;
 
 import tmr.lolilabs.LabMachineEntity;
 import tmr.lolilabs.LoliLabs;
+import tmr.lolilabs.machine.MachineBehaviour;
 import tmr.lolilabs.utility.FortuneEntity;
 import tmr.lolilabs.utility.LabUtility;
 
@@ -26,15 +27,15 @@ public enum LabMachineWorkableProvider implements IBlockComponentProvider, IServ
     INSTANCE;
 
     private static final ResourceLocation UID = new ResourceLocation(LoliLabs.MOD_ID, "workable");
-    private static final int MATTER_CYCLE = 20;
 
     @Override
     public void appendServerData(CompoundTag data, BlockAccessor accessor) {
         var be = accessor.getBlockEntity();
-        if (be instanceof LabMachineEntity machine && machine.definition.kind == 2) {
-            data.m_128405_("LabProgress", Math.max(0, machine.progress));
-            data.m_128405_("LabDuration", MATTER_CYCLE);
-            data.m_128379_("LabActive", machine.enabled && machine.progress > 0);
+        if (be instanceof LabMachineEntity machine && machine.definition.kindCode() == 2) {
+            int scale = MachineBehaviour.UI_PROGRESS_SCALE;
+            data.m_128405_("LabProgress", machine.craft.progress(scale));
+            data.m_128405_("LabDuration", scale);
+            data.m_128379_("LabActive", machine.enabled && machine.craft.active());
             var item = ForgeRegistries.ITEMS.getValue(new ResourceLocation(LoliLabs.MOD_ID, machine.definition.matter));
             if (item != null && item != Items.f_41852_) {
                 data.m_128365_("LabOutput", new ItemStack(item).m_41739_(new CompoundTag()));

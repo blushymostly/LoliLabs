@@ -1,24 +1,16 @@
 {
-  "type": "minecraft:crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "loli_labs:osmiridium_ingot"
-    },
-    {
-      "item": "loli_labs:osmiridium_ingot"
-    },
-    {
-      "item": "loli_labs:osmiridium_ingot"
-    },
-    {
-      "item": "loli_labs:osmiridium_ingot"
-    },
-    {
-      "item": "ic2modern:electronic_circuit"
-    }
-  ],
+  "type": "minecraft:crafting_shaped",
   "result": {
-    "item": "loli_labs:osmiridium_gear",
-    "count": 1
+    "item": "loli_labs:osmiridium_gear"
+  },
+  "pattern": [
+    " A ",
+    "AAA",
+    " A "
+  ],
+  "key": {
+    "A": {
+      "item": "loli_labs:osmiridium_ingot"
+    }
   }
 }

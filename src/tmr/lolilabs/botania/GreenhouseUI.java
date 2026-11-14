@@ -57,14 +57,14 @@ public final class GreenhouseUI {
                 .decoration());
         panel.child(new GuiDecoration().name("magically_logo").pos(72, -14).size(98, 12)
                 .background(common.getSubArea(0, 61 / 256F, 98 / 256F, 73 / 256F)).decoration());
-        var enabled = new BooleanSyncValue(() -> be.enabled, v -> {
-            be.enabled = v;
+        var enabled = new BooleanSyncValue(() -> be.domain.enabled, v -> {
+            be.domain.enabled = v;
             be.syncSettings();
         }).allowC2S();
-        var mana = new IntSyncValue(() -> be.mana);
-        var manaCap = new IntSyncValue(() -> be.manaCap);
-        var energy = new LongSyncValue(() -> be.energy);
-        var energyCap = new LongSyncValue(() -> be.energyCap);
+        var mana = new IntSyncValue(() -> be.domain.mana);
+        var manaCap = new IntSyncValue(() -> be.domain.manaCap);
+        var energy = new LongSyncValue(() -> be.domain.energy);
+        var energyCap = new LongSyncValue(() -> be.domain.energyCap);
         sync.syncValue("enabled", enabled);
         sync.syncValue("mana", mana);
         sync.syncValue("manaCap", manaCap);
@@ -75,7 +75,7 @@ public final class GreenhouseUI {
         var activationTimes = new LongSyncValue[4];
         for (int i = 0; i < 4; i++) {
             final int slot = i;
-            activationTimes[i] = new LongSyncValue(() -> be.upgradeInstalledAt[slot]);
+            activationTimes[i] = new LongSyncValue(() -> be.domain.upgradeInstalledAt[slot]);
             sync.syncValue("upgrade_installed_at_" + i, activationTimes[i]);
         }
         var activation = new GreenhouseGauge(installed::getIntValue, i -> activationTimes[i].getLongValue(),
@@ -131,12 +131,12 @@ public final class GreenhouseUI {
                 .background(common.getSubArea(134 / 256F, 15 / 256F, 139 / 256F, 22 / 256F))
                 .setEnabledIf(w -> energy.getLongValue() > 0).decoration());
         panel.child(new ProgressWidget().name("mana_meter").pos(61, 176).size(129, 5)
-                .value(new DoubleSyncValue(() -> (double) be.mana / Math.max(1, be.manaCap)))
+                .value(new DoubleSyncValue(() -> (double) be.domain.mana / Math.max(1, be.domain.manaCap)))
                 .texture(IDrawable.NONE, manaFill, ProgressDrawable.Direction.RIGHT)
                 .tooltipAutoUpdate(true).tooltipDynamic(t -> t.addLine(
                         Text.lang("gui.loli_labs.greenhouse.mana", mana.getIntValue(), manaCap.getIntValue()))));
         panel.child(new ProgressWidget().name("energy_meter").pos(61, 190).size(129, 5)
-                .value(new DoubleSyncValue(() -> (double) be.energy / Math.max(1, be.energyCap)))
+                .value(new DoubleSyncValue(() -> (double) be.domain.energy / Math.max(1, be.domain.energyCap)))
                 .texture(IDrawable.NONE, energyFill, ProgressDrawable.Direction.RIGHT)
                 .tooltipAutoUpdate(true).tooltipDynamic(t -> t.addLine(
                         Text.lang("gui.loli_labs.greenhouse.eu", energy.getLongValue(), energyCap.getLongValue()))));

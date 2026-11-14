@@ -19,7 +19,8 @@ public final class GreenhouseRenderer implements BlockEntityRenderer<GreenhouseB
 
         public ResourceLocation getTextureResource(GreenhouseBlockEntity be) {
             return resource(
-                    "textures/models/block/multi_greenhouse/multi_greenhouse" + (be.enabled ? "_active" : "") + ".png");
+                    "textures/models/block/multi_greenhouse/multi_greenhouse" + (be.domain.enabled ? "_active" : "") +
+                            ".png");
         }
 
         public ResourceLocation getAnimationResource(GreenhouseBlockEntity be) {

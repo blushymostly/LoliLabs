@@ -1,6 +1,12 @@
 package tmr.lolilabs;
 
-import com.ic2ceu.icceu.*;
+import com.ic2ceu.icceu.IC2Modern;
+import com.ic2ceu.icceu.common.energy.CableBlock;
+import com.ic2ceu.icceu.common.energy.CableEntity;
+import com.ic2ceu.icceu.common.energy.PacketNetwork;
+import com.ic2ceu.icceu.common.machine.CreativeEnergyEntity;
+import com.ic2ceu.icceu.common.machine.MachineBlock;
+import com.ic2ceu.icceu.common.machine.MachineEntity;
 
 import net.minecraft.core.*;
 import net.minecraft.gametest.framework.*;
@@ -40,7 +46,7 @@ public final class EUWorldChecks {
         var target = (LabMachineEntity) world.m_7702_(targetPos);
         source.energy.restore(30000);
         check(CableBlock.canConnect(world, cablePos, Direction.EAST), "Cable does not recognize EUReceiver");
-        EUNetwork.distribute(source);
+        PacketNetwork.distribute(source);
         check(target.energy > 0 && source.energy.stored() < 30000, "IC2 -> Loli Labs native EU failed");
         target.energy = 250000;
         target.inventory.setStackInSlot(0,

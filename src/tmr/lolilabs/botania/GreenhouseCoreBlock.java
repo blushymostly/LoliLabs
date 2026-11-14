@@ -15,7 +15,7 @@ public final class GreenhouseCoreBlock extends BaseEntityBlock {
             .m_61465_("formed");
     public static final net.minecraft.world.level.block.state.properties.BooleanProperty LIT = net.minecraft.world.level.block.state.properties.BooleanProperty
             .m_61465_("lit");
-    public static final net.minecraft.world.level.block.state.properties.DirectionProperty FACING = com.ic2ceu.icceu.MachineBlock.FACING;
+    public static final net.minecraft.world.level.block.state.properties.DirectionProperty FACING = com.ic2ceu.icceu.common.machine.MachineBlock.FACING;
 
     public GreenhouseCoreBlock() {
         super(BlockBehaviour.Properties.m_284310_().m_60913_(5F, 20F).m_60953_(state -> state.m_61143_(LIT) ? 15 : 0));

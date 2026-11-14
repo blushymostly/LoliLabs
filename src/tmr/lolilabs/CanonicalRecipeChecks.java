@@ -56,7 +56,7 @@ public final class CanonicalRecipeChecks {
                 throw new IllegalStateException("Canonical recipe failed native serializer " + id);
             count++;
         }
-        if (count != 41) throw new IllegalStateException("Canonical recipe count " + count);
+        if (count != 50) throw new IllegalStateException("Canonical recipe count " + count);
         System.out.println("LOLI_LABS_CANONICAL_RECIPES_OK count=" + count +
                 " native serializers; exact KubeJS payloads; all item references registered");
     }

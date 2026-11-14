@@ -1,202 +1,142 @@
 {
   "sources": [
     {
-      "file": "kubejsstudio/blood_magic.js",
-      "sha256": "a268ffa291a790eded274f708857b0432ccc666a35217794bc67d602c37a50a8"
-    },
-    {
-      "file": "kubejsstudio/recipes.js",
-      "sha256": "a42317ae63113758208b5d84f7d2be7d7f5c3c3f1d4d974af5ecda469be7f8bd"
-    },
-    {
-      "file": "recipe_editor.js",
-      "sha256": "56fe2288a021ff18018899619ce262a14d84ebee862e57a48bd15da261beb821"
+      "file": "minecraft/kubejs/server_scripts/recipe_editor.js",
+      "sha256": "beabf632e4d1b188301ce147ce46ed0cb0ee7b6ee352eee553cd8fd9404bee5e"
     }
   ],
   "recipes": [
-    {
-      "json": {
-        "type": "bloodmagic:alchemytable",
-        "input": [
-          {
-            "item": "loli_labs:dispersion_solar_panel"
-          },
-          {
-            "item": "loli_labs:dispersion_solar_panel"
-          },
-          {
-            "item": "loli_labs:asmodeus_demon_contract"
-          },
-          {
-            "item": "loli_labs:matter_purple"
-          },
-          {
-            "item": "loli_labs:blood_clot"
-          }
-        ],
-        "output": {
-          "item": "loli_labs:asmodeus_demonic_panel"
-        },
-        "syphon": 1000,
-        "ticks": 5,
-        "upgradeLevel": 5
-      },
-      "file": "kubejsstudio/blood_magic.js",
-      "id": "loli_labs:asmodeus_demonic_panel"
-    },
-    {
-      "json": {
-        "type": "bloodmagic:alchemytable",
-        "input": [
-          {
-            "item": "loli_labs:asmodeus_demonic_panel"
-          },
-          {
-            "item": "loli_labs:asmodeus_demonic_panel"
-          },
-          {
-            "item": "loli_labs:belphegor_demon_contract"
-          },
-          {
-            "item": "loli_labs:matter_luminous_turquoise"
-          },
-          {
-            "item": "loli_labs:blood_clot"
-          }
-        ],
-        "output": {
-          "item": "loli_labs:belphegor_demonic_panel"
-        },
-        "syphon": 5000,
-        "ticks": 5,
-        "upgradeLevel": 5
-      },
-      "file": "kubejsstudio/blood_magic.js",
-      "id": "loli_labs:belphegor_demonic_panel"
-    },
-    {
-      "json": {
-        "type": "bloodmagic:alchemytable",
-        "input": [
-          {
-            "item": "loli_labs:belphegor_demonic_panel"
-          },
-          {
-            "item": "loli_labs:belphegor_demonic_panel"
-          },
-          {
-            "item": "loli_labs:beelzebub_demon_contract"
-          },
-          {
-            "item": "loli_labs:matter_luminous_red"
-          },
-          {
-            "item": "loli_labs:blood_clot"
-          }
-        ],
-        "output": {
-          "item": "loli_labs:beelzebub_demonic_panel"
-        },
-        "syphon": 10000,
-        "ticks": 5,
-        "upgradeLevel": 5
-      },
-      "file": "kubejsstudio/blood_magic.js",
-      "id": "loli_labs:beelzebub_demonic_panel"
-    },
-    {
-      "json": {
-        "type": "bloodmagic:alchemytable",
-        "input": [
-          {
-            "item": "loli_labs:beelzebub_demonic_panel"
-          },
-          {
-            "item": "loli_labs:beelzebub_demonic_panel"
-          },
-          {
-            "item": "loli_labs:leviathan_demon_contract"
-          },
-          {
-            "item": "loli_labs:matter_loose_blue"
-          },
-          {
-            "item": "loli_labs:blood_clot"
-          }
-        ],
-        "output": {
-          "item": "loli_labs:leviathan_demonic_panel"
-        },
-        "syphon": 100000,
-        "ticks": 5,
-        "upgradeLevel": 5
-      },
-      "file": "kubejsstudio/blood_magic.js",
-      "id": "loli_labs:leviathan_demonic_panel"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "###",
-          "ABA",
-          "CDC"
-        ],
-        "key": {
-          "#": {
-            "item": "ic2modern:quantum_solar_panel"
-          },
-          "A": {
-            "item": "ic2modern:reinforced_iridium_iron_plate"
-          },
-          "B": {
-            "item": "loli_labs:dispersion_core"
-          },
-          "C": {
-            "item": "loli_labs:niobium_ingot"
-          },
-          "D": {
-            "item": "loli_labs:base_microchip"
-          }
-        },
-        "result": {
-          "item": "loli_labs:dispersion_solar_panel"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:dispersion_solar_panel"
-    },
     {
       "json": {
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "#A#",
           "BCB",
-          "DBD"
+          "DED"
         ],
         "key": {
           "#": {
-            "item": "loli_labs:dispersion_solar_panel"
+            "item": "loli_labs:anisotropic_solar_panel"
           },
           "A": {
-            "item": "ic2modern:quantum_solar_panel"
+            "item": "loli_labs:fluctuation_solar_panel"
           },
           "B": {
-            "item": "loli_labs:matter_turquoise"
+            "item": "avaritia:neutron_ingot"
           },
           "C": {
-            "item": "loli_labs:gravitomagnetic_core"
+            "item": "loli_labs:aberration_core"
           },
           "D": {
-            "item": "loli_labs:integral_microchip"
+            "item": "loli_labs:chrysolite_plasma_core"
+          },
+          "E": {
+            "item": "loli_labs:quant_microchip"
           }
         },
         "result": {
-          "item": "loli_labs:gravitomagnetic_solar_panel"
+          "item": "loli_labs:aberration_solar_panel"
         }
       },
       "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:gravitomagnetic_solar_panel"
+      "id": "loli_labs:aberration_solar_panel"
+    },
+    {
+      "id": "loli_labs:adamantium_ethereal_ingot",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "botania:runic_altar",
+        "ingredients": [
+          {
+            "item": "loli_labs:adamantium_ingot"
+          },
+          {
+            "item": "loli_labs:adamantium_ingot"
+          },
+          {
+            "item": "loli_labs:adamantium_ingot"
+          },
+          {
+            "item": "loli_labs:adamantium_ingot"
+          },
+          {
+            "item": "botania:manasteel_ingot"
+          },
+          {
+            "item": "botania:manasteel_ingot"
+          },
+          {
+            "item": "botania:manasteel_ingot"
+          },
+          {
+            "item": "botania:manasteel_ingot"
+          }
+        ],
+        "output": {
+          "item": "loli_labs:adamantium_ethereal_ingot"
+        },
+        "mana": 50000
+      }
+    },
+    {
+      "id": "loli_labs:adamantium_ingot",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "result": {
+          "item": "loli_labs:adamantium_ingot"
+        },
+        "pattern": [
+          "AAA",
+          "AAA"
+        ],
+        "key": {
+          "A": {
+            "item": "loli_labs:adamantium_scrap"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:adamantium_scrap",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "botania:mana_infusion",
+        "input": {
+          "item": "loli_labs:tungsten_ingot"
+        },
+        "output": {
+          "item": "loli_labs:adamantium_scrap"
+        },
+        "mana": 10000,
+        "catalyst": {
+          "type": "block",
+          "block": "botania:conjuration_catalyst"
+        }
+      }
+    },
+    {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "A#A",
+          "#A#"
+        ],
+        "key": {
+          "#": {
+            "item": "ic2modern:raw_iridium"
+          },
+          "A": {
+            "item": "loli_labs:ametrine_ingot"
+          }
+        },
+        "result": {
+          "item": "loli_labs:ametrine_base"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:ametrine_base"
     },
     {
       "json": {
@@ -239,76 +179,6 @@
         "pattern": [
           "#A#",
           "BCB",
-          "DED"
-        ],
-        "key": {
-          "#": {
-            "item": "loli_labs:anisotropic_solar_panel"
-          },
-          "A": {
-            "item": "loli_labs:gravitomagnetic_solar_panel"
-          },
-          "B": {
-            "item": "loli_labs:matter_luminous_turquoise"
-          },
-          "C": {
-            "item": "loli_labs:fluctuation_core"
-          },
-          "D": {
-            "item": "loli_labs:niobium_ingot"
-          },
-          "E": {
-            "item": "loli_labs:matter_luminous_red"
-          }
-        },
-        "result": {
-          "item": "loli_labs:fluctuation_solar_panel"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:fluctuation_solar_panel"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
-          "BCB",
-          "DED"
-        ],
-        "key": {
-          "#": {
-            "item": "loli_labs:anisotropic_solar_panel"
-          },
-          "A": {
-            "item": "loli_labs:fluctuation_solar_panel"
-          },
-          "B": {
-            "item": "avaritia:neutron_ingot"
-          },
-          "C": {
-            "item": "loli_labs:aberration_core"
-          },
-          "D": {
-            "item": "loli_labs:chrysolite_plasma_core"
-          },
-          "E": {
-            "item": "loli_labs:quant_microchip"
-          }
-        },
-        "result": {
-          "item": "loli_labs:aberration_solar_panel"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:aberration_solar_panel"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
-          "BCB",
           "DBD"
         ],
         "key": {
@@ -316,24 +186,143 @@
             "item": "loli_labs:fluctuation_solar_panel"
           },
           "A": {
-            "item": "loli_labs:aberration_solar_panel"
+            "item": "loli_labs:chronodynamic_solar_panel"
           },
           "B": {
-            "item": "avaritia:neutron"
+            "item": "loli_labs:matter_sparkling"
           },
           "C": {
-            "item": "loli_labs:parametric_core"
+            "item": "loli_labs:antimaterial_core"
           },
           "D": {
-            "item": "loli_labs:matter_loose_blue"
+            "item": "avaritia:neutron"
           }
         },
         "result": {
-          "item": "loli_labs:parametric_solar_panel"
+          "item": "loli_labs:antimaterial_solar_panel"
         }
       },
       "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:parametric_solar_panel"
+      "id": "loli_labs:antimaterial_solar_panel"
+    },
+    {
+      "json": {
+        "type": "bloodmagic:alchemytable",
+        "input": [
+          {
+            "item": "loli_labs:dispersion_solar_panel"
+          },
+          {
+            "item": "loli_labs:dispersion_solar_panel"
+          },
+          {
+            "item": "loli_labs:asmodeus_demon_contract"
+          },
+          {
+            "item": "loli_labs:matter_purple"
+          },
+          {
+            "item": "loli_labs:blood_clot"
+          }
+        ],
+        "output": {
+          "item": "loli_labs:asmodeus_demonic_panel"
+        },
+        "syphon": 1000,
+        "ticks": 5,
+        "upgradeLevel": 5
+      },
+      "file": "kubejsstudio/blood_magic.js",
+      "id": "loli_labs:asmodeus_demonic_panel"
+    },
+    {
+      "json": {
+        "type": "bloodmagic:alchemytable",
+        "input": [
+          {
+            "item": "loli_labs:belphegor_demonic_panel"
+          },
+          {
+            "item": "loli_labs:belphegor_demonic_panel"
+          },
+          {
+            "item": "loli_labs:beelzebub_demon_contract"
+          },
+          {
+            "item": "loli_labs:matter_luminous_red"
+          },
+          {
+            "item": "loli_labs:blood_clot"
+          }
+        ],
+        "output": {
+          "item": "loli_labs:beelzebub_demonic_panel"
+        },
+        "syphon": 10000,
+        "ticks": 5,
+        "upgradeLevel": 5
+      },
+      "file": "kubejsstudio/blood_magic.js",
+      "id": "loli_labs:beelzebub_demonic_panel"
+    },
+    {
+      "json": {
+        "type": "bloodmagic:alchemytable",
+        "input": [
+          {
+            "item": "loli_labs:asmodeus_demonic_panel"
+          },
+          {
+            "item": "loli_labs:asmodeus_demonic_panel"
+          },
+          {
+            "item": "loli_labs:belphegor_demon_contract"
+          },
+          {
+            "item": "loli_labs:matter_luminous_turquoise"
+          },
+          {
+            "item": "loli_labs:blood_clot"
+          }
+        ],
+        "output": {
+          "item": "loli_labs:belphegor_demonic_panel"
+        },
+        "syphon": 5000,
+        "ticks": 5,
+        "upgradeLevel": 5
+      },
+      "file": "kubejsstudio/blood_magic.js",
+      "id": "loli_labs:belphegor_demonic_panel"
+    },
+    {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "ABA",
+          "CAC"
+        ],
+        "key": {
+          "#": {
+            "item": "loli_labs:dispersion_solar_panel"
+          },
+          "A": {
+            "item": "loli_labs:superalloy_ingot"
+          },
+          "B": {
+            "item": "loli_labs:infinity_dragon_awakened_heart"
+          },
+          "C": {
+            "item": "loli_labs:matter_turquoise"
+          }
+        },
+        "result": {
+          "item": "loli_labs:chaos_guardian_panel"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:chaos_guardian_panel"
     },
     {
       "json": {
@@ -372,148 +361,6 @@
         "type": "minecraft:crafting_shaped",
         "pattern": [
           "#A#",
-          "BCB",
-          "DBD"
-        ],
-        "key": {
-          "#": {
-            "item": "loli_labs:fluctuation_solar_panel"
-          },
-          "A": {
-            "item": "loli_labs:chronodynamic_solar_panel"
-          },
-          "B": {
-            "item": "loli_labs:matter_sparkling"
-          },
-          "C": {
-            "item": "loli_labs:antimaterial_core"
-          },
-          "D": {
-            "item": "avaritia:neutron"
-          }
-        },
-        "result": {
-          "item": "loli_labs:antimaterial_solar_panel"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:antimaterial_solar_panel"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
-          "BCB",
-          "DED"
-        ],
-        "key": {
-          "#": {
-            "item": "ic2modern:luminator"
-          },
-          "A": {
-            "item": "ic2modern:irradiant_glass"
-          },
-          "B": {
-            "item": "ic2modern:irradiant_reinforced_plate"
-          },
-          "C": {
-            "item": "ic2modern:mfsu"
-          },
-          "D": {
-            "item": "loli_labs:niobium_chip"
-          },
-          "E": {
-            "item": "loli_labs:ametrine_base"
-          }
-        },
-        "result": {
-          "item": "loli_labs:energy_unifier"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:energy_unifier"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "###",
-          "ABA",
-          "CAC"
-        ],
-        "key": {
-          "#": {
-            "item": "loli_labs:dispersion_solar_panel"
-          },
-          "A": {
-            "item": "loli_labs:superalloy_ingot"
-          },
-          "B": {
-            "item": "loli_labs:infinity_dragon_awakened_heart"
-          },
-          "C": {
-            "item": "loli_labs:matter_turquoise"
-          }
-        },
-        "result": {
-          "item": "loli_labs:chaos_guardian_panel"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:chaos_guardian_panel"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
-          "A#A",
-          "#A#"
-        ],
-        "key": {
-          "#": {
-            "item": "ic2modern:raw_iridium"
-          },
-          "A": {
-            "item": "loli_labs:fluorite_ingot"
-          }
-        },
-        "result": {
-          "item": "loli_labs:fluorite_base"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:fluorite_base"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
-          "A#A",
-          "#A#"
-        ],
-        "key": {
-          "#": {
-            "item": "ic2modern:raw_iridium"
-          },
-          "A": {
-            "item": "loli_labs:ametrine_ingot"
-          }
-        },
-        "result": {
-          "item": "loli_labs:ametrine_base"
-        }
-      },
-      "file": "kubejsstudio/recipes.js",
-      "id": "loli_labs:ametrine_base"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "pattern": [
-          "#A#",
           "A#A",
           "#A#"
         ],
@@ -533,80 +380,8 @@
       "id": "loli_labs:chrysolite_base"
     },
     {
-      "json": {
-        "type": "botania:runic_altar",
-        "ingredients": [
-          {
-            "item": "loli_labs:adamantium_ingot"
-          },
-          {
-            "item": "loli_labs:adamantium_ingot"
-          },
-          {
-            "item": "loli_labs:adamantium_ingot"
-          },
-          {
-            "item": "loli_labs:adamantium_ingot"
-          },
-          {
-            "item": "botania:manasteel_ingot"
-          },
-          {
-            "item": "botania:manasteel_ingot"
-          },
-          {
-            "item": "botania:manasteel_ingot"
-          },
-          {
-            "item": "botania:manasteel_ingot"
-          }
-        ],
-        "output": {
-          "item": "loli_labs:adamantium_ethereal_ingot"
-        },
-        "mana": 50000
-      },
+      "id": "loli_labs:conductive_chip",
       "file": "recipe_editor.js",
-      "id": "loli_labs:adamantium_ethereal_ingot"
-    },
-    {
-      "json": {
-        "type": "minecraft:crafting_shaped",
-        "result": {
-          "item": "loli_labs:adamantium_ingot"
-        },
-        "pattern": [
-          "AAA",
-          "AAA"
-        ],
-        "key": {
-          "A": {
-            "item": "loli_labs:adamantium_scrap"
-          }
-        }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:adamantium_ingot"
-    },
-    {
-      "json": {
-        "type": "botania:mana_infusion",
-        "input": {
-          "item": "loli_labs:tungsten_ingot"
-        },
-        "output": {
-          "item": "loli_labs:adamantium_scrap"
-        },
-        "mana": 10000,
-        "catalyst": {
-          "type": "block",
-          "block": "botania:conjuration_catalyst"
-        }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:adamantium_scrap"
-    },
-    {
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -637,11 +412,11 @@
             "item": "loli_labs:base_microchip"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:conductive_chip"
+      }
     },
     {
+      "id": "loli_labs:cracked_bird_bone",
+      "file": "recipe_editor.js",
       "json": {
         "type": "ic2modern:machine",
         "machine": "compressor",
@@ -654,11 +429,11 @@
         },
         "duration": 600,
         "eu_per_tick": 2
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:cracked_bird_bone"
+      }
     },
     {
+      "id": "loli_labs:crystal_primordial_chaos",
+      "file": "recipe_editor.js",
       "json": {
         "type": "bloodmagic:alchemytable",
         "input": [
@@ -687,11 +462,11 @@
         "syphon": 4000,
         "ticks": 200,
         "upgradeLevel": 5
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:crystal_primordial_chaos"
+      }
     },
     {
+      "id": "loli_labs:dark_manabricks",
+      "file": "recipe_editor.js",
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -713,13 +488,13 @@
             "item": "loli_labs:adamantium_ethereal_ingot"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:dark_manabricks"
+      }
     },
     {
+      "id": "loli_labs:demon_notes",
+      "file": "recipe_editor.js",
       "json": {
-        "type": "avaritia:shaped_table",
+        "type": "loliavaritia:shaped_table",
         "tier": 4,
         "compatible": false,
         "result": {
@@ -766,11 +541,11 @@
             "item": "botania:rune_air"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:demon_notes"
+      }
     },
     {
+      "id": "loli_labs:dispersion_core",
+      "file": "recipe_editor.js",
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -792,11 +567,43 @@
             "item": "loli_labs:conductive_chip"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:dispersion_core"
+      }
     },
     {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "###",
+          "ABA",
+          "CDC"
+        ],
+        "key": {
+          "#": {
+            "item": "ic2modern:quantum_solar_panel"
+          },
+          "A": {
+            "item": "ic2modern:reinforced_iridium_iron_plate"
+          },
+          "B": {
+            "item": "loli_labs:dispersion_core"
+          },
+          "C": {
+            "item": "loli_labs:niobium_ingot"
+          },
+          "D": {
+            "item": "loli_labs:base_microchip"
+          }
+        },
+        "result": {
+          "item": "loli_labs:dispersion_solar_panel"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:dispersion_solar_panel"
+    },
+    {
+      "id": "loli_labs:dust_primordial_chaos",
+      "file": "recipe_editor.js",
       "json": {
         "type": "ic2modern:machine",
         "machine": "macerator",
@@ -808,11 +615,11 @@
         },
         "duration": 300,
         "eu_per_tick": 32
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:dust_primordial_chaos"
+      }
     },
     {
+      "id": "loli_labs:editor/loli_labs/fire_circle",
+      "file": "recipe_editor.js",
       "json": {
         "type": "ic2modern:machine",
         "machine": "compressor",
@@ -825,11 +632,31 @@
         },
         "duration": 200,
         "eu_per_tick": 16
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:editor/loli_labs/fire_circle"
+      }
     },
     {
+      "id": "loli_labs:editor/loli_labs/infinity_nugget",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "result": {
+          "item": "loli_labs:infinity_nugget"
+        },
+        "pattern": [
+          "AAA",
+          "AAA",
+          "AAA"
+        ],
+        "key": {
+          "A": {
+            "item": "loli_labs:infinity_dust"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:editor/loli_labs/infused_air_scroll",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:runic_altar",
         "ingredients": [
@@ -874,11 +701,278 @@
           "item": "loli_labs:infused_air_scroll"
         },
         "mana": 20000
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:editor/loli_labs/infused_air_scroll"
+      }
     },
     {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "BCB",
+          "DED"
+        ],
+        "key": {
+          "#": {
+            "item": "ic2modern:luminator"
+          },
+          "A": {
+            "item": "ic2modern:irradiant_glass"
+          },
+          "B": {
+            "item": "ic2modern:irradiant_reinforced_plate"
+          },
+          "C": {
+            "item": "ic2modern:mfsu"
+          },
+          "D": {
+            "item": "loli_labs:niobium_chip"
+          },
+          "E": {
+            "item": "loli_labs:ametrine_base"
+          }
+        },
+        "result": {
+          "item": "loli_labs:energy_unifier"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:energy_unifier"
+    },
+    {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "BCB",
+          "DED"
+        ],
+        "key": {
+          "#": {
+            "item": "loli_labs:anisotropic_solar_panel"
+          },
+          "A": {
+            "item": "loli_labs:gravitomagnetic_solar_panel"
+          },
+          "B": {
+            "item": "loli_labs:matter_luminous_turquoise"
+          },
+          "C": {
+            "item": "loli_labs:fluctuation_core"
+          },
+          "D": {
+            "item": "loli_labs:niobium_ingot"
+          },
+          "E": {
+            "item": "loli_labs:matter_luminous_red"
+          }
+        },
+        "result": {
+          "item": "loli_labs:fluctuation_solar_panel"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:fluctuation_solar_panel"
+    },
+    {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "A#A",
+          "#A#"
+        ],
+        "key": {
+          "#": {
+            "item": "ic2modern:raw_iridium"
+          },
+          "A": {
+            "item": "loli_labs:fluorite_ingot"
+          }
+        },
+        "result": {
+          "item": "loli_labs:fluorite_base"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:fluorite_base"
+    },
+    {
+      "id": "loli_labs:fortune_module_10",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "loliavaritia:shaped_table",
+        "tier": 4,
+        "compatible": false,
+        "result": {
+          "item": "loli_labs:fortune_module_10"
+        },
+        "pattern": [
+          "ABCBA",
+          "BDEDB",
+          "CEFEC",
+          "BDEDB",
+          "ABCBA"
+        ],
+        "key": {
+          "A": {
+            "item": "botania:terrasteel_block"
+          },
+          "B": {
+            "item": "ic2modern:enriched_sunnarium"
+          },
+          "C": {
+            "item": "loli_labs:green_iridescent_crystal_plate"
+          },
+          "D": {
+            "item": "ic2modern:sunnarium_alloy"
+          },
+          "E": {
+            "item": "loli_labs:conductive_chip"
+          },
+          "F": {
+            "item": "loli_labs:fortune_module_5"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:fortune_module_3",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "result": {
+          "item": "loli_labs:fortune_module_3"
+        },
+        "pattern": [
+          "ABC",
+          "BDB",
+          "EBF"
+        ],
+        "key": {
+          "A": {
+            "item": "ic2modern:iridium_ingot"
+          },
+          "B": {
+            "item": "minecraft:lapis_block"
+          },
+          "C": {
+            "item": "loliavaritia:crystal_matrix_ingot"
+          },
+          "D": {
+            "item": "ae2:nether_quartz_pickaxe"
+          },
+          "E": {
+            "item": "ic2modern:electrum_ingot"
+          },
+          "F": {
+            "item": "botania:terrasteel_ingot"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:fortune_module_5",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "loliavaritia:shaped_table",
+        "tier": 4,
+        "compatible": false,
+        "result": {
+          "item": "loli_labs:fortune_module_5"
+        },
+        "pattern": [
+          "AA AA",
+          "ABCBA",
+          " CDC ",
+          "ABCBA",
+          "AA AA"
+        ],
+        "key": {
+          "A": {
+            "item": "ic2modern:red_alloy_ingot"
+          },
+          "B": {
+            "item": "loli_labs:base_microchip"
+          },
+          "C": {
+            "item": "minecraft:glowstone"
+          },
+          "D": {
+            "item": "loli_labs:fortune_module_3"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:fortune_transformer",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "result": {
+          "item": "loli_labs:fortune_transformer"
+        },
+        "pattern": [
+          "ABA",
+          "CDC",
+          "EFE"
+        ],
+        "key": {
+          "A": {
+            "item": "ic2modern:reinforced_glass"
+          },
+          "B": {
+            "item": "loli_labs:osmiridium_gear"
+          },
+          "C": {
+            "item": "ic2modern:reinforced_iridium_iron_plate"
+          },
+          "D": {
+            "item": "ic2modern:diamond_drill"
+          },
+          "E": {
+            "item": "minecraft:gold_block"
+          },
+          "F": {
+            "item": "ic2modern:advanced_machine_casing"
+          }
+        }
+      }
+    },
+    {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "BCB",
+          "DBD"
+        ],
+        "key": {
+          "#": {
+            "item": "loli_labs:dispersion_solar_panel"
+          },
+          "A": {
+            "item": "ic2modern:quantum_solar_panel"
+          },
+          "B": {
+            "item": "loli_labs:matter_turquoise"
+          },
+          "C": {
+            "item": "loli_labs:gravitomagnetic_core"
+          },
+          "D": {
+            "item": "loli_labs:integral_microchip"
+          }
+        },
+        "result": {
+          "item": "loli_labs:gravitomagnetic_solar_panel"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:gravitomagnetic_solar_panel"
+    },
+    {
+      "id": "loli_labs:greenhouse_upgrade_efficiency",
+      "file": "recipe_editor.js",
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -903,11 +997,11 @@
             "item": "botania:lens_efficiency"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:greenhouse_upgrade_efficiency"
+      }
     },
     {
+      "id": "loli_labs:horrific_something",
+      "file": "recipe_editor.js",
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -929,11 +1023,105 @@
             "item": "loli_labs:fire_circle"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:horrific_something"
+      }
     },
     {
+      "id": "loli_labs:infinity_pickaxe_ultra",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "loliavaritia:shaped_table",
+        "tier": 4,
+        "compatible": false,
+        "result": {
+          "item": "loli_labs:infinity_pickaxe_ultra"
+        },
+        "pattern": [
+          "    A    ",
+          "  BCDEB  ",
+          " BFGHGFB ",
+          " CGIJIGE ",
+          "ADHJKJHDA",
+          " LGIJIGM ",
+          " BFGHGFB ",
+          "  BLDMB  ",
+          "    A    "
+        ],
+        "key": {
+          "A": {
+            "item": "loli_labs:sister_necromancer_kella_doll"
+          },
+          "B": {
+            "item": "loli_labs:sister_necromancer_bergamma_doll"
+          },
+          "C": {
+            "item": "loli_labs:star_crystal_aer"
+          },
+          "D": {
+            "item": "loli_labs:demon_notes"
+          },
+          "E": {
+            "item": "loli_labs:star_crystal_ignis"
+          },
+          "F": {
+            "item": "loli_labs:galaxy_singularity_multicolor"
+          },
+          "G": {
+            "item": "draconicevolution:chaotic_core"
+          },
+          "H": {
+            "item": "loliavaritia:infinity_ingot"
+          },
+          "I": {
+            "item": "loli_labs:soul_shard"
+          },
+          "J": {
+            "item": "loli_labs:advanced_chaotic_core"
+          },
+          "K": {
+            "item": "loliavaritia:infinity_pickaxe"
+          },
+          "L": {
+            "item": "loli_labs:star_crystal_aqua"
+          },
+          "M": {
+            "item": "loli_labs:star_crystal_praecantatio"
+          }
+        }
+      }
+    },
+    {
+      "json": {
+        "type": "bloodmagic:alchemytable",
+        "input": [
+          {
+            "item": "loli_labs:beelzebub_demonic_panel"
+          },
+          {
+            "item": "loli_labs:beelzebub_demonic_panel"
+          },
+          {
+            "item": "loli_labs:leviathan_demon_contract"
+          },
+          {
+            "item": "loli_labs:matter_loose_blue"
+          },
+          {
+            "item": "loli_labs:blood_clot"
+          }
+        ],
+        "output": {
+          "item": "loli_labs:leviathan_demonic_panel"
+        },
+        "syphon": 100000,
+        "ticks": 5,
+        "upgradeLevel": 5
+      },
+      "file": "kubejsstudio/blood_magic.js",
+      "id": "loli_labs:leviathan_demonic_panel"
+    },
+    {
+      "id": "loli_labs:managlass",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:runic_altar",
         "ingredients": [
@@ -969,18 +1157,18 @@
           "item": "loli_labs:managlass"
         },
         "mana": 5000
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:managlass"
+      }
     },
     {
+      "id": "loli_labs:multi_greenhouse_base",
+      "file": "recipe_editor.js",
       "json": {
-        "type": "avaritia:shaped_table",
+        "type": "loliavaritia:shaped_table",
         "tier": 4,
+        "compatible": false,
         "result": {
           "item": "loli_labs:multi_greenhouse_base"
         },
-        "compatible": false,
         "pattern": [
           "AAAAA",
           "BCDEB",
@@ -1011,11 +1199,11 @@
             "item": "botania:terrasteel_ingot"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:multi_greenhouse_base"
+      }
     },
     {
+      "id": "loli_labs:multi_greenhouse_core",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:runic_altar",
         "ingredients": [
@@ -1048,11 +1236,110 @@
           "item": "loli_labs:multi_greenhouse_core"
         },
         "mana": 10000
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:multi_greenhouse_core"
+      }
     },
     {
+      "id": "loli_labs:neutronium_catalyst",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "loliavaritia:shaped_table",
+        "tier": 4,
+        "compatible": false,
+        "result": {
+          "item": "loli_labs:neutronium_catalyst"
+        },
+        "pattern": [
+          "    A    ",
+          "  B C B  ",
+          " BDEFEDB ",
+          "  EFGFE  ",
+          "ACFGDGFCA",
+          "  EFGFE  ",
+          " BDEFEDB ",
+          "  B C B  ",
+          "    A    "
+        ],
+        "key": {
+          "A": {
+            "item": "loli_labs:stone_tablet"
+          },
+          "B": {
+            "item": "loli_labs:innos_ancient_artefact"
+          },
+          "C": {
+            "item": "loli_labs:adamantium"
+          },
+          "D": {
+            "item": "loliavaritia:singularity",
+            "nbt": "{Id:\"loliavaritia:reinforced_neutronium\"}",
+            "type": "forge:nbt"
+          },
+          "E": {
+            "item": "loli_labs:adonas_scroll"
+          },
+          "F": {
+            "item": "loliavaritia:singularity",
+            "nbt": "{Id:\"loliavaritia:neutronium\"}",
+            "type": "forge:nbt"
+          },
+          "G": {
+            "item": "loli_labs:sister_necromancer_bergamma_doll"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:osmiridium_gear",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "result": {
+          "item": "loli_labs:osmiridium_gear"
+        },
+        "pattern": [
+          " A ",
+          "AAA",
+          " A "
+        ],
+        "key": {
+          "A": {
+            "item": "loli_labs:osmiridium_ingot"
+          }
+        }
+      }
+    },
+    {
+      "id": "loli_labs:osmiridium_ingot",
+      "file": "recipe_editor.js",
+      "json": {
+        "type": "ic2modern:industrial",
+        "machine": "blast_furnace",
+        "ingredients": [
+          {
+            "ingredient": {
+              "item": "ic2modern:raw_iridium"
+            },
+            "count": 4
+          },
+          {
+            "ingredient": {
+              "item": "ic2modern:invar_ingot"
+            },
+            "count": 8
+          }
+        ],
+        "results": [
+          {
+            "item": "loli_labs:osmiridium_ingot"
+          }
+        ],
+        "duration": 200,
+        "eu_per_tick": 2
+      }
+    },
+    {
+      "id": "loli_labs:osmiridium_plate",
+      "file": "recipe_editor.js",
       "json": {
         "type": "ic2modern:machine",
         "machine": "metal_former_rolling",
@@ -1064,11 +1351,43 @@
         },
         "duration": 200,
         "eu_per_tick": 10
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:osmiridium_plate"
+      }
     },
     {
+      "json": {
+        "type": "minecraft:crafting_shaped",
+        "pattern": [
+          "#A#",
+          "BCB",
+          "DBD"
+        ],
+        "key": {
+          "#": {
+            "item": "loli_labs:fluctuation_solar_panel"
+          },
+          "A": {
+            "item": "loli_labs:aberration_solar_panel"
+          },
+          "B": {
+            "item": "avaritia:neutron"
+          },
+          "C": {
+            "item": "loli_labs:parametric_core"
+          },
+          "D": {
+            "item": "loli_labs:matter_loose_blue"
+          }
+        },
+        "result": {
+          "item": "loli_labs:parametric_solar_panel"
+        }
+      },
+      "file": "kubejsstudio/recipes.js",
+      "id": "loli_labs:parametric_solar_panel"
+    },
+    {
+      "id": "loli_labs:petrified_heart",
+      "file": "recipe_editor.js",
       "json": {
         "type": "ic2modern:industrial",
         "machine": "blast_furnace",
@@ -1093,25 +1412,25 @@
         ],
         "duration": 10000,
         "eu_per_tick": 32
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:petrified_heart"
+      }
     },
     {
+      "id": "loli_labs:sister_necromancer_bergamma_doll",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:runic_altar",
         "ingredients": [
           {
-            "item": "avaritia:neutron"
+            "item": "loliavaritia:neutron"
           },
           {
-            "item": "avaritia:neutron"
+            "item": "loliavaritia:neutron"
           },
           {
-            "item": "avaritia:neutron"
+            "item": "loliavaritia:neutron"
           },
           {
-            "item": "avaritia:neutron"
+            "item": "loliavaritia:neutron"
           },
           {
             "item": "loli_labs:adonas_scroll"
@@ -1133,25 +1452,25 @@
           "item": "loli_labs:sister_necromancer_bergamma_doll"
         },
         "mana": 500000
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:sister_necromancer_bergamma_doll"
+      }
     },
     {
+      "id": "loli_labs:sister_necromancer_kella_doll",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:runic_altar",
         "ingredients": [
           {
-            "item": "avaritia:crystal_matrix"
+            "item": "loliavaritia:crystal_matrix"
           },
           {
-            "item": "avaritia:crystal_matrix"
+            "item": "loliavaritia:crystal_matrix"
           },
           {
-            "item": "avaritia:crystal_matrix"
+            "item": "loliavaritia:crystal_matrix"
           },
           {
-            "item": "avaritia:crystal_matrix"
+            "item": "loliavaritia:crystal_matrix"
           },
           {
             "item": "loli_labs:time_rune"
@@ -1173,11 +1492,11 @@
           "item": "loli_labs:sister_necromancer_kella_doll"
         },
         "mana": 500000
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:sister_necromancer_kella_doll"
+      }
     },
     {
+      "id": "loli_labs:star_crystal",
+      "file": "recipe_editor.js",
       "json": {
         "type": "botania:mana_infusion",
         "input": {
@@ -1191,11 +1510,11 @@
           "type": "block",
           "block": "botania:alchemy_catalyst"
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:star_crystal"
+      }
     },
     {
+      "id": "loli_labs:straw_doll",
+      "file": "recipe_editor.js",
       "json": {
         "type": "minecraft:crafting_shaped",
         "result": {
@@ -1217,11 +1536,11 @@
             "item": "loli_labs:cracked_bird_bone"
           }
         }
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:straw_doll"
+      }
     },
     {
+      "id": "loli_labs:witch_doll",
+      "file": "recipe_editor.js",
       "json": {
         "type": "bloodmagic:altar",
         "input": {
@@ -1234,44 +1553,7 @@
         "consumptionRate": 50,
         "drainRate": 100,
         "upgradeLevel": 5
-      },
-      "file": "recipe_editor.js",
-      "id": "loli_labs:witch_doll"
-    }
-  ],
-  "removals": [
-    {
-      "file": "kubejsstudio/blood_magic.js",
-      "filter": {
-        "output": "loli_labs:asmodeus_demonic_panel"
-      }
-    },
-    {
-      "file": "kubejsstudio/blood_magic.js",
-      "filter": {
-        "output": "loli_labs:belphegor_demonic_panel"
-      }
-    },
-    {
-      "file": "kubejsstudio/blood_magic.js",
-      "filter": {
-        "output": "loli_labs:beelzebub_demonic_panel"
-      }
-    },
-    {
-      "file": "kubejsstudio/blood_magic.js",
-      "filter": {
-        "output": "loli_labs:leviathan_demonic_panel"
       }
     }
-  ],
-  "excluded": [
-    {
-      "id": "avaritia:infinity_pickaxe",
-      "outputs": [
-        "avaritia:infinity_pickaxe"
-      ]
-    }
-  ],
-  "removedPreviousRecipes": []
+  ]
 }

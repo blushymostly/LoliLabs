@@ -11,9 +11,9 @@ import net.minecraft.world.phys.BlockHitResult;
 
 public final class LabMachineBlock extends BaseEntityBlock {
 
-    public static final net.minecraft.world.level.block.state.properties.DirectionProperty FACING = com.ic2ceu.icceu.MachineBlock.FACING;
-    /** Lit while a panel/unifier is working. Always registered; lightLevel only on kind 0/1. */
-    public static final net.minecraft.world.level.block.state.properties.BooleanProperty ACTIVE = com.ic2ceu.icceu.MachineBlock.ACTIVE;
+    public static final net.minecraft.world.level.block.state.properties.DirectionProperty FACING = com.ic2ceu.icceu.common.machine.MachineBlock.FACING;
+    /** Lit while a panel or unifier is working. Always registered; lightLevel only on those two. */
+    public static final net.minecraft.world.level.block.state.properties.BooleanProperty ACTIVE = com.ic2ceu.icceu.common.machine.MachineBlock.ACTIVE;
 
     public static net.minecraft.core.Direction rotationFacing(int kind, net.minecraft.core.Direction selected) {
         return kind == 2 ? selected : selected.m_122424_();
@@ -25,7 +25,8 @@ public final class LabMachineBlock extends BaseEntityBlock {
         super(properties);
         this.definition = definition;
         m_49959_(
-                m_49966_().m_61124_(FACING, net.minecraft.core.Direction.NORTH).m_61124_(ACTIVE, definition.kind == 0));
+                m_49966_().m_61124_(FACING, net.minecraft.core.Direction.NORTH)
+                        .m_61124_(ACTIVE, definition.kindCode() == 0));
     }
 
     @Override
@@ -38,9 +39,9 @@ public final class LabMachineBlock extends BaseEntityBlock {
         var front = context.m_8125_().m_122424_();
         if (context.m_43723_() != null && context.m_43723_().m_6144_() &&
                 context.m_43725_().m_8055_(context.m_8083_().m_121945_(context.m_43719_().m_122424_()))
-                        .m_60734_() instanceof com.ic2ceu.icceu.CableBlock)
+                        .m_60734_() instanceof com.ic2ceu.icceu.common.energy.CableBlock)
             front = context.m_43719_();
-        return m_49966_().m_61124_(FACING, front).m_61124_(ACTIVE, definition.kind == 0);
+        return m_49966_().m_61124_(FACING, front).m_61124_(ACTIVE, definition.kindCode() == 0);
     }
 
     @Override
@@ -63,21 +64,21 @@ public final class LabMachineBlock extends BaseEntityBlock {
                                      BlockHitResult hit) {
         var held = player.m_21120_(hand);
         var context = new net.minecraft.world.item.context.UseOnContext(player, hand, hit);
-        if (held.m_41720_() instanceof com.ic2ceu.icceu.UpgradeItem upgrade && upgrade.directional())
+        if (held.m_41720_() instanceof com.ic2ceu.icceu.common.item.UpgradeItem upgrade && upgrade.directional())
             return upgrade.m_6225_(context);
-        if (held.m_41720_() instanceof com.ic2ceu.icceu.MachineTool tool) {
+        if (held.m_41720_() instanceof com.ic2ceu.icceu.common.machine.MachineTool tool) {
             if (!level.m_7966_(player, pos)) return InteractionResult.FAIL;
             if (tool.electric() && tool.charge(held) < tool.energyUse() && !player.m_7500_())
                 return InteractionResult.FAIL;
             var location = hit.m_82450_();
-            var selected = com.ic2ceu.icceu.ToolGrid.side(hit.m_82434_(), location.f_82479_ - pos.m_123341_(),
+            var selected = com.ic2ceu.icceu.common.ToolGrid.side(hit.m_82434_(), location.f_82479_ - pos.m_123341_(),
                     location.f_82480_ - pos.m_123342_(), location.f_82481_ - pos.m_123343_());
             if (tool.wrench() && player.m_6144_()) {
-                var front = rotationFacing(definition.kind, selected);
+                var front = rotationFacing(definition.kindCode(), selected);
                 if (state.m_61143_(FACING) == front) return InteractionResult.FAIL;
                 if (!level.f_46443_) {
                     level.m_46597_(pos, state.m_61124_(FACING, front));
-                    com.ic2ceu.icceu.CableBlock.refreshAround(level, pos);
+                    com.ic2ceu.icceu.common.energy.CableBlock.refreshAround(level, pos);
                     com.ic2ceu.icceu.tool.ToolHelper.onActionDone(player, held, level, location);
                 }
                 return InteractionResult.m_19078_(level.f_46443_);
@@ -108,7 +109,7 @@ public final class LabMachineBlock extends BaseEntityBlock {
     @Override
     public void m_6807_(BlockState state, Level level, BlockPos pos, BlockState old, boolean moving) {
         super.m_6807_(state, level, pos, old, moving);
-        if (!level.f_46443_) com.ic2ceu.icceu.CableBlock.refreshAround(level, pos);
+        if (!level.f_46443_) com.ic2ceu.icceu.common.energy.CableBlock.refreshAround(level, pos);
     }
 
     @Override

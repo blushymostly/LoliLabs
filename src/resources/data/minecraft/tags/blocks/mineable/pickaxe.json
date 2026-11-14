@@ -21,6 +21,26 @@
     "loli_labs:infinity_guardian_panel",
     "loli_labs:infinity_demon_guardian_panel",
     "loli_labs:dragon_slayer_ultimate_panel",
+    {
+      "id": "loli_labs:ethereal_panel",
+      "required": false
+    },
+    {
+      "id": "loli_labs:ghost_panel",
+      "required": false
+    },
+    {
+      "id": "loli_labs:arcane_panel",
+      "required": false
+    },
+    {
+      "id": "loli_labs:dragon_panel",
+      "required": false
+    },
+    {
+      "id": "loli_labs:ultimate_infernal_panel",
+      "required": false
+    },
     "loli_labs:energy_unifier",
     "loli_labs:matter_solid_t0_x1",
     "loli_labs:matter_solid_t0_x6",

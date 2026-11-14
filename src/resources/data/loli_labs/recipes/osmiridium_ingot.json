@@ -1,18 +1,25 @@
 {
-  "type": "minecraft:crafting_shapeless",
+  "type": "ic2modern:industrial",
+  "machine": "blast_furnace",
   "ingredients": [
     {
-      "item": "ic2modern:advanced_alloy"
+      "ingredient": {
+        "item": "ic2modern:raw_iridium"
+      },
+      "count": 4
     },
     {
-      "item": "minecraft:yellow_dye"
-    },
-    {
-      "item": "minecraft:red_dye"
+      "ingredient": {
+        "item": "ic2modern:invar_ingot"
+      },
+      "count": 8
     }
   ],
-  "result": {
-    "item": "loli_labs:osmiridium_ingot",
-    "count": 1
-  }
+  "results": [
+    {
+      "item": "loli_labs:osmiridium_ingot"
+    }
+  ],
+  "duration": 200,
+  "eu_per_tick": 2
 }

@@ -2,7 +2,8 @@ package tmr.lolilabs.botania;
 
 import tmr.lolilabs.*;
 
-import com.ic2ceu.icceu.*;
+import com.ic2ceu.icceu.common.energy.CableBlock;
+import com.ic2ceu.icceu.common.energy.CableEntity;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.*;
@@ -121,7 +122,8 @@ public final class BotaniaWorldChecks {
             var part = (GreenhouseBlockEntity) world.m_7702_(partPos);
             require(part.connectsEU(Direction.WEST) && part.acceptsEnergy(Direction.WEST), "Outer shell refuses EU");
             part.receiveMana(60000);
-            require(greenhouse.mana == 60000 && part.getCurrentMana() == 60000, "Shell mana did not reach controller");
+            require(greenhouse.domain.mana == 60000 && part.getCurrentMana() == 60000,
+                    "Shell mana did not reach controller");
             var sourcePos = origin.m_7918_(-5, -1, 0);
             world.m_46597_(sourcePos, LabMachines.DEFINITIONS.get("dispersion_solar_panel").block.get().m_49966_());
             for (int x = -4; x <= -2; x++) {
@@ -135,15 +137,16 @@ public final class BotaniaWorldChecks {
             }
             var source = (LabMachineEntity) world.m_7702_(sourcePos);
             source.serverTick();
-            require(greenhouse.energy > 0, "Solar -> native cable -> outer shell -> controller transfer failed");
-            long quantaBefore = greenhouse.energy * 40 + greenhouse.euFraction;
+            require(greenhouse.domain.energy > 0,
+                    "Solar -> native cable -> outer shell -> controller transfer failed");
+            long quantaBefore = greenhouse.domain.energy * 40 + greenhouse.domain.euFraction;
             for (var r : GreenhouseStructure.relativePattern().keySet()) {
                 var shell = (GreenhouseBlockEntity) world
                         .m_7702_(origin.m_7918_(r.m_123341_(), r.m_123342_(), r.m_123343_()));
                 require(shell.connectsEU(Direction.DOWN), "Disconnected assembled shell part " + r);
                 require(shell.receivePacket(Direction.DOWN, 1, 1) == 1, "Shell lost fractional EU " + r);
             }
-            require(greenhouse.energy * 40 + greenhouse.euFraction - quantaBefore == 26,
+            require(greenhouse.domain.energy * 40 + greenhouse.domain.euFraction - quantaBefore == 26,
                     "Fractional EU not conserved across shell parts");
             for (var tier : LabBotaniaTiers.Tier.values()) {
                 var spreaderPos = origin.m_7918_(tier.ordinal() - 2, -1, -3);
@@ -181,8 +184,8 @@ public final class BotaniaWorldChecks {
                 default -> "minecraft:coal";
             };
             test.inventory.setStackInSlot(8, item(resource, 64));
-            for (int tick = 0; tick < 200; tick++) test.flowers.tick(test);
-            require(test.mana > 0, "No mana from " + type + " / " + resource);
+            for (int tick = 0; tick < 200; tick++) test.domain.flowers.tick(test.domain);
+            require(test.domain.mana > 0, "No mana from " + type + " / " + resource);
             require(test.inventory.getStackInSlot(8).m_41613_() < 64, "Resource not consumed by " + type);
         }
         for (var kind : GreenhouseUpgrade.Kind.values()) for (int level = 1; level <= kind.maxLevel; level++) {
@@ -207,7 +210,7 @@ public final class BotaniaWorldChecks {
         for (int level = 1; level <= 2; level++) {
             balance.inventory.setStackInSlot(GreenhouseBlockEntity.UPGRADE_BASE + 9,
                     upgrade(GreenhouseUpgrade.Kind.MANA_BUFFER, level));
-            require(balance.manaCap == LabBotaniaTiers.BASE_MANA_CAPACITY + (level == 1 ? 5000000 : 100000000),
+            require(balance.domain.manaCap == LabBotaniaTiers.BASE_MANA_CAPACITY + (level == 1 ? 5000000 : 100000000),
                     "Wrong additive mana buffer " + level);
         }
         balance.inventory.setStackInSlot(GreenhouseBlockEntity.UPGRADE_BASE + 8,
@@ -219,13 +222,13 @@ public final class BotaniaWorldChecks {
                     upgrade(GreenhouseUpgrade.Kind.EU_SPEED, level));
             long cost = new long[] { 1000, 3000, 4500 }[level - 1];
             int expected = new int[] { 10, 15, 25 }[level - 1];
-            balance.energy = cost * 20;
+            balance.domain.energy = cost * 20;
             int advanced = 0;
             for (int tick = 0; tick < 20; tick++) advanced += balance.workBonusAndPay();
-            require(balance.energy == 0 && advanced == expected * 20,
+            require(balance.domain.energy == 0 && advanced == expected * 20,
                     "EU speed bonus or per-tick payment wrong " + level);
-            balance.energy = cost - 1;
-            require(balance.workBonusAndPay() == 0 && balance.energy == cost - 1,
+            balance.domain.energy = cost - 1;
+            require(balance.workBonusAndPay() == 0 && balance.domain.energy == cost - 1,
                     "Unfunded speed upgrade spent energy or accelerated");
         }
         var pattern = GreenhouseStructure.relativePattern();
@@ -251,24 +254,24 @@ public final class BotaniaWorldChecks {
                 "Multiplication II must accept eight flowers");
         single.inventory.setStackInSlot(0, item("botania:endoflame", 2));
         single.inventory.setStackInSlot(8, item("minecraft:coal", 64));
-        single.flowers.tick(single);
+        single.domain.flowers.tick(single.domain);
         require(single.inventory.getStackInSlot(8).m_41613_() == 62, "Two flowers did not consume independently");
-        for (int i = 0; i < 100; i++) single.flowers.tick(single);
+        for (int i = 0; i < 100; i++) single.domain.flowers.tick(single.domain);
         var saved = single.m_187480_();
         var restored = new GreenhouseBlockEntity(origin, single.m_58900_());
         restored.m_142466_(saved);
         for (int i = 0; i < 100; i++) {
-            single.flowers.tick(single);
-            restored.flowers.tick(restored);
+            single.domain.flowers.tick(single.domain);
+            restored.domain.flowers.tick(restored.domain);
         }
-        require(single.mana == restored.mana &&
+        require(single.domain.mana == restored.domain.mana &&
                 single.inventory.getStackInSlot(8).m_41613_() == restored.inventory.getStackInSlot(8).m_41613_(),
                 "Flower timers/consumption lost after NBT reload");
         single.inventory.setStackInSlot(GreenhouseBlockEntity.UPGRADE_BASE + 8,
                 upgrade(GreenhouseUpgrade.Kind.PROCESSING, 1));
         single.inventory.setStackInSlot(1, item("botania:entropinnyum", 1));
         single.inventory.setStackInSlot(9, item("minecraft:tnt", 64));
-        single.flowers.tick(single);
+        single.domain.flowers.tick(single.domain);
         require(single.inventory.getStackInSlot(9).m_41619_(), "Processing did not consume a resource stack");
         var roof = (GreenhouseBlockEntity) world.m_7702_(origin.m_7918_(0, 1, 0));
         require(roof.canAttachSpark(item("botania:spark", 1)), "Formed roof refuses spark");
@@ -287,9 +290,9 @@ public final class BotaniaWorldChecks {
         world.m_7967_(targetSpark);
         spark.setUpgrade(vazkii.botania.api.mana.spark.SparkUpgradeType.RECESSIVE);
         spark.registerTransfer(targetSpark);
-        int before = greenhouse.mana;
+        int before = greenhouse.domain.mana;
         spark.m_8119_();
-        require(target.getCurrentMana() > 0 && before - greenhouse.mana == target.getCurrentMana(),
+        require(target.getCurrentMana() > 0 && before - greenhouse.domain.mana == target.getCurrentMana(),
                 "Native spark transfer did not conserve greenhouse mana");
         spark.setUpgrade(vazkii.botania.api.mana.spark.SparkUpgradeType.NONE);
         verifyNativeSpreaders(world, greenhouse);
@@ -297,21 +300,21 @@ public final class BotaniaWorldChecks {
         var full = new GreenhouseBlockEntity(origin, greenhouse.m_58900_());
         full.inventory.setStackInSlot(0, item("botania:endoflame", 1));
         full.inventory.setStackInSlot(8, item("minecraft:coal", 64));
-        full.mana = full.manaCap;
-        for (int i = 0; i < 10; i++) full.flowers.tick(full);
+        full.domain.mana = full.domain.manaCap;
+        for (int i = 0; i < 10; i++) full.domain.flowers.tick(full.domain);
         require(full.inventory.getStackInSlot(8).m_41613_() == 64, "Full buffer consumes fuel");
-        full.mana = 0;
+        full.domain.mana = 0;
         full.inventory.setStackInSlot(8, item("minecraft:cobblestone", 64));
-        for (int i = 0; i < 10; i++) full.flowers.tick(full);
-        require(full.inventory.getStackInSlot(8).m_41613_() == 64 && full.mana == 0, "Invalid resource consumed");
-        long savedEnergy = greenhouse.energy;
-        int savedProgress = greenhouse.progress;
-        greenhouse.energy = 0;
-        greenhouse.progress = 0;
+        for (int i = 0; i < 10; i++) full.domain.flowers.tick(full.domain);
+        require(full.inventory.getStackInSlot(8).m_41613_() == 64 && full.domain.mana == 0, "Invalid resource consumed");
+        long savedEnergy = greenhouse.domain.energy;
+        int savedProgress = greenhouse.domain.progress;
+        greenhouse.domain.energy = 0;
+        greenhouse.domain.progress = 0;
         GreenhouseBlockEntity.tick(world, origin, greenhouse.m_58900_(), greenhouse);
-        require(greenhouse.progress == 10, "Efficiency stops working when EU-speed upgrade has no power");
-        greenhouse.energy = savedEnergy;
-        greenhouse.progress = savedProgress;
+        require(greenhouse.domain.progress == 10, "Efficiency stops working when EU-speed upgrade has no power");
+        greenhouse.domain.energy = savedEnergy;
+        greenhouse.domain.progress = savedProgress;
         var oldPos = origin.m_7918_(8, 0, -7);
         world.m_46597_(oldPos, LabBotaniaBlocks.MULTI_GREENHOUSE_CORE.get().m_49966_());
         var old = (GreenhouseBlockEntity) world.m_7702_(oldPos);
@@ -339,20 +342,20 @@ public final class BotaniaWorldChecks {
                 upgrade(GreenhouseUpgrade.Kind.MANA_BUFFER, 2));
         for (int i = 0; i < 8; i++) greenhouse.inventory.setStackInSlot(i, item("botania:endoflame", 1));
         greenhouse.inventory.setStackInSlot(8, item("minecraft:coal", 64));
-        greenhouse.flowers.load(new net.minecraft.nbt.ListTag());
-        greenhouse.mana = 0;
+        greenhouse.domain.flowers.load(new net.minecraft.nbt.ListTag());
+        greenhouse.domain.mana = 0;
         for (int i = 0; i < 120; i++) GreenhouseBlockEntity.tick(world, origin, greenhouse.m_58900_(), greenhouse);
-        require(greenhouse.mana >= 1300 && greenhouse.inventory.getStackInSlot(8).m_41613_() == 56,
+        require(greenhouse.domain.mana >= 1300 && greenhouse.inventory.getStackInSlot(8).m_41613_() == 56,
                 "User reproduction: eight flowers consume coal but do not accumulate mana with Mana Storage only");
         for (var tier : LabBotaniaTiers.Tier.values()) {
             var remote = (LabManaSpreaderBlockEntity) world.m_7702_(origin.m_7918_(tier.ordinal() - 2, -1, -3));
             require(remote.getCurrentMana() == 0, "Remote spreader still drains greenhouse mana");
         }
-        greenhouse.enabled = false;
+        greenhouse.domain.enabled = false;
         greenhouse.syncSettings();
         require(world.m_8055_(origin.m_7918_(0, 0, -1)).getLightEmission(world, origin.m_7918_(0, 0, -1)) == 0,
                 "Disabled greenhouse still emits light");
-        greenhouse.enabled = true;
+        greenhouse.domain.enabled = true;
         greenhouse.syncSettings();
         for (var relative : GreenhouseStructure.relativePattern().keySet()) {
             var litPos = origin.m_7918_(relative.m_123341_(), relative.m_123342_(), relative.m_123343_());
@@ -382,13 +385,13 @@ public final class BotaniaWorldChecks {
         require(automation.getSlots() == 40, "Automation exposes private legacy or upgrade slots");
         var clockCopy = new GreenhouseBlockEntity(origin, greenhouse.m_58900_());
         clockCopy.m_142466_(greenhouse.m_187480_());
-        require(java.util.Arrays.equals(clockCopy.upgradeInstalledAt, greenhouse.upgradeInstalledAt),
+        require(java.util.Arrays.equals(clockCopy.domain.upgradeInstalledAt, greenhouse.domain.upgradeInstalledAt),
                 "Upgrade installation timestamps did not survive save/load");
         System.out.println(
                 "LOLI_LABS_POOL_INFUSION_NBT_OK: native infusion consumes mana; custom save ID and stored mana survive reload");
         System.out.println(
                 "LOLI_LABS_GREENHOUSE_BUFFER_REPRO_OK: started at zero; eight single flowers; only mana buffer upgrade; 8 coal consumed; " +
-                        greenhouse.mana + " mana retained; distant spreaders did not drain buffer");
+                        greenhouse.domain.mana + " mana retained; distant spreaders did not drain buffer");
         System.out.println(
                 "LOLI_LABS_GREENHOUSE_FLOWERS_OK: five item-fed generators; four typed upgrades; 1/4/8 flower limits; independent consumption; processing; persisted timers; native spark transfer; collector output; buffer backpressure");
     }
@@ -664,7 +667,7 @@ public final class BotaniaWorldChecks {
             return;
         }
         if (phase == 27) {
-            require(!((GreenhouseBlockEntity) mc.f_91073_.m_7702_(origin)).enabled,
+            require(!((GreenhouseBlockEntity) mc.f_91073_.m_7702_(origin)).domain.enabled,
                     "Power toggle did not disable server controller");
             shot(mc, "greenhouse-power-off");
             clickWidget(mc, "power");
@@ -673,7 +676,7 @@ public final class BotaniaWorldChecks {
             return;
         }
         if (phase == 28) {
-            require(((GreenhouseBlockEntity) mc.f_91073_.m_7702_(origin)).enabled,
+            require(((GreenhouseBlockEntity) mc.f_91073_.m_7702_(origin)).domain.enabled,
                     "Power toggle did not re-enable server controller");
             shot(mc, "greenhouse-power-on");
             System.out.println(

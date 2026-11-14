@@ -20,7 +20,7 @@ public final class LabMaterialClient {
     public static void chargeBars(RegisterItemDecorationsEvent event) {
         for (String id : new String[] { "vajra", "legendary_vajra", "infinity_pickaxe_ultra" }) {
             event.register(LabItems.CATALOG.get(id).get(),
-                    (graphics, font, stack, x, y) -> com.ic2ceu.icceu.ElectricChargeRenderer.render(graphics, stack, x,
+                    (graphics, font, stack, x, y) -> com.ic2ceu.icceu.client.ElectricChargeRenderer.render(graphics, stack, x,
                             y));
         }
     }

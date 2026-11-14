@@ -4,7 +4,7 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="loli_labs"
-version="1.4.35"
+version="1.4.36"
 displayName="Loli Labs"
 description='''Loli Labs: all-weather panels, energy unifier, solid matter generators and crafting materials for TMR.'''
 
@@ -61,5 +61,12 @@ side="BOTH"
 modId="jade"
 mandatory=false
 versionRange="[11,)"
+ordering="AFTER"
+side="BOTH"
+
+[[dependencies.loli_labs]]
+modId="thaumaturge"
+mandatory=false
+versionRange="[1.0.0,)"
 ordering="AFTER"
 side="BOTH"

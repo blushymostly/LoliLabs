@@ -12,9 +12,9 @@ public final class GreenhouseAutomation implements IItemHandler {
         this.part = part;
     }
 
-    private GreenhouseBlockEntity core() {
-        var core = part.core();
-        return core != null && (!part.isPart() || core.isFormed()) ? core : null;
+    private GreenhouseCore domain() {
+        var controller = part.core();
+        return controller != null && (!part.isPart() || controller.isFormed()) ? controller.domain : null;
     }
 
     public int getSlots() {
@@ -22,27 +22,27 @@ public final class GreenhouseAutomation implements IItemHandler {
     }
 
     public ItemStack getStackInSlot(int slot) {
-        var core = core();
-        return core == null ? ItemStack.f_41583_ : core.inventory.getStackInSlot(slot);
+        var domain = domain();
+        return domain == null ? ItemStack.f_41583_ : domain.inventory.getStackInSlot(slot);
     }
 
     public ItemStack insertItem(int slot, ItemStack stack, boolean simulate) {
-        var core = core();
-        return core == null ? stack : core.inventory.insertItem(slot, stack, simulate);
+        var domain = domain();
+        return domain == null ? stack : domain.inventory.insertItem(slot, stack, simulate);
     }
 
     public ItemStack extractItem(int slot, int amount, boolean simulate) {
-        var core = core();
-        return core == null || slot < 8 ? ItemStack.f_41583_ : core.inventory.extractItem(slot, amount, simulate);
+        var domain = domain();
+        return domain == null || slot < 8 ? ItemStack.f_41583_ : domain.inventory.extractItem(slot, amount, simulate);
     }
 
     public int getSlotLimit(int slot) {
-        var core = core();
-        return core == null ? 64 : core.inventory.getSlotLimit(slot);
+        var domain = domain();
+        return domain == null ? 64 : domain.inventory.getSlotLimit(slot);
     }
 
     public boolean isItemValid(int slot, ItemStack stack) {
-        var core = core();
-        return core != null && core.inventory.isItemValid(slot, stack);
+        var domain = domain();
+        return domain != null && domain.inventory.isItemValid(slot, stack);
     }
 }

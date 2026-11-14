@@ -1,22 +1,37 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "GEG",
-    "ECE",
-    "GEG"
-  ],
-  "key": {
-    "G": {
-      "item": "minecraft:gold_ingot"
-    },
-    "E": {
-      "item": "minecraft:emerald"
-    },
-    "C": {
-      "item": "minecraft:lapis_block"
-    }
-  },
   "result": {
     "item": "loli_labs:fortune_module_3"
-  }
+  },
+  "pattern": [
+    "ABC",
+    "BDB",
+    "EBF"
+  ],
+  "key": {
+    "A": {
+      "item": "ic2modern:iridium_ingot"
+    },
+    "B": {
+      "item": "minecraft:lapis_block"
+    },
+    "C": {
+      "item": "loliavaritia:crystal_matrix_ingot"
+    },
+    "D": {
+      "item": "ae2:nether_quartz_pickaxe"
+    },
+    "E": {
+      "item": "ic2modern:electrum_ingot"
+    },
+    "F": {
+      "item": "botania:terrasteel_ingot"
+    }
+  },
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "ae2"
+    }
+  ]
 }
