@@ -23,4 +23,6 @@ jobs:
           java-version: "17"
 
       - name: Spotless check
-        run: ./gradlew spotlessCheck --no-daemon
+        run: |
+          chmod +x gradlew
+          ./gradlew spotlessCheck --no-daemon
